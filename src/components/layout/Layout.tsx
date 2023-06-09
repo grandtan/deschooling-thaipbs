@@ -1,5 +1,4 @@
 // components/Layout.tsx
-import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
 import { BiMoviePlay, BiPodcast } from 'react-icons/bi';
@@ -14,7 +13,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const logo = () => (
-    <div className='w-1/6'>
+    <div className='w-1/4'>
       <Link className='py-4 text-xl' href='/home'>
         LOGO
       </Link>
@@ -22,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const home = () => (
-    <div className=''>
+    <div className='w-1/12'>
       <Link className=' py-4 text-xl  ' href='/home'>
         <div className='mb-2 flex justify-center '>
           <GrHomeRounded size={40} />
@@ -33,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const learningSpace = () => (
-    <div className=' '>
+    <div className='w-1/12 '>
       <button className=' peer py-3 text-xl '>
         <div className='mb-2 flex justify-center'>
           <BsBookHalf size={40} />
@@ -58,7 +57,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const vdo = () => (
-    <div className=' '>
+    <div className='w-1/12 '>
       <button className=' peer  py-3  text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BiMoviePlay size={40} />
@@ -75,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const podCast = () => (
-    <div className=''>
+    <div className='w-1/12'>
       <button className=' peer py-3  text-xl '>
         <div className='mb-2 flex justify-center'>
           <BiPodcast size={40} />
@@ -91,7 +90,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const activity = () => (
-    <div className=' '>
+    <div className='w-1/12'>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <SlCalender size={40} />
@@ -121,7 +120,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const tv = () => (
-    <div className='  '>
+    <div className='w-1/12'>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BsFilm size={40} />
@@ -142,7 +141,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const aboutUs = () => (
-    <div className=''>
+    <div className='w-1/12 '>
       <button className=' peer py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <HiOutlineMail size={40} />
@@ -159,21 +158,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
   return (
     <div>
-      <Image
-        src='/images/Navbar.png'
-        width={200}
-        height={200}
-        alt='Picture of the author'
-      />
-      <div
-        className=' h-screen w-full pt-10'
-        // style={{
-        //   backgroundImage: "url('/svg/bg.svg')",
-        //   backgroundRepeat: 'no-repeat',
-        //   backgroundSize: 'cover',
-        // }}
-      >
-        <div className='flex h-24  flex-wrap items-center justify-evenly  bg-[#ffe224] pr-20 text-center font-medium'>
+      <div className=' h-screen w-full bg-slate-700 pt-10'>
+        <div className=' flex h-24 flex-initial flex-row items-center space-x-2 bg-[#ffe224] text-center font-medium'>
           {logo()}
           {home()}
           {learningSpace()}
@@ -183,6 +169,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {tv()}
           {aboutUs()}
         </div>
+
         {children}
       </div>
     </div>

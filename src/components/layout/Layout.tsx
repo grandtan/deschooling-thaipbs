@@ -41,13 +41,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
       <div className='fixed hidden  w-[200px] flex-col divide-y divide-yellow-400  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
         <Link
-          className=' px-5  py-3  hover:rounded-t hover:text-yellow-400'
+          className=' px-5  py-3  hover:rounded-t hover:text-[#ffba00]'
           href='/teacher'
         >
           ครูและผู้อำนวยการ
         </Link>
         <Link
-          className='px-5  py-3  hover:rounded-b  hover:text-yellow-400'
+          className='px-5  py-3  hover:rounded-b  hover:text-[#ffba00]'
           href='/parent'
         >
           พ่อแม่และผู้ปกครอง
@@ -66,7 +66,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
 
       <div className=' fixed hidden  w-[200px] flex-col divide-y  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
-        <Link className=' px-5 py-3  hover:text-yellow-400' href='/vdo'>
+        <Link className=' px-5 py-3  hover:text-[#ffba00]' href='/vdo'>
           VDO How to
         </Link>
       </div>
@@ -82,7 +82,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         Podcast
       </button>
       <div className='fixed hidden  w-[200px] flex-col divide-y   rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
-        <Link className=' px-5 py-3 hover:text-yellow-400' href='/podcast'>
+        <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/podcast'>
           ฟัง พูด อ่าน กิน
         </Link>
       </div>
@@ -99,18 +99,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
 
       <div className='fixed hidden w-[200px]  flex-col divide-y divide-yellow-400  rounded  bg-white  text-start  drop-shadow-lg hover:flex peer-hover:flex'>
-        <Link className='px-5 py-3 hover:text-yellow-400' href='/calendar'>
+        <Link className='px-5 py-3 hover:text-[#ffba00]' href='/calendar'>
           ปฏิทินกิจกรรม
         </Link>
 
         <Link
-          className='px-5 py-3 hover:text-yellow-400'
+          className='px-5 py-3 hover:text-[#ffba00]'
           href='/activity-register'
         >
           สนใจเข้าร่วม
         </Link>
         <Link
-          className='px-5 py-3 hover:text-yellow-400'
+          className='px-5 py-3 hover:text-[#ffba00]'
           href='/activity-picture'
         >
           ภาพกิจกรรม
@@ -129,11 +129,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
 
       <div className='fixed hidden  w-[200px] flex-col divide-y divide-yellow-400  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
-        <Link className=' px-5 py-3 hover:text-yellow-400' href='/deschooling'>
+        <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/deschooling'>
           Deschooling
         </Link>
 
-        <Link className=' px-5 py-3 hover:text-yellow-400' href='/teacher-hero'>
+        <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/teacher-hero'>
           Teacher Hero
         </Link>
       </div>
@@ -150,28 +150,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </button>
 
       <div className='fixed hidden w-[200px] flex-col divide-y  rounded  bg-white text-start  drop-shadow-lg hover:flex  peer-hover:flex '>
-        <Link className=' px-5 py-3 hover:text-yellow-400' href='/about-us'>
+        <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/about-us'>
           AboutUs
         </Link>
       </div>
     </div>
   );
   return (
-    <div>
-      <div className=' h-screen w-full bg-slate-700 pt-10'>
-        <div className=' flex h-24 flex-initial flex-row items-center space-x-2 bg-[#ffe224] text-center font-medium'>
-          {logo()}
-          {home()}
-          {learningSpace()}
-          {vdo()}
-          {podCast()}
-          {activity()}
-          {tv()}
-          {aboutUs()}
-        </div>
-
-        {children}
+    <div
+      className='relative h-screen w-full pt-10 '
+      style={{
+        backgroundImage: `url(/images/bg.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className=' flex h-24 flex-initial flex-row items-center space-x-2 bg-[#ffba00] text-center font-medium'>
+        {logo()}
+        {home()}
+        {learningSpace()}
+        {vdo()}
+        {podCast()}
+        {activity()}
+        {tv()}
+        {aboutUs()}
       </div>
+
+      {children}
     </div>
   );
 };

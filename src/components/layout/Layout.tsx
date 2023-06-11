@@ -1,4 +1,6 @@
 // components/Layout.tsx
+import Container from '@mui/material/Container';
+import { Sarabun } from 'next/font/google';
 import Link from 'next/link';
 import * as React from 'react';
 import { BiMoviePlay, BiPodcast } from 'react-icons/bi';
@@ -7,21 +9,29 @@ import { GrHomeRounded } from 'react-icons/gr';
 import { HiOutlineMail } from 'react-icons/hi';
 import { SlCalender } from 'react-icons/sl';
 
+import { LogoWeb } from '@/icon/LogoWeb';
+
+const fontWeb = Sarabun({
+  weight: '500',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
 interface LayoutProps {
   children?: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const logo = () => (
-    <div className='w-1/4'>
-      <Link className='py-4 text-xl' href='/home'>
-        LOGO
+    <div className=' flex  w-1/4 justify-center pl-20'>
+      <Link className=' py-4 ' href='/home'>
+        <LogoWeb />
       </Link>
     </div>
   );
 
   const home = () => (
-    <div className='w-1/12'>
+    <div className=' ml-24  w-1/12'>
       <Link className=' py-4 text-xl  ' href='/home'>
         <div className='mb-2 flex justify-center '>
           <GrHomeRounded size={40} />
@@ -32,16 +42,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const learningSpace = () => (
-    <div className='w-1/12 '>
+    <div className=' z-40  w-1/12'>
       <button className=' peer py-3 text-xl '>
         <div className='mb-2 flex justify-center'>
           <BsBookHalf size={40} />
         </div>
         พื้นที่เรียนรู้
       </button>
-      <div className='fixed hidden  w-[200px] flex-col divide-y divide-yellow-400  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
+      <div className=' fixed hidden  w-[200px] flex-col divide-y divide-yellow-400  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
         <Link
-          className=' px-5  py-3  hover:rounded-t hover:text-[#ffba00]'
+          className=' px-5  py-3   hover:rounded-t hover:text-[#ffba00]'
           href='/teacher'
         >
           ครูและผู้อำนวยการ
@@ -57,15 +67,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const vdo = () => (
-    <div className='w-1/12 '>
+    <div className='z-40 w-1/12'>
       <button className=' peer  py-3  text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BiMoviePlay size={40} />
         </div>
-        วีดีโอ
+        วิดีโอ
       </button>
 
-      <div className=' fixed hidden  w-[200px] flex-col divide-y  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-[200px]  flex-col divide-y rounded  bg-white  text-start   drop-shadow-lg  hover:flex peer-hover:flex'>
         <Link className=' px-5 py-3  hover:text-[#ffba00]' href='/vdo'>
           VDO How to
         </Link>
@@ -74,14 +84,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const podCast = () => (
-    <div className='w-1/12'>
+    <div className='z-40 w-1/12'>
       <button className=' peer py-3  text-xl '>
         <div className='mb-2 flex justify-center'>
           <BiPodcast size={40} />
         </div>
         Podcast
       </button>
-      <div className='fixed hidden  w-[200px] flex-col divide-y   rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
+      <div className=' fixed hidden w-[200px]  flex-col divide-y rounded   bg-white  text-start   drop-shadow-lg  hover:flex peer-hover:flex'>
         <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/podcast'>
           ฟัง พูด อ่าน กิน
         </Link>
@@ -90,7 +100,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const activity = () => (
-    <div className='w-1/12'>
+    <div className='z-40 w-1/12'>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <SlCalender size={40} />
@@ -98,7 +108,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         กิจกรรม
       </button>
 
-      <div className='fixed hidden w-[200px]  flex-col divide-y divide-yellow-400  rounded  bg-white  text-start  drop-shadow-lg hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-[200px] flex-col  divide-y divide-yellow-400 rounded  bg-white  text-start   drop-shadow-lg hover:flex peer-hover:flex'>
         <Link className='px-5 py-3 hover:text-[#ffba00]' href='/calendar'>
           ปฏิทินกิจกรรม
         </Link>
@@ -120,7 +130,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const tv = () => (
-    <div className='w-1/12'>
+    <div className='z-40 w-1/12'>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BsFilm size={40} />
@@ -128,7 +138,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         รายการทีวี
       </button>
 
-      <div className='fixed hidden  w-[200px] flex-col divide-y divide-yellow-400  rounded  bg-white  text-start drop-shadow-lg  hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-[200px]  flex-col divide-y divide-yellow-400 rounded  bg-white  text-start  text-lg drop-shadow-lg  hover:flex peer-hover:flex'>
         <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/deschooling'>
           Deschooling
         </Link>
@@ -141,7 +151,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const aboutUs = () => (
-    <div className='w-1/12 '>
+    <div className='z-40 w-1/12'>
       <button className=' peer py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <HiOutlineMail size={40} />
@@ -149,7 +159,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         ติดต่อเรา
       </button>
 
-      <div className='fixed hidden w-[200px] flex-col divide-y  rounded  bg-white text-start  drop-shadow-lg hover:flex  peer-hover:flex '>
+      <div className='fixed hidden w-[200px] flex-col divide-y rounded  bg-white  text-start text-lg  drop-shadow-lg hover:flex  peer-hover:flex '>
         <Link className=' px-5 py-3 hover:text-[#ffba00]' href='/about-us'>
           AboutUs
         </Link>
@@ -157,26 +167,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     </div>
   );
   return (
-    <div
-      className='relative h-screen w-full pt-10 '
-      style={{
-        backgroundImage: `url(/images/bg.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className=' flex h-24 flex-initial flex-row items-center space-x-2 bg-[#ffba00] text-center font-medium'>
-        {logo()}
-        {home()}
-        {learningSpace()}
-        {vdo()}
-        {podCast()}
-        {activity()}
-        {tv()}
-        {aboutUs()}
-      </div>
+    <div className={fontWeb.className}>
+      <div
+        className='relative h-screen w-full pt-10'
+        style={{
+          backgroundImage: `url(/images/bgnew.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className=' flex h-24 flex-initial flex-row  items-center bg-[#ffba00] pl-10 text-center font-medium'>
+          {logo()}
+          {home()}
+          {learningSpace()}
+          {vdo()}
+          {podCast()}
+          {activity()}
+          {tv()}
+          {aboutUs()}
+        </div>
 
-      {children}
+        <Container maxWidth='xl'>{children}</Container>
+      </div>
     </div>
   );
 };

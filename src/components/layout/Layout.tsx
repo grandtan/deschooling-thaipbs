@@ -1,6 +1,6 @@
 // components/Layout.tsx
 import Container from '@mui/material/Container';
-import { Sarabun } from 'next/font/google';
+import { Kanit } from 'next/font/google';
 import Link from 'next/link';
 import * as React from 'react';
 import { BiMoviePlay, BiPodcast } from 'react-icons/bi';
@@ -11,8 +11,8 @@ import { SlCalender } from 'react-icons/sl';
 
 import { LogoWeb } from '@/icon/LogoWeb';
 
-const fontWeb = Sarabun({
-  weight: '500',
+const fontWeb = Kanit({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 });

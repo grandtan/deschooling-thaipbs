@@ -3,10 +3,10 @@ import React from 'react';
 
 const ThaiPbs = () => {
   return (
-    <div className='mt-20 flex justify-center '>
+    <div className='flex justify-center '>
       <Image
         src='/images/thaipbs.png'
-        alt='ไทยพีบีเอสกับการขับเคลื่อน'
+        alt='ไทยพีบีเอสกับการขับเคลื่อนการศึกษา'
         width={1000}
         height={200}
       />

@@ -187,7 +187,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {aboutUs()}
         </div>
 
-        <Container maxWidth='xl'>{children}</Container>
+        <Container className='mt-10 '>{children}</Container>
       </div>
     </div>
   );

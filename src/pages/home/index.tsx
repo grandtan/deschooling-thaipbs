@@ -10,12 +10,12 @@ const Home = () => {
   return (
     <div className=' h-full'>
       <Slide duration={2000}>
-        <div className='each-slide-effect flex justify-center'>
+        <div className='each-slide-effect  flex justify-center '>
           <Image
             onClick={() => router.push('/thaipbs')}
             className=' cursor-pointer'
             src='/images/deschooling.png'
-            alt='what is a deschooling '
+            alt='Deschooling คืออะไร'
             width={1000}
             height={200}
           />
@@ -24,8 +24,8 @@ const Home = () => {
           <Image
             onClick={() => router.push('/thaipbs')}
             className='cursor-pointer'
-            src='/images/whologo.png'
-            alt='คุณคือใครในวงการศึกษา'
+            src='/images/bgslide2.png'
+            alt='คุณคือใครในวงการ การศึกษา'
             width={1000}
             height={200}
           />

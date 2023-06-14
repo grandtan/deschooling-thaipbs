@@ -8,8 +8,6 @@ import { GrHomeRounded } from 'react-icons/gr';
 import { HiOutlineMail } from 'react-icons/hi';
 import { SlCalender } from 'react-icons/sl';
 
-import { LogoWeb } from '@/icon/LogoWeb';
-
 const fontWeb = Kanit({
   weight: '400',
   subsets: ['latin'],
@@ -21,14 +19,14 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const logo = () => (
-    <div className=' flex w-1/4 justify-center'>
-      <LogoWeb />
-    </div>
-  );
+  // const logo = () => (
+  //   <div className=' flex w-1/4 justify-center'>
+  //     <LogoWeb />
+  //   </div>
+  // );
 
   const home = () => (
-    <div className=' ml-24  w-1/12'>
+    <div className=' w-1/6'>
       <Link className=' py-4 text-xl  ' href='/home'>
         <div className='mb-2 flex justify-center '>
           <GrHomeRounded size={40} />
@@ -39,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const learningSpace = () => (
-    <div className=' z-40  w-1/12'>
+    <div className=' z-40  w-1/6'>
       <button className=' peer py-3 text-xl '>
         <div className='mb-2 flex justify-center'>
           <BsBookHalf size={40} />
@@ -64,7 +62,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const vdo = () => (
-    <div className='z-40 w-1/12'>
+    <div className='z-40 w-1/6'>
       <button className=' peer  py-3  text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BiMoviePlay size={40} />
@@ -81,7 +79,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const podCast = () => (
-    <div className='z-40 w-1/12'>
+    <div className='z-40 w-1/6'>
       <button className=' peer py-3  text-xl '>
         <div className='mb-2 flex justify-center'>
           <BiPodcast size={40} />
@@ -97,7 +95,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const activity = () => (
-    <div className='z-40 w-1/12'>
+    <div className='z-40 w-1/6 '>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <SlCalender size={40} />
@@ -127,7 +125,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const tv = () => (
-    <div className='z-40 w-1/12'>
+    <div className='z-40 w-1/6'>
       <button className=' peer  py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <BsFilm size={40} />
@@ -148,7 +146,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   const aboutUs = () => (
-    <div className='z-40 w-1/12'>
+    <div className='z-40 w-1/6'>
       <button className=' peer py-3 text-xl  '>
         <div className='mb-2 flex justify-center'>
           <HiOutlineMail size={40} />
@@ -173,8 +171,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           backgroundPosition: 'center',
         }}
       >
-        <div className=' flex h-24 flex-initial flex-row  items-center bg-[#ffba00] pl-10 text-center font-medium '>
-          {logo()}
+        <div className=' mx-auto flex h-24 flex-initial flex-row  items-center bg-[#ffba00] px-24 text-center font-medium'>
+          {/* {logo()} */}
           {home()}
           {learningSpace()}
           {vdo()}

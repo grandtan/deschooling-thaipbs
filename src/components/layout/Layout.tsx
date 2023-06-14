@@ -1,5 +1,4 @@
 // components/Layout.tsx
-import Container from '@mui/material/Container';
 import { Kanit } from 'next/font/google';
 import Link from 'next/link';
 import * as React from 'react';
@@ -23,10 +22,8 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const logo = () => (
-    <div className=' flex  w-1/4 justify-center pl-20'>
-      <Link className=' py-4 ' href='/home'>
-        <LogoWeb />
-      </Link>
+    <div className=' flex w-1/4 justify-center'>
+      <LogoWeb />
     </div>
   );
 
@@ -169,14 +166,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className={fontWeb.className}>
       <div
-        className='relative h-screen w-full pt-10'
+        className='relative h-screen w-full pt-10 '
         style={{
           backgroundImage: `url(/images/bgnew.png)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className=' flex h-24 flex-initial flex-row  items-center bg-[#ffba00] pl-10 text-center font-medium'>
+        <div className=' flex h-24 flex-initial flex-row  items-center bg-[#ffba00] pl-10 text-center font-medium '>
           {logo()}
           {home()}
           {learningSpace()}
@@ -187,7 +184,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {aboutUs()}
         </div>
 
-        <Container className='mt-10 '>{children}</Container>
+        <div className=' mx-auto mt-4 lg:container'>{children}</div>
       </div>
     </div>
   );

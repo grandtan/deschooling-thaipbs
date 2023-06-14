@@ -8,16 +8,16 @@ import 'react-slideshow-image/dist/styles.css';
 const Home = () => {
   const router = useRouter();
   return (
-    <div className=' h-full'>
+    <div>
       <Slide duration={2000}>
-        <div className='each-slide-effect  flex justify-center '>
+        <div className='each-slide-effect   flex  justify-center'>
           <Image
             onClick={() => router.push('/thaipbs')}
             className=' cursor-pointer'
             src='/images/deschooling.png'
             alt='Deschooling คืออะไร'
-            width={1000}
-            height={200}
+            width={1024}
+            height={768}
           />
         </div>
         <div className='each-slide-effect   flex  justify-center '>
@@ -26,8 +26,8 @@ const Home = () => {
             className='cursor-pointer'
             src='/images/bgslide2.png'
             alt='คุณคือใครในวงการ การศึกษา'
-            width={1000}
-            height={200}
+            width={1024}
+            height={768}
           />
         </div>
       </Slide>

@@ -10,11 +10,11 @@ const Home = () => {
   return (
     <div>
       <Slide duration={2000}>
-        <div className='each-slide-effect   flex  justify-center'>
+        <div className='each-slide-effect  flex  justify-center '>
           <Image
             onClick={() => router.push('/thaipbs')}
             className=' cursor-pointer'
-            src='/images/deschooling.png'
+            src='/images/text.png'
             alt='Deschooling คืออะไร'
             width={1024}
             height={768}

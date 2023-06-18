@@ -8,7 +8,8 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  height: 550px;
+  height: 100vh;
+  
 }
 
 .each-slide-effect span {

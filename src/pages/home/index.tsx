@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -11,28 +10,26 @@ import Layout from '@/components/layout/Layout';
 const Home = () => {
   const router = useRouter();
   return (
-    <Layout>
+    <Layout container={false}>
       <Slide duration={2000}>
         <div className='each-slide-effect '>
           <div className='flex justify-center '>
-            <Link href='/thaipbs' className=' pr-8 text-9xl text-[#ffba00]'>
-              Deschooling
-            </Link>
-            <Link href='/thaipbs' className=' text-8xl italic text-white'>
-              คืออะไร ?
+            <Link href='/thaipbs' className=' flex items-center '>
+              <div className='text-9xl  text-[#ffcc00]'>Deschooling</div>
+              <div className=' pl-10 pt-4 text-8xl italic text-white'>
+                คืออะไร ?
+              </div>
             </Link>
           </div>
         </div>
 
         <div className='each-slide-effect '>
           <div className='flex justify-center'>
-            <Image
-              onClick={() => router.push('/thaipbs')}
+            <img
+              onClick={() => router.push('/')}
               className=' cursor-pointer'
               src='/images/bgslide2.png'
               alt='คุณคือใครในวงการ การศึกษา'
-              width={1024}
-              height={400}
             />
           </div>
         </div>

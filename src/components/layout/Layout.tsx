@@ -12,9 +12,14 @@ const fontWeb = Kanit({
 interface LayoutProps {
   children?: React.ReactNode;
   backgroundImage?: string;
+  container?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  backgroundImage,
+  container = true,
+}) => {
   // const logo = () => (
   //   <div className=' flex w-1/4 justify-center'>
   //     <LogoWeb />
@@ -162,11 +167,9 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   return (
     <div className={fontWeb.className}>
       <div
-        className='relative h-screen w-full pt-16'
+        className='relative h-full w-full bg-cover bg-center pt-14'
         style={{
-          backgroundImage: `url(${checkImage} )`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: `url(${checkImage})`,
         }}
       >
         <div className='  mx-auto flex h-24 flex-row  items-center justify-between bg-[#ffcc00] px-4 text-center font-medium'>
@@ -180,7 +183,9 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           {aboutUs()}
         </div>
 
-        <div className=' mx-auto  xl:container'>{children}</div>
+        <div className={container ? 'mx-auto  xl:container' : ''}>
+          {children}
+        </div>
       </div>
     </div>
   );

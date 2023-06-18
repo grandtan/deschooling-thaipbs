@@ -1,24 +1,9 @@
-import Image from 'next/image';
 import React from 'react';
 
+import Layout from '@/components/layout/Layout';
+
 const ThaiPbs = () => {
-  return (
-    <div className='flex justify-center '>
-      <Image
-        src='/images/thaipbs.png'
-        alt='ไทยพีบีเอสกับการขับเคลื่อนการศึกษา'
-        width={1000}
-        height={200}
-      />
-    </div>
-  );
+  return <Layout backgroundImage='/images/tpbs.png'>xxxx</Layout>;
 };
 
 export default ThaiPbs;
-
-// className=' my-10 '
-// style={{
-//   backgroundImage: `url(/images/thaipbs.png)`,
-//   backgroundSize: 'cover',
-//   backgroundPosition: 'center',
-// }}

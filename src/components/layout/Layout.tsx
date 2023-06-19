@@ -167,12 +167,12 @@ const Layout: React.FC<LayoutProps> = ({
   return (
     <div className={fontWeb.className}>
       <div
-        className='relative h-full w-full bg-cover bg-center pt-14'
+        className='relative h-full w-full bg-cover bg-center '
         style={{
           backgroundImage: `url(${checkImage})`,
         }}
       >
-        <div className='  mx-auto flex h-24 flex-row  items-center justify-between bg-[#ffcc00] px-4 text-center font-medium'>
+        <div className=' absolute inset-x-0 top-8 flex  h-24 flex-row items-center justify-between bg-[#ffcc00]  text-center font-medium'>
           {/* {logo()} */}
           {home()}
           {learningSpace()}

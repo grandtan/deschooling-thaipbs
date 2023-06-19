@@ -11,7 +11,7 @@ const Home = () => {
   const router = useRouter();
   return (
     <Layout container={false}>
-      <Slide duration={2000}>
+      <Slide duration={20000}>
         <div className='each-slide-effect '>
           <div className='flex justify-center '>
             <Link href='/thaipbs' className=' flex items-center '>
@@ -24,11 +24,11 @@ const Home = () => {
         </div>
 
         <div className='each-slide-effect '>
-          <div className='flex justify-center'>
+          <div className=' flex justify-center'>
             <img
               onClick={() => router.push('/')}
-              className=' cursor-pointer'
-              src='/images/bgslide2.png'
+              className='  cursor-pointer'
+              src='/images/whologo.png'
               alt='คุณคือใครในวงการ การศึกษา'
             />
           </div>

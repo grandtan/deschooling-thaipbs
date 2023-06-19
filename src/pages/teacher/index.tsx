@@ -1,4 +1,3 @@
-import Grid from '@mui/material/Unstable_Grid2';
 import React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -14,20 +13,20 @@ const Teacher = () => {
     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
   ];
   return (
-    <Layout>
-      <div className=' h-screen'>
-        <div className='mt-4 flex text-4xl font-semibold text-[#ffcc00]'>
+    <Layout backgroundImage='/images/bg-teacher.png'>
+      <div className=' h-screen  pt-40'>
+        <div className=' mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
           Learning Space แบ่งปันนวัตกรรมการสอน
         </div>
-        <Grid container spacing={2}>
+        {/* <Grid container spacing={4} className='mt-20'>
           {link.map((e) => (
             <Grid md={3} key={e}>
-              <div className=' h-32 bg-white p-4'>
-                {/* <iframe src={e} /> */}
+              <div className=' h-52 rounded-lg bg-white'>
+                <iframe src={e} />
               </div>
             </Grid>
           ))}
-        </Grid>
+        </Grid> */}
       </div>
     </Layout>
   );

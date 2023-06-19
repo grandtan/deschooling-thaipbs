@@ -172,7 +172,7 @@ const Layout: React.FC<LayoutProps> = ({
           backgroundImage: `url(${checkImage})`,
         }}
       >
-        <div className=' absolute inset-x-0 top-8 flex  h-24 flex-row items-center justify-between bg-[#ffcc00]  text-center font-medium'>
+        <div className=' absolute inset-x-0 top-10 mx-auto flex h-24 flex-row items-center justify-between  bg-[#ffcc00] px-8 text-center font-medium'>
           {/* {logo()} */}
           {home()}
           {learningSpace()}
@@ -183,7 +183,7 @@ const Layout: React.FC<LayoutProps> = ({
           {aboutUs()}
         </div>
 
-        <div className={container ? 'mx-auto  xl:container' : ''}>
+        <div className={container ? 'mx-auto  xl:container ' : ''}>
           {children}
         </div>
       </div>

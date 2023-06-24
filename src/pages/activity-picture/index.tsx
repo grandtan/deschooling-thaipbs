@@ -1,7 +1,17 @@
 import React from 'react';
 
+import Layout from '@/components/layout/Layout';
+
 const ActivityPicture = () => {
-  return <div className='text-[#ffff]'>ActivityPicture</div>;
+  return (
+    <Layout backgroundImage='/images/bgn.png'>
+      <div className=' h-screen  pt-40'>
+        <div className=' mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
+          ภาพกิจกรรม
+        </div>
+      </div>
+    </Layout>
+  );
 };
 
 export default ActivityPicture;

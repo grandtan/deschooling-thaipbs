@@ -167,12 +167,12 @@ const Layout: React.FC<LayoutProps> = ({
   return (
     <div className={fontWeb.className}>
       <div
-        className='relative h-full w-full bg-cover bg-center '
+        className='h-screen w-full bg-cover bg-center '
         style={{
           backgroundImage: `url(${checkImage})`,
         }}
       >
-        <div className=' absolute inset-x-0 top-10 mx-auto flex h-24 flex-row items-center justify-between  bg-[#ffcc00] px-8 text-center font-medium'>
+        <div className=' absolute inset-x-0 top-10 mx-auto flex h-24 flex-row items-center justify-between  bg-[#ffcc00] px-8 text-center '>
           {/* {logo()} */}
           {home()}
           {learningSpace()}
@@ -183,9 +183,7 @@ const Layout: React.FC<LayoutProps> = ({
           {aboutUs()}
         </div>
 
-        <div className={container ? 'mx-auto  xl:container ' : ''}>
-          {children}
-        </div>
+        <div className={container ? ' 2xl:container ' : ''}>{children}</div>
       </div>
     </div>
   );

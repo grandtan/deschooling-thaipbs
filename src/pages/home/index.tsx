@@ -24,7 +24,7 @@ const Home = () => {
         </div>
 
         <div className='each-slide-effect '>
-          <div className='  flex justify-center'>
+          <div className=' flex justify-center'>
             <Image
               src='/images/bg2.png'
               width={1920}

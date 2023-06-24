@@ -1,33 +1,42 @@
+import { Grid } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 
 import Layout from '@/components/layout/Layout';
 const Parent = () => {
-  //   const link = [
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //     'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
-  //   ];
+  const link = [
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+    'https://www.youtube.com/watch?v=NFnAuiklEug&list=RDKY-Dgpwthe8&index=8&ab_channel=THEBLACKLABEL',
+  ];
 
   return (
-    <Layout backgroundImage='/images/bg-parent.png'>
+    <Layout backgroundImage='/images/bgn.png'>
       <div className=' h-screen  pt-40'>
         <div className=' mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
           Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน
         </div>
-        {/* <Grid container spacing={4} className='mt-20'>
-          {link.map((e) => (
-            <Grid md={3} key={e}>
-              <div className=' h-52 rounded-lg bg-white'>
-                <iframe src={e} />
-              </div>
+        <div className=' my-10 flex flex-row'>
+          <div className='w-1/5'>picture</div>
+          <div className='w-4/5 pr-4'>
+            <Grid container spacing={2}>
+              {link.map((e) => (
+                <Grid item xs={12} md={6} lg={3} key={e}>
+                  <Link href={e} key={e}>
+                    <div className=' h-56  bg-slate-50 p-1 hover:bg-[#ffcc00]'>
+                      <div className=' h-full  bg-black text-white'>VDO</div>
+                    </div>
+                  </Link>
+                </Grid>
+              ))}
             </Grid>
-          ))}
-        </Grid> */}
+          </div>
+        </div>
       </div>
     </Layout>
   );

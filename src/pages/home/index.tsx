@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
 
@@ -6,8 +7,12 @@ import 'react-slideshow-image/dist/styles.css';
 
 import Layout from '@/components/layout/Layout';
 
+import BabyHome from '@/icon/BabyHome';
+import BabyHome2 from '@/icon/BabyHome2';
+import GirlHome from '@/icon/GirlHome';
+
 const Home = () => {
-  // const router = useRouter();
+  const router = useRouter();
   return (
     <Layout container={false}>
       <div className=' '>
@@ -24,7 +29,7 @@ const Home = () => {
           </div>
 
           <div
-            className='each-slide-effect px-60 '
+            className='each-slide-effect '
             style={{
               background: `url('/images/bg2.png')`,
               backgroundSize: 'cover',
@@ -34,8 +39,37 @@ const Home = () => {
               height: '100%',
             }}
           >
-            <div className=' flex  justify-between space-x-10  '>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
+            <div className=' relative mx-8 h-full w-full'>
+              <div className='absolute inset-x-0 bottom-0 grid grid-cols-6   gap-x-1 '>
+                <div className='absolute bottom-0 left-0 col-start-1  '>
+                  <BabyHome
+                    className='cursor-pointer'
+                    onClick={() => router.push('/')}
+                  />
+                </div>
+                <div className='absolute  bottom-0 col-start-2 cursor-pointer'>
+                  <BabyHome2
+                    className=''
+                    onClick={() => router.push('/student')}
+                  />
+                </div>
+                <div className='absolute  bottom-4 col-start-3 cursor-pointer'>
+                  <GirlHome
+                    className=''
+                    onClick={() => router.push('/student')}
+                  />
+                </div>
+              </div>
+            </div>
+            {/* <div className=' flex  items-end justify-between space-x-2'>
+              <BabyHome
+                className=' h-60 bg-slate-300'
+                onClick={() => router.push('/parent')}
+              />
+              <BabyHome2
+                className='  bg-slate-300'
+                onClick={() => router.push('/parent')}
+              />
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
@@ -43,7 +77,7 @@ const Home = () => {
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
               <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>d
-            </div>
+            </div> */}
           </div>
         </Slide>
       </div>

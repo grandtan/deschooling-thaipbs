@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const BabyHome = (props: SVGProps<SVGSVGElement>) => (
+const GirlHome = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -21,4 +21,4 @@ const BabyHome = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export default BabyHome;
+export default GirlHome;

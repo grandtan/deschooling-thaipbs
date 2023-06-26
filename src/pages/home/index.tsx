@@ -10,6 +10,8 @@ import Layout from '@/components/layout/Layout';
 import BabyHome from '@/icon/BabyHome';
 import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
+import ParentHome from '@/icon/ParentHome';
+import TeacherHome from '@/icon/TeacherHome';
 
 const Home = () => {
   const router = useRouter();
@@ -39,12 +41,12 @@ const Home = () => {
               height: '100%',
             }}
           >
-            <div className=' relative mx-8 h-full w-full'>
+            <div className=' relative h-full w-full'>
               <div className='absolute inset-x-0 bottom-0 grid grid-cols-6   gap-x-1 '>
                 <div className='absolute bottom-0 left-0 col-start-1  '>
                   <BabyHome
                     className='cursor-pointer'
-                    onClick={() => router.push('/')}
+                    onClick={() => router.push('/baby')}
                   />
                 </div>
                 <div className='absolute  bottom-0 col-start-2 cursor-pointer'>
@@ -56,9 +58,27 @@ const Home = () => {
                 <div className='absolute  bottom-4 col-start-3 cursor-pointer'>
                   <GirlHome
                     className=''
-                    onClick={() => router.push('/student')}
+                    onClick={() => router.push('/government')}
                   />
                 </div>
+                <div className='absolute  bottom-4 col-start-4 cursor-pointer'>
+                  <TeacherHome
+                    className=''
+                    onClick={() => router.push('/teacher-all')}
+                  />
+                </div>
+                <div className='absolute  bottom-0 col-start-5 cursor-pointer'>
+                  <ParentHome
+                    className=''
+                    onClick={() => router.push('/parent-all')}
+                  />
+                </div>
+                {/* <div className='absolute  bottom-0 right-4 col-start-6 cursor-pointer'>
+                  <OrganizeHome
+                    className=''
+                    onClick={() => router.push('/teacher-all')}
+                  />
+                </div> */}
               </div>
             </div>
             {/* <div className=' flex  items-end justify-between space-x-2'>

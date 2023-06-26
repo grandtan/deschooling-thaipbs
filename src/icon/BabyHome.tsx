@@ -4,8 +4,8 @@ const BabyHome = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    width={400}
-    height={300}
+    width={300}
+    height={400}
     viewBox='0 0 300 400'
     {...props}
   >

@@ -5,6 +5,7 @@ import * as React from 'react';
 
 const fontWeb = Kanit({
   weight: '400',
+
   subsets: ['latin'],
   display: 'swap',
 });

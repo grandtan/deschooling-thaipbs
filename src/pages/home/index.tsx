@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
@@ -10,6 +9,7 @@ import Layout from '@/components/layout/Layout';
 import BabyHome from '@/icon/BabyHome';
 import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
+import OrganizeHome from '@/icon/OrganizeHome';
 import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
 
@@ -19,17 +19,18 @@ const Home = () => {
     <Layout container={false}>
       <div className=' '>
         <Slide duration={20000}>
-          <div className='each-slide-effect '>
-            <div className='flex justify-center'>
-              <Link href='/thaipbs' className=' flex items-center '>
-                <div className='text-9xl  text-[#ffcc00]'>Deschooling</div>
-                <div className=' pl-10 pt-4 text-8xl italic text-white'>
-                  คืออะไร ?
-                </div>
-              </Link>
-            </div>
-          </div>
-
+          <div
+            className='each-slide-effect cursor-pointer'
+            onClick={() => router.push('/baby')}
+            style={{
+              background: `url('/images/bg-home1.png')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              width: '100%',
+              height: '100%',
+            }}
+          ></div>
           <div
             className='each-slide-effect '
             style={{
@@ -73,12 +74,12 @@ const Home = () => {
                     onClick={() => router.push('/parent-all')}
                   />
                 </div>
-                {/* <div className='absolute  bottom-0 right-4 col-start-6 cursor-pointer'>
+                <div className='absolute  bottom-0 right-0 col-start-6 cursor-pointer '>
                   <OrganizeHome
                     className=''
                     onClick={() => router.push('/teacher-all')}
                   />
-                </div> */}
+                </div>
               </div>
             </div>
             {/* <div className=' flex  items-end justify-between space-x-2'>

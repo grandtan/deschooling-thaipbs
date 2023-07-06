@@ -74,7 +74,7 @@ const Home = () => {
                     onClick={() => router.push('/parent-all')}
                   />
                 </div>
-                <div className='absolute bottom-0 left-2 col-start-6  cursor-pointer  '>
+                <div className='absolute bottom-0 left-10   col-start-6  cursor-pointer  '>
                   <OrganizeHome
                     className=''
                     onClick={() => router.push('/teacher-all')}

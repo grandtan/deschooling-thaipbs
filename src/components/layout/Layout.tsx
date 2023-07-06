@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const learningSpace = () => (
-    <div className='   w-1/6 '>
+    <div className='z-40 w-1/6 '>
       <button className=' peer py-8 text-4xl '>
         {/* <div className='flex justify-center'>
           {/* <BsBookHalf size={40} /> */}
@@ -63,7 +63,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const vdo = () => (
-    <div className=' w-1/6'>
+    <div className='z-40 w-1/6'>
       <button className=' peer  py-8  text-4xl  '>
         {/* <div className='mb-2 flex justify-center'>
           {/* <BiMoviePlay size={40} /> */}
@@ -80,7 +80,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const podCast = () => (
-    <div className=' w-1/6'>
+    <div className='z-40 w-1/6'>
       <button className=' peer py-8  text-4xl '>
         {/* <div className='mb-2 flex justify-center'>
           <BiPodcast size={40} />
@@ -96,7 +96,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const activity = () => (
-    <div className=' w-1/6 '>
+    <div className='z-40 w-1/6 '>
       <button className=' peer  py-8 text-4xl  '>
         {/* <div className='mb-2 flex justify-center'>
           <SlCalender size={40} />
@@ -126,7 +126,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const tv = () => (
-    <div className=' w-1/6'>
+    <div className='z-40 w-1/6'>
       <button className=' peer  py-8 text-4xl  '>
         {/* <div className='mb-2 flex justify-center'>
           <BsFilm size={40} />
@@ -147,7 +147,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const aboutUs = () => (
-    <div className=' w-1/6'>
+    <div className='z-40 w-1/6'>
       <button className=' peer py-8 text-4xl  '>
         {/* <div className='mb-2 flex justify-center'>
           <HiOutlineMail size={40} />
@@ -167,12 +167,12 @@ const Layout: React.FC<LayoutProps> = ({
   return (
     <div className={fontWeb.className}>
       <div
-        className='h-screen min-h-full   w-full min-w-[1236px] overflow-auto bg-cover bg-center'
+        className='relative h-screen  min-h-full w-full min-w-[1024px] overflow-auto bg-cover bg-center '
         style={{
           backgroundImage: `url(${checkImage})`,
         }}
       >
-        <div className=' flex  flex-row  items-center justify-between bg-[#ffcc00]  px-8 text-center '>
+        <div className='absolute inset-x-0 top-0 flex h-24 flex-row items-center justify-between bg-[#ffcc00] px-8 text-center'>
           {home()}
           {learningSpace()}
           {vdo()}

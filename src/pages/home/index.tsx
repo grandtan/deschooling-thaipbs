@@ -18,10 +18,10 @@ const Home = () => {
   return (
     <Layout container={false}>
       <div className=' '>
-        <Slide duration={20000}>
+        <Slide duration={200000}>
           <div
             className='each-slide-effect cursor-pointer'
-            onClick={() => router.push('/baby')}
+            onClick={() => router.push('/thaipbs')}
             style={{
               background: `url('/images/bg-home1.png')`,
               backgroundSize: 'cover',
@@ -34,7 +34,7 @@ const Home = () => {
           <div
             className='each-slide-effect '
             style={{
-              background: `url('/images/bg2.png')`,
+              background: `url('/images/bg-homewho.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -44,7 +44,7 @@ const Home = () => {
           >
             <div className=' relative h-full w-full'>
               <div className='absolute inset-x-0 bottom-0 grid grid-cols-6   gap-x-1 '>
-                <div className='absolute bottom-0 left-0 col-start-1  '>
+                <div className='absolute bottom-0 left-0 col-start-1 '>
                   <BabyHome
                     className='cursor-pointer'
                     onClick={() => router.push('/baby')}

@@ -5,7 +5,7 @@ const GirlHome = (props: SVGProps<SVGSVGElement>) => (
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     width={300}
-    height={370}
+    height={300}
     viewBox='0 0 300 400'
     {...props}
   >

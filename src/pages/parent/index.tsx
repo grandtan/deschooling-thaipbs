@@ -32,8 +32,8 @@ const Parent = () => {
             {link.map((e) => (
               <Grid item xs={12} md={6} lg={3} key={e}>
                 <Link href={e} key={e}>
-                  <div className='aspect-video  w-full rounded-t-lg rounded-bl-lg bg-white  hover:-translate-y-4   '>
-                    <div className=' h-64 rounded-t-lg rounded-bl-lg hover:bg-[#ffcc00] '>
+                  <div className='aspect-video  w-full rounded-t-lg rounded-bl-lg bg-white  hover:-translate-y-6 hover:duration-500 hover:ease-in'>
+                    <div className=' h-64 rounded-t-lg rounded-bl-lg  hover:bg-[#ffcc00] '>
                       VDO
                     </div>
                   </div>

@@ -46,37 +46,37 @@ const Home = () => {
               <div className='absolute inset-x-0 bottom-0 grid grid-cols-7 gap-x-1 '>
                 <div className='absolute bottom-0 left-0 col-start-1 '>
                   <BabyHome
-                    className='cursor-pointer'
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/baby')}
                   />
                 </div>
-                <div className='absolute  bottom-0 col-start-2 cursor-pointer'>
+                <div className='absolute  bottom-0 col-start-2 '>
                   <BabyHome2
-                    className=''
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/student')}
                   />
                 </div>
-                <div className='absolute  bottom-4 col-start-3 cursor-pointer '>
+                <div className='absolute  bottom-4 col-start-3 '>
                   <GirlHome
-                    className=''
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/government')}
                   />
                 </div>
-                <div className='absolute  bottom-4 col-start-4 cursor-pointer'>
+                <div className='absolute  bottom-4 col-start-4'>
                   <TeacherHome
-                    className=''
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/teacher-all')}
                   />
                 </div>
-                <div className='absolute bottom-0  col-start-5 cursor-pointer '>
+                <div className='absolute bottom-0 col-start-5 pl-10'>
                   <ParentHome
-                    className=''
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/parent-all')}
                   />
                 </div>
-                <div className='absolute bottom-0 left-10   col-start-6  cursor-pointer  '>
+                <div className='absolute bottom-0 left-10  col-start-6 '>
                   <OrganizeHome
-                    className=''
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/teacher-all')}
                   />
                 </div>

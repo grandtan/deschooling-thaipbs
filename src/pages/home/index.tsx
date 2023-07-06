@@ -62,7 +62,7 @@ const Home = () => {
                     onClick={() => router.push('/government')}
                   />
                 </div>
-                <div className='absolute  bottom-4 col-start-4'>
+                <div className='absolute bottom-2 col-start-4 '>
                   <TeacherHome
                     className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
                     onClick={() => router.push('/teacher-all')}

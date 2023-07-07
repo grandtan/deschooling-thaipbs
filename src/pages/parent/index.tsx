@@ -24,7 +24,7 @@ const Parent = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       > */}
-        <div className=' mt-36 flex justify-center text-3xl font-semibold text-[#ffcc00]'>
+        <div className=' flex justify-center text-3xl font-semibold text-[#ffcc00]'>
           Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน
         </div>
         <div className=' mx-20 mt-10 flex flex-row justify-center'>

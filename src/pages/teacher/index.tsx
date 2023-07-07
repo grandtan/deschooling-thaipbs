@@ -18,7 +18,7 @@ const Teacher = () => {
   // const backgroundImage = '/images/bgn.png';
 
   return (
-    <Layout backgroundImage='/images/bgn.png'>
+    <Layout>
       <div className=' '>
         {/* <div
         className=' pt-40'
@@ -26,7 +26,7 @@ const Teacher = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       > */}
-        <div className=' mt-36 flex justify-center text-3xl font-semibold text-[#ffcc00]'>
+        <div className='flex justify-center text-3xl font-semibold text-[#ffcc00]'>
           Learning Space แบ่งปันนวัตกรรมการสอน
         </div>
         <div className=' mx-20 mt-10 flex flex-row justify-center'>

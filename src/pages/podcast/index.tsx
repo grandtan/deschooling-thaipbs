@@ -24,7 +24,7 @@ const Podcast = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       > */}
-        <div className=' mt-36 flex justify-center text-3xl font-semibold text-[#ffcc00]'>
+        <div className=' flex justify-center text-3xl font-semibold text-[#ffcc00]'>
           Podcast ฟัง พูด อ่าน กิน
         </div>
         <div className=' mx-20 mt-10 flex flex-row justify-center'>

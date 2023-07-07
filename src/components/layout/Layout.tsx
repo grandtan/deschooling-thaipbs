@@ -170,8 +170,8 @@ const Layout: React.FC<LayoutProps> = ({
   const checkImage = backgroundImage ? backgroundImage : '/images/bgn.png';
   return (
     <div className='relative h-screen w-full '>
-      <div className=' flex flex-row bg-amber-100'>
-        <div className=' ml-12  w-1/6 justify-center  '>
+      <div className=' flex flex-row bg-[#ffcc00]'>
+        <div className=' ml-12 w-1/6 justify-center  '>
           <Image
             src='/images/logoweb.png'
             alt='Picture of the author'
@@ -201,7 +201,7 @@ const Layout: React.FC<LayoutProps> = ({
           <MenuIcon />
         </IconButton>
       </div>
-      <div className='h-full bg-white'>{children}</div>
+      <div className='h-full bg-black'>{children}</div>
     </div>
   );
 };

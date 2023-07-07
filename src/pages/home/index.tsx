@@ -82,23 +82,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div className=' flex  items-end justify-between space-x-2'>
-              <BabyHome
-                className=' h-60 bg-slate-300'
-                onClick={() => router.push('/parent')}
-              />
-              <BabyHome2
-                className='  bg-slate-300'
-                onClick={() => router.push('/parent')}
-              />
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>
-              <div className=' h-16 w-[40px] bg-red-800'>aaaa</div>d
-            </div> */}
           </div>
         </Slide>
       </div>

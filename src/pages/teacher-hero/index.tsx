@@ -24,7 +24,7 @@ const TeacherHero = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       > */}
-        <div className=' mt-36 flex justify-center text-3xl font-semibold text-[#ffcc00]'>
+        <div className='flex justify-center text-3xl font-semibold text-[#ffcc00]'>
           Teacher Hero
         </div>
         <div className=' mx-20 mt-10 flex flex-row justify-center'>

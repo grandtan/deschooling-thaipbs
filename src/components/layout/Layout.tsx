@@ -152,7 +152,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   const aboutUs = () => (
     <div className='hidden w-full md:w-auto xl:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+      <button className='peer py-8 text-base text-black lg:text-2xl'>
         ติดต่อเรา
       </button>
 
@@ -169,39 +169,37 @@ const Layout: React.FC<LayoutProps> = ({
 
   const checkImage = backgroundImage ? backgroundImage : '/images/bgn.png';
   return (
-    <div className='h-screen w-full'>
-      <div className='h-24 bg-amber-100'>
-        <Toolbar>
-          <div className='w-1/6'>
-            <Image
-              src='/images/logoweb.png'
-              alt='Picture of the author'
-              width={500}
-              height={500}
-            />
-          </div>
+    <div className='relative h-screen w-full '>
+      <div className=' flex flex-row bg-amber-100'>
+        <div className=' ml-12  w-1/6 justify-center  '>
+          <Image
+            src='/images/logoweb.png'
+            alt='Picture of the author'
+            width={500}
+            height={500}
+          />
+        </div>
 
-          <div className='flex w-full flex-row items-center space-x-8 md:justify-center xl:space-x-16'>
-            {home()}
-            {learningSpace()}
-            {vdo()}
-            {podCast()}
-            {activity()}
-            {tv()}
-            {aboutUs()}
-          </div>
+        <div className='z-40 flex w-full flex-row items-center space-x-8 md:justify-center xl:space-x-14'>
+          {home()}
+          {learningSpace()}
+          {vdo()}
+          {podCast()}
+          {activity()}
+          {tv()}
+          {aboutUs()}
+        </div>
 
-          <IconButton
-            className='xl:hidden '
-            size='large'
-            edge='start'
-            color='default'
-            aria-label='menu'
-            sx={{ mx: 1 }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
+        <IconButton
+          className='xl:hidden '
+          size='large'
+          edge='start'
+          color='default'
+          aria-label='menu'
+          sx={{ mx: 1 }}
+        >
+          <MenuIcon />
+        </IconButton>
       </div>
       <div className='h-full bg-white'>{children}</div>
     </div>

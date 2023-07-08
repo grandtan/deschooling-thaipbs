@@ -151,8 +151,8 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const aboutUs = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
-      <button className='peer py-8 text-base text-black lg:text-2xl'>
+    <div className='hidden w-full md:w-auto xl:block '>
+      <button className='peer  py-8 text-base text-black lg:text-2xl'>
         ติดต่อเรา
       </button>
 
@@ -167,11 +167,10 @@ const Layout: React.FC<LayoutProps> = ({
     </div>
   );
 
-  const checkImage = backgroundImage ? backgroundImage : '/images/bgn.png';
   return (
     <div className='relative h-screen w-full '>
-      <div className=' flex flex-row bg-[#ffcc00]'>
-        <div className=' ml-12 w-1/6 justify-center  '>
+      <div className=' flex flex-row bg-[#ffcc00] '>
+        <div className=' ml-12 w-1/6 justify-center '>
           <Image
             src='/images/logoweb.png'
             alt='Picture of the author'
@@ -191,7 +190,7 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
 
         <IconButton
-          className='xl:hidden '
+          className='lg:hidden'
           size='large'
           edge='start'
           color='default'
@@ -201,7 +200,7 @@ const Layout: React.FC<LayoutProps> = ({
           <MenuIcon />
         </IconButton>
       </div>
-      <div className='h-full bg-black'>{children}</div>
+      <div className='h-full bg-black '>{children}</div>
     </div>
   );
 };

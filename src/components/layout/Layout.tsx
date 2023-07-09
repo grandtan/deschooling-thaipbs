@@ -8,16 +8,24 @@ import {
   AppBar,
   Box,
   Button,
+  Drawer,
   IconButton,
+  MenuItem,
   Toolbar,
   Typography,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Grid from '@mui/material/Unstable_Grid2';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
+import TreeView from '@mui/lab/TreeView';
+import TreeItem from '@mui/lab/TreeItem';
+import { auto } from '@popperjs/core';
 
 const fontWeb = Kanit({
-  weight: '500',
-  subsets: ['latin'],
+  weight: '400',
+  subsets: ['thai'],
   display: 'swap',
 });
 
@@ -32,16 +40,18 @@ const Layout: React.FC<LayoutProps> = ({
   backgroundImage,
   container = true,
 }) => {
+  const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
+
   const home = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
-      <Link className=' text-base text-black lg:text-2xl  ' href='/home'>
+    <div className='hidden w-full md:w-auto lg:block'>
+      <Link className=' text-base text-black lg:text-2xl' href='/home'>
         หน้าแรก
       </Link>
     </div>
   );
 
   const learningSpace = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
+    <div className='hidden w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         พื้นที่เรียนรู้
       </button>
@@ -64,7 +74,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const vdo = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
+    <div className='hidden w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         วิดีโอ
       </button>
@@ -81,7 +91,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const podCast = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
+    <div className='hidden w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         Podcast
       </button>
@@ -98,7 +108,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const activity = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
+    <div className='hidden w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         กิจกรรม
       </button>
@@ -127,7 +137,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const tv = () => (
-    <div className='hidden w-full md:w-auto xl:block'>
+    <div className='hidden w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         รายการทีวี
       </button>
@@ -151,8 +161,8 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const aboutUs = () => (
-    <div className='hidden w-full md:w-auto xl:block '>
-      <button className='peer  py-8 text-base text-black lg:text-2xl'>
+    <div className='hidden w-full md:w-auto lg:block'>
+      <button className='peer py-8 text-base text-black lg:text-2xl'>
         ติดต่อเรา
       </button>
 
@@ -168,39 +178,101 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   return (
-    <div className='relative h-screen w-full '>
-      <div className=' flex flex-row bg-[#ffcc00] '>
-        <div className=' ml-12 w-1/6 justify-center '>
-          <Image
-            src='/images/logoweb.png'
-            alt='Picture of the author'
-            width={500}
-            height={500}
-          />
+    <div className={fontWeb.className}>
+      <div className='relative h-screen w-full '>
+        <div className=' flex flex-row bg-[#ffcc00] '>
+          <div className='flex items-center pl-6 xl:pl-10'>
+            <Image
+              src='/images/logoweb.png'
+              alt='Picture of the author'
+              width={200}
+              height={200}
+            />
+          </div>
+
+          <div className='z-40 flex w-full flex-row items-center space-x-10 transition-all duration-500 ease-in md:justify-center xl:space-x-14 '>
+            {home()}
+            {learningSpace()}
+            {vdo()}
+            {podCast()}
+            {activity()}
+            {tv()}
+            {aboutUs()}
+          </div>
+
+          <IconButton
+            className='mx-2 block cursor-pointer lg:hidden'
+            size='large'
+            edge='start'
+            color='default'
+            aria-label='menu'
+            sx={{ mx: 1 }}
+            onClick={() => setIsOpenDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
         </div>
 
-        <div className='z-40 flex w-full flex-row items-center space-x-8 md:justify-center xl:space-x-14'>
-          {home()}
-          {learningSpace()}
-          {vdo()}
-          {podCast()}
-          {activity()}
-          {tv()}
-          {aboutUs()}
-        </div>
-
-        <IconButton
-          className='lg:hidden'
-          size='large'
-          edge='start'
-          color='default'
-          aria-label='menu'
-          sx={{ mx: 1 }}
+        <Drawer
+          className={fontWeb.className}
+          anchor='right'
+          open={isOpenDrawer}
+          onClose={() => setIsOpenDrawer(false)}
         >
-          <MenuIcon />
-        </IconButton>
+          <div className='flex w-80 flex-col divide-y-2 divide-yellow-300  rounded   border-y-2 border-yellow-300 bg-white  lg:w-96'>
+            <div className='px-4 py-4'>
+              <Link className=' text-xl text-black lg:text-2xl' href='/home'>
+                หน้าแรก
+              </Link>
+            </div>
+
+            <div className='px-4 py-4'>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem nodeId='1' label='พื้นที่เรียนรู้'>
+                  <TreeItem
+                    nodeId='2'
+                    label='ครูและผู้อำนวยการ'
+                    className='my-2 '
+                  />
+                  <TreeItem
+                    nodeId='2'
+                    label=' พ่อแม่และผู้ปกครอง'
+                    className='my-2'
+                  />
+                </TreeItem>
+              </TreeView>
+            </div>
+
+            <div className='px-4 py-4'>
+              <div className='peer text-xl text-black lg:text-2xl'>วิดีโอ</div>
+            </div>
+            <div className='px-4 py-4'>
+              <div className='peer text-xl text-black lg:text-2xl'>Podcast</div>
+            </div>
+            <div className='px-4 py-4'>
+              <div className='peer text-xl text-black lg:text-2xl'>กิจกรรม</div>
+            </div>
+            <div className='px-4 py-4'>
+              <div className='peer text-xl text-black lg:text-2xl'>
+                รายการทีวี
+              </div>
+            </div>
+            <div className='px-4 py-4'>
+              <div className='peer text-xl text-black lg:text-2xl'>AboutUs</div>
+            </div>
+          </div>
+        </Drawer>
+        <div className='h-full bg-black '>{children}</div>
       </div>
-      <div className='h-full bg-black '>{children}</div>
     </div>
   );
 };

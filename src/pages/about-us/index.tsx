@@ -9,12 +9,12 @@ import Layout from '@/components/layout/Layout';
 const AboutUs = () => {
   return (
     <Layout backgroundImage='/images/bgn.png'>
-      <div className=' h-screen  pt-40'>
-        <div className='mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
+      <div className=''>
+        <div className='flex justify-center text-4xl font-semibold text-[#ffcc00]'>
           ติดต่อเรา
         </div>
 
-        <div className=' mt-10 grid grid-cols-5'>
+        <div className=' grid grid-cols-5'>
           <div className='col-start-2 justify-self-end pr-10'>
             <AiOutlineMail size={50} className=' text-white' />
           </div>

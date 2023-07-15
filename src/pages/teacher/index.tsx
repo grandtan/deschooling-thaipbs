@@ -48,7 +48,7 @@ const Teacher = () => {
                     passHref
                     target='_blank'
                   >
-                    <div className='aspect-video w-full  rounded-t-xl  rounded-bl-xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:bg-[#ffcc00]  hover:text-white hover:ease-in'>
+                    <div className='aspect-video w-full  rounded-t-xl  rounded-bl-xl bg-white p-1.5  duration-500 hover:-translate-y-6  hover:bg-[#ffcc00] hover:text-white hover:ease-in'>
                       <div>
                         <img
                           className='rounded-t-xl rounded-bl-xl'
@@ -58,7 +58,7 @@ const Teacher = () => {
                           alt={e.snippet.title}
                         />
                       </div>
-                      <div className='h-28 p-4 text-left '>
+                      <div className='h-24 p-4 text-left '>
                         {e.snippet.title}
                       </div>
                     </div>

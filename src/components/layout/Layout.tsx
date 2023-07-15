@@ -53,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   const learningSpace = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden  w-full md:w-auto lg:block'>
       <button className='peer py-8  text-base text-black lg:text-2xl'>
         พื้นที่เรียนรู้
       </button>
@@ -403,7 +403,7 @@ const Layout: React.FC<LayoutProps> = ({
             </div>
           </div>
         </Drawer>
-        <div className=' bg-slate-500'>{children}</div>
+        <div className=' bg-slate-700'>{children}</div>
       </div>
     </div>
   );

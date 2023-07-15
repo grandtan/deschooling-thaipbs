@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 
 const ActivityPicture = () => {
   return (
-    <Layout backgroundImage='/images/bgn.png'>
+    <Layout>
       <div className=''>
         <div className=' mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
           ภาพกิจกรรม

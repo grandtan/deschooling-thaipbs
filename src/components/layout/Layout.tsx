@@ -22,6 +22,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TreeView from '@mui/lab/TreeView';
 import TreeItem from '@mui/lab/TreeItem';
 import { auto } from '@popperjs/core';
+import { useRouter } from 'next/router';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -40,6 +41,7 @@ const Layout: React.FC<LayoutProps> = ({
   backgroundImage,
   container = true,
 }) => {
+  const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
 
   const home = () => (
@@ -182,12 +184,12 @@ const Layout: React.FC<LayoutProps> = ({
       <div className='relative h-screen w-full '>
         <div className=' flex flex-row bg-[#ffcc00] '>
           <div className='flex items-center pl-6 xl:pl-10'>
-            <Image
+            {/* <Image
               src='/images/logoweb.png'
               alt='Picture of the author'
               width={200}
               height={200}
-            />
+            /> */}
           </div>
 
           <div className='z-40 flex w-full flex-row items-center space-x-10 transition-all duration-500 ease-in md:justify-center xl:space-x-14 '>
@@ -219,11 +221,64 @@ const Layout: React.FC<LayoutProps> = ({
           open={isOpenDrawer}
           onClose={() => setIsOpenDrawer(false)}
         >
-          <div className='flex w-80 flex-col divide-y-2 divide-yellow-300  rounded   border-y-2 border-yellow-300 bg-white  lg:w-96'>
-            <div className='px-4 py-4'>
-              <Link className=' text-xl text-black lg:text-2xl' href='/home'>
+          <div className='flex w-80 flex-col divide-y divide-yellow-300  rounded   border-y border-yellow-300 bg-white  lg:w-96'>
+            <div className='ml-8 px-4 py-4'>
+              <Link className=' text-lg text-black ' href='/home'>
                 หน้าแรก
               </Link>
+            </div>
+            <div className='px-4 py-4'>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '>พื้นที่เรียนรู้</div>}
+                >
+                  <TreeItem
+                    onClick={() => router.push('/teacher')}
+                    nodeId='ครูและผู้อำนวยการ'
+                    label='ครูและผู้อำนวยการ'
+                    className='my-2 '
+                  />
+                  <TreeItem
+                    nodeId='พ่อแม่และผู้ปกครอง'
+                    label='พ่อแม่และผู้ปกครอง'
+                    className='mt-2 '
+                  />
+                </TreeItem>
+              </TreeView>
+            </div>
+            <div className='px-4 py-4'>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '>วิดีโอ</div>}
+                >
+                  <TreeItem
+                    onClick={() => router.push('/vdo')}
+                    nodeId='VDO How to'
+                    label='VDO How to'
+                    className='mt-2 '
+                  />
+                </TreeItem>
+              </TreeView>
             </div>
 
             <div className='px-4 py-4'>
@@ -237,41 +292,118 @@ const Layout: React.FC<LayoutProps> = ({
                   overflowY: 'auto',
                 }}
               >
-                <TreeItem nodeId='1' label='พื้นที่เรียนรู้'>
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '>Podcast</div>}
+                >
                   <TreeItem
-                    nodeId='2'
-                    label='ครูและผู้อำนวยการ'
-                    className='my-2 '
-                  />
-                  <TreeItem
-                    nodeId='2'
-                    label=' พ่อแม่และผู้ปกครอง'
-                    className='my-2'
+                    onClick={() => router.push('/podcast')}
+                    nodeId='VDO How to'
+                    label='ฟัง พูด อ่าน กิน'
+                    className='mt-2 '
                   />
                 </TreeItem>
               </TreeView>
             </div>
 
             <div className='px-4 py-4'>
-              <div className='peer text-xl text-black lg:text-2xl'>วิดีโอ</div>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '>กิจกรรม</div>}
+                >
+                  <TreeItem
+                    onClick={() => router.push('/calendar')}
+                    nodeId='calendar'
+                    label='ปฏิทินกิจกรรม'
+                    className='my-2 '
+                  />
+
+                  <TreeItem
+                    onClick={() => router.push('/activity-register')}
+                    nodeId='activity-register'
+                    label=' สนใจเข้าร่วม'
+                    className='my-2 '
+                  />
+
+                  <TreeItem
+                    onClick={() => router.push('/activity-picture')}
+                    nodeId='activity-picture'
+                    label=' ภาพกิจกรรม'
+                    className='mt-2 '
+                  />
+                </TreeItem>
+              </TreeView>
             </div>
+
             <div className='px-4 py-4'>
-              <div className='peer text-xl text-black lg:text-2xl'>Podcast</div>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '>รายการทีวี</div>}
+                >
+                  <TreeItem
+                    onClick={() => router.push('/deschooling')}
+                    nodeId='deschooling'
+                    label='Deschooling'
+                    className='my-2 '
+                  />
+
+                  <TreeItem
+                    onClick={() => router.push('/teacher-hero')}
+                    nodeId='teacher-hero'
+                    label=' Teacher Hero'
+                    className='mt-2 '
+                  />
+                </TreeItem>
+              </TreeView>
             </div>
+
             <div className='px-4 py-4'>
-              <div className='peer text-xl text-black lg:text-2xl'>กิจกรรม</div>
-            </div>
-            <div className='px-4 py-4'>
-              <div className='peer text-xl text-black lg:text-2xl'>
-                รายการทีวี
-              </div>
-            </div>
-            <div className='px-4 py-4'>
-              <div className='peer text-xl text-black lg:text-2xl'>AboutUs</div>
+              <TreeView
+                aria-label='file system navigator'
+                defaultCollapseIcon={<ExpandMoreIcon />}
+                defaultExpandIcon={<ChevronRightIcon />}
+                sx={{
+                  height: auto,
+                  flexGrow: 1,
+                  overflowY: 'auto',
+                }}
+              >
+                <TreeItem
+                  nodeId='1'
+                  label={<div className=' text-lg '> ติดต่อเรา</div>}
+                >
+                  <TreeItem
+                    onClick={() => router.push('/about-us')}
+                    nodeId='about-us'
+                    label='AboutUs'
+                    className='mt-2 '
+                  />
+                </TreeItem>
+              </TreeView>
             </div>
           </div>
         </Drawer>
-        <div className='h-full bg-black '>{children}</div>
+        <div className=' bg-slate-500'>{children}</div>
       </div>
     </div>
   );

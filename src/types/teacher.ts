@@ -1,4 +1,5 @@
 export interface YoutubeResponse {
+  nextPageToken(nextPageToken: any): unknown;
   kind: string;
   etag: string;
   items: Item[];

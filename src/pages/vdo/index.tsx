@@ -34,7 +34,7 @@ const VDO = () => {
   return (
     <Layout>
       <div className='mx-20 py-10'>
-        <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffcc00]'>
+        <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffba00]'>
           <PiPencilLine size={30} />
           <div>VDO How to ดูง่าย พอดีคำ สำหรับครู</div>
         </div>

@@ -34,7 +34,7 @@ const Teacher = () => {
   return (
     <Layout>
       <div className='mx-20 py-10'>
-        <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffcc00]'>
+        <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffba00]'>
           <PiPencilLine size={30} />
           <div>Learning Space แบ่งปันนวัตกรรมการสอน</div>
         </div>
@@ -48,7 +48,7 @@ const Teacher = () => {
                     passHref
                     target='_blank'
                   >
-                    <div className='aspect-video w-full  rounded-t-xl  rounded-bl-xl bg-white p-1.5  duration-500 hover:-translate-y-6  hover:bg-[#ffcc00] hover:text-white hover:ease-in'>
+                    <div className='aspect-video w-full  rounded-t-xl  rounded-bl-xl bg-white p-1.5  duration-500 hover:-translate-y-6   hover:text-[#ffba00] hover:ease-in'>
                       <div>
                         <img
                           className='rounded-t-xl rounded-bl-xl'

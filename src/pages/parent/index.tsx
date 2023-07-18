@@ -22,6 +22,7 @@ const Parent = () => {
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     fetchYoutube();
   }, [maxResults]);
@@ -48,7 +49,15 @@ const Parent = () => {
     setMaxResults((e) => e + RESULTS_PER_PAGE);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   console.log(totalItems, maxResults);
+
   return (
     <Layout>
       <div className='mx-20 py-10'>
@@ -102,14 +111,17 @@ const Parent = () => {
         <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
           {totalItems > maxResults && (
             <button onClick={handleViewMore}>
-              ถัดไป
+              VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
             </button>
           )}
         </div>
 
         <div className=' flex justify-end '>
-          <button className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00] '>
+          <button
+            className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
+            onClick={scrollToTop}
+          >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
         </div>

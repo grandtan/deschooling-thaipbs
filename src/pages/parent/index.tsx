@@ -2,7 +2,6 @@ import { Grid, CircularProgress } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { PiPencilLine } from 'react-icons/pi';
-import { GrFormNext } from 'react-icons/gr';
 import Layout from '@/components/layout/Layout';
 import { YoutubeResponse } from '@/types/teacher';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
@@ -22,6 +21,7 @@ const Parent = () => {
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     fetchYoutube();
   }, [maxResults]);

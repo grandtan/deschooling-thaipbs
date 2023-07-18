@@ -181,7 +181,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <div className={fontWeb.className}>
-      <div className='relative h-screen w-full '>
+      <div className='relative h-full w-full '>
         <div className=' flex flex-row  border-2 border-[#ffcc00]'>
           <div className=' w-1/4  '>
             {/* <Image
@@ -191,7 +191,7 @@ const Layout: React.FC<LayoutProps> = ({
               height={200}
             /> */}
           </div>
-          <div className='z-40 flex w-full flex-row items-center space-x-8 rounded-bl-[50px] bg-[#ffcc00] transition-all  duration-500 ease-in md:justify-center xl:space-x-10 '>
+          <div className='z-40 flex w-full flex-row items-center space-x-8 rounded-bl-[50px] bg-[#ffcc00] transition-all  duration-500 ease-in md:justify-center lg:space-x-10 '>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -402,7 +402,7 @@ const Layout: React.FC<LayoutProps> = ({
             </div>
           </div>
         </Drawer>
-        <div className='h-screen '>{children}</div>
+        <div className=' bg-slate-400'>{children}</div>
       </div>
     </div>
   );

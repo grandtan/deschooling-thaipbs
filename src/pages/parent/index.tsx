@@ -22,7 +22,6 @@ const Parent = () => {
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     fetchYoutube();
   }, [maxResults]);
@@ -109,12 +108,15 @@ const Parent = () => {
         </div>
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {totalItems > maxResults && (
-            <button onClick={handleViewMore}>
-              VDO เพิ่มเติม
-              <ArrowForwardIosIcon className='pl-1' />
-            </button>
-          )}
+          {totalItems > maxResults &&
+            (isLoading ? (
+              <CircularProgress color='inherit' />
+            ) : (
+              <button onClick={handleViewMore}>
+                VDO เพิ่มเติม
+                <ArrowForwardIosIcon className='pl-1' />
+              </button>
+            ))}
         </div>
 
         <div className=' flex justify-end '>

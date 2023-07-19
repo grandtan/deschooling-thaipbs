@@ -23,6 +23,7 @@ import TreeView from '@mui/lab/TreeView';
 import TreeItem from '@mui/lab/TreeItem';
 import { auto } from '@popperjs/core';
 import { useRouter } from 'next/router';
+import { LogoWebNew } from '@/icon/LogoWebNew';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -183,15 +184,11 @@ const Layout: React.FC<LayoutProps> = ({
     <div className={fontWeb.className}>
       <div className='relative h-full w-full '>
         <div className=' flex flex-row  border-2 border-[#ffcc00]'>
-          <div className=' w-1/4  '>
-            {/* <Image
-              src='/images/logoweb.png'
-              alt='Picture of the author'
-              width={200}
-              height={200}
-            /> */}
+          <div className=' flex w-1/4 justify-center '>
+            <LogoWebNew width={200} />
           </div>
-          <div className='z-40 flex w-full flex-row items-center space-x-8 rounded-bl-[50px] bg-[#ffcc00] transition-all  duration-500 ease-in md:justify-center lg:space-x-10 '>
+
+          <div className='z-40 flex w-3/4 flex-row items-center space-x-8 rounded-bl-[50px] bg-[#ffcc00]  transition-all duration-500 ease-in md:justify-center  xl:space-x-8'>
             {home()}
             {learningSpace()}
             {vdo()}

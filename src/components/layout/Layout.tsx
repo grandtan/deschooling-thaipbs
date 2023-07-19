@@ -29,7 +29,6 @@ interface LayoutProps {
   children?: React.ReactNode;
   backgroundImage?: string;
   container?: boolean;
-  index: number;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {

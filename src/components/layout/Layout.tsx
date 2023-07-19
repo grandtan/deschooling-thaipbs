@@ -1,36 +1,23 @@
-// components/Layout.tsx
-import { Content, Kanit } from 'next/font/google';
-import Link from 'next/link';
-import * as React from 'react';
-import Script from 'next/script';
-import Image from 'next/image';
-import {
-  AppBar,
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  MenuItem,
-  Toolbar,
-  Typography,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import Grid from '@mui/material/Unstable_Grid2';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-
-import TreeView from '@mui/lab/TreeView';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MenuIcon from '@mui/icons-material/Menu';
 import TreeItem from '@mui/lab/TreeItem';
+import TreeView from '@mui/lab/TreeView';
+import { Drawer, IconButton } from '@mui/material';
 import { auto } from '@popperjs/core';
+import { Kanit } from 'next/font/google';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { LogoWebNew } from '@/icon/LogoWebNew';
-import { TbHomeHeart } from 'react-icons/tb';
-import { MdComputer } from 'react-icons/md';
-import { SiYoutubemusic } from 'react-icons/si';
-import { FaPodcast } from 'react-icons/fa';
+import * as React from 'react';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
+import { FaPodcast } from 'react-icons/fa';
+import { MdComputer } from 'react-icons/md';
 import { PiTelevisionFill } from 'react-icons/pi';
 import { RiMailUnreadFill } from 'react-icons/ri';
+import { SiYoutubemusic } from 'react-icons/si';
+import { TbHomeHeart } from 'react-icons/tb';
+
+import { LogoWebNew } from '@/icon/LogoWebNew';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -42,20 +29,17 @@ interface LayoutProps {
   children?: React.ReactNode;
   backgroundImage?: string;
   container?: boolean;
+  index: number;
 }
 
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  backgroundImage,
-  container = true,
-}) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
 
   const home = () => (
     <div className='hidden w-full md:w-auto lg:block'>
       <Link
-        className='flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'
+        className='flex flex-col items-center  p-3   text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'
         href='/home'
       >
         <div className='mb-1 flex flex-col  items-center'>
@@ -74,7 +58,6 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
         พื้นที่เรียนรู้
       </button>
-
       <div className='fixed hidden w-[210px] flex-col divide-y  rounded  bg-white   text-start  text-xl drop-shadow-lg hover:flex peer-hover:flex '>
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
@@ -219,7 +202,7 @@ const Layout: React.FC<LayoutProps> = ({
             <LogoWebNew width={200} />
           </div>
 
-          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center xl:space-x-4'>
+          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center xl:space-x-3'>
             {home()}
             {learningSpace()}
             {vdo()}

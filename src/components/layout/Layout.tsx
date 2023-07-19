@@ -24,6 +24,13 @@ import TreeItem from '@mui/lab/TreeItem';
 import { auto } from '@popperjs/core';
 import { useRouter } from 'next/router';
 import { LogoWebNew } from '@/icon/LogoWebNew';
+import { TbHomeHeart } from 'react-icons/tb';
+import { MdComputer } from 'react-icons/md';
+import { SiYoutubemusic } from 'react-icons/si';
+import { FaPodcast } from 'react-icons/fa';
+import { BsFillCalendarHeartFill } from 'react-icons/bs';
+import { PiTelevisionFill } from 'react-icons/pi';
+import { RiMailUnreadFill } from 'react-icons/ri';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -47,19 +54,28 @@ const Layout: React.FC<LayoutProps> = ({
 
   const home = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <Link className=' text-base text-black  lg:text-2xl' href='/home'>
+      <Link
+        className='flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'
+        href='/home'
+      >
+        <div className='mb-1 flex flex-col  items-center'>
+          <TbHomeHeart size={35} />
+        </div>
         หน้าแรก
       </Link>
     </div>
   );
 
   const learningSpace = () => (
-    <div className='hidden  w-full md:w-auto lg:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+    <div className='hidden w-full md:w-auto lg:block '>
+      <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'>
+        <div className='mb-1 flex flex-col  items-center'>
+          <MdComputer size={35} />
+        </div>
         พื้นที่เรียนรู้
       </button>
 
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
+      <div className='fixed hidden w-[210px] flex-col divide-y  rounded  bg-white   text-start  text-xl drop-shadow-lg hover:flex peer-hover:flex '>
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
           href='/teacher'
@@ -78,7 +94,10 @@ const Layout: React.FC<LayoutProps> = ({
 
   const vdo = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+      <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
+        <div className='mb-1 flex  flex-col items-center'>
+          <SiYoutubemusic size={35} />
+        </div>
         วิดีโอ
       </button>
 
@@ -95,7 +114,10 @@ const Layout: React.FC<LayoutProps> = ({
 
   const podCast = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
+        <div className='mb-1 flex  flex-col items-center'>
+          <FaPodcast size={35} />
+        </div>
         Podcast
       </button>
 
@@ -112,7 +134,10 @@ const Layout: React.FC<LayoutProps> = ({
 
   const activity = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
+        <div className='mb-1 flex  flex-col items-center'>
+          <BsFillCalendarHeartFill size={35} />
+        </div>
         กิจกรรม
       </button>
 
@@ -141,7 +166,10 @@ const Layout: React.FC<LayoutProps> = ({
 
   const tv = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <button className='peer py-8  text-base text-black lg:text-2xl'>
+      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
+        <div className='mb-1 flex  flex-col items-center'>
+          <PiTelevisionFill size={35} />
+        </div>
         รายการทีวี
       </button>
 
@@ -165,11 +193,14 @@ const Layout: React.FC<LayoutProps> = ({
 
   const aboutUs = () => (
     <div className='hidden w-full md:w-auto lg:block'>
-      <button className='peer py-8 text-base text-black lg:text-2xl'>
+      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'>
+        <div className='mb-1 flex  flex-col items-center'>
+          <RiMailUnreadFill size={35} />
+        </div>
         ติดต่อเรา
       </button>
 
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
+      <div className='fixed  hidden w-[210px] flex-col divide-y  rounded  bg-white  text-start text-xl  drop-shadow-lg hover:flex peer-hover:flex'>
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
           href='/about-us'
@@ -183,12 +214,12 @@ const Layout: React.FC<LayoutProps> = ({
   return (
     <div className={fontWeb.className}>
       <div className='relative h-full w-full '>
-        <div className=' flex flex-row  border-2 border-[#ffcc00]'>
-          <div className=' flex w-1/4 justify-center '>
+        <div className=' flex flex-row  border border-[#ffcc00]'>
+          <div className=' flex w-1/4 justify-center px-1'>
             <LogoWebNew width={200} />
           </div>
 
-          <div className='z-40 flex w-3/4 flex-row items-center space-x-8 rounded-bl-[50px] bg-[#ffcc00]  transition-all duration-500 ease-in md:justify-center  xl:space-x-8'>
+          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center xl:space-x-4'>
             {home()}
             {learningSpace()}
             {vdo()}

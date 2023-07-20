@@ -6,6 +6,7 @@ import Layout from '@/components/layout/Layout';
 import { YoutubeResponse } from '@/types/teacher';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { MdComputer } from 'react-icons/md';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -58,11 +59,11 @@ const Parent = () => {
   console.log(totalItems, maxResults);
 
   return (
-    <Layout>
-      <div className='mx-20 py-10'>
+    <Layout container={false}>
+      <div className='mx-24 py-10'>
         <div className='flex justify-between'>
-          <div className=' flex items-center font-semibold text-[#ffba00]'>
-            <PiPencilLine size={30} />
+          <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
+            <MdComputer size={35} />
             <div className=' text-2xl '>
               Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน
             </div>

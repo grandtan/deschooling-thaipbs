@@ -416,7 +416,6 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
         {drowerComponent()}
         <div
-          className=''
           style={{
             backgroundImage: `url(${
               backgroundImage || '/images/bg-master.png'

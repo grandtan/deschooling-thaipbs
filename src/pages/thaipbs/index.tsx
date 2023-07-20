@@ -8,7 +8,7 @@ const ThaiPbs = () => {
     <Layout backgroundImage='/images/bg-master.png'>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
-          <TfiRulerPencil size={30} />
+          <TfiRulerPencil size={35} />
           <div className=' text-2xl '>ความหมายของ Deschooling</div>
         </div>
       </div>

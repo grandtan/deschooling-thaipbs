@@ -5,7 +5,7 @@ import { PiPencilLine } from 'react-icons/pi';
 
 const ThaiPbs = () => {
   return (
-    <Layout backgroundImage='/images/bg-thaipbs.png'>
+    <Layout backgroundImage='/images/bg-master.png'>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center font-semibold text-[#ffba00]'>
           <PiPencilLine size={30} />

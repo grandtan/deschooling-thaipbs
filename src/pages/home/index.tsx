@@ -25,7 +25,7 @@ const Home = () => {
             className='each-slide-effect cursor-pointer'
             onClick={() => router.push('/thaipbs')}
             style={{
-              background: `url('/images/bghome1.png')`,
+              background: `url('/images/bg-home-slide1.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -36,7 +36,7 @@ const Home = () => {
           <div
             className='each-slide-effect '
             style={{
-              background: `url('/images/bg-homewho.png')`,
+              background: `url('/images/bg-home-slide2.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

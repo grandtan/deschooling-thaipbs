@@ -12,7 +12,8 @@ import GirlHome from '@/icon/GirlHome';
 import OrganizeHome from '@/icon/OrganizeHome';
 import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
-import BackgroundHome1 from '@/icon/BackgroundHome1';
+import BgHome1 from '@/icon/Bghome1';
+import Bghome1 from '@/icon/Bghome1';
 
 const Home = () => {
   const router = useRouter();
@@ -24,16 +25,14 @@ const Home = () => {
             className='each-slide-effect cursor-pointer'
             onClick={() => router.push('/thaipbs')}
             style={{
-              background: `url('/images/bg-home-1.png')`,
+              background: `url('/images/bghome1.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               width: '100%',
               height: '100%',
             }}
-          >
-            {/* <BackgroundHome1 width={600} /> */}
-          </div>
+          ></div>
           <div
             className='each-slide-effect '
             style={{

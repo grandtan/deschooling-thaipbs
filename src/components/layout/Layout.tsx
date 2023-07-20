@@ -385,15 +385,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
   return (
     <div className={fontWeb.className}>
-      <div
-        className='relative h-full w-full '
-        style={{
-          backgroundImage: `url(${backgroundImage || '/images/bghome1.png'})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className='relative h-full w-full '>
         <div className=' flex flex-row  border border-[#ffcc00]'>
           <div className=' flex w-1/4 justify-center px-1'>
             <LogoWebNew width={200} />
@@ -423,7 +415,17 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         </div>
 
         {drowerComponent()}
-        <div className=''>{children}</div>
+        <div
+          className=''
+          style={{
+            backgroundImage: `url(${backgroundImage || '/images/bghome1.png'})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

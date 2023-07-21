@@ -14,6 +14,8 @@ import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
 import BgHome1 from '@/icon/Bghome1';
 import Bghome1 from '@/icon/Bghome1';
+import { RiMailUnreadFill } from 'react-icons/ri';
+import TextBgSlide2 from '@/icon/TextBgSlide2';
 
 const Home = () => {
   const router = useRouter();

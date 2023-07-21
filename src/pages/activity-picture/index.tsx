@@ -1,15 +1,16 @@
 import React from 'react';
 
 import Layout from '@/components/layout/Layout';
-import { PiPencilLine } from 'react-icons/pi';
+
+import { BsFillCalendarHeartFill } from 'react-icons/bs';
 
 const ActivityPicture = () => {
   return (
-    <Layout>
-      <div className='mx-20 py-10'>
-        <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffba00]'>
-          <PiPencilLine size={30} />
-          ภาพกิจกรรม
+    <Layout backgroundImage='/images/bg-master.png'>
+      <div className='mx-24 h-screen py-10'>
+        <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
+          <BsFillCalendarHeartFill size={35} />
+          <div className=' text-2xl'> ภาพกิจกรรม</div>
         </div>
       </div>
     </Layout>

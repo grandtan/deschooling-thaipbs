@@ -8,43 +8,18 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { BsFillCalendarHeartFill } from 'react-icons/bs';
+import { SiYoutubemusic } from 'react-icons/si';
 
 const Calendar = () => {
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-
   return (
-    <Layout>
-      <div className='flex justify-center space-x-4 text-2xl font-semibold text-[#ffba00]'>
-        <PiPencilLine size={30} />
-        ปฏิทินกิจกรรม
+    <Layout backgroundImage='/images/bg-master.png'>
+      <div className='mx-24 h-screen py-10'>
+        <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
+          <BsFillCalendarHeartFill size={35} />
+          <div className=' text-2xl '>ปฏิทินกิจกรรม</div>
+        </div>
       </div>
-
-      <Timeline position='alternate'>
-        {months.map((month, index) => (
-          <TimelineItem key={index}>
-            <TimelineSeparator>
-              <TimelineDot />
-              {index !== months.length - 1 && <TimelineConnector />}
-            </TimelineSeparator>
-            <TimelineContent>
-              <h2>{month}</h2>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
     </Layout>
   );
 };

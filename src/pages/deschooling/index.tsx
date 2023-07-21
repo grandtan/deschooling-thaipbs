@@ -63,7 +63,7 @@ const Deschooling = () => {
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <PiTelevisionFill size={35} />
-            <div className=' text-2xl '>Deschooling ห้องเรียนข้ามเส้น</div>
+            <div className='text-3xl '>Deschooling ห้องเรียนข้ามเส้น</div>
           </div>
           <button
             className=' flex items-center font-semibold text-[#ffba00]'

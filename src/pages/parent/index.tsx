@@ -64,7 +64,7 @@ const Parent = () => {
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <MdComputer size={35} />
-            <div className=' text-2xl '>
+            <div className=' text-3xl'>
               Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน
             </div>
           </div>

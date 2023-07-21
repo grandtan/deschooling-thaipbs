@@ -66,7 +66,7 @@ const Podcast = () => {
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <FaPodcast size={35} />
-            <div className=' text-2xl '>Podcast ฟัง พูด อ่าน กิน</div>
+            <div className=' text-3xl '>Podcast ฟัง พูด อ่าน กิน</div>
           </div>
           <button
             className=' flex items-center font-semibold text-[#ffba00]'

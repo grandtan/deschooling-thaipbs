@@ -10,7 +10,7 @@ const ActivityRegister = () => {
       <div className='mx-24 h-screen py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
-          <div className=' text-2xl'> สมัครเข้าร่วมกิจกรรม</div>
+          <div className=' text-3xl'> สมัครเข้าร่วมกิจกรรม</div>
         </div>
       </div>
     </Layout>

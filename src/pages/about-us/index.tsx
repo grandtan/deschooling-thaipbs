@@ -15,7 +15,7 @@ const AboutUs = () => {
       <div className=' mx-24 h-screen  py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <RiMailUnreadFill size={35} />
-          <div className=' text-4xl '>ติดต่อเรา</div>
+          <div className=' text-3xl '>ติดต่อเรา</div>
         </div>
 
         <div

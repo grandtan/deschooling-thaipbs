@@ -17,7 +17,7 @@ const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
 
 const PLAYLIST_ID = 'PLeZwwnM5meV8cKcg83FL1EEI2tF2G5T3R';
 
-const RESULTS_PER_PAGE = 8;
+const RESULTS_PER_PAGE = 0;
 
 const Podcast = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
@@ -62,7 +62,7 @@ const Podcast = () => {
 
   return (
     <Layout container={false}>
-      <div className='mx-24 py-10'>
+      <div className='mx-24 h-screen py-10'>
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <FaPodcast size={35} />
@@ -108,7 +108,7 @@ const Podcast = () => {
           </Grid>
         </div>
 
-        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+        {/* <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
           {totalItems > maxResults &&
             (isLoading ? (
               <CircularProgress color='inherit' />
@@ -127,7 +127,7 @@ const Podcast = () => {
           >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

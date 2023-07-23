@@ -14,7 +14,7 @@ const YOUTUBE_PLAYLIST_ITEMs_API =
 
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
 
-const PLAYLIST_ID = 'PLeZwwnM5meV8cKcg83FL1EEI2tF2G5T3R';
+const PLAYLIST_ID = 'PLeZwwnM5meV8NRnJ3RkyUawJwzKiSMtt6';
 
 const RESULTS_PER_PAGE = 8;
 
@@ -65,7 +65,7 @@ const VDO = () => {
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <SiYoutubemusic size={35} />
-            <div className=' text-3xl '>VDO How to ดูง่าย พอดีคำ สำหรับครู</div>
+            <div className=' text-3xl '>VDO How to ดูง่าย พอดีคำ</div>
           </div>
           <button
             className=' flex items-center font-semibold text-[#ffba00]'

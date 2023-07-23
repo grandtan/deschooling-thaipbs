@@ -65,8 +65,7 @@ const Teacher = () => {
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <MdComputer size={35} />
             <div className=' text-3xl'>
-              Learning Space
-              แบ่งปันนวัตกรรมการสอนสำหรับครูและผู้อำนวยการโรงเรียน
+              Learning Space แบ่งปันนวัตกรรมการสอน
             </div>
           </div>
           <button

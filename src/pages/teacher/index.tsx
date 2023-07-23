@@ -38,7 +38,7 @@ const Teacher = () => {
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 500);
   };
 
   const handleViewAll = () => {

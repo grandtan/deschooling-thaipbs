@@ -37,7 +37,7 @@ const TeacherHero = () => {
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
       setIsLoading(false); // Stop loading
-    }, 1000);
+    }, 500);
   };
 
   const handleViewAll = () => {

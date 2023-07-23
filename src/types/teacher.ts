@@ -1,12 +1,44 @@
 export interface YoutubeResponse {
-  nextPageToken(nextPageToken: any): unknown;
   kind: string;
   etag: string;
-  items: Item[];
-  pageInfo: PageInfo;
+  nextPageToken: string;
+  pageInfo: {
+    totalResults: number;
+    resultsPerPage: number;
+  };
+  items: {
+    kind: string;
+    etag: string;
+    id: string;
+    snippet: {
+      publishedAt: string;
+      channelId: string;
+      title: string;
+      description: string;
+      thumbnails: {
+        default: {
+          url: string;
+        };
+        medium: {
+          url: string;
+        };
+        high: {
+          url: string;
+        };
+      };
+      channelTitle: string;
+      playlistId: string;
+      position: number;
+      resourceId: {
+        kind: string;
+        videoId: string;
+      };
+    };
+  }[];
 }
 
 export interface Item {
+  statistics: any;
   kind: string;
   etag: string;
   id: string;

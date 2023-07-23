@@ -90,7 +90,7 @@ const Teacher = () => {
                       passHref
                       target='_blank'
                     >
-                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:text-[#ffba00] hover:ease-in'>
+                      <div className='aspect-video w-full rounded-t-2xl rounded-bl-2xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:text-[#ffba00] hover:ease-in'>
                         <div>
                           <img
                             className='rounded-t-xl rounded-bl-xl'

@@ -26,7 +26,11 @@ const AboutUs = () => {
           </div>
 
           <div className='rounded-full  border-2 border-black bg-white p-3 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white'>
-            <Link href='mailto:deschooling.thaipbs@gmail.com'>
+            <Link
+              href='https://line.me/R/ti/p/@deschooling?from=page'
+              passHref
+              target='_blank'
+            >
               <FaLine size={50} />
             </Link>
           </div>

@@ -23,10 +23,10 @@ const TeacherHero = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    fetchYoutube();
-  }, [maxResults]);
+    fetchYoutube(totalItems); // fetch all videos at once
+  }, [totalItems]);
 
-  const fetchYoutube = async () => {
+  const fetchYoutube = async (maxResults: number) => {
     setIsLoading(true); // Start loading
     const res = await fetch(
       `${YOUTUBE_PLAYLIST_ITEMs_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=${maxResults}&key=${YOUTUBE_API_KEY}`
@@ -45,7 +45,7 @@ const TeacherHero = () => {
   };
 
   const handleViewMore = () => {
-    setMaxResults((e) => e + RESULTS_PER_PAGE);
+    setMaxResults((prevMaxResults) => prevMaxResults + RESULTS_PER_PAGE);
   };
 
   const scrollToTop = () => {
@@ -77,31 +77,34 @@ const TeacherHero = () => {
         <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
-              itemYoutube.items.map((e, i) => (
-                <Grid item xs={12} md={6} lg={3} key={i}>
-                  <Link
-                    href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}`}
-                    passHref
-                    target='_blank'
-                  >
-                    <div className='aspect-video w-full rounded-t-xl rounded-bl-xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:text-[#ffba00] hover:ease-in'>
-                      <div>
-                        <img
-                          className='rounded-t-xl rounded-bl-xl'
-                          src={e.snippet.thumbnails.high.url}
-                          width='100%'
-                          height='100%'
-                          alt={e.snippet.title}
-                        />
-                      </div>
+              [...itemYoutube.items]
+                .reverse()
+                .slice(0, maxResults)
+                .map((e, i) => (
+                  <Grid item xs={12} md={6} lg={3} key={i}>
+                    <Link
+                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
+                      passHref
+                      target='_blank'
+                    >
+                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:text-[#ffba00] hover:ease-in'>
+                        <div>
+                          <img
+                            className='rounded-t-xl rounded-bl-xl'
+                            src={e.snippet.thumbnails.high.url}
+                            width='100%'
+                            height='100%'
+                            alt={e.snippet.title}
+                          />
+                        </div>
 
-                      <div className='h-24 p-4 text-left'>
-                        {e.snippet.title}
+                        <div className='h-24 p-4 text-left'>
+                          {e.snippet.title}
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                </Grid>
-              ))}
+                    </Link>
+                  </Grid>
+                ))}
           </Grid>
         </div>
 

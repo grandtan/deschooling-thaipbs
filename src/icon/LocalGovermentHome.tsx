@@ -1,6 +1,6 @@
 import { SVGProps } from 'react';
 
-const OrganizeHome = (props: SVGProps<SVGSVGElement>) => (
+const LocalGovernmentHome = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -21,4 +21,4 @@ const OrganizeHome = (props: SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-export default OrganizeHome;
+export default LocalGovernmentHome;

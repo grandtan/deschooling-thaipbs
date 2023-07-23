@@ -9,19 +9,21 @@ import Layout from '@/components/layout/Layout';
 import BabyHome from '@/icon/BabyHome';
 import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
-import OrganizeHome from '@/icon/OrganizeHome';
+import OrganizeHome from '@/icon/LocalGovermentHome';
 import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
 import BgHome1 from '@/icon/Bghome1';
 import Bghome1 from '@/icon/Bghome1';
 import { RiMailUnreadFill } from 'react-icons/ri';
+import LocalGovermentHome from '@/icon/LocalGovermentHome';
+import LocalGovernmentHome from '@/icon/LocalGovermentHome';
 
 const Home = () => {
   const router = useRouter();
   return (
     <Layout container={false}>
       <div className=' '>
-        <Slide duration={2000}>
+        <Slide duration={20000}>
           <div
             className='each-slide-effect cursor-pointer'
             onClick={() => router.push('/thaipbs')}
@@ -78,9 +80,9 @@ const Home = () => {
                   />
                 </div>
                 <div className='absolute bottom-0 left-10  col-start-6 '>
-                  <OrganizeHome
+                  <LocalGovernmentHome
                     className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
-                    onClick={() => router.push('/teacher-all')}
+                    onClick={() => router.push('/local-government')}
                   />
                 </div>
               </div>

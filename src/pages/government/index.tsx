@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Layout from '@/components/layout/Layout';
+import { RiGovernmentFill } from 'react-icons/ri';
 const Goverment = () => {
   return (
-    <Layout backgroundImage='/images/bgn.png'>
-      <div className=' h-screen  pt-40'>
-        <div className=' mt-4 flex justify-center text-4xl font-semibold text-[#ffcc00]'>
-          รัฐบาล (ยังไม่มีข้อมูล)
+    <Layout backgroundImage='/images/bg-master.png'>
+      <div className=' h-screen py-10'>
+        <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
+          <RiGovernmentFill size={35} />
+          <div className=' text-3xl '> รัฐบาล</div>
         </div>
       </div>
     </Layout>

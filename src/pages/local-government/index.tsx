@@ -5,7 +5,7 @@ import { RiGovernmentFill, RiParentLine } from 'react-icons/ri';
 
 const LocalGovernment = () => {
   return (
-    <Layout backgroundImage='/images/bg-master.png'>
+    <Layout backgroundImage='/images/local-government.png'>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <RiGovernmentFill size={35} />

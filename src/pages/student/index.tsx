@@ -6,6 +6,8 @@ import { RiMailUnreadFill } from 'react-icons/ri';
 import { FaLine, FaPodcast } from 'react-icons/fa';
 
 import Image from 'next/image';
+import { Grid } from '@mui/material';
+import Item from 'antd/es/descriptions/Item';
 const Student = () => {
   return (
     <Layout backgroundImage='/images/bg-master.png'>
@@ -15,26 +17,40 @@ const Student = () => {
           <div className=' text-3xl '>นักเรียน</div>
         </div>
 
-        <div className=' mt-60 flex flex-row items-center justify-center space-x-28 '>
-          <div className=' rounded-full  border-2 border-black bg-white p-10 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white'>
-            <Link href='mailto:deschooling.thaipbs@gmail.com'>
-              <FaPodcast size={60} />
-            </Link>
+        <div className=' mt-24 flex flex-row justify-center text-xl text-white md:text-3xl'>
+          สวัสดีค่ะ น้อง ๆ สนใจเรื่องไหนคลิกเลยค่ะ !
+        </div>
+
+        <div className=' mt-16 flex  flex-row items-center justify-center space-x-28'>
+          <div className='flex flex-col space-y-6'>
+            <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
+              Podcast ฟัง พูด อ่าน กิน
+            </div>
+            <div className=' flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-2 border-black bg-white p-8 hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>
+              <Link href='/podcast'>
+                <FaPodcast size={100} />
+              </Link>
+            </div>
           </div>
 
-          <div className='rounded-[50px]  border-2 border-black bg-white p-10 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white'>
-            <Link
-              href='https://line.me/R/ti/p/@deschooling?from=page'
-              passHref
-              target='_blank'
-            >
-              <Image
-                src='/images/logoaltv.png'
-                alt='Picture of the author'
-                width={200}
-                height={200}
-              />
-            </Link>
+          <div className=' flex-col space-y-6'>
+            <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
+              TV Program
+            </div>
+            <div className='flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-2 border-black bg-white p-8 hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>
+              <Link
+                href='https://line.me/R/ti/p/@deschooling?from=page'
+                passHref
+                target='_blank'
+              >
+                <Image
+                  src='/images/logoaltv.png'
+                  alt='Picture of the author'
+                  width={200}
+                  height={200}
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

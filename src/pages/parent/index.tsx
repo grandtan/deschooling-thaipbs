@@ -101,7 +101,7 @@ const Parent = () => {
                           />
                         </div>
 
-                        <div className='h-24 p-4 text-left'>
+                        <div className='h-24 p-4 text-left '>
                           {e.snippet.title}
                         </div>
                       </div>

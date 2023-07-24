@@ -68,13 +68,13 @@ const Podcast = () => {
             <FaPodcast size={35} />
             <div className=' text-3xl '>Podcast ฟัง พูด อ่าน กิน</div>
           </div>
-          <button
+          {/* <button
             className=' flex items-center font-semibold text-[#ffba00]'
             onClick={handleViewAll}
           >
             <div className='text-lg'>ดูทั้งหมด</div>
             <ArrowForwardIosIcon className='pl-1' />
-          </button>
+          </button> */}
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>

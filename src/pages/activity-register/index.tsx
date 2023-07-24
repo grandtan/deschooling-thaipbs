@@ -9,7 +9,7 @@ import { FaPodcast } from 'react-icons/fa';
 
 const ActivityRegister = () => {
   return (
-    <Layout backgroundImage='/images/bg-activity-register.png'>
+    <Layout backgroundImage='/images/bg-master.png'>
       <div className='mx-24 h-screen py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />

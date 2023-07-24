@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 
 const Baby = () => {
   return (
-    <Layout backgroundImage='/images/bg-master.png'>
+    <Layout backgroundImage='/images/bg-baby.png'>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <LuBaby size={35} />

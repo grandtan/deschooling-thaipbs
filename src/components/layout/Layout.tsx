@@ -393,7 +393,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center lg:space-x-3'>
+          <div className='z-40 flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00]  md:justify-center xl:space-x-2'>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -404,7 +404,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           </div>
 
           <IconButton
-            className='mx-2 block cursor-pointer md:hidden'
+            className='mx-2 block cursor-pointer lg:hidden'
             size='large'
             edge='start'
             color='default'

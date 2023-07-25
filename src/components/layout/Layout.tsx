@@ -3,7 +3,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import TreeItem from '@mui/lab/TreeItem';
 import TreeView from '@mui/lab/TreeView';
-import { Drawer, IconButton } from '@mui/material';
+import { Drawer, IconButton, useTheme } from '@mui/material';
 import { auto } from '@popperjs/core';
 import { Kanit } from 'next/font/google';
 import Link from 'next/link';
@@ -18,6 +18,7 @@ import { SiYoutubemusic } from 'react-icons/si';
 import { TbHomeHeart } from 'react-icons/tb';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -34,11 +35,13 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
+  const theme = useTheme();
+  const isIpadLayout = useMediaQuery(theme.breakpoints.down('sm'));
 
   const home = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block md:w-auto'>
       <Link
-        className='flex flex-col items-center  p-3   text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'
+        className='flex flex-col items-center  p-3  text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00]  lg:text-2xl'
         href='/home'
       >
         <div className='mb-1 flex flex-col  items-center'>
@@ -50,7 +53,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const learningSpace = () => (
-    <div className='hidden w-full md:w-auto lg:block '>
+    <div className='hidden w-full sm:block  md:w-auto '>
       <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'>
         <div className='mb-1 flex flex-col  items-center'>
           <MdComputer size={35} />
@@ -75,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const vdo = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block  md:w-auto'>
       <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
         <div className='mb-1 flex  flex-col items-center'>
           <SiYoutubemusic size={35} />
@@ -95,7 +98,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const podCast = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block  md:w-auto'>
       <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
         <div className='mb-1 flex  flex-col items-center'>
           <FaPodcast size={35} />
@@ -115,7 +118,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const activity = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block  md:w-auto'>
       <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
         <div className='mb-1 flex  flex-col items-center'>
           <BsFillCalendarHeartFill size={35} />
@@ -147,7 +150,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const tv = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block  md:w-auto'>
       <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
         <div className='mb-1 flex  flex-col items-center'>
           <PiTelevisionFill size={35} />
@@ -174,7 +177,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
 
   const aboutUs = () => (
-    <div className='hidden w-full md:w-auto lg:block'>
+    <div className='hidden w-full sm:block  md:w-auto'>
       <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'>
         <div className='mb-1 flex  flex-col items-center'>
           <RiMailUnreadFill size={35} />
@@ -387,13 +390,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
     <div className={fontWeb.className}>
       <div className='relative h-full w-full '>
         <div className=' flex flex-row  border border-[#ffcc00]'>
-          <div className='flex w-1/4 justify-center px-1'>
+          <div className='flex w-1/4 justify-center'>
             <Link href='/home'>
               <LogoWebNew width={200} />
             </Link>
           </div>
 
-          <div className='z-40 flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center xl:space-x-2'>
+          <div className='z-40 flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center lg:space-x-2'>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -403,17 +406,19 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             {aboutUs()}
           </div>
 
-          <IconButton
-            className='mx-2 block cursor-pointer lg:hidden xl:hidden 2xl:hidden'
-            size='large'
-            edge='start'
-            color='default'
-            aria-label='menu'
-            sx={{ mx: 1 }}
-            onClick={() => setIsOpenDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
+          {isIpadLayout && (
+            <IconButton
+              className=' mx-2 cursor-pointer  '
+              size='large'
+              edge='end'
+              color='default'
+              aria-label='menu'
+              sx={{ mx: 1 }}
+              onClick={() => setIsOpenDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
         </div>
 
         {drowerComponent()}

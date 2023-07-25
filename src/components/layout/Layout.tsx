@@ -388,10 +388,12 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
       <div className='relative h-full w-full '>
         <div className=' flex flex-row  border border-[#ffcc00]'>
           <div className=' flex w-1/4 justify-center px-1'>
-            <LogoWebNew width={200} />
+            <Link href='/home'>
+              <LogoWebNew width={200} />
+            </Link>
           </div>
 
-          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center xl:space-x-3'>
+          <div className='z-40  flex  w-3/4  flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center lg:space-x-3'>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -402,7 +404,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           </div>
 
           <IconButton
-            className='mx-2 block cursor-pointer lg:hidden'
+            className='mx-2 block cursor-pointer md:hidden'
             size='large'
             edge='start'
             color='default'

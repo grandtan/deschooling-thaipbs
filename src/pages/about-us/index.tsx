@@ -13,13 +13,13 @@ import Item from 'antd/es/descriptions/Item';
 const AboutUs = () => {
   return (
     <Layout backgroundImage='/images/bg-activity-register.png'>
-      <div className=' mx-24 h-screen  py-10'>
+      <div className=' mx-24 h-screen py-10'>
         <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
           <RiMailUnreadFill size={35} />
           <div className=' text-3xl '>ติดต่อเรา</div>
         </div>
 
-        <div className='mt-20 flex  flex-row items-center justify-center space-x-28 '>
+        <div className='mt-20 flex flex-row items-center justify-center space-x-28 '>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               EMAIL

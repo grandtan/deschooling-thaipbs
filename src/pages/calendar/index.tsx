@@ -30,37 +30,48 @@ const Calendar = () => {
   console.log(data);
 
   return (
-    <Layout backgroundImage='/images/bg-master.png'>
-      <div className='mx-24 h-screen py-10'>
+    <Layout>
+      <div className='mx-24  py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
-          <div className=' text-3xl '>ปฏิทินกิจกรรม</div>
+          <div className='text-3xl '>ปฏิทินกิจกรรม</div>
         </div>
-        <div className='text-center text-xl text-[#ffba00]'>
-          ประจำเดือน {format(new Date(), 'MMMM', { locale: th })}
+        <div className='my-10  text-center text-2xl text-[#ffba00]'>
+          กิจกรรมเดือน {format(new Date(), 'MMMM', { locale: th })}
         </div>
-        <div>
+        <div className='flex flex-col space-y-10  '>
           {data?.map((item, index) => (
-            <div key={index} className=' mt-10 bg-slate-100 p-4 text-[#ffba00]'>
-              <div>ชื่อกิจกรรม :{item.eventName}</div>
-              <div>รายละเอียดกิจกรรม :{item.eventDes}</div>
+            <div
+              key={index}
+              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00]'
+            >
+              <div className='flex w-1/6 flex-row items-center justify-center  rounded-b-[50px]  rounded-tl-[50px] bg-[#ffd666] text-center  '>
+                <div className='text-2xl'>{item.textDate}</div>
+              </div>
+              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-xl '>
+                <div>ชื่อกิจกรรม :{item.eventName}</div>
+                {/* <div>รายละเอียดกิจกรรม :{item.eventDes}</div>
               <div>ชื่อแขกรับเชิญ :{item.guestName}</div>
               <div>รายละเอียดแขกรับเชิญ :{item.guestDes}</div>
               <div>ชื่อผู้ดำเนินรายการ : {item.speakerName}</div>
-              <div>รายละเอียดผู้ดำเนินรายการ : {item.speakerDes}</div>
-              <div>วันที่จัดกิจกรรม : {item.textDate}</div>
-              <div>เวลาที่จัดกิจกรรม : {item.period}</div>
-              <div>หมายเหตุ : {item.remark}</div>
-              <div className=' flex flex-row space-x-5'>
+              <div>รายละเอียดผู้ดำเนินรายการ : {item.speakerDes}</div> */}
+
+                <div>เวลาที่จัดกิจกรรม : {item.period}</div>
+                <div>หมายเหตุ : {item.remark}</div>
+              </div>
+
+              <div className=' flex w-2/6 flex-row items-center justify-center space-x-2 rounded-b-[50px] rounded-tr-[50px] bg-slate-200'>
                 <QRCode
-                  size={200}
+                  className=' border-2 border-[#ffba00]'
+                  size={150}
                   iconSize={200 / 4}
                   errorLevel='H'
                   value={item.qrcode}
                   icon='https://img.icons8.com/color/48/google-docs--v1.png'
                 />
                 <QRCode
-                  size={200}
+                  className=' border-2 border-[#ffba00]'
+                  size={150}
                   iconSize={200 / 4}
                   errorLevel='H'
                   value={item.line}

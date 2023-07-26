@@ -193,7 +193,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         href='/about-us'
       >
         <div className='mb-1 flex flex-col  items-center'>
-          <TbHomeHeart size={35} />
+          <RiMailUnreadFill size={35} />
         </div>
         ติดต่อเรา
       </Link>
@@ -392,69 +392,15 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
   return (
     <div className={fontWeb.className}>
-      {/* <AppBar position='static' className='flex flex-row bg-[#ffcc00]'>
-        <Container maxWidth='xl'>
-          <Toolbar disableGutters className=' w-full'>
-            <Typography
-              className='w-1/6 bg-slate-600 '
-              variant='h6'
-              noWrap
-              component='a'
-              sx={{
-                mr: 2,
-                display: { xs: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              <Link href='/home'>
-                <LogoWebNew width={200} />
-              </Link>
-            </Typography>
-
-            <Typography className='w-5/6'>
-              <Box sx={{ backgroundColor: 'white' }}>
-                {isIpadLayout && (
-                  <IconButton
-                    className='cursor-pointer  justify-end  bg-slate-400'
-                    size='large'
-                    edge='end'
-                    color='default'
-                    aria-label='menu'
-                    sx={{ mx: 1 }}
-                    onClick={() => setIsOpenDrawer(true)}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                )}
-              </Box>
-
-              <div className=' flex flex-row '>
-                {home()}
-                {learningSpace()}
-                {vdo()}
-                {podCast()}
-                {activity()}
-                {tv()}
-                {aboutUs()}
-              </div>
-            </Typography>
-          </Toolbar>
-        </Container>
-        {drowerComponent()}
-      </AppBar> */}
       <div className='relative h-full w-full '>
         <div className=' flex flex-row  border border-[#ffcc00]'>
-          <div className='flex w-1/4 justify-center'>
+          <div className='flex w-1/4 justify-center '>
             <Link href='/home'>
               <LogoWebNew width={200} />
             </Link>
           </div>
 
-          <div className='z-40  flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00]  md:justify-center '>
+          <div className='z-40 flex flex-row space-x-0 rounded-bl-[50px] bg-[#ffcc00]  sm:w-3/4  md:justify-center md:space-x-4'>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -466,7 +412,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
           {isIpadLayout && (
             <IconButton
-              className=' mx-2 cursor-pointer  '
+              className=' mx-2 hidden cursor-pointer '
               size='large'
               edge='end'
               color='default'

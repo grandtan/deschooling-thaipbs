@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import TreeItem from '@mui/lab/TreeItem';
 import TreeView from '@mui/lab/TreeView';
 import { Drawer, IconButton, useTheme } from '@mui/material';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { auto } from '@popperjs/core';
 import { Kanit } from 'next/font/google';
 import Link from 'next/link';
@@ -18,7 +19,6 @@ import { SiYoutubemusic } from 'react-icons/si';
 import { TbHomeHeart } from 'react-icons/tb';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -35,6 +35,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
+  const [menuName, setMenuName] = React.useState('');
   const theme = useTheme();
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('sm'));
 

@@ -143,12 +143,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         >
           ปฏิทินกิจกรรม
         </Link>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/activity-register'
-        >
-          สนใจเข้าร่วม
-        </Link>
+
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
           href='/activity-picture'
@@ -400,7 +395,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-40 flex flex-row space-x-0 rounded-bl-[50px] bg-[#ffcc00]  sm:w-3/4  md:justify-center md:space-x-4'>
+          <div className='z-40 flex flex-row rounded-bl-[50px] bg-[#ffcc00]  sm:w-3/4  md:justify-center '>
             {home()}
             {learningSpace()}
             {vdo()}

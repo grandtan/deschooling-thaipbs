@@ -34,11 +34,13 @@ const Calendar = () => {
       <div className='mx-24  py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
-          <div className='text-3xl '>ปฏิทินกิจกรรม</div>
+          <div className='text-3xl'>ปฏิทินกิจกรรม</div>
         </div>
+
         <div className='my-10  text-center text-2xl text-[#ffba00]'>
           กิจกรรมเดือน {format(new Date(), 'MMMM', { locale: th })}
         </div>
+
         <div className='flex flex-col space-y-10  '>
           {data?.map((item, index) => (
             <div

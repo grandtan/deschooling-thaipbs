@@ -396,7 +396,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-40 flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00] md:justify-center lg:space-x-2'>
+          <div className='z-40  flex w-3/4 flex-row rounded-bl-[50px] bg-[#ffcc00]  md:justify-center '>
             {home()}
             {learningSpace()}
             {vdo()}

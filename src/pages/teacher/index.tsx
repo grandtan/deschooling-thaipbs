@@ -1,12 +1,15 @@
-import { Grid, CircularProgress } from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Grid } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { PiPencilLine } from 'react-icons/pi';
-import Layout from '@/components/layout/Layout';
-import { YoutubeResponse } from '@/types/teacher';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { MdComputer } from 'react-icons/md';
+
+import Layout from '@/components/layout/Layout';
+
+import { useLoading } from '@/context/loadingContext';
+
+import { YoutubeResponse } from '@/types/teacher';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -21,14 +24,16 @@ const Teacher = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+
+  const { setLoading } = useLoading();
 
   useEffect(() => {
     fetchYoutube(totalItems); // fetch all videos at once
   }, [totalItems]);
 
   const fetchYoutube = async (maxResults: number) => {
-    setIsLoading(true); // Start loading
+    setLoading(true);
+
     const res = await fetch(
       `${YOUTUBE_PLAYLIST_ITEMs_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=${maxResults}&key=${YOUTUBE_API_KEY}`
     );
@@ -37,8 +42,8 @@ const Teacher = () => {
     setItemYoutube(data);
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
-      setIsLoading(false); // Stop loading
-    }, 500);
+      setLoading(false);
+    }, 1000);
   };
 
   const handleViewAll = () => {
@@ -46,7 +51,11 @@ const Teacher = () => {
   };
 
   const handleViewMore = () => {
+    setLoading(true);
     setMaxResults((prevMaxResults) => prevMaxResults + RESULTS_PER_PAGE);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
 
   const scrollToTop = () => {
@@ -112,15 +121,12 @@ const Teacher = () => {
         </div>
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {totalItems > maxResults &&
-            (isLoading ? (
-              <CircularProgress color='inherit' />
-            ) : (
-              <button onClick={handleViewMore}>
-                VDO เพิ่มเติม
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            ))}
+          {totalItems > maxResults && (
+            <button onClick={handleViewMore}>
+              VDO เพิ่มเติม
+              <ArrowForwardIosIcon className='pl-1' />
+            </button>
+          )}
         </div>
 
         <div className=' flex justify-end '>

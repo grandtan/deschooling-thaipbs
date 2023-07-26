@@ -7,6 +7,8 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { PiTelevisionFill } from 'react-icons/pi';
 
+import { useLoading } from '@/context/loadingContext';
+
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
@@ -20,14 +22,16 @@ const Deschooling = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+
+  const { setLoading } = useLoading();
 
   useEffect(() => {
     fetchYoutube(totalItems); // fetch all videos at once
   }, [totalItems]);
 
   const fetchYoutube = async (maxResults: number) => {
-    setIsLoading(true); // Start loading
+    setLoading(true);
+
     const res = await fetch(
       `${YOUTUBE_PLAYLIST_ITEMs_API}?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=${maxResults}&key=${YOUTUBE_API_KEY}`
     );
@@ -36,8 +40,8 @@ const Deschooling = () => {
     setItemYoutube(data);
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
-      setIsLoading(false); // Stop loading
-    }, 500);
+      setLoading(false);
+    }, 1000);
   };
 
   const handleViewAll = () => {
@@ -45,7 +49,11 @@ const Deschooling = () => {
   };
 
   const handleViewMore = () => {
+    setLoading(true);
     setMaxResults((prevMaxResults) => prevMaxResults + RESULTS_PER_PAGE);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
   };
 
   const scrollToTop = () => {
@@ -109,15 +117,12 @@ const Deschooling = () => {
         </div>
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {totalItems > maxResults &&
-            (isLoading ? (
-              <CircularProgress color='inherit' />
-            ) : (
-              <button onClick={handleViewMore}>
-                VDO เพิ่มเติม
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            ))}
+          {totalItems > maxResults && (
+            <button onClick={handleViewMore}>
+              VDO เพิ่มเติม
+              <ArrowForwardIosIcon className='pl-1' />
+            </button>
+          )}
         </div>
 
         <div className=' flex justify-end '>

@@ -1,17 +1,30 @@
-import React from 'react';
-import Layout from '@/components/layout/Layout';
-import { PiPencilLine } from 'react-icons/pi';
-
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
+import React, { useEffect, useState } from 'react';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
-import { SiYoutubemusic } from 'react-icons/si';
+
+import Layout from '@/components/layout/Layout';
+
+import { useLoading } from '@/context/loadingContext';
+
+import { CaledarResponse } from '@/types/calendat';
 
 const Calendar = () => {
+  const [data, setData] = useState<CaledarResponse[] | null>(null);
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(true);
+    fetch('/api/googleCalendar')
+      .then((response) => response.json())
+      .then((data: CaledarResponse[]) => {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
+      });
+  }, []);
+
   return (
     <Layout backgroundImage='/images/bg-master.png'>
       <div className='mx-24 h-screen py-10'>
@@ -19,6 +32,9 @@ const Calendar = () => {
           <BsFillCalendarHeartFill size={35} />
           <div className=' text-3xl '>ปฏิทินกิจกรรม</div>
         </div>
+        {data?.map((x, index) => (
+          <div key={index}>{x.endDate}</div>
+        ))}
       </div>
     </Layout>
   );

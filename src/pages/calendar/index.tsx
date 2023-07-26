@@ -41,7 +41,7 @@ const Calendar = () => {
           กิจกรรมเดือน {format(new Date(), 'MMMM', { locale: th })}
         </div>
 
-        <div className='flex flex-col space-y-10  '>
+        <div className='flex flex-col space-y-10 '>
           {data?.map((item, index) => (
             <div
               key={index}

@@ -43,24 +43,18 @@ const Calendar = () => {
           {data?.map((item, index) => (
             <div
               key={index}
-              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00]'
+              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00] '
             >
               <div className='flex w-1/6 flex-row items-center justify-center  rounded-b-[50px]  rounded-tl-[50px] bg-[#ffd666] text-center  '>
                 <div className='text-2xl'>{item.textDate}</div>
               </div>
-              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-xl '>
-                <div>ชื่อกิจกรรม :{item.eventName}</div>
-                {/* <div>รายละเอียดกิจกรรม :{item.eventDes}</div>
-              <div>ชื่อแขกรับเชิญ :{item.guestName}</div>
-              <div>รายละเอียดแขกรับเชิญ :{item.guestDes}</div>
-              <div>ชื่อผู้ดำเนินรายการ : {item.speakerName}</div>
-              <div>รายละเอียดผู้ดำเนินรายการ : {item.speakerDes}</div> */}
-
+              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-xl  hover:text-yellow-900'>
+                <div>ชื่อกิจกรรม : {item.eventName}</div>
                 <div>เวลาที่จัดกิจกรรม : {item.period}</div>
                 <div>หมายเหตุ : {item.remark}</div>
               </div>
 
-              <div className=' flex w-2/6 flex-row items-center justify-center space-x-2 rounded-b-[50px] rounded-tr-[50px] bg-slate-200'>
+              <div className=' flex w-2/6 flex-row items-center justify-center space-x-10 rounded-b-[50px] rounded-tr-[50px]  bg-slate-100 p-1'>
                 <QRCode
                   className=' border-2 border-[#ffba00]'
                   size={150}

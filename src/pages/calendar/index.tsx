@@ -1,3 +1,6 @@
+import { QRCode } from 'antd';
+import { format } from 'date-fns';
+import { th } from 'date-fns/locale';
 import React, { useEffect, useState } from 'react';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
 
@@ -21,9 +24,10 @@ const Calendar = () => {
       })
       .catch((error) => {
         setLoading(false);
-        console.error(error);
       });
   }, []);
+
+  console.log(data);
 
   return (
     <Layout backgroundImage='/images/bg-master.png'>
@@ -32,9 +36,40 @@ const Calendar = () => {
           <BsFillCalendarHeartFill size={35} />
           <div className=' text-3xl '>ปฏิทินกิจกรรม</div>
         </div>
-        {data?.map((x, index) => (
-          <div key={index}>{x.endDate}</div>
-        ))}
+        <div className='text-center text-xl text-[#ffba00]'>
+          ประจำเดือน {format(new Date(), 'MMMM', { locale: th })}
+        </div>
+        <div>
+          {data?.map((item, index) => (
+            <div key={index} className=' mt-10 bg-slate-100 p-4 text-[#ffba00]'>
+              <div>ชื่อกิจกรรม :{item.eventName}</div>
+              <div>รายละเอียดกิจกรรม :{item.eventDes}</div>
+              <div>ชื่อแขกรับเชิญ :{item.guestName}</div>
+              <div>รายละเอียดแขกรับเชิญ :{item.guestDes}</div>
+              <div>ชื่อผู้ดำเนินรายการ : {item.speakerName}</div>
+              <div>รายละเอียดผู้ดำเนินรายการ : {item.speakerDes}</div>
+              <div>วันที่จัดกิจกรรม : {item.textDate}</div>
+              <div>เวลาที่จัดกิจกรรม : {item.period}</div>
+              <div>หมายเหตุ : {item.remark}</div>
+              <div className=' flex flex-row space-x-5'>
+                <QRCode
+                  size={200}
+                  iconSize={200 / 4}
+                  errorLevel='H'
+                  value={item.qrcode}
+                  icon='https://img.icons8.com/color/48/google-docs--v1.png'
+                />
+                <QRCode
+                  size={200}
+                  iconSize={200 / 4}
+                  errorLevel='H'
+                  value={item.line}
+                  icon='https://img.icons8.com/color/48/line-me.png'
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );

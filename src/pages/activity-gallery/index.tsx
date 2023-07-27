@@ -4,7 +4,15 @@ import { BsFillCalendarHeartFill } from 'react-icons/bs';
 import { Image } from 'antd';
 
 const ActivityGallery = () => {
-  const images = [
+  const activityGovernment = [
+    '/images/activity/1.jpg',
+    '/images/activity/2.jpg',
+    '/images/activity/3.jpg',
+    '/images/activity/5.jpg',
+    '/images/activity/5.jpg',
+  ];
+
+  const activitySchool = [
     '/images/activity/1.jpg',
     '/images/activity/2.jpg',
     '/images/activity/3.jpg',
@@ -28,7 +36,7 @@ const ActivityGallery = () => {
                   console.log(`current index: ${current}, prev index: ${prev}`),
               }}
             >
-              {images.map((src, index) => (
+              {activityGovernment.map((src, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl' : ''}
@@ -38,8 +46,7 @@ const ActivityGallery = () => {
               ))}
             </Image.PreviewGroup>
             <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg '>
-              "ข้ามเส้น" กรอบควาามคิด "สู่"
-              ทางออกใหม่ให้กับโรงเรียนเล็กและโรงเรียนใหญ่
+              เวทีนโยบายการศึกษากับพรรคการเมือง
             </div>
           </div>
 
@@ -50,7 +57,7 @@ const ActivityGallery = () => {
                   console.log(`current index: ${current}, prev index: ${prev}`),
               }}
             >
-              {images.map((src, index) => (
+              {activitySchool.map((src, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl' : ''}

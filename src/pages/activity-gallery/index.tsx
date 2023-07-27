@@ -1,0 +1,48 @@
+import React from 'react';
+import Layout from '@/components/layout/Layout';
+import { BsFillCalendarHeartFill } from 'react-icons/bs';
+import { Image } from 'antd';
+
+const ActivityGallery = () => {
+  const images = [
+    '/images/activity/1.jpg',
+    '/images/activity/2.jpg',
+    '/images/activity/3.jpg',
+    '/images/activity/4.jpg',
+    '/images/activity/5.jpg',
+  ];
+
+  return (
+    <Layout backgroundImage='/images/bg-master.png'>
+      <div className='mx-24 py-10'>
+        <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
+          <BsFillCalendarHeartFill size={35} />
+          <div className=' text-3xl'>ภาพกิจกรรม</div>
+        </div>
+
+        <div className='  grid h-screen grid-cols-1 place-content-center gap-4 md:grid-cols-2'>
+          <div className=' grid grid-cols-4 gap-2 rounded-t-xl bg-slate-500 p-2 md:grid-cols-4'>
+            <Image.PreviewGroup
+              preview={{
+                onChange: (current, prev) =>
+                  console.log(`current index: ${current}, prev index: ${prev}`),
+              }}
+            >
+              {images.map((src, index) => (
+                <div
+                  key={index}
+                  className={index === 0 ? 'col-span-4 rounded-xl' : ''}
+                >
+                  <Image src={src} sizes='50%' className='rounded-xl' />
+                </div>
+              ))}
+            </Image.PreviewGroup>
+          </div>
+          <div className=' bg-gray-400'>2</div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default ActivityGallery;

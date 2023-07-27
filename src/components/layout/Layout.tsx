@@ -146,7 +146,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/activity-picture'
+          href='/activity-gallery'
         >
           ภาพกิจกรรม
         </Link>

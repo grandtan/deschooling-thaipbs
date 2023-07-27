@@ -58,7 +58,6 @@ const Calendar = () => {
 
               <div className=' flex w-2/6 flex-row items-center justify-center space-x-10 rounded-b-[50px] rounded-tr-[50px]  bg-slate-100 p-1'>
                 <QRCode
-                  className=' border-2 border-[#ffba00]'
                   size={150}
                   iconSize={200 / 4}
                   errorLevel='H'
@@ -66,7 +65,6 @@ const Calendar = () => {
                   icon='https://img.icons8.com/color/48/google-docs--v1.png'
                 />
                 <QRCode
-                  className=' border-2 border-[#ffba00]'
                   size={150}
                   iconSize={200 / 4}
                   errorLevel='H'

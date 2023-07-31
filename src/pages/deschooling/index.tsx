@@ -73,13 +73,15 @@ const Deschooling = () => {
             <PiTelevisionFill size={35} />
             <div className='text-3xl '>Deschooling ห้องเรียนข้ามเส้น</div>
           </div>
-          <button
-            className=' flex items-center font-semibold text-[#ffba00]'
-            onClick={handleViewAll}
-          >
-            <div className='text-lg'>ดูทั้งหมด</div>
-            <ArrowForwardIosIcon className='pl-1' />
-          </button>
+          {totalItems > RESULTS_PER_PAGE && (
+            <button
+              className=' flex items-center font-semibold text-[#ffba00]'
+              onClick={handleViewAll}
+            >
+              <div className='text-lg'>ดูทั้งหมด</div>
+              <ArrowForwardIosIcon className='pl-1' />
+            </button>
+          )}
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>

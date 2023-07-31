@@ -429,6 +429,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
           }}
         >
           {children}

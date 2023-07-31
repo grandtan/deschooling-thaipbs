@@ -24,11 +24,12 @@ const Teacher = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
+  const [viewAllClicked, setViewAllClicked] = useState(false);
 
   const { setLoading } = useLoading();
 
   useEffect(() => {
-    fetchYoutube(totalItems); // fetch all videos at once
+    fetchYoutube(totalItems);
   }, [totalItems]);
 
   const fetchYoutube = async (maxResults: number) => {
@@ -48,6 +49,7 @@ const Teacher = () => {
 
   const handleViewAll = () => {
     setMaxResults(totalItems);
+    setViewAllClicked(true);
   };
 
   const handleViewMore = () => {
@@ -77,13 +79,17 @@ const Teacher = () => {
               Learning Space แบ่งปันนวัตกรรมการสอน
             </div>
           </div>
-          <button
-            className=' flex items-center font-semibold text-[#ffba00]'
-            onClick={handleViewAll}
-          >
-            <div className='text-lg'>ดูทั้งหมด</div>
-            <ArrowForwardIosIcon className='pl-1' />
-          </button>
+          {!viewAllClicked &&
+            maxResults < totalItems &&
+            totalItems > RESULTS_PER_PAGE && (
+              <button
+                className=' flex items-center font-semibold text-[#ffba00]'
+                onClick={handleViewAll}
+              >
+                <div className='text-lg'>ดูทั้งหมด</div>
+                <ArrowForwardIosIcon className='pl-1' />
+              </button>
+            )}
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>
@@ -121,7 +127,7 @@ const Teacher = () => {
         </div>
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {totalItems > maxResults && (
+          {maxResults < totalItems && (
             <button onClick={handleViewMore}>
               VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
@@ -129,7 +135,7 @@ const Teacher = () => {
           )}
         </div>
 
-        <div className=' flex justify-end '>
+        <div className='flex justify-end'>
           <button
             className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
             onClick={scrollToTop}

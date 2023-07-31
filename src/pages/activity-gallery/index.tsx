@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
 import { Image } from 'antd';
+import Link from 'next/link';
 
 const ActivityGallery = () => {
   const activityGovernment = [
@@ -10,11 +11,6 @@ const ActivityGallery = () => {
     '/images/activity-government/Government_3.jpg',
     '/images/activity-government/Government_4.jpg',
     '/images/activity-government/Government_5.jpg',
-    '/images/activity-government/Government_6.jpg',
-    '/images/activity-government/Government_7.jpg',
-    '/images/activity-government/Government_8.jpg',
-    '/images/activity-government/Government_9.jpg',
-    '/images/activity-government/Government_10.jpg',
   ];
 
   const activitySchool = [
@@ -23,11 +19,6 @@ const ActivityGallery = () => {
     '/images/activity-school/School_3.jpg',
     '/images/activity-school/School_4.jpg',
     '/images/activity-school/School_5.jpg',
-    '/images/activity-school/School_6.jpg',
-    '/images/activity-school/School_7.jpg',
-    '/images/activity-school/School_8.jpg',
-    '/images/activity-school/School_9.jpg',
-    '/images/activity-school/School_10.jpg',
   ];
 
   return (
@@ -40,6 +31,10 @@ const ActivityGallery = () => {
 
         <div className='  grid h-screen grid-cols-1 place-content-center gap-4 md:grid-cols-2'>
           <div className=' grid grid-cols-4 gap-2 rounded-t-xl rounded-bl-xl border-4 bg-white p-1 md:grid-cols-4'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg'>
+              เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
+              ก้าวทันโลก”
+            </div>
             <Image.PreviewGroup>
               {activityGovernment.map((src, index) => (
                 <div
@@ -50,12 +45,18 @@ const ActivityGallery = () => {
                 </div>
               ))}
             </Image.PreviewGroup>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg '>
-              เวทีนโยบายการศึกษากับพรรคการเมือง
-            </div>
+            <Link
+              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-center text-lg'
+              href='/activity-gallery/government'
+            >
+              ภาพและรายละเอียดเพิ่มเติม
+            </Link>
           </div>
 
           <div className=' grid grid-cols-4 gap-2 rounded-t-xl rounded-bl-xl border-4 bg-white p-2 md:grid-cols-4'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg hover:text-yellow-900'>
+              เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
+            </div>
             <Image.PreviewGroup
               preview={{
                 onChange: (current, prev) =>
@@ -71,10 +72,12 @@ const ActivityGallery = () => {
                 </div>
               ))}
             </Image.PreviewGroup>
-            <div className='col-span-4 rounded-t-xl rounded-br-xl bg-[#ffba00] p-2 text-lg hover:text-yellow-900'>
-              "ข้ามเส้น" กรอบควาามคิด "สู่"
-              ทางออกใหม่ให้กับโรงเรียนเล็กและโรงเรียนใหญ่
-            </div>
+            <Link
+              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-center text-lg'
+              href='/activity-gallery/school'
+            >
+              ภาพและรายละเอียดเพิ่มเติม
+            </Link>
           </div>
         </div>
       </div>

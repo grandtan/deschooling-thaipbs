@@ -30,8 +30,8 @@ const ActivityGallery = () => {
         </div>
 
         <div className='  grid h-screen grid-cols-1 place-content-center gap-4 md:grid-cols-2'>
-          <div className=' grid grid-cols-4 gap-2 rounded-t-xl rounded-bl-xl border-4 bg-white p-1 md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg'>
+          <div className=' grid grid-cols-4 gap-1 rounded-t-xl rounded-bl-xl  bg-white p-1 md:grid-cols-4'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-4 text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
               ก้าวทันโลก”
             </div>
@@ -39,7 +39,7 @@ const ActivityGallery = () => {
               {activityGovernment.map((src, index) => (
                 <div
                   key={index}
-                  className={index === 0 ? 'col-span-4 rounded-xl' : ''}
+                  className={index === 0 ? 'col-span-4 rounded-xl ' : ''}
                 >
                   <Image src={src} sizes='50%' className='rounded-xl ' alt='' />
                 </div>
@@ -49,12 +49,12 @@ const ActivityGallery = () => {
               className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center '
               href='/activity-gallery/government'
             >
-              ภาพและรายละเอียดเพิ่มเติม
+              รายละเอียดเพิ่มเติม
             </Link>
           </div>
 
-          <div className=' grid grid-cols-4 gap-2 rounded-t-xl rounded-bl-xl border-4 bg-white p-2 md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg '>
+          <div className=' grid grid-cols-4 gap-1 rounded-t-xl rounded-bl-xl  bg-white p-1 md:grid-cols-4'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-4 text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup
@@ -76,7 +76,7 @@ const ActivityGallery = () => {
               className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center'
               href='/activity-gallery/school'
             >
-              ภาพและรายละเอียดเพิ่มเติม
+              รายละเอียดเพิ่มเติม
             </Link>
           </div>
         </div>

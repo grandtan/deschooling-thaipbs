@@ -1,7 +1,22 @@
 import React from 'react';
 import Layout from '@/components/layout/Layout';
+import { Image } from 'antd';
+import Link from 'next/link';
 
 const government = () => {
+  const governmentActivity = [
+    '/images/government-activity/Government_1.jpg',
+    '/images/government-activity/Government_2.jpg',
+    '/images/government-activity/Government_3.jpg',
+    '/images/government-activity/Government_4.jpg',
+    '/images/government-activity/Government_5.jpg',
+    '/images/government-activity/Government_6.jpg',
+    '/images/government-activity/Government_7.jpg',
+    '/images/government-activity/Government_8.jpg',
+    '/images/government-activity/Government_9.jpg',
+    '/images/government-activity/Government_10.jpg',
+  ];
+
   return (
     <Layout backgroundImage='/images/bg-master.png'>
       <div className='mx-24 h-screen py-10'>
@@ -9,6 +24,44 @@ const government = () => {
           <div className=' text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”
           </div>
+        </div>
+
+        <div className='my-8 grid grid-cols-2 gap-2 md:grid-cols-5'>
+          <Image.PreviewGroup>
+            {governmentActivity.map((image, index) => (
+              <div key={index} className='m-4'>
+                <Image
+                  className=' rounded-xl'
+                  sizes='50%'
+                  src={image}
+                  alt={`Government Activity ${index + 1}`}
+                />
+              </div>
+            ))}
+          </Image.PreviewGroup>
+        </div>
+
+        <div className='text-justify text-lg font-light text-white'>
+          วันที่ 5 มีนาคม 2566 ภาคีเพื่อการศึกษาไทย (Thailand Education
+          Partnership: TEP) จัดเวทีเสวนา “TEP Policy Forum: ชวนพรรคร่วมคิด
+          พลิกห้องเรียน เปลี่ยนไทยทันโลก” โดยนำเสนอความท้าทายของระบบการศึกษาไทย
+          และข้อเสนอแนะเชิงนโยบายการศึกษาในโลกยุคหลังโควิด-19
+          ที่ต้องเร่งฟื้นฟูการเรียนรู้ที่ถดถอย
+          ไปพร้อมกับสร้างสมรรถนะให้เด็กไทยก้าวทันโลกที่เปลี่ยนแปลงอย่างรวดเร็ว
+          และเปิดเวทีให้ตัวแทน 8 พรรคการเมือง ได้แก่ พรรคเพื่อไทย พรรคก้าวไกล
+          พรรคไทยสร้างไทย พรรคประชาธิปัตย์ พรรคชาติพัฒนากล้า พรรคภูมิใจไทย
+          พรรคชาติไทยพัฒนา และ พรรคเสรีรวมไทย
+          มาร่วมคิดทางออกเชิงนโยบายให้ระบบการศึกษาไทยก้าวข้ามความท้าทายได้ตรงจุดและตรงกับความต้องการของสังคม
+        </div>
+
+        <div className='mt-10 flex justify-center text-lg text-[#ffba00]'>
+          <Link
+            href='/pdf/government.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            อ่านเพิ่มเติม
+          </Link>
         </div>
       </div>
     </Layout>

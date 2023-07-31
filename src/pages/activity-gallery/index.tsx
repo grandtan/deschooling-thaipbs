@@ -5,20 +5,20 @@ import { Image } from 'antd';
 import Link from 'next/link';
 
 const ActivityGallery = () => {
-  const activityGovernment = [
-    '/images/activity-government/Government_1.jpg',
-    '/images/activity-government/Government_2.jpg',
-    '/images/activity-government/Government_3.jpg',
-    '/images/activity-government/Government_4.jpg',
-    '/images/activity-government/Government_5.jpg',
+  const governmentActivity = [
+    '/images/government-activity/Government_1.jpg',
+    '/images/government-activity/Government_2.jpg',
+    '/images/government-activity/Government_3.jpg',
+    '/images/government-activity/Government_4.jpg',
+    '/images/government-activity/Government_5.jpg',
   ];
 
-  const activitySchool = [
-    '/images/activity-school/School_1.jpg',
-    '/images/activity-school/School_2.jpg',
-    '/images/activity-school/School_3.jpg',
-    '/images/activity-school/School_4.jpg',
-    '/images/activity-school/School_5.jpg',
+  const schoolActivity = [
+    '/images/school-activity/School_1.jpg',
+    '/images/school-activity/School_2.jpg',
+    '/images/school-activity/School_3.jpg',
+    '/images/school-activity/School_4.jpg',
+    '/images/school-activity/School_5.jpg',
   ];
 
   return (
@@ -36,12 +36,17 @@ const ActivityGallery = () => {
               ก้าวทันโลก”
             </div>
             <Image.PreviewGroup>
-              {activityGovernment.map((src, index) => (
+              {governmentActivity.map((image, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl ' : ''}
                 >
-                  <Image src={src} sizes='50%' className='rounded-xl ' alt='' />
+                  <Image
+                    src={image}
+                    sizes='50%'
+                    className='rounded-xl '
+                    alt='Government Activity'
+                  />
                 </div>
               ))}
             </Image.PreviewGroup>
@@ -57,18 +62,18 @@ const ActivityGallery = () => {
             <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-4 text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
-            <Image.PreviewGroup
-              preview={{
-                onChange: (current, prev) =>
-                  console.log(`current index: ${current}, prev index: ${prev}`),
-              }}
-            >
-              {activitySchool.map((src, index) => (
+            <Image.PreviewGroup>
+              {schoolActivity.map((image, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl' : ''}
                 >
-                  <Image src={src} sizes='50%' className='rounded-xl' />
+                  <Image
+                    src={image}
+                    sizes='50%'
+                    className='rounded-xl'
+                    alt='School Activity'
+                  />
                 </div>
               ))}
             </Image.PreviewGroup>

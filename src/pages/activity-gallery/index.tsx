@@ -46,7 +46,7 @@ const ActivityGallery = () => {
               ))}
             </Image.PreviewGroup>
             <Link
-              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-center text-lg'
+              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center '
               href='/activity-gallery/government'
             >
               ภาพและรายละเอียดเพิ่มเติม
@@ -54,7 +54,7 @@ const ActivityGallery = () => {
           </div>
 
           <div className=' grid grid-cols-4 gap-2 rounded-t-xl rounded-bl-xl border-4 bg-white p-2 md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg hover:text-yellow-900'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-lg '>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup
@@ -73,7 +73,7 @@ const ActivityGallery = () => {
               ))}
             </Image.PreviewGroup>
             <Link
-              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-2 text-center text-lg'
+              className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center'
               href='/activity-gallery/school'
             >
               ภาพและรายละเอียดเพิ่มเติม

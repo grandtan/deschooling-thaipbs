@@ -5,21 +5,31 @@ import Link from 'next/link';
 
 const government = () => {
   const governmentActivity = [
-    '/images/government-activity/Government_1.jpg',
-    '/images/government-activity/Government_2.jpg',
-    '/images/government-activity/Government_3.jpg',
-    '/images/government-activity/Government_4.jpg',
-    '/images/government-activity/Government_5.jpg',
-    '/images/government-activity/Government_6.jpg',
-    '/images/government-activity/Government_7.jpg',
-    '/images/government-activity/Government_8.jpg',
-    '/images/government-activity/Government_9.jpg',
-    '/images/government-activity/Government_10.jpg',
+    '/images/government-activity/government_1.jpg',
+    '/images/government-activity/government_2.jpg',
+    '/images/government-activity/government_3.jpg',
+    '/images/government-activity/government_4.jpg',
+    '/images/government-activity/government_5.jpg',
+    '/images/government-activity/government_6.jpg',
+    '/images/government-activity/government_7.jpg',
+    '/images/government-activity/government_8.jpg',
+    '/images/government-activity/government_9.jpg',
+    '/images/government-activity/government_10.jpg',
+    '/images/government-activity/government_11.jpg',
+    '/images/government-activity/government_12.jpg',
+    '/images/government-activity/government_13.jpg',
+    '/images/government-activity/government_14.jpg',
+    '/images/government-activity/government_15.jpg',
+    '/images/government-activity/government_16.jpg',
+    '/images/government-activity/government_17.jpg',
+    '/images/government-activity/government_18.jpg',
+    '/images/government-activity/government_19.jpg',
+    '/images/government-activity/government_20.jpg',
   ];
 
   return (
     <Layout backgroundImage='/images/bg-master.png'>
-      <div className='mx-24 h-screen py-10'>
+      <div className='mx-24 h-full py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className=' text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”

@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '@/components/layout/Layout';
-import { BsFillCalendarHeartFill } from 'react-icons/bs';
+import { BsImages } from 'react-icons/bs';
 import { Image } from 'antd';
 import Link from 'next/link';
 
@@ -25,7 +25,7 @@ const Gallery = () => {
     <Layout backgroundImage='/images/bg-master.png'>
       <div className='mx-24 py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
-          <BsFillCalendarHeartFill size={35} />
+          <BsImages size={35} />
           <div className=' text-3xl'>ภาพกิจกรรม</div>
         </div>
 

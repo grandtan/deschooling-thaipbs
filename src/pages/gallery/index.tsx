@@ -4,21 +4,21 @@ import { BsFillCalendarHeartFill } from 'react-icons/bs';
 import { Image } from 'antd';
 import Link from 'next/link';
 
-const ActivityGallery = () => {
-  const governmentActivity = [
-    '/images/government-activity/Government_1.jpg',
-    '/images/government-activity/Government_2.jpg',
-    '/images/government-activity/Government_3.jpg',
-    '/images/government-activity/Government_4.jpg',
-    '/images/government-activity/Government_5.jpg',
+const Gallery = () => {
+  const governmentEvent = [
+    '/images/government-event/government_1.jpg',
+    '/images/government-event/government_2.jpg',
+    '/images/government-event/government_3.jpg',
+    '/images/government-event/government_4.jpg',
+    '/images/government-event/government_5.jpg',
   ];
 
-  const schoolActivity = [
-    '/images/school-activity/School_1.jpg',
-    '/images/school-activity/School_2.jpg',
-    '/images/school-activity/School_3.jpg',
-    '/images/school-activity/School_4.jpg',
-    '/images/school-activity/School_5.jpg',
+  const schoolEvent = [
+    '/images/school-event/school_1.jpg',
+    '/images/school-event/school_2.jpg',
+    '/images/school-event/school_3.jpg',
+    '/images/school-event/school_4.jpg',
+    '/images/school-event/school_5.jpg',
   ];
 
   return (
@@ -36,7 +36,7 @@ const ActivityGallery = () => {
               ก้าวทันโลก”
             </div>
             <Image.PreviewGroup>
-              {governmentActivity.map((image, index) => (
+              {governmentEvent.map((image, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl ' : ''}
@@ -52,7 +52,7 @@ const ActivityGallery = () => {
             </Image.PreviewGroup>
             <Link
               className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center '
-              href='/activity-gallery/government'
+              href='/gallery/government'
             >
               รายละเอียดเพิ่มเติม
             </Link>
@@ -63,7 +63,7 @@ const ActivityGallery = () => {
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup>
-              {schoolActivity.map((image, index) => (
+              {schoolEvent.map((image, index) => (
                 <div
                   key={index}
                   className={index === 0 ? 'col-span-4 rounded-xl' : ''}
@@ -79,7 +79,7 @@ const ActivityGallery = () => {
             </Image.PreviewGroup>
             <Link
               className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffd666] p-2 text-center'
-              href='/activity-gallery/school'
+              href='/gallery/school'
             >
               รายละเอียดเพิ่มเติม
             </Link>
@@ -90,4 +90,4 @@ const ActivityGallery = () => {
   );
 };
 
-export default ActivityGallery;
+export default Gallery;

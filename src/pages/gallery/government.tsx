@@ -4,27 +4,27 @@ import { Image } from 'antd';
 import Link from 'next/link';
 
 const government = () => {
-  const governmentActivity = [
-    '/images/government-activity/government_1.jpg',
-    '/images/government-activity/government_2.jpg',
-    '/images/government-activity/government_3.jpg',
-    '/images/government-activity/government_4.jpg',
-    '/images/government-activity/government_5.jpg',
-    '/images/government-activity/government_6.jpg',
-    '/images/government-activity/government_7.jpg',
-    '/images/government-activity/government_8.jpg',
-    '/images/government-activity/government_9.jpg',
-    '/images/government-activity/government_10.jpg',
-    '/images/government-activity/government_11.jpg',
-    '/images/government-activity/government_12.jpg',
-    '/images/government-activity/government_13.jpg',
-    '/images/government-activity/government_14.jpg',
-    '/images/government-activity/government_15.jpg',
-    '/images/government-activity/government_16.jpg',
-    '/images/government-activity/government_17.jpg',
-    '/images/government-activity/government_18.jpg',
-    '/images/government-activity/government_19.jpg',
-    '/images/government-activity/government_20.jpg',
+  const governmentEvent = [
+    '/images/government-event/government_1.jpg',
+    '/images/government-event/government_2.jpg',
+    '/images/government-event/government_3.jpg',
+    '/images/government-event/government_4.jpg',
+    '/images/government-event/government_5.jpg',
+    '/images/government-event/government_6.jpg',
+    '/images/government-event/government_7.jpg',
+    '/images/government-event/government_8.jpg',
+    '/images/government-event/government_9.jpg',
+    '/images/government-event/government_10.jpg',
+    '/images/government-event/government_11.jpg',
+    '/images/government-event/government_12.jpg',
+    '/images/government-event/government_13.jpg',
+    '/images/government-event/government_14.jpg',
+    '/images/government-event/government_15.jpg',
+    '/images/government-event/government_16.jpg',
+    '/images/government-event/government_17.jpg',
+    '/images/government-event/government_18.jpg',
+    '/images/government-event/government_19.jpg',
+    '/images/government-event/government_20.jpg',
   ];
 
   return (
@@ -38,7 +38,7 @@ const government = () => {
 
         <div className='my-8 grid grid-cols-2 gap-2 md:grid-cols-5'>
           <Image.PreviewGroup>
-            {governmentActivity.map((image, index) => (
+            {governmentEvent.map((image, index) => (
               <div key={index} className='m-4'>
                 <Image
                   className=' rounded-xl'
@@ -67,7 +67,7 @@ const government = () => {
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00]'>
           <Link
-            href='/pdf/government.pdf'
+            href='/pdf/government-event.pdf'
             target='_blank'
             rel='noopener noreferrer'
           >

@@ -127,7 +127,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
     </div>
   );
 
-  const activity = () => (
+  const event = () => (
     <div className='hidden w-full sm:block  md:w-auto'>
       <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
         <div className='mb-1 flex  flex-col items-center'>
@@ -146,7 +146,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/activity-gallery'
+          href='/gallery'
         >
           ภาพกิจกรรม
         </Link>
@@ -400,7 +400,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             {learningSpace()}
             {vdo()}
             {podCast()}
-            {activity()}
+            {event()}
             {tv()}
             {aboutUs()}
           </div>

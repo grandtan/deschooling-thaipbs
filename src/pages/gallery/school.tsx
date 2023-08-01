@@ -4,22 +4,32 @@ import { Image } from 'antd';
 import Link from 'next/link';
 
 const school = () => {
-  const schoolActivity = [
-    '/images/school-activity/School_1.jpg',
-    '/images/school-activity/School_2.jpg',
-    '/images/school-activity/School_3.jpg',
-    '/images/school-activity/School_4.jpg',
-    '/images/school-activity/School_5.jpg',
-    '/images/school-activity/School_6.jpg',
-    '/images/school-activity/School_7.jpg',
-    '/images/school-activity/School_8.jpg',
-    '/images/school-activity/School_9.jpg',
-    '/images/school-activity/School_10.jpg',
+  const schoolEvent = [
+    '/images/school-event/school_1.jpg',
+    '/images/school-event/school_2.jpg',
+    '/images/school-event/school_3.jpg',
+    '/images/school-event/school_4.jpg',
+    '/images/school-event/school_5.jpg',
+    '/images/school-event/school_6.jpg',
+    '/images/school-event/school_7.jpg',
+    '/images/school-event/school_8.jpg',
+    '/images/school-event/school_9.jpg',
+    '/images/school-event/school_10.jpg',
+    '/images/school-event/school_11.jpg',
+    '/images/school-event/school_12.jpg',
+    '/images/school-event/school_13.jpg',
+    '/images/school-event/school_14.jpg',
+    '/images/school-event/school_15.jpg',
+    '/images/school-event/school_16.jpg',
+    '/images/school-event/school_17.jpg',
+    '/images/school-event/school_18.jpg',
+    '/images/school-event/school_19.jpg',
+    '/images/school-event/school_20.jpg',
   ];
 
   return (
     <Layout backgroundImage='/images/bg-master.png'>
-      <div className='mx-24 h-screen py-10'>
+      <div className='mx-24 h-full py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className=' text-3xl'>
             “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
@@ -28,7 +38,7 @@ const school = () => {
 
         <div className='my-8 grid grid-cols-2 gap-2 md:grid-cols-5'>
           <Image.PreviewGroup>
-            {schoolActivity.map((image, index) => (
+            {schoolEvent.map((image, index) => (
               <div key={index} className='m-4'>
                 <Image
                   className=' rounded-xl'
@@ -53,7 +63,7 @@ const school = () => {
 
         <div className='mt-10 flex justify-center text-lg text-[#ffba00]'>
           <Link
-            href='/pdf/school.pdf'
+            href='/pdf/school-event.pdf'
             target='_blank'
             rel='noopener noreferrer'
           >

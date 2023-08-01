@@ -44,7 +44,7 @@ const government = () => {
                   className=' rounded-xl'
                   sizes='50%'
                   src={image}
-                  alt={`Government Activity ${index + 1}`}
+                  alt={`Government Event ${index + 1}`}
                 />
               </div>
             ))}

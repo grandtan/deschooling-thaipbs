@@ -31,7 +31,7 @@ const Gallery = () => {
 
         <div className='  grid h-screen grid-cols-1 place-content-center gap-4 md:grid-cols-2'>
           <div className=' grid grid-cols-4 gap-1 rounded-t-xl rounded-bl-xl  bg-white p-1 md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-4 text-xl'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffcc00] p-4 text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
               ก้าวทันโลก”
             </div>
@@ -45,7 +45,7 @@ const Gallery = () => {
                     src={image}
                     sizes='50%'
                     className='rounded-xl '
-                    alt='Government Activity'
+                    alt='Government Event'
                   />
                 </div>
               ))}
@@ -59,7 +59,7 @@ const Gallery = () => {
           </div>
 
           <div className=' grid grid-cols-4 gap-1 rounded-t-xl rounded-bl-xl  bg-white p-1 md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffba00] p-4 text-xl'>
+            <div className='col-span-4 rounded-t-xl rounded-bl-xl bg-[#ffcc00] p-4 text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup>
@@ -72,7 +72,7 @@ const Gallery = () => {
                     src={image}
                     sizes='50%'
                     className='rounded-xl'
-                    alt='School Activity'
+                    alt='School Event'
                   />
                 </div>
               ))}

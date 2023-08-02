@@ -9,6 +9,7 @@ import Layout from '@/components/layout/Layout';
 import { useLoading } from '@/context/loadingContext';
 
 import { CaledarResponse } from '@/types/calendat';
+import Head from 'next/head';
 
 const Calendar = () => {
   const [data, setData] = useState<CaledarResponse[] | null>(null);
@@ -32,6 +33,13 @@ const Calendar = () => {
   return (
     <Layout>
       <div className='mx-24  py-10'>
+        <Head>
+          <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>
+          <meta
+            name='keywords'
+            content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+          />
+        </Head>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
           <div className='text-3xl'>ปฏิทินกิจกรรม</div>

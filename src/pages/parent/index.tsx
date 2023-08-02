@@ -9,6 +9,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { MdComputer } from 'react-icons/md';
 
 import { useLoading } from '@/context/loadingContext';
+import Head from 'next/head';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -70,6 +71,13 @@ const Parent = () => {
 
   return (
     <Layout container={false}>
+      <Head>
+        <title>พ่อแม่และผู้ปกครอง : DeschoolingDoc</title>
+        <meta
+          name='keywords'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
       <div className='mx-24 py-10'>
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>

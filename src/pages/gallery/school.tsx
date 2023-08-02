@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import { Image } from 'antd';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const school = () => {
   const schoolEvent = [
@@ -29,6 +30,15 @@ const school = () => {
 
   return (
     <Layout backgroundImage='/images/bg-master.png'>
+      <Head>
+        <title>
+          เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
+        </title>
+        <meta
+          name='keywords'
+          content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
       <div className='mx-24 h-full py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className=' text-3xl'>

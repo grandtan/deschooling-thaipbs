@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout';
 import { BsImages } from 'react-icons/bs';
 import { Image } from 'antd';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Gallery = () => {
   const governmentEvent = [
@@ -23,6 +24,13 @@ const Gallery = () => {
 
   return (
     <Layout backgroundImage='/images/bg-master.png'>
+      <Head>
+        <title>ภาพกิจกรรม : DeschoolingDoc</title>
+        <meta
+          name='keywords'
+          content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
       <div className='mx-24 py-10'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsImages size={35} />

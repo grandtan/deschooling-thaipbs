@@ -14,28 +14,43 @@ import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
 import BgHome1 from '@/icon/Bghome1';
 import Bghome1 from '@/icon/Bghome1';
-import { RiMailUnreadFill } from 'react-icons/ri';
+import { ImSearch } from 'react-icons/im';
 import LocalGovermentHome from '@/icon/LocalGovermentHome';
 import LocalGovernmentHome from '@/icon/LocalGovermentHome';
+import Head from 'next/head';
 
 const Home = () => {
   const router = useRouter();
   return (
     <Layout container={false}>
+      <Head>
+        <title>หน้าแรก : DeschoolingDoc</title>
+        <meta
+          name='keywords'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
+
       <div className=' '>
         <Slide duration={20000}>
           <div
-            className='each-slide-effect cursor-pointer'
+            className='each-slide-effect flex cursor-pointer flex-row justify-center '
             onClick={() => router.push('/thaipbs')}
-            style={{
-              background: `url('/images/bg-home-slide1.png')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              width: '100%',
-              height: '100%',
-            }}
-          ></div>
+            // style={{
+            //   background: `url('/images/bg-home-1.png')`,
+            //   backgroundSize: 'cover',
+            //   backgroundPosition: 'center',
+            //   backgroundRepeat: 'no-repeat',
+            //   width: '100%',
+            //   height: '100%',
+            // }}
+          >
+            <div className=' flex flex-row space-x-8 text-7xl'>
+              <div className='text-[#ffcc00]'>Deschooling</div>
+              <div className='text-white'>คืออะไร ?</div>
+              <ImSearch color='white' size={50} />
+            </div>
+          </div>
           <div
             className='each-slide-effect '
             style={{

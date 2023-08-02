@@ -9,10 +9,18 @@ import Layout from '@/components/layout/Layout';
 import { RiMailUnreadFill } from 'react-icons/ri';
 import { Stack } from '@mui/material';
 import Item from 'antd/es/descriptions/Item';
+import Head from 'next/head';
 
 const AboutUs = () => {
   return (
     <Layout backgroundImage='/images/bg-master.png'>
+      <Head>
+        <title>ติดต่อเรา : DeschoolingDoc</title>
+        <meta
+          name='keywords'
+          content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
       <div className=' mx-24 h-screen py-10'>
         <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
           <RiMailUnreadFill size={35} />

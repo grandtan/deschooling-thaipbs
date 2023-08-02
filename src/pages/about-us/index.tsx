@@ -12,7 +12,7 @@ import Item from 'antd/es/descriptions/Item';
 
 const AboutUs = () => {
   return (
-    <Layout backgroundImage='/images/bg-activity-register.png'>
+    <Layout backgroundImage='/images/bg-master.png'>
       <div className=' mx-24 h-screen py-10'>
         <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
           <RiMailUnreadFill size={35} />

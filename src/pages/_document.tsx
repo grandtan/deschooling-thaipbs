@@ -5,7 +5,11 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <title>DeschoolingDOC</title>
+        <meta
+          name='description'
+          content='คำอธิบายเว็บไซต์ของคุณ'
+          title='DecschoolingDoc'
+        />
         <link
           rel='preload'
           href='/favicon.ico'

@@ -32,7 +32,7 @@ const Home = () => {
       </Head>
 
       <div className=' '>
-        <Slide duration={20000}>
+        <Slide duration={2000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center '
             onClick={() => router.push('/thaipbs')}
@@ -45,10 +45,10 @@ const Home = () => {
             //   height: '100%',
             // }}
           >
-            <div className=' flex flex-row space-x-8 text-7xl'>
-              <div className='text-[#ffcc00]'>Deschooling</div>
-              <div className='text-white'>คืออะไร ?</div>
-              <ImSearch color='white' size={50} />
+            <div className=' flex flex-row space-x-8 text-8xl'>
+              <div className=' text-[#ffcc00]'>Deschooling</div>
+              <div className=' text-white'>คืออะไร_</div>
+              <ImSearch color='white' size={60} />
             </div>
           </div>
           <div

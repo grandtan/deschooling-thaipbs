@@ -387,9 +387,9 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
   return (
     <div className={fontWeb.className}>
-      <div className='relative h-full w-full '>
-        <div className=' flex flex-row  border border-[#ffcc00]'>
-          <div className='flex w-1/4 justify-center '>
+      <div className='relative h-full w-full'>
+        <div className=' flex  flex-row border border-[#ffcc00]'>
+          <div className='flex w-1/4 justify-center'>
             <Link href='/home'>
               <LogoWebNew width={200} />
             </Link>

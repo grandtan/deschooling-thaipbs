@@ -6,9 +6,21 @@ import { FaPodcast } from 'react-icons/fa';
 import Image from 'next/image';
 import { SiYoutubemusic } from 'react-icons/si';
 import { MdComputer } from 'react-icons/md';
+import Head from 'next/head';
+
 const TeacherAll = () => {
   return (
     <Layout backgroundImage='/images/bg-teacher-all.png'>
+      <Head>
+        <title>
+          ครูและผู้อำนวยการ : คุณคือใครในวงการการศึกษา : Deschooling
+        </title>
+        <meta
+          name='keywords'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
+
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <GiTeacher size={35} />

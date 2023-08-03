@@ -8,9 +8,19 @@ import { FaLine, FaPodcast } from 'react-icons/fa';
 import Image from 'next/image';
 import { Grid } from '@mui/material';
 import Item from 'antd/es/descriptions/Item';
+import Head from 'next/head';
+
 const Student = () => {
   return (
     <Layout backgroundImage='/images/bg-student.png'>
+      <Head>
+        <title>นักเรียน : คุณคือใครในวงการการศึกษา : Deschooling</title>
+        <meta
+          name='keywords'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
+
       <div className='  h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <PiStudentFill size={35} />

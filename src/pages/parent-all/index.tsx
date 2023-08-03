@@ -6,9 +6,19 @@ import { SiYoutubemusic } from 'react-icons/si';
 import Link from 'next/link';
 import { FaPodcast } from 'react-icons/fa';
 import { MdComputer } from 'react-icons/md';
+import Head from 'next/head';
 const ParentAll = () => {
   return (
     <Layout backgroundImage='/images/bg-parent-all.png'>
+      <Head>
+        <title>
+          พ่อแม่และผู้ปกครอง : คุณคือใครในวงการการศึกษา : Deschooling
+        </title>
+        <meta
+          name='keywords'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+        />
+      </Head>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <RiParentLine size={35} />

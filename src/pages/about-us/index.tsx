@@ -55,11 +55,11 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className='mt-10 flex  flex-row items-center justify-center space-x-28 '>
+        {/* <div className='mt-10 flex  flex-row items-center justify-center space-x-28 '>
           <div className='text-center font-mono text-2xl  text-white'>
             Compose & Scan Me !
           </div>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

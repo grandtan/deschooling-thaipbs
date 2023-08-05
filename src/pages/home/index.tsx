@@ -46,9 +46,15 @@ const Home = () => {
             // }}
           >
             <div className=' flex flex-row space-x-8 text-8xl'>
-              <div className=' text-[#ffcc00]'>Deschooling</div>
+              <div className=' font-bold text-[#ffcc00]'>Deschooling</div>
               <div className=' text-white'>คืออะไร_</div>
-              <ImSearch color='white' size={60} />
+              <div>
+                <ImSearch
+                  color='white'
+                  size={60}
+                  className='transition delay-300 duration-300 ease-in-out'
+                />
+              </div>
             </div>
           </div>
           <div

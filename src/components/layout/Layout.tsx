@@ -46,7 +46,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
   const [menuName, setMenuName] = React.useState('');
   const theme = useTheme();
-  const isIpadLayout = useMediaQuery(theme.breakpoints.down('sm'));
+  const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
 
   const home = () => (
     <div className='hidden w-full sm:block md:w-auto'>
@@ -387,15 +387,15 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   );
   return (
     <div className={fontWeb.className}>
-      <div className='relative h-full w-full'>
-        <div className=' flex  flex-row border border-[#ffcc00]'>
+      <div className='relative h-screen w-full '>
+        <div className=' flex flex-row items-center  bg-white sm:space-x-2'>
           <div className='flex w-1/4 justify-center'>
             <Link href='/home'>
-              <LogoWebNew width={200} />
+              <LogoWebNew width='200px' />
             </Link>
           </div>
 
-          <div className='z-40 flex flex-row rounded-bl-[50px] bg-[#ffcc00]  sm:w-3/4  md:justify-center '>
+          <div className='absolute left-0 top-[-100%] z-40 flex items-center justify-center bg-[#ffcc00] md:static  md:w-3/4 '>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -407,7 +407,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
           {isIpadLayout && (
             <IconButton
-              className=' mx-2 hidden cursor-pointer '
+              className=' mx-2 hidden cursor-pointer  bg-black'
               size='large'
               edge='end'
               color='default'

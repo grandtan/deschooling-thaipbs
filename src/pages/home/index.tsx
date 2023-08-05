@@ -31,19 +31,11 @@ const Home = () => {
         />
       </Head>
 
-      <div className=' '>
+      <div className=''>
         <Slide duration={2000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center '
             onClick={() => router.push('/thaipbs')}
-            // style={{
-            //   background: `url('/images/bg-home-1.png')`,
-            //   backgroundSize: 'cover',
-            //   backgroundPosition: 'center',
-            //   backgroundRepeat: 'no-repeat',
-            //   width: '100%',
-            //   height: '100%',
-            // }}
           >
             <div className=' flex flex-row space-x-8 text-8xl'>
               <div className=' font-bold text-[#ffcc00]'>Deschooling</div>

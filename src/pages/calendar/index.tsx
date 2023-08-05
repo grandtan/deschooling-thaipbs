@@ -32,7 +32,7 @@ const Calendar = () => {
 
   return (
     <Layout>
-      <div className='mx-24  py-10'>
+      <div className='mx-24 h-full py-10'>
         <Head>
           <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>
           <meta
@@ -53,12 +53,12 @@ const Calendar = () => {
           {data?.map((item, index) => (
             <div
               key={index}
-              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00] '
+              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00] md:w-auto'
             >
               <div className='flex w-1/6 flex-row items-center justify-center  rounded-b-[50px]  rounded-tl-[50px] bg-[#ffd666] text-center  '>
-                <div className='text-2xl'>{item.textDate}</div>
+                <div className='text-2xl '>{item.textDate}</div>
               </div>
-              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-xl  hover:text-yellow-900'>
+              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-center  text-xl  hover:text-yellow-900'>
                 <div>ชื่อกิจกรรม : {item.eventName}</div>
                 <div>เวลาที่จัดกิจกรรม : {item.period}</div>
                 <div>หมายเหตุ : {item.remark}</div>

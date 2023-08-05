@@ -388,14 +388,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   return (
     <div className={fontWeb.className}>
       <div className='relative h-screen w-full '>
-        <div className=' flex flex-row  items-center border-y-8 border-r-2 border-white bg-white sm:space-x-2'>
-          <div className='flex w-1/4 justify-center'>
+        <div className=' flex flex-row  items-center justify-between border-y-8 border-r-2 border-white bg-white sm:space-x-2'>
+          <div className='flex w-1/4 justify-center max-[768px]:pl-24'>
             <Link href='/home'>
               <LogoWebNew width='200px' />
             </Link>
           </div>
 
-          <div className='absolute left-0 top-[-100%] z-40 flex items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:static md:w-3/4 '>
+          <div className='absolute left-0 top-[-100%] z-40 flex items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:static  md:w-3/4'>
             {home()}
             {learningSpace()}
             {vdo()}
@@ -407,7 +407,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
           {isIpadLayout && (
             <IconButton
-              className=' mx-2 hidden cursor-pointer  bg-black'
+              className=' cursor-pointer justify-end md:hidden '
               size='large'
               edge='end'
               color='default'
@@ -421,6 +421,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         </div>
 
         {drowerComponent()}
+
         <div
           style={{
             backgroundImage: `url(${

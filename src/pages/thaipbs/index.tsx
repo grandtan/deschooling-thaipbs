@@ -1,8 +1,6 @@
 import React from 'react';
-import { LuBaby } from 'react-icons/lu';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
-import { FaQuestion } from 'react-icons/fa';
 import { RiQuestionnaireFill } from 'react-icons/ri';
 
 const ThaiPbs = () => {
@@ -17,7 +15,7 @@ const ThaiPbs = () => {
       </Head>
       <div className=' h-screen py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
-          <div className=' text-3xl '> Deschooling คือ_ </div>
+          <div className='text-3xl'> Deschooling คือ_ </div>
           <RiQuestionnaireFill size={35} />
         </div>
       </div>

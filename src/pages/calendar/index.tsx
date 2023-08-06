@@ -10,6 +10,10 @@ import { useLoading } from '@/context/loadingContext';
 
 import { CaledarResponse } from '@/types/calendat';
 import Head from 'next/head';
+import { TiWarningOutline } from 'react-icons/ti';
+import { BiTimeFive } from 'react-icons/bi';
+import { AiFillSound } from 'react-icons/ai';
+import { LuMapPin } from 'react-icons/lu';
 
 const Calendar = () => {
   const [data, setData] = useState<CaledarResponse[] | null>(null);
@@ -49,22 +53,28 @@ const Calendar = () => {
           กิจกรรมเดือน {format(new Date(), 'MMMM', { locale: th })}
         </div>
 
-        <div className='flex flex-col space-y-10 '>
+        <div className='flex flex-col space-y-10'>
           {data?.map((item, index) => (
             <div
               key={index}
-              className='flex w-full flex-row  rounded-[50px]   border-4 bg-white  p-2 hover:border-[#ffba00] md:w-auto'
+              className='flex w-full cursor-pointer flex-row  rounded-t-[50px]   rounded-bl-[50px] bg-white md:w-auto'
             >
-              <div className='flex w-1/6 flex-row items-center justify-center  rounded-b-[50px]  rounded-tl-[50px] bg-[#ffd666] text-center  '>
-                <div className='text-2xl '>{item.textDate}</div>
+              <div className='flex w-1/6 flex-row items-center  justify-center  rounded-t-[50px] rounded-bl-[50px] bg-[#ffd666]  text-center'>
+                <div className='text-2xl font-bold'>{item.textDate}</div>
               </div>
-              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-b-[50px] text-center  text-xl  hover:text-yellow-900'>
-                <div>ชื่อกิจกรรม : {item.eventName}</div>
-                <div>เวลาที่จัดกิจกรรม : {item.period}</div>
-                <div>หมายเหตุ : {item.remark}</div>
+              <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-t-[50px]  rounded-bl-[50px] text-center text-xl hover:text-yellow-900'>
+                <div className='flex flex-row items-center gap-x-2'>
+                  <LuMapPin /> {item.eventName}
+                </div>
+                <div className='flex flex-row items-center gap-x-2'>
+                  <BiTimeFive /> {item.period}
+                </div>
+                <div className='flex flex-row items-center gap-x-2'>
+                  <TiWarningOutline /> {item.remark}
+                </div>
               </div>
 
-              <div className=' flex w-2/6 flex-row items-center justify-center space-x-10 rounded-b-[50px] rounded-tr-[50px]  bg-slate-100 p-1'>
+              <div className='flex w-2/6 flex-row items-center justify-center space-x-10 rounded-t-[50px]  rounded-bl-[50px]  bg-slate-100 p-1'>
                 <QRCode
                   size={150}
                   iconSize={200 / 4}

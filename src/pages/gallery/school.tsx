@@ -61,7 +61,7 @@ const school = () => {
           </Image.PreviewGroup>
         </div>
 
-        <div className='text-justify text-lg font-light text-white'>
+        <div className='text-justify indent-8 text-lg font-light text-white'>
           วันที่ 5 มีนาคม 2566 เวลา 14.00 - 15.30 น. ดร.สมเกียรติ ตั้งกิจวานิชย์
           ประธานสถาบันวิจัยเพื่อการพัฒนาประเทศไทย
           นำเสนอภาพระบบการศึกษาไทยที่มีปัญหาตั้งแต่ก่อนเกิดสถานการณ์โควิด-19

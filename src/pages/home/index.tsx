@@ -18,6 +18,7 @@ import { ImSearch } from 'react-icons/im';
 import LocalGovermentHome from '@/icon/LocalGovermentHome';
 import LocalGovernmentHome from '@/icon/LocalGovermentHome';
 import Head from 'next/head';
+import { TbZoomQuestion } from 'react-icons/tb';
 
 const Home = () => {
   const router = useRouter();
@@ -41,9 +42,9 @@ const Home = () => {
               <div className=' font-bold text-[#ffcc00]'>Deschooling</div>
               <div className=' text-white'>คืออะไร_</div>
               <div>
-                <ImSearch
+                <TbZoomQuestion
                   color='white'
-                  size={60}
+                  size={70}
                   className='transition delay-300 duration-300 ease-in-out'
                 />
               </div>

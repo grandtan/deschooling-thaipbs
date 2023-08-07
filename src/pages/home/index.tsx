@@ -33,7 +33,7 @@ const Home = () => {
       </Head>
 
       <div className=''>
-        <Slide duration={400}>
+        <Slide duration={2000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
             onClick={() => router.push('/thaipbs')}

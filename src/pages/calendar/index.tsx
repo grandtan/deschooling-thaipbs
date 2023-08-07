@@ -36,7 +36,7 @@ const Calendar = () => {
 
   return (
     <Layout>
-      <div className='mx-24 h-full py-10'>
+      <div className='mx-24 h-screen py-10'>
         <Head>
           <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>
           <meta

@@ -310,15 +310,8 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               />
 
               <TreeItem
-                onClick={() => router.push('/activity-register')}
-                nodeId='activity-register'
-                label=' สนใจเข้าร่วม'
-                className='my-2 '
-              />
-
-              <TreeItem
-                onClick={() => router.push('/activity-picture')}
-                nodeId='activity-picture'
+                onClick={() => router.push('/gallery')}
+                nodeId='gallery'
                 label=' ภาพกิจกรรม'
                 className='mt-2 '
               />
@@ -358,29 +351,10 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           </TreeView>
         </div>
 
-        <div className='px-4 py-4'>
-          <TreeView
-            aria-label='file system navigator'
-            defaultCollapseIcon={<ExpandMoreIcon />}
-            defaultExpandIcon={<ChevronRightIcon />}
-            sx={{
-              height: auto,
-              flexGrow: 1,
-              overflowY: 'auto',
-            }}
-          >
-            <TreeItem
-              nodeId='1'
-              label={<div className=' text-lg '> ติดต่อเรา</div>}
-            >
-              <TreeItem
-                onClick={() => router.push('/about-us')}
-                nodeId='about-us'
-                label='AboutUs'
-                className='mt-2 '
-              />
-            </TreeItem>
-          </TreeView>
+        <div className='px-12 py-4 '>
+          <Link className=' text-lg text-black ' href='/about-us'>
+            ติดต่อเรา
+          </Link>
         </div>
       </div>
     </Drawer>

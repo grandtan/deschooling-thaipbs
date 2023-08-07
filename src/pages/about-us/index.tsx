@@ -27,7 +27,7 @@ const AboutUs = () => {
           <div className=' text-3xl '>ติดต่อเรา</div>
         </div>
 
-        <div className='mt-20 flex flex-row items-center justify-center space-x-28 '>
+        <div className='mt-20 flex flex-row items-center justify-center space-x-28 font-mono'>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               EMAIL

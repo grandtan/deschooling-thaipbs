@@ -44,14 +44,14 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
-  const [menuName, setMenuName] = React.useState('');
+
   const theme = useTheme();
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
 
   const home = () => (
     <div className='hidden w-full sm:block md:w-auto'>
       <Link
-        className='flex flex-col items-center  p-3  text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00]  lg:text-2xl'
+        className='flex flex-col items-center p-3 text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00]  lg:text-2xl'
         href='/home'
       >
         <div className='mb-1 flex flex-col  items-center'>

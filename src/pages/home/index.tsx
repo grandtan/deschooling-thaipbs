@@ -33,7 +33,7 @@ const Home = () => {
       </Head>
 
       <div className=''>
-        <Slide duration={2000}>
+        <Slide duration={10000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
             onClick={() => router.push('/thaipbs')}
@@ -62,17 +62,8 @@ const Home = () => {
             }}
           >
             <div className=' relative h-full w-full'>
-              <div className=' absolute inset-x-0 bottom-0 grid grid-cols-7 '>
-                <div className='absolute bottom-0 left-0 col-start-1 '>
-                  <div className='absolute left-[110px] top-[110px] text-xl text-white '>
-                    เด็กทารก
-                  </div>
-                  <BabyHome
-                    className='cursor-pointer  duration-700 hover:-translate-y-4   hover:ease-in-out'
-                    onClick={() => router.push('/baby')}
-                  />
-                </div>
-                <div className='absolute  bottom-0 col-start-2 '>
+              <div className=' absolute inset-x-0 bottom-0 grid grid-cols-5 pr-24 '>
+                <div className='absolute bottom-0 col-start-1'>
                   <div className='absolute left-[110px] top-[-10px] text-xl text-white '>
                     นักเรียน
                   </div>
@@ -81,8 +72,8 @@ const Home = () => {
                     onClick={() => router.push('/student')}
                   />
                 </div>
-                <div className='absolute  bottom-4 col-start-3 '>
-                  <div className='absolute left-[110px] top-[-30px] text-xl text-white '>
+                <div className='absolute  bottom-4 col-start-2 '>
+                  <div className='absolute left-[110px] top-[-30px] text-xl text-white'>
                     รัฐบาล
                   </div>
                   <GirlHome
@@ -90,8 +81,8 @@ const Home = () => {
                     onClick={() => router.push('/government')}
                   />
                 </div>
-                <div className='absolute bottom-2 col-start-4'>
-                  <div className='absolute left-[110px] top-[240px] text-xl text-white '>
+                <div className='absolute bottom-2 col-start-3 '>
+                  <div className='absolute left-[110px] top-[240px] text-xl text-white'>
                     ครูและผู้อำนวยการ
                   </div>
                   <TeacherHome
@@ -99,8 +90,8 @@ const Home = () => {
                     onClick={() => router.push('/teacher-all')}
                   />
                 </div>
-                <div className='absolute bottom-0 col-start-5 pl-10'>
-                  <div className='absolute left-[110px] top-[-20px] text-xl text-white '>
+                <div className='absolute bottom-0  col-start-4'>
+                  <div className='absolute left-[110px] top-[-20px]  text-xl text-white'>
                     พ่อแม่และผู้ปกครอง
                   </div>
                   <ParentHome
@@ -108,7 +99,7 @@ const Home = () => {
                     onClick={() => router.push('/parent-all')}
                   />
                 </div>
-                <div className='absolute bottom-0 left-10  col-start-6 '>
+                <div className='absolute bottom-0  col-start-5  '>
                   <div className='absolute left-[100px] top-[350px] text-xl text-white '>
                     หน่วยงานท้องถิ่น
                   </div>

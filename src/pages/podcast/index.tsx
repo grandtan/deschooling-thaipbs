@@ -1,16 +1,15 @@
-import { Grid, CircularProgress } from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Grid } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { PiPencilLine } from 'react-icons/pi';
-import Layout from '@/components/layout/Layout';
-import { YoutubeResponse } from '@/types/teacher';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { MdComputer } from 'react-icons/md';
-import { SiYoutubemusic } from 'react-icons/si';
-import { FaPodcast } from 'react-icons/fa';
+
+import Layout from '@/components/layout/Layout';
 
 import { useLoading } from '@/context/loadingContext';
+
+import { YoutubeResponse } from '@/types/teacher';
 import Head from 'next/head';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
@@ -18,7 +17,7 @@ const YOUTUBE_PLAYLIST_ITEMs_API =
 
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
 
-const PLAYLIST_ID = 'PLeZwwnM5meV8bGT7GtUEd8Kv5A9cmdTkk';
+const PLAYLIST_ID = 'PLOXec4xqLw1Hqeoj8yxo9MXKIfLe19XfQ';
 
 const RESULTS_PER_PAGE = 8;
 
@@ -26,11 +25,12 @@ const Podcast = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
+  const [viewAllClicked, setViewAllClicked] = useState(false);
 
   const { setLoading } = useLoading();
 
   useEffect(() => {
-    fetchYoutube(totalItems); // fetch all videos at once
+    fetchYoutube(totalItems);
   }, [totalItems]);
 
   const fetchYoutube = async (maxResults: number) => {
@@ -50,6 +50,7 @@ const Podcast = () => {
 
   const handleViewAll = () => {
     setMaxResults(totalItems);
+    setViewAllClicked(true);
   };
 
   const handleViewMore = () => {
@@ -72,28 +73,37 @@ const Podcast = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>Podcast : DeschoolingDoc</title>
+        <title>
+          Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง : DeschoolingDoc
+        </title>
         <meta
           name='keywords'
-          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+          content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-24  h-screen py-10'>
+
+      <div className='mx-24 py-10'>
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
-            <FaPodcast size={35} />
-            <div className=' text-3xl '>Podcast ฟัง พูด อ่าน กิน</div>
+            <MdComputer size={35} />
+            <div className=' text-3xl'>
+              Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
+            </div>
           </div>
-          {/* <button
-            className=' flex items-center font-semibold text-[#ffba00]'
-            onClick={handleViewAll}
-          >
-            <div className='text-lg'>ดูทั้งหมด</div>
-            <ArrowForwardIosIcon className='pl-1' />
-          </button> */}
+          {!viewAllClicked &&
+            maxResults < totalItems &&
+            totalItems > RESULTS_PER_PAGE && (
+              <button
+                className=' flex items-center font-semibold text-[#ffba00]'
+                onClick={handleViewAll}
+              >
+                <div className='text-lg'>ดูทั้งหมด</div>
+                <ArrowForwardIosIcon className='pl-1' />
+              </button>
+            )}
         </div>
 
-        {/* <div className='mt-10 flex flex-row justify-center '>
+        <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
               [...itemYoutube.items]
@@ -106,7 +116,7 @@ const Podcast = () => {
                       passHref
                       target='_blank'
                     >
-                      <div className='aspect-video w-full rounded-t-2xl rounded-bl-2xl bg-white p-1.5 duration-500 hover:-translate-y-6 hover:text-[#ffba00] hover:ease-in'>
+                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
                         <div>
                           <img
                             className='rounded-t-xl rounded-bl-xl'
@@ -117,7 +127,7 @@ const Podcast = () => {
                           />
                         </div>
 
-                        <div className='h-24 p-4 text-left'>
+                        <div className='h-24 p-2 text-left'>
                           {e.snippet.title}
                         </div>
                       </div>
@@ -125,25 +135,25 @@ const Podcast = () => {
                   </Grid>
                 ))}
           </Grid>
-        </div> */}
+        </div>
 
-        {/* <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {totalItems > maxResults && (
+        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+          {maxResults < totalItems && (
             <button onClick={handleViewMore}>
               VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
             </button>
           )}
-        </div> */}
+        </div>
 
-        {/* <div className=' flex justify-end '>
+        <div className='flex justify-end'>
           <button
             className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
             onClick={scrollToTop}
           >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
-        </div> */}
+        </div>
       </div>
     </Layout>
   );

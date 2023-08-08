@@ -116,12 +116,12 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         Podcast
       </button>
 
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
+      <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
         <Link
           className=' px-5 py-3 text-black hover:text-[#ffba00]'
           href='/podcast'
         >
-          ฟัง พูด อ่าน กิน
+          กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
         </Link>
       </div>
     </div>

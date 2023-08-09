@@ -58,7 +58,7 @@ const Gallery = () => {
             </Link>
           </div>
 
-          <div className=' grid grid-cols-4  gap-x-1  md:grid-cols-4'>
+          <div className='  grid grid-cols-4 gap-1 md:grid-cols-4'>
             <div className='col-span-4 grid   content-center rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>

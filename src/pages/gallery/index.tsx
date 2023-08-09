@@ -38,55 +38,39 @@ const Gallery = () => {
         </div>
 
         <div className='  grid h-screen grid-cols-1 place-content-center gap-4  md:grid-cols-2'>
-          <div className=' grid grid-cols-4 gap-1  md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
+          <div className=' grid grid-cols-4 gap-1 md:grid-cols-4'>
+            <div className='col-span-4 grid content-center  rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
               ก้าวทันโลก”
             </div>
             <Image.PreviewGroup>
               {governmentEvent.map((image, index) => (
-                <div
-                  key={index}
-                  className={index === 0 ? 'col-span-4 rounded-xl ' : ''}
-                >
-                  <Image
-                    src={image}
-                    sizes='50%'
-                    className='rounded-xl '
-                    alt='Government Event'
-                  />
+                <div key={index} className={index === 0 ? 'col-span-4 ' : ''}>
+                  <Image src={image} sizes='50%' alt='Government Event' />
                 </div>
               ))}
             </Image.PreviewGroup>
             <Link
-              className='col-span-4  rounded-b-3xl bg-[#ffd666] p-2 text-center '
+              className='col-span-4  grid content-center rounded-b-3xl bg-[#ffd666]  p-2 text-center '
               href='/gallery/government'
             >
               รายละเอียดเพิ่มเติม
             </Link>
           </div>
 
-          <div className=' grid grid-cols-4 gap-1   md:grid-cols-4'>
-            <div className='col-span-4 rounded-t-3xl  bg-[#ffcc00] p-4 text-center  text-xl '>
+          <div className=' grid grid-cols-4  gap-x-1  md:grid-cols-4'>
+            <div className='col-span-4 grid   content-center rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup>
               {schoolEvent.map((image, index) => (
-                <div
-                  key={index}
-                  className={index === 0 ? 'col-span-4 rounded-xl' : ''}
-                >
-                  <Image
-                    src={image}
-                    sizes='50%'
-                    className='rounded-xl'
-                    alt='School Event'
-                  />
+                <div key={index} className={index === 0 ? 'col-span-4  ' : ''}>
+                  <Image src={image} sizes='100%' alt='School Event' />
                 </div>
               ))}
             </Image.PreviewGroup>
             <Link
-              className='col-span-4 rounded-b-3xl  bg-[#ffd666] p-2 text-center'
+              className='col-span-4  grid content-center rounded-b-3xl bg-[#ffd666]  p-2 text-center '
               href='/gallery/school'
             >
               รายละเอียดเพิ่มเติม

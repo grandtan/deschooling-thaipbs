@@ -4,11 +4,8 @@ import { Grid } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { MdComputer } from 'react-icons/md';
-
 import Layout from '@/components/layout/Layout';
-
 import { useLoading } from '@/context/loadingContext';
-
 import { YoutubeResponse } from '@/types/teacher';
 import Head from 'next/head';
 

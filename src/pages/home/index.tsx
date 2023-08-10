@@ -1,24 +1,24 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import { Slide } from 'react-slideshow-image';
-
+import Image from 'next/image';
 import 'react-slideshow-image/dist/styles.css';
 
 import Layout from '@/components/layout/Layout';
 
-import BabyHome from '@/icon/BabyHome';
 import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
-import OrganizeHome from '@/icon/LocalGovermentHome';
 import ParentHome from '@/icon/ParentHome';
 import TeacherHome from '@/icon/TeacherHome';
-import BgHome1 from '@/icon/Bghome1';
-import Bghome1 from '@/icon/Bghome1';
-import { ImSearch } from 'react-icons/im';
-import LocalGovermentHome from '@/icon/LocalGovermentHome';
 import LocalGovernmentHome from '@/icon/LocalGovermentHome';
 import Head from 'next/head';
 import { TbZoomQuestion } from 'react-icons/tb';
+import { MdEmojiPeople, MdOutlineEmojiPeople } from 'react-icons/md';
+
+import EscalatorWarningIcon from '@mui/icons-material/EscalatorWarning';
+import { MdBoy } from 'react-icons/md';
+import { IoMdMan } from 'react-icons/io';
+import LocalMan from '@/icon/LocalMan';
 
 const Home = () => {
   const router = useRouter();
@@ -33,7 +33,7 @@ const Home = () => {
       </Head>
 
       <div className=''>
-        <Slide duration={2000}>
+        <Slide duration={20000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
             onClick={() => router.push('/thaipbs')}
@@ -62,7 +62,7 @@ const Home = () => {
             }}
           >
             <div className=' relative h-full w-full'>
-              <div className=' absolute inset-x-0 bottom-0 grid grid-cols-5 pr-24 '>
+              <div className=' absolute inset-x-0 bottom-0 grid grid-cols-5  '>
                 <div className='absolute bottom-0 col-start-1'>
                   <div className='absolute left-[110px] top-[-10px] text-xl text-white '>
                     นักเรียน
@@ -81,17 +81,23 @@ const Home = () => {
                     onClick={() => router.push('/government')}
                   />
                 </div>
-                <div className='absolute bottom-2 col-start-3 '>
-                  <div className='absolute left-[110px] top-[240px] text-xl text-white'>
+
+                <div className='absolute bottom-2 left-[-70px] col-start-3 '>
+                  <div className='absolute left-[120px] top-[-30px] text-xl text-white '>
                     ครูและผู้อำนวยการ
                   </div>
-                  <TeacherHome
-                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
-                    onClick={() => router.push('/teacher-all')}
+                  <Image
+                    src='/images/icon-localman.png'
+                    width={350}
+                    height={350}
+                    alt='local-government'
+                    className=' cursor-pointer  duration-700 hover:-translate-y-4 hover:ease-in-out'
+                    onClick={() => router.push('/local-government')}
                   />
                 </div>
-                <div className='absolute bottom-0  col-start-4'>
-                  <div className='absolute left-[110px] top-[-20px]  text-xl text-white'>
+
+                <div className='absolute bottom-0 left-[-40px]  col-start-4'>
+                  <div className='absolute left-[110px] top-[-30px]  text-xl text-white'>
                     พ่อแม่และผู้ปกครอง
                   </div>
                   <ParentHome
@@ -99,13 +105,14 @@ const Home = () => {
                     onClick={() => router.push('/parent-all')}
                   />
                 </div>
-                <div className='absolute bottom-0  col-start-5  '>
-                  <div className='absolute left-[100px] top-[350px] text-xl text-white '>
+
+                <div className='absolute bottom-2 left-[-90px] col-start-5'>
+                  <div className='absolute left-[100px] top-[210px] text-xl text-white'>
                     หน่วยงานท้องถิ่น
                   </div>
-                  <LocalGovernmentHome
+                  <TeacherHome
                     className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
-                    onClick={() => router.push('/local-government')}
+                    onClick={() => router.push('/teacher-all')}
                   />
                 </div>
               </div>

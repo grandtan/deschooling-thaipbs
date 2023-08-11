@@ -33,7 +33,7 @@ const Home = () => {
         />
       </Head>
 
-      <div className=''>
+      <div className='w-full '>
         <Slide duration={20000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
@@ -93,7 +93,7 @@ const Home = () => {
                     height={350}
                     alt='local-government'
                     className=' cursor-pointer  duration-700 hover:-translate-y-4 hover:ease-in-out'
-                    onClick={() => router.push('/local-government')}
+                    onClick={() => router.push('/teacher-all')}
                   />
                 </div>
 
@@ -113,7 +113,7 @@ const Home = () => {
                   </div>
                   <LocalGovermentHome
                     className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
-                    onClick={() => router.push('/teacher-all')}
+                    onClick={() => router.push('/local-government')}
                   />
                 </div>
               </div>

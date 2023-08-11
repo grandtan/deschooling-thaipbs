@@ -5,16 +5,11 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <meta
-          name='description'
-          content='คำอธิบายเว็บไซต์ของคุณ'
-          title='DecschoolingDoc'
-        />
         <link
-          rel='preload'
-          href='/favicon.ico'
-          as='font'
-          crossOrigin='anonymous'
+          rel='icon'
+          href='/favicon/favicon.ico'
+          sizes='32x32'
+          type='image/png'
         />
       </Head>
       <body>

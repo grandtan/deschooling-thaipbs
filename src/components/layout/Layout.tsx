@@ -28,6 +28,7 @@ import AppBar from '@mui/material/AppBar';
 import Container from '@mui/material/Container';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
+import Head from 'next/head';
 
 const fontWeb = Kanit({
   weight: '400',

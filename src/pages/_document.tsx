@@ -5,12 +5,7 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <link
-          rel='icon'
-          href='/favicon/favicon.ico'
-          sizes='32x32'
-          type='image/png'
-        />
+        <link rel='icon' href='/favicon/favicon.ico' sizes='32x32' />
       </Head>
       <body>
         <Main />

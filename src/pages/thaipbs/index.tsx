@@ -19,10 +19,10 @@ const ThaiPbs = () => {
         <div className='relative'>
           <div className='absolute left-[30%] top-[8%] mx-24 flex space-x-4 font-semibold text-[#ffba00]'>
             <LiaSchoolSolid size={35} />
-            <div className=' text-3xl '>ความเป็นมาของ Deschooling</div>
+            <div className=' text-3xl'>ความเป็นมาของ Deschooling</div>
           </div>
 
-          <div className='absolute left-[35%] top-[34%] w-[40%] text-start  text-lg leading-8'>
+          <div className='absolute left-[35%] top-[34%] w-[40%] text-start text-sm leading-8 lg:text-lg'>
             <p className='indent-8'>
               เพราะเราเชื่อว่า
               “ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้” จนเกิดเป็น

@@ -3,14 +3,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import TreeItem from '@mui/lab/TreeItem';
 import TreeView from '@mui/lab/TreeView';
-import {
-  Box,
-  Drawer,
-  IconButton,
-  Toolbar,
-  Typography,
-  useTheme,
-} from '@mui/material';
+import { Drawer, IconButton, useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { auto } from '@popperjs/core';
 import { Kanit } from 'next/font/google';
@@ -24,11 +17,8 @@ import { PiTelevisionFill } from 'react-icons/pi';
 import { RiMailUnreadFill } from 'react-icons/ri';
 import { SiYoutubemusic } from 'react-icons/si';
 import { TbHomeHeart } from 'react-icons/tb';
-import AppBar from '@mui/material/AppBar';
-import Container from '@mui/material/Container';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
-import Head from 'next/head';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -47,154 +37,206 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
 
   const theme = useTheme();
+
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
 
-  const home = () => (
-    <div className='hidden w-full sm:block md:w-auto'>
-      <Link
-        className='flex flex-col items-center p-3 text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00]  lg:text-2xl'
-        href='/home'
-      >
-        <div className='mb-1 flex flex-col  items-center'>
-          <TbHomeHeart size={35} />
-        </div>
-        หน้าแรก
-      </Link>
-    </div>
-  );
+  const pathName = router.pathname;
 
-  const learningSpace = () => (
-    <div className='hidden w-full sm:block  md:w-auto '>
-      <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl'>
-        <div className='mb-1 flex flex-col  items-center'>
-          <MdComputer size={35} />
-        </div>
-        พื้นที่เรียนรู้
-      </button>
-      <div className='fixed hidden w-[210px] flex-col divide-y  rounded  bg-white   text-start  text-xl drop-shadow-lg hover:flex peer-hover:flex '>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/teacher'
-        >
-          ครูและผู้อำนวยการ
-        </Link>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/parent'
-        >
-          พ่อแม่และผู้ปกครอง
+  const home = () => {
+    const baseClasses =
+      'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeClasses =
+      pathName === '/home' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <Link className={`${baseClasses} ${activeClasses}`} href='/home'>
+          <div className='mb-1 flex flex-col  items-center'>
+            <TbHomeHeart size={35} />
+          </div>
+          หน้าแรก
         </Link>
       </div>
-    </div>
-  );
+    );
+  };
 
-  const vdo = () => (
-    <div className='hidden w-full sm:block  md:w-auto'>
-      <button className=' peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
-        <div className='mb-1 flex  flex-col items-center'>
-          <SiYoutubemusic size={35} />
+  const learningSpace = () => {
+    const baseButtonClasses =
+      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeButtonClasses =
+      pathName === '/teacher' || pathName === '/parent'
+        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
+        : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
+          <div className='mb-1 flex flex-col  items-center'>
+            <MdComputer size={35} />
+          </div>
+          พื้นที่เรียนรู้
+        </button>
+        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/teacher'
+          >
+            ครูและผู้อำนวยการ
+          </Link>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/parent'
+          >
+            พ่อแม่และผู้ปกครอง
+          </Link>
         </div>
-        วิดีโอ
-      </button>
+      </div>
+    );
+  };
 
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/vdo'
-        >
-          VDO How to
+  const vdo = () => {
+    const baseButtonClasses =
+      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeButtonClasses =
+      pathName === '/vdo' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
+          <div className='mb-1 flex flex-col items-center'>
+            <SiYoutubemusic size={35} />
+          </div>
+          วิดีโอ
+        </button>
+
+        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/vdo'
+          >
+            VDO How to
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
+  const podCast = () => {
+    const baseButtonClasses =
+      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeButtonClasses =
+      pathName === '/podcast' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
+          <div className='mb-1 flex flex-col items-center'>
+            <FaPodcast size={35} />
+          </div>
+          Podcast
+        </button>
+
+        <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/podcast'
+          >
+            กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
+  const event = () => {
+    const baseButtonClasses =
+      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeButtonClasses =
+      pathName === '/calendar' || pathName === '/gallery'
+        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
+        : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
+          <div className='mb-1 flex flex-col items-center'>
+            <BsFillCalendarHeartFill size={35} />
+          </div>
+          กิจกรรม
+        </button>
+
+        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/calendar'
+          >
+            ปฏิทินกิจกรรม
+          </Link>
+
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/gallery'
+          >
+            ภาพกิจกรรม
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
+  const tv = () => {
+    const baseButtonClasses =
+      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeButtonClasses =
+      pathName === '/deschooling' || pathName === '/teacher-hero'
+        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
+        : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
+          <div className='mb-1 flex flex-col items-center'>
+            <PiTelevisionFill size={35} />
+          </div>
+          รายการทีวี
+        </button>
+
+        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/deschooling'
+          >
+            Deschooling
+          </Link>
+
+          <Link
+            className='px-5 py-3 text-black hover:text-[#ffba00]'
+            href='/teacher-hero'
+          >
+            Teacher Hero
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
+  const aboutUs = () => {
+    const baseClasses =
+      'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
+    const activeClasses =
+      pathName === '/home' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+
+    return (
+      <div className='hidden w-full sm:block md:w-auto'>
+        <Link className={`${baseClasses} ${activeClasses}`} href='/about-us'>
+          <div className='mb-1 flex flex-col  items-center'>
+            <RiMailUnreadFill size={35} />
+          </div>
+          ติดต่อเรา
         </Link>
       </div>
-    </div>
-  );
-
-  const podCast = () => (
-    <div className='hidden w-full sm:block  md:w-auto'>
-      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
-        <div className='mb-1 flex  flex-col items-center'>
-          <FaPodcast size={35} />
-        </div>
-        Podcast
-      </button>
-
-      <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/podcast'
-        >
-          กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
-        </Link>
-      </div>
-    </div>
-  );
-
-  const event = () => (
-    <div className='hidden w-full sm:block  md:w-auto'>
-      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
-        <div className='mb-1 flex  flex-col items-center'>
-          <BsFillCalendarHeartFill size={35} />
-        </div>
-        กิจกรรม
-      </button>
-
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/calendar'
-        >
-          ปฏิทินกิจกรรม
-        </Link>
-
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/gallery'
-        >
-          ภาพกิจกรรม
-        </Link>
-      </div>
-    </div>
-  );
-
-  const tv = () => (
-    <div className='hidden w-full sm:block  md:w-auto'>
-      <button className='peer p-3 text-base text-black hover:rounded-b-[50px]  hover:bg-white  hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00] lg:text-2xl '>
-        <div className='mb-1 flex  flex-col items-center'>
-          <PiTelevisionFill size={35} />
-        </div>
-        รายการทีวี
-      </button>
-
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white  text-start  text-xl  drop-shadow-lg hover:flex  peer-hover:flex '>
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/deschooling'
-        >
-          Deschooling
-        </Link>
-
-        <Link
-          className=' px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/teacher-hero'
-        >
-          Teacher Hero
-        </Link>
-      </div>
-    </div>
-  );
-
-  const aboutUs = () => (
-    <div className='hidden w-full sm:block md:w-auto'>
-      <Link
-        className='flex flex-col items-center  p-3  text-base text-black  hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] focus:rounded-b-[50px] focus:bg-white focus:text-[#ffba00]  lg:text-2xl'
-        href='/about-us'
-      >
-        <div className='mb-1 flex flex-col  items-center'>
-          <RiMailUnreadFill size={35} />
-        </div>
-        ติดต่อเรา
-      </Link>
-    </div>
-  );
+    );
+  };
 
   const drowerComponent = () => (
     <Drawer

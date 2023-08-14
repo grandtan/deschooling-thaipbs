@@ -1,8 +1,8 @@
+import Head from 'next/head';
 import React from 'react';
+import { RiGovernmentFill } from 'react-icons/ri';
 
 import Layout from '@/components/layout/Layout';
-import { RiGovernmentFill, RiParentLine } from 'react-icons/ri';
-import Head from 'next/head';
 
 const LocalGovernment = () => {
   return (
@@ -19,6 +19,15 @@ const LocalGovernment = () => {
           <RiGovernmentFill size={35} />
           <div className=' text-3xl '> หน่วยงานท้องถิ่น</div>
         </div>
+        <iframe
+          width='560'
+          height='315'
+          src='https://www.youtube.com/embed/M_jcdqHPiFo'
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        />
       </div>
     </Layout>
   );

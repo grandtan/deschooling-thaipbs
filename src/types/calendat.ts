@@ -10,4 +10,5 @@ export interface CaledarResponse {
   remark: string;
   qrcode: string;
   line: string;
+  imageUrl: string;
 }

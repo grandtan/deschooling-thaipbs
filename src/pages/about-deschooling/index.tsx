@@ -5,7 +5,7 @@ import { RiQuestionnaireFill } from 'react-icons/ri';
 import Image from 'next/image';
 import { LiaSchoolSolid } from 'react-icons/lia';
 
-const ThaiPbs = () => {
+const AboutDeschooling = () => {
   return (
     <Layout container={false}>
       <Head>
@@ -63,4 +63,4 @@ const ThaiPbs = () => {
   );
 };
 
-export default ThaiPbs;
+export default AboutDeschooling;

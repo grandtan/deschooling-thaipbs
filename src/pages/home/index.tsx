@@ -30,7 +30,7 @@ const Home = () => {
         <Slide duration={3000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
-            onClick={() => router.push('/thaipbs')}
+            onClick={() => router.push('/about-deschooling')}
           >
             <div className=' flex flex-row space-x-8 text-8xl'>
               <div className=' font-bold text-[#ffcc00]'>Deschooling</div>

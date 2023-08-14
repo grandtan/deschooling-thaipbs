@@ -79,7 +79,7 @@ const Podcast = () => {
         />
       </Head>
 
-      <div className='mx-24 py-10'>
+      <div className='mx-24 h-full py-10'>
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <MdComputer size={35} />

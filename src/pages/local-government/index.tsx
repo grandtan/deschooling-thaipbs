@@ -1,11 +1,41 @@
+import { Grid } from '@mui/material';
 import Head from 'next/head';
-import React from 'react';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { RiGovernmentFill } from 'react-icons/ri';
 
 import Layout from '@/components/layout/Layout';
-import Grid from '@mui/material/Grid';
+
+import { YoutubeResponse } from '@/types/teacher';
+
+const YOUTUBE_VIDEOS_API = 'https://www.googleapis.com/youtube/v3/videos';
+const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
+const VIDEO_ID1 = 'kkJqmf25xzk';
+const VIDEO_ID2 = 'OG_OGyNXDXQ';
+const VIDEO_ID3 = '2MjVUkt8JBQ';
+const VIDEO_ID4 = '5UcbCjUYLdY';
+const VIDEO_ID5 = 'GHOGbrAGTok';
+const VIDEO_ID6 = 'RZ_TT2zSrlw';
+const VIDEO_ID7 = 'O_fnd959HNA';
+const VIDEO_ID8 = 'MPf9ckzspvA';
+const VIDEO_ID9 = 'Bt4Q4SacV88';
+const VIDEO_ID10 = 'q8w5IIyq1T4';
 
 const LocalGovernment = () => {
+  const [videoData, setVideoData] = useState<YoutubeResponse | null>(null);
+
+  useEffect(() => {
+    const fetchYoutube = async () => {
+      const res = await fetch(
+        `${YOUTUBE_VIDEOS_API}?part=snippet&id=${VIDEO_ID1}&id=${VIDEO_ID2}&id=${VIDEO_ID3}&id=${VIDEO_ID4}&id=${VIDEO_ID5}&id=${VIDEO_ID6}&id=${VIDEO_ID7}&id=${VIDEO_ID8}&id=${VIDEO_ID9}&id=${VIDEO_ID10}&key=${YOUTUBE_API_KEY}`
+      );
+      const data: YoutubeResponse = await res.json();
+
+      setVideoData(data);
+    };
+    fetchYoutube();
+  }, []);
+
   return (
     <Layout container={false}>
       <Head>
@@ -21,66 +51,31 @@ const LocalGovernment = () => {
           <div className=' text-3xl '> หน่วยงานท้องถิ่น</div>
         </div>
 
-        <div className=' mt-10 flex flex-col space-y-8'>
-          <div className='flex flex-row justify-center space-x-6 '>
-            <div className='aspect-video  rounded-t-xl rounded-bl-xl  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-              <div>
-                <iframe
-                  width='560'
-                  height='315'
-                  src='https://www.youtube.com/embed/kkJqmf25xzk'
-                  title='YouTube video player'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-
-            <div className='aspect-video  rounded-t-xl rounded-bl-xl  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-              <div>
-                <iframe
-                  width='560'
-                  height='315'
-                  src='https://www.youtube.com/embed/OG_OGyNXDXQ'
-                  title='YouTube video player'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-
-          <div className='flex flex-row justify-center space-x-6 '>
-            <div className='aspect-video  rounded-t-xl rounded-bl-xl  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-              <div>
-                <iframe
-                  width='560'
-                  height='315'
-                  src='https://www.youtube.com/embed/2MjVUkt8JBQ'
-                  title='YouTube video player'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-
-            <div className='aspect-video rounded-t-xl rounded-bl-xl  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-              <div className=' target:blank'>
-                <iframe
-                  width='560'
-                  height='315'
-                  src='https://www.youtube.com/embed/5UcbCjUYLdY'
-                  title='YouTube video player'
-                  frameborder='0'
-                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
+        <div className='mt-10 flex flex-row justify-center '>
+          <Grid container spacing={4}>
+            {videoData?.items?.map((e, i) => (
+              <Grid item xs={12} md={6} lg={3} key={i}>
+                <Link
+                  href={`https://www.youtube.com/watch?v=${e.id}`}
+                  passHref
+                  target='_blank'
+                >
+                  <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                    <div>
+                      <img
+                        className='rounded-t-xl rounded-bl-xl'
+                        src={e.snippet.thumbnails.high.url}
+                        width='100%'
+                        height='100%'
+                        alt={e.snippet.title}
+                      />
+                    </div>
+                    <div className='h-24 p-2 text-left'>{e.snippet.title}</div>
+                  </div>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
         </div>
       </div>
     </Layout>

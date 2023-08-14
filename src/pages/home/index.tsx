@@ -62,7 +62,7 @@ const Home = () => {
               height: '100%',
             }}
           >
-            <div className=' relative h-full w-full'>
+            <div className=' relative h-full w-full '>
               <div className=' absolute inset-x-0 bottom-0 grid grid-cols-5  '>
                 <div className='absolute bottom-0 col-start-1'>
                   <div className='absolute left-[110px] top-[-10px] text-xl text-white '>

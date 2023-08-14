@@ -1,25 +1,18 @@
+import Head from 'next/head';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
-import Image from 'next/image';
+
 import 'react-slideshow-image/dist/styles.css';
 
 import Layout from '@/components/layout/Layout';
 
 import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
-import ParentHome from '@/icon/ParentHome';
-import TeacherHome from '@/icon/LocalGovermentHome';
-import LocalGovernmentHome from '@/icon/LocalGovermentHome';
-import Head from 'next/head';
-import { TbZoomQuestion } from 'react-icons/tb';
-import { MdEmojiPeople, MdOutlineEmojiPeople } from 'react-icons/md';
-
-import EscalatorWarningIcon from '@mui/icons-material/EscalatorWarning';
-import { MdBoy } from 'react-icons/md';
-import { IoMdMan } from 'react-icons/io';
-import LocalMan from '@/icon/LocalMan';
 import LocalGovermentHome from '@/icon/LocalGovermentHome';
+import ParentHome from '@/icon/ParentHome';
 
 const Home = () => {
   const router = useRouter();
@@ -34,7 +27,7 @@ const Home = () => {
       </Head>
 
       <div className='w-full '>
-        <Slide duration={20000}>
+        <Slide duration={3000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
             onClick={() => router.push('/thaipbs')}

@@ -56,11 +56,11 @@ const Calendar = () => {
 
         <div className='flex flex-col space-y-10'>
           {data?.map((item, index) => (
-            <div key={index} className=' flex  justify-center '>
+            <div key={index} className=' flex justify-center '>
               <img
                 src={item.imageUrl}
                 alt='deschooling'
-                className='h-3/4 w-3/4'
+                className='h-3/4 w-3/4  '
               />
             </div>
             // <div

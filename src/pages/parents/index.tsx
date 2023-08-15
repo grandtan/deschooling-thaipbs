@@ -7,7 +7,8 @@ import Link from 'next/link';
 import { FaPodcast } from 'react-icons/fa';
 import { MdComputer } from 'react-icons/md';
 import Head from 'next/head';
-const ParentAll = () => {
+
+const Parents = () => {
   return (
     <Layout backgroundImage='/images/bg-parent-all.png'>
       <Head>
@@ -69,4 +70,4 @@ const ParentAll = () => {
   );
 };
 
-export default ParentAll;
+export default Parents;

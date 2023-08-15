@@ -29,7 +29,7 @@ const AboutDeschooling = () => {
               </span>
             </div>
           </div>
-          <div className='text-justify indent-10 text-xl  leading-10 text-white'>
+          <div className='text-justify indent-10 text-xl leading-10 text-white'>
             เราเชื่อว่า “ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้
             <span className='mx-2 font-mono text-2xl font-extrabold text-[#f05223]'>
               Thai PBS

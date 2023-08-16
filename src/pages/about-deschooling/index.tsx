@@ -15,22 +15,19 @@ const AboutDeschooling = () => {
       </Head>
 
       <div className=' h-screen '>
-        <div className='flex h-[70%] w-full flex-row '>
-          <div className=' flex w-1/3 items-center justify-end  space-x-10 text-5xl'>
+        <div className='flex h-[70%] w-full flex-col space-y-14 px-44 py-10'>
+          <div className=' flex flex-row items-center justify-center text-4xl'>
             <div className=' space-y-4 text-center '>
               <p className=' text-white'>ความเป็นมาของ</p>
-              <p className='text-[#ffba00]'>'Deschooling'</p>
-            </div>
-            <div className=' text-[#3ba30a]'>
-              <BiRightArrow />
+              <p className='text-[#ffba00]'>"Deschooling"</p>
             </div>
           </div>
 
-          <div className=' flex w-2/3 items-center justify-start px-8 pr-20'>
-            <div className=' text-xl leading-10 text-white'>
-              <p className='text-center '>
+          <div className='flex flex-row items-center justify-center '>
+            <div className=' rounded-b-xl  rounded-t-xl  border-2 border-dotted  p-4 text-xl leading-10 text-white'>
+              <p className='text-justify indent-10'>
                 เราเชื่อว่า “ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้
-                <span className='mx-2 font-mono text-2xl font-extrabold text-[#f05223]'>
+                <span className='ml-4 mr-2 font-mono text-xl font-extrabold text-[#f05223]'>
                   Thai PBS
                 </span>
                 จึงมีความตั้งใจที่อยากจะขับเคลื่อนการศึกษาไทย
@@ -40,13 +37,21 @@ const AboutDeschooling = () => {
                 ภาคเอกชน ครู ผู้อำนวยการโรงเรียน ชุมชน ท้องถิ่น พ่อแม่ ผู้ปกครอง
                 นักเรียน ตลอดจนความร่วมมือจากประชาชนคนรุ่นใหม่
                 ที่อยากเข้ามามีส่วนร่วมในการพลิกโฉมการศึกษาไทย ผ่านช่องทาง
-                Online และ On Air ตรงกับความต้องการที่หลากหลาย (On Demand)
+                <span className='mx-2 font-mono text-xl font-extrabold text-[#73fa61]'>
+                  Online
+                </span>
+                และ
+                <span className='mx-2 font-mono text-xl font-extrabold text-[#73fa61]'>
+                  On Air
+                </span>
+                ตรงกับความต้องการที่หลากหลาย (On Demand)
                 เพื่อให้เกิดการเข้าถึงกลุ่มเป้าหมาย ได้ทุกที่ ทุกเวลา
                 และต่อยอดไปสู่การเปลี่ยนแปลงในสังคมวงกว้าง
-                ด้วยการก้าวข้ามทุกปัญหาการศึกษาไทย กับหลักคิดแบบ
-                <span className='mx-2 font-mono text-2xl font-extrabold text-[#ffba00] underline underline-offset-2'>
-                  “Deschooling ห้องเรียนข้ามเส้น”
-                </span>
+                ด้วยการก้าวข้ามทุกปัญหาการศึกษาไทยกับหลักคิดแบบ
+              </p>
+
+              <p className='mx-2 mt-4 text-center font-mono text-2xl font-extrabold text-[#ffba00] underline underline-offset-2'>
+                “Deschooling ห้องเรียนข้ามเส้น”
               </p>
             </div>
           </div>

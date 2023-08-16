@@ -36,11 +36,7 @@ const Home = () => {
               <div className=' font-bold text-[#ffcc00]'>Deschooling</div>
               <div className=' text-white'>คืออะไร_</div>
               <div>
-                <TbZoomQuestion
-                  color='white'
-                  size={70}
-                  className='transition delay-300 duration-300 ease-in-out'
-                />
+                <TbZoomQuestion color='white' size={70} />
               </div>
             </div>
           </div>

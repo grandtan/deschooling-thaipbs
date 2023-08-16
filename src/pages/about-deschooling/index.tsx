@@ -19,7 +19,7 @@ const AboutDeschooling = () => {
           <div className=' flex flex-row items-center justify-center text-4xl'>
             <div className=' space-y-4 text-center '>
               <p className=' text-white'>ความเป็นมาของ</p>
-              <p className='text-[#ffba00]'>"Deschooling"</p>
+              <p className='text-[#ffcc00]'>"Deschooling"</p>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ const AboutDeschooling = () => {
                 ด้วยการก้าวข้ามทุกปัญหาการศึกษาไทยกับหลักคิดแบบ
               </p>
 
-              <p className='mx-2 mt-4 text-center font-mono text-2xl font-extrabold text-[#ffba00] underline underline-offset-2'>
+              <p className='mx-2 mt-4 text-center font-mono text-2xl font-extrabold text-[#ffcc00] underline underline-offset-2'>
                 “Deschooling ห้องเรียนข้ามเส้น”
               </p>
             </div>

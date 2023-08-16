@@ -27,7 +27,7 @@ const Home = () => {
       </Head>
 
       <div className='w-full'>
-        <Slide duration={3000}>
+        <Slide duration={2000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'
             onClick={() => router.push('/about-deschooling')}

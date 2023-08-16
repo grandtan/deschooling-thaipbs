@@ -35,7 +35,7 @@ const Calendar = () => {
   console.log(data);
 
   return (
-    <Layout>
+    <Layout backgroundImage='/images/bg-calendar-1.png'>
       <div className='mx-24 h-full py-10'>
         <Head>
           <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>
@@ -54,13 +54,13 @@ const Calendar = () => {
           กิจกรรมเดือน {format(new Date(), 'MMMM', { locale: th })}
         </div>
 
-        <div className='flex flex-col space-y-10'>
+        <div className='flex flex-col space-y-10 p-4 '>
           {data?.map((item, index) => (
-            <div key={index} className=' flex justify-center '>
+            <div key={index} className=' flex justify-center  '>
               <img
                 src={item.imageUrl}
                 alt='deschooling'
-                className='h-3/4 w-3/4  '
+                className='h-3/4 w-3/4  rounded-b-xl  rounded-t-xl  border-2 border-dotted '
               />
             </div>
             // <div

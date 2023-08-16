@@ -3,11 +3,11 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Grid } from '@mui/material';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { MdComputer } from 'react-icons/md';
 import Layout from '@/components/layout/Layout';
 import { useLoading } from '@/context/loadingContext';
 import { YoutubeResponse } from '@/types/teacher';
 import Head from 'next/head';
+import { FaPodcast } from 'react-icons/fa';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -82,7 +82,7 @@ const Podcast = () => {
       <div className='mx-24 h-full py-10'>
         <div className='flex justify-between'>
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
-            <MdComputer size={35} />
+            <FaPodcast size={35} />
             <div className=' text-3xl'>
               Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
             </div>

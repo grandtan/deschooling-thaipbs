@@ -86,7 +86,7 @@ const Home = () => {
                   />
                 </div>
 
-                <div className='absolute bottom-0 left-[-40px]  col-start-4'>
+                <div className='absolute bottom-0 left-[-30px]  col-start-4'>
                   <div className='absolute left-[70px] top-[-30px]  text-xl text-white'>
                     พ่อแม่และผู้ปกครอง
                   </div>
@@ -96,7 +96,7 @@ const Home = () => {
                   />
                 </div>
 
-                <div className='absolute bottom-2 left-[-100px] col-start-5'>
+                <div className='absolute bottom-2 left-[-80px] col-start-5'>
                   <div className='absolute left-[100px] top-[220px] text-xl text-white'>
                     หน่วยงานท้องถิ่น
                   </div>

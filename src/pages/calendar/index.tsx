@@ -35,7 +35,7 @@ const Calendar = () => {
   console.log(data);
 
   return (
-    <Layout backgroundImage='/images/bg-calendar-1.png'>
+    <Layout backgroundImage='/images/bg-calendar.png'>
       <div className='mx-24 h-full py-10'>
         <Head>
           <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>

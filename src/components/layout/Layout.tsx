@@ -220,17 +220,17 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
     );
   };
 
-  const aboutUs = () => {
+  const ContactUs = () => {
     const baseClasses =
       'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
     const activeClasses =
-      pathName === '/about-us'
+      pathName === '/contact-us'
         ? 'rounded-b-[50px] bg-white text-[#ffba00]'
         : '';
 
     return (
       <div className='hidden w-full sm:block md:w-auto'>
-        <Link className={`${baseClasses} ${activeClasses}`} href='/about-us'>
+        <Link className={`${baseClasses} ${activeClasses}`} href='/contact-us'>
           <div className='mb-1 flex flex-col  items-center'>
             <RiMailUnreadFill size={35} />
           </div>
@@ -421,7 +421,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             {podCast()}
             {event()}
             {tv()}
-            {aboutUs()}
+            {ContactUs()}
           </div>
 
           {isIpadLayout && (

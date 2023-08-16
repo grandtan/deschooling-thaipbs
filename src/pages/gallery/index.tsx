@@ -23,7 +23,7 @@ const Gallery = () => {
   ];
 
   return (
-    <Layout backgroundImage='/images/bg-master.png'>
+    <Layout container={false}>
       <Head>
         <title>ภาพกิจกรรม : DeschoolingDoc</title>
         <meta
@@ -38,7 +38,7 @@ const Gallery = () => {
         </div>
 
         <div className='  grid h-screen grid-cols-1 place-content-center gap-4  md:grid-cols-2'>
-          <div className=' grid grid-cols-4 gap-1 md:grid-cols-4'>
+          <div className=' grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl  border-2  border-dashed p-0.5 md:grid-cols-4'>
             <div className='col-span-4 grid content-center  rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
               ก้าวทันโลก”
@@ -58,7 +58,7 @@ const Gallery = () => {
             </Link>
           </div>
 
-          <div className='  grid grid-cols-4 gap-1 md:grid-cols-4'>
+          <div className='grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl  border-2  border-dashed p-0.5 md:grid-cols-4'>
             <div className='col-span-4 grid   content-center rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>

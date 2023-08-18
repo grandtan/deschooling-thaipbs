@@ -38,7 +38,7 @@ const Calendar = () => {
     <Layout backgroundImage='/images/bg-calendar.png'>
       <div className='mx-24 h-full py-10'>
         <Head>
-          <title>ปฏิทินกิจกรรม : DeschoolingDoc</title>
+          <title>ปฏิทินกิจกรรม : deschooling</title>
           <meta
             name='keywords'
             content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

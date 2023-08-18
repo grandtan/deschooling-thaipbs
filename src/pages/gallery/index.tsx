@@ -25,7 +25,7 @@ const Gallery = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>ภาพกิจกรรม : DeschoolingDoc</title>
+        <title>ภาพกิจกรรม : deschooling</title>
         <meta
           name='keywords'
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

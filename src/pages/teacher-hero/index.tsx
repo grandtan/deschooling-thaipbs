@@ -71,7 +71,7 @@ const TeacherHero = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>Teacher Hero : DeschoolingDoc</title>
+        <title>Teacher Hero : deschooling</title>
         <meta
           name='keywords'
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

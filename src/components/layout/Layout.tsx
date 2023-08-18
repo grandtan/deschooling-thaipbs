@@ -148,7 +148,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             className='px-5 py-3 text-black hover:text-[#ffba00]'
             href='/podcast'
           >
-            กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
+            กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง
           </Link>
         </div>
       </div>

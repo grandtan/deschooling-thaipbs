@@ -71,7 +71,7 @@ const Podcast = () => {
     <Layout container={false}>
       <Head>
         <title>
-          Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง : DeschoolingDoc
+          Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง : deschooling
         </title>
         <meta
           name='keywords'
@@ -84,7 +84,7 @@ const Podcast = () => {
           <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
             <FaPodcast size={35} />
             <div className=' text-3xl'>
-              Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาทีรู้เรื่อง
+              Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง
             </div>
           </div>
           {!viewAllClicked &&

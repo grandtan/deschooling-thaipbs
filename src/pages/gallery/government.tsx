@@ -33,7 +33,7 @@ const government = () => {
       <Head>
         <title>
           เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
-          ก้าวทันโลก” : DeschoolingDoc
+          ก้าวทันโลก” : deschooling
         </title>
         <meta
           name='keywords'

@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>หน้าแรก : DeschoolingDoc</title>
+        <title>หน้าแรก : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

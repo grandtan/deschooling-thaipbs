@@ -73,7 +73,7 @@ const VDO = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>VDO How to : DeschoolingDoc</title>
+        <title>VDO How to : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

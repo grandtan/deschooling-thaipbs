@@ -72,7 +72,7 @@ const Parent = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>พ่อแม่และผู้ปกครอง : DeschoolingDoc</title>
+        <title>พ่อแม่และผู้ปกครอง : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

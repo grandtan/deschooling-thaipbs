@@ -73,7 +73,7 @@ const Teacher = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>ครูและผู้อำนวยการ : DeschoolingDoc</title>
+        <title>ครูและผู้อำนวยการ : deschooling</title>
         <meta
           name='keywords'
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

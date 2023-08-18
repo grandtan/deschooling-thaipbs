@@ -39,7 +39,7 @@ const LocalGovernment = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>หน่วยงานท้องถิ่น : คุณคือใครในวงการการศึกษา : Deschooling</title>
+        <title>หน่วยงานท้องถิ่น : คุณคือใครในวงการการศึกษา : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

@@ -13,7 +13,7 @@ const Parents = () => {
     <Layout backgroundImage='/images/bg-parent-all.png'>
       <Head>
         <title>
-          พ่อแม่และผู้ปกครอง : คุณคือใครในวงการการศึกษา : Deschooling
+          พ่อแม่และผู้ปกครอง : คุณคือใครในวงการการศึกษา : deschooling
         </title>
         <meta
           name='keywords'

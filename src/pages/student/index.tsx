@@ -14,7 +14,7 @@ const Student = () => {
   return (
     <Layout backgroundImage='/images/bg-student.png'>
       <Head>
-        <title>นักเรียน : คุณคือใครในวงการการศึกษา : Deschooling</title>
+        <title>นักเรียน : คุณคือใครในวงการการศึกษา : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

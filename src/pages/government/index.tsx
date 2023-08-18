@@ -71,7 +71,7 @@ const Goverment = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>รัฐบาล : คุณคือใครในวงการการศึกษา : Deschooling</title>
+        <title>รัฐบาล : คุณคือใครในวงการการศึกษา : deschooling</title>
         <meta
           name='keywords'
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'

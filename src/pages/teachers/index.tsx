@@ -13,7 +13,7 @@ const TeacherAll = () => {
     <Layout backgroundImage='/images/bg-teacher-all.png'>
       <Head>
         <title>
-          ครูและผู้อำนวยการ : คุณคือใครในวงการการศึกษา : Deschooling
+          ครูและผู้อำนวยการ : คุณคือใครในวงการการศึกษา : deschooling
         </title>
         <meta
           name='keywords'

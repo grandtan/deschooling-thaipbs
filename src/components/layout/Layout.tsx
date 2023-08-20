@@ -282,6 +282,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 className='my-2 '
               />
               <TreeItem
+                onClick={() => router.push('/parent')}
                 nodeId='พ่อแม่และผู้ปกครอง'
                 label='พ่อแม่และผู้ปกครอง'
                 className='mt-2 '
@@ -404,7 +405,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         </div>
 
         <div className='px-12 py-4 '>
-          <Link className=' text-lg text-black ' href='/about-us'>
+          <Link className=' text-lg text-black ' href='/contact-us'>
             ติดต่อเรา
           </Link>
         </div>

@@ -26,7 +26,7 @@ const Home = () => {
         />
       </Head>
 
-      <div className='w-full'>
+      <div className=''>
         <Slide duration={2000}>
           <div
             className='each-slide-effect flex cursor-pointer flex-row justify-center'

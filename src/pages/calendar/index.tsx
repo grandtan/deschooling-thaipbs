@@ -18,7 +18,7 @@ const Calendar = () => {
     const fetchDeschoolingDetails = () => {
       setLoading(true);
       fetch(
-        'https://sheet.best/api/sheets/70bacdb9-b223-4aae-882e-2540a7c82d56'
+        'https://sheet.best/api/sheets/84dbfbff-a983-41ad-82e4-627c6217f442'
       )
         .then((response) => response.json())
         .then((data: CaledarResponse[]) => {
@@ -36,7 +36,7 @@ const Calendar = () => {
 
   return (
     <Layout backgroundImage='/images/bg-calendar.png'>
-      <div className='mx-24 h-full py-10'>
+      <div className='mx-24 h-screen py-10  lg:h-full'>
         <Head>
           <title>ปฏิทินกิจกรรม : deschooling</title>
           <meta
@@ -47,7 +47,7 @@ const Calendar = () => {
 
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
-          <div className='text-3xl'>ปฏิทินกิจกรรม</div>
+          <div className='text-3xl  '>ปฏิทินกิจกรรม</div>
         </div>
 
         <div className='my-10 text-center text-2xl text-[#ffba00]'>

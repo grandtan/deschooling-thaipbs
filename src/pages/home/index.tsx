@@ -99,8 +99,8 @@ const Home = () => {
 
                   <Image
                     src='/images/icon-teacher.png'
-                    width={350}
-                    height={350}
+                    width={450}
+                    height={450}
                     alt='local-government'
                     className='cursor-pointer  duration-700 hover:-translate-y-4 hover:ease-in-out '
                     onClick={() => router.push('/teachers')}

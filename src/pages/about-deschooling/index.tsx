@@ -17,7 +17,7 @@ const AboutDeschooling = () => {
       <div className='h-screen  w-full '>
         <div className='flex flex-row items-center justify-center pt-20'>
           <div className='max-w-4xl'>
-            <div className='px-4  text-start  indent-10 text-xl leading-6 text-white md:px-0 md:text-justify md:text-2xl md:leading-10'>
+            <div className=' px-4 indent-10 text-xl leading-9 text-white lg:px-0 lg:text-justify lg:text-2xl lg:leading-10'>
               เราเชื่อว่า "ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้"
               <span className='ml-4 mr-2 text-[#f05223]'>Thai PBS</span>
               จึงมีความตั้งใจที่อยากจะขับเคลื่อนการศึกษาไทย
@@ -25,7 +25,7 @@ const AboutDeschooling = () => {
               และแนวคิดใหม่ ๆ เพื่อเป็นพื้นที่แลกเปลี่ยนเรียนรู้ร่วมกัน
               พร้อมกับสร้าง
             </div>
-            <div className='px-4  text-start  indent-10 text-xl leading-6 text-white md:px-0 md:text-justify md:text-2xl md:leading-10'>
+            <div className='px-4 indent-10 text-xl leading-9  text-white lg:px-0 lg:text-justify lg:text-2xl lg:leading-10'>
               ความร่วมมือจากบุคลากรหลากหลายภาคส่วนทั้งหน่วยงานภาครัฐ ภาคเอกชน
               ผู้อำนวยการโรงเรียน ครู ชุมชน ท้องถิ่น พ่อแม่ ผู้ปกครอง นักเรียน
               ตลอดจนความร่วมมือจากประชาชนคนรุ่นใหม่

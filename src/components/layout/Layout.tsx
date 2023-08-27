@@ -405,7 +405,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         </div>
 
         <div className='px-12 py-4 '>
-          <Link className=' text-lg text-black ' href='/contact-us'>
+          <Link className=' text-lg ' href='/contact-us'>
             ติดต่อเรา
           </Link>
         </div>

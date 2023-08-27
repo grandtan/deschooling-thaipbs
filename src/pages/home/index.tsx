@@ -1,10 +1,11 @@
+import { Col, Grid, Row } from 'antd';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
-import { Grid } from 'antd';
+
 import 'react-slideshow-image/dist/styles.css';
 
 import Layout from '@/components/layout/Layout';
@@ -19,7 +20,6 @@ const Home = () => {
   const screens = useBreakpoint();
   const router = useRouter();
 
-  console.log('screens :', screens);
   return (
     <Layout container={false}>
       <Head>
@@ -57,64 +57,85 @@ const Home = () => {
               height: '100%',
             }}
           >
-            <div className='relative '>
-              <div className='grid  grid-cols-5 pt-[400px]  '>
-                <div className='flex flex-col items-center'>
-                  <div className='mb-2 text-xl text-white'>นักเรียน</div>
+            <Row
+              gutter={[16, 16]}
+              style={{
+                width: '100%',
+                paddingTop: 600,
+                display: 'flex',
+                justifyContent: 'center',
+                overflowY: 'auto',
+              }}
+            >
+              <Col xs={24} sm={12} md={8} lg={6} xl={4}>
+                <div className='flex  flex-col items-center'>
+                  <div className='mb-2 text-center text-xl text-white'>
+                    นักเรียน
+                  </div>
+
                   <BabyHome2
-                    className='cursor-pointer duration-700 hover:-translate-y-2 hover:ease-in-out sm:hover:-translate-y-4'
+                    className='cursor-pointer duration-700 hover:-translate-y-2 hover:ease-in-out  sm:hover:-translate-y-4'
                     onClick={() => router.push('/student')}
                   />
                 </div>
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex flex-col items-center'>
                   <div className='mb-2  mr-8 text-center  text-xl text-white'>
                     รัฐบาล
                   </div>
+
                   <GirlHome
-                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
+                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out '
                     onClick={() => router.push('/government')}
                   />
                 </div>
-
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex  flex-col items-center'>
                   <div className='mb-2 text-xl text-white'>
                     ครูและผู้อำนวยการ
                   </div>
+
                   <Image
                     src='/images/icon-teacher.png'
                     width={350}
                     height={350}
                     alt='local-government'
-                    className=' cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
+                    className='cursor-pointer  duration-700 hover:-translate-y-4 hover:ease-in-out '
                     onClick={() => router.push('/teachers')}
                   />
                 </div>
-
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex flex-col items-center'>
                   <div className='mb-2 text-xl text-white'>
                     พ่อแม่และผู้ปกครอง
                   </div>
+
                   <ParentHome
-                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
+                    className=' cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out '
                     onClick={() => router.push('/parents')}
                     width={230}
                     height={310}
                   />
                 </div>
-
-                <div className='  flex flex-col items-center'>
+              </Col>
+              <Col xs={24} sm={12} md={8} lg={6} xl={4}>
+                <div className='  flex flex-col items-center '>
                   <div className='mb-2 text-xl text-white'>
                     หน่วยงานท้องถิ่น
                   </div>
+
                   <LocalGovermentHome
-                    className='cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out'
+                    className=' cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out '
                     onClick={() => router.push('/local-government')}
                     width={230}
                     height={310}
                   />
                 </div>
-              </div>
-            </div>
+              </Col>
+            </Row>
           </div>
         </Slide>
       </div>

@@ -11,6 +11,7 @@ import { useLoading } from '@/context/loadingContext';
 
 import { YoutubeResponse } from '@/types/teacher';
 import Head from 'next/head';
+import ViedoCard from '@/pages/teacher/viedoCard';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -79,6 +80,8 @@ const Teacher = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
+
+      <ViedoCard item={itemYoutube} />
 
       <div className='mx-24 py-10'>
         <div className='flex justify-between'>

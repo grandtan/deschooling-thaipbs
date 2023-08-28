@@ -11,14 +11,15 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
-import { FaPodcast } from 'react-icons/fa';
-import { MdComputer } from 'react-icons/md';
+
 import { PiTelevisionFill } from 'react-icons/pi';
 import { RiMailUnreadFill } from 'react-icons/ri';
-import { SiYoutubemusic } from 'react-icons/si';
-import { TbHomeHeart } from 'react-icons/tb';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
+import { Home } from '@/components/layout/components/home';
+import { LearningSpace } from '@/components/layout/components/learningspace';
+import { Vdo } from '@/components/layout/components/vdo';
+import { Podcast } from '@/components/layout/components/podcast';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -41,119 +42,6 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
 
   const pathName = router.pathname;
-
-  const home = () => {
-    const baseClasses =
-      'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeClasses =
-      pathName === '/home' ||
-      pathName === '/student' ||
-      pathName === '/government' ||
-      pathName === '/teachers' ||
-      pathName === '/parents' ||
-      pathName === '/local-government'
-        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
-        : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <Link className={`${baseClasses} ${activeClasses}`} href='/home'>
-          <div className='mb-1 flex flex-col  items-center'>
-            <TbHomeHeart size={35} />
-          </div>
-          หน้าแรก
-        </Link>
-      </div>
-    );
-  };
-
-  const learningSpace = () => {
-    const baseButtonClasses =
-      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeButtonClasses =
-      pathName === '/teacher' || pathName === '/parent'
-        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
-        : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
-          <div className='mb-1 flex flex-col  items-center'>
-            <MdComputer size={35} />
-          </div>
-          พื้นที่เรียนรู้
-        </button>
-        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/teacher'
-          >
-            ครูและผู้อำนวยการ
-          </Link>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/parent'
-          >
-            พ่อแม่และผู้ปกครอง
-          </Link>
-        </div>
-      </div>
-    );
-  };
-
-  const vdo = () => {
-    const baseButtonClasses =
-      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeButtonClasses =
-      pathName === '/vdo' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
-          <div className='mb-1 flex flex-col items-center'>
-            <SiYoutubemusic size={35} />
-          </div>
-          วิดีโอ
-        </button>
-
-        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/vdo'
-          >
-            VDO How to
-          </Link>
-        </div>
-      </div>
-    );
-  };
-
-  const podCast = () => {
-    const baseButtonClasses =
-      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeButtonClasses =
-      pathName === '/podcast' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
-          <div className='mb-1 flex flex-col items-center'>
-            <FaPodcast size={35} />
-          </div>
-          Podcast
-        </button>
-
-        <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/podcast'
-          >
-            กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง
-          </Link>
-        </div>
-      </div>
-    );
-  };
 
   const event = () => {
     const baseButtonClasses =
@@ -423,10 +311,18 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           </div>
 
           <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex'>
-            {home()}
-            {learningSpace()}
-            {vdo()}
-            {podCast()}
+            <Home menuName='หน้าแรก' />
+            <LearningSpace
+              menuName='พื้นที่เรียนรู้'
+              submenu1='ครูและผู้อำนวยการ'
+              submenu2='พ่อแม่แลผู้ปกครอง'
+            />
+            <Vdo menuName='วิดีโอ' submenu1='VDO How to ดูง่าย พอดีคำ' />
+
+            <Podcast
+              menuName=' Podcast'
+              submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
+            />
             {event()}
             {tv()}
             {ContactUs()}

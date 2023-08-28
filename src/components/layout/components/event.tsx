@@ -1,35 +1,45 @@
 import Link from 'next/link';
 import router from 'next/router';
-import { FaPodcast } from 'react-icons/fa';
+import { BsFillCalendarHeartFill } from 'react-icons/bs';
 
 interface Props {
   menuName: string;
   submenu1: string;
+  submenu2: string;
 }
 
-export const Podcast = ({ menuName, submenu1 }: Props) => {
+export const Event = ({ menuName, submenu1, submenu2 }: Props) => {
   const pathName = router.pathname;
 
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
-    pathName === '/podcast' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+    pathName === '/calendar' || pathName === '/gallery'
+      ? 'rounded-b-[50px] bg-white text-[#ffba00]'
+      : '';
 
   return (
     <div className='hidden w-full sm:block md:w-auto'>
       <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
         <div className='mb-1 flex flex-col items-center'>
-          <FaPodcast size={35} />
+          <BsFillCalendarHeartFill size={35} />
         </div>
         {menuName}
       </button>
 
-      <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
         <Link
           className='px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/podcast'
+          href='/calendar'
         >
           {submenu1}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/gallery'
+        >
+          {submenu2}
         </Link>
       </div>
     </div>

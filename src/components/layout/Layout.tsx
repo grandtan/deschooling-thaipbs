@@ -20,6 +20,9 @@ import { Home } from '@/components/layout/components/home';
 import { LearningSpace } from '@/components/layout/components/learningspace';
 import { Vdo } from '@/components/layout/components/vdo';
 import { Podcast } from '@/components/layout/components/podcast';
+import { Event } from '@/components/layout/components/event';
+import { Tv } from '@/components/layout/components/tv';
+import { ContactUs } from '@/components/layout/components/contactus';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -42,98 +45,6 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
 
   const pathName = router.pathname;
-
-  const event = () => {
-    const baseButtonClasses =
-      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeButtonClasses =
-      pathName === '/calendar' || pathName === '/gallery'
-        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
-        : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
-          <div className='mb-1 flex flex-col items-center'>
-            <BsFillCalendarHeartFill size={35} />
-          </div>
-          กิจกรรม
-        </button>
-
-        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/calendar'
-          >
-            ปฏิทินกิจกรรม
-          </Link>
-
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/gallery'
-          >
-            ภาพกิจกรรม
-          </Link>
-        </div>
-      </div>
-    );
-  };
-
-  const tv = () => {
-    const baseButtonClasses =
-      'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeButtonClasses =
-      pathName === '/deschooling' || pathName === '/teacher-hero'
-        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
-        : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <button className={`${baseButtonClasses} ${activeButtonClasses}`}>
-          <div className='mb-1 flex flex-col items-center'>
-            <PiTelevisionFill size={35} />
-          </div>
-          รายการทีวี
-        </button>
-
-        <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/deschooling'
-          >
-            Deschooling
-          </Link>
-
-          <Link
-            className='px-5 py-3 text-black hover:text-[#ffba00]'
-            href='/teacher-hero'
-          >
-            Teacher Hero
-          </Link>
-        </div>
-      </div>
-    );
-  };
-
-  const ContactUs = () => {
-    const baseClasses =
-      'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
-    const activeClasses =
-      pathName === '/contact-us'
-        ? 'rounded-b-[50px] bg-white text-[#ffba00]'
-        : '';
-
-    return (
-      <div className='hidden w-full sm:block md:w-auto'>
-        <Link className={`${baseClasses} ${activeClasses}`} href='/contact-us'>
-          <div className='mb-1 flex flex-col  items-center'>
-            <RiMailUnreadFill size={35} />
-          </div>
-          ติดต่อเรา
-        </Link>
-      </div>
-    );
-  };
 
   const drowerComponent = () => (
     <Drawer
@@ -312,20 +223,33 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
           <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex'>
             <Home menuName='หน้าแรก' />
+
             <LearningSpace
               menuName='พื้นที่เรียนรู้'
               submenu1='ครูและผู้อำนวยการ'
               submenu2='พ่อแม่แลผู้ปกครอง'
             />
+
             <Vdo menuName='วิดีโอ' submenu1='VDO How to ดูง่าย พอดีคำ' />
 
             <Podcast
               menuName=' Podcast'
               submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
             />
-            {event()}
-            {tv()}
-            {ContactUs()}
+
+            <Event
+              menuName=' กิจกรรม '
+              submenu1='ปฏิทินกิจกรรม '
+              submenu2=' ภาพกิจกรรม'
+            />
+
+            <Tv
+              menuName=' รายการทีวี '
+              submenu1='Deschooling'
+              submenu2='Teacher Hero'
+            />
+
+            <ContactUs menuName='  ติดต่อเรา' />
           </div>
 
           {isIpadLayout && (

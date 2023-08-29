@@ -10,11 +10,6 @@ import { Kanit } from 'next/font/google';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { BsFillCalendarHeartFill } from 'react-icons/bs';
-
-import { PiTelevisionFill } from 'react-icons/pi';
-import { RiMailUnreadFill } from 'react-icons/ri';
-
 import { LogoWebNew } from '@/icon/LogoWebNew';
 import { Home } from '@/components/layout/components/home';
 import { LearningSpace } from '@/components/layout/components/learningspace';

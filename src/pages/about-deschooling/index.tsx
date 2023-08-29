@@ -16,16 +16,16 @@ const AboutDeschooling = () => {
 
       <div className='h-screen  w-full '>
         <div className='flex flex-row items-center justify-center pt-20'>
-          <div className='max-w-4xl'>
-            <div className=' px-4 indent-10 text-xl leading-9 text-white lg:px-0 lg:text-justify lg:text-2xl lg:leading-10'>
+          <div className='shrink'>
+            <div className=' px-24 text-2xl leading-9 text-white  '>
               เราเชื่อว่า "ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้"
-              <span className='ml-4 mr-2 text-[#f05223]'>Thai PBS</span>
-              จึงมีความตั้งใจที่อยากจะขับเคลื่อนการศึกษาไทย
-              ด้วยการข้ามข้อจำกัดเดิม ๆ ผ่านการนำเสนอ นวัตกรรม วิธีการ
-              และแนวคิดใหม่ ๆ เพื่อเป็นพื้นที่แลกเปลี่ยนเรียนรู้ร่วมกัน
-              พร้อมกับสร้าง
+              <span className='ml-2 mr-2 text-[#f05223]'>Thai PBS</span>
+              จึงมีความตั้งใจ
+              ที่อยากจะขับเคลื่อนการศึกษาไทยด้วยการข้ามข้อจำกัดเดิม ๆ
+              ผ่านการนำเสนอนวัตกรรม วิธีการ และแนวคิดใหม่ ๆ
+              เพื่อเป็นพื้นที่แลกเปลี่ยนเรียนรู้ร่วมกัน พร้อมกับสร้าง
             </div>
-            <div className='px-4 indent-10 text-xl leading-9  text-white lg:px-0 lg:text-justify lg:text-2xl lg:leading-10'>
+            <div className='px-4  text-xl leading-9  text-white lg:px-0  lg:text-2xl lg:leading-10'>
               ความร่วมมือจากบุคลากรหลากหลายภาคส่วนทั้งหน่วยงานภาครัฐ ภาคเอกชน
               ผู้อำนวยการโรงเรียน ครู ชุมชน ท้องถิ่น พ่อแม่ ผู้ปกครอง นักเรียน
               ตลอดจนความร่วมมือจากประชาชนคนรุ่นใหม่

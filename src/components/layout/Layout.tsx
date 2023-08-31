@@ -67,19 +67,19 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           >
             <TreeItem
               nodeId='1'
-              label={<div className=' text-lg '>พื้นที่เรียนรู้</div>}
+              label={<div className=' text-lg  '>พื้นที่เรียนรู้</div>}
             >
               <TreeItem
                 onClick={() => router.push('/teacher')}
                 nodeId='ครูและผู้อำนวยการ'
                 label='ครูและผู้อำนวยการ'
-                className='my-2 '
+                className='my-4 '
               />
               <TreeItem
                 onClick={() => router.push('/parent')}
                 nodeId='พ่อแม่และผู้ปกครอง'
                 label='พ่อแม่และผู้ปกครอง'
-                className='mt-2 '
+                className='my-4 '
               />
             </TreeItem>
           </TreeView>
@@ -103,7 +103,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/vdo')}
                 nodeId='VDO How to'
                 label='VDO How to'
-                className='mt-2 '
+                className='my-4'
               />
             </TreeItem>
           </TreeView>
@@ -128,7 +128,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/podcast')}
                 nodeId='VDO How to'
                 label='ฟัง พูด อ่าน กิน'
-                className='mt-2 '
+                className='my-4'
               />
             </TreeItem>
           </TreeView>
@@ -153,14 +153,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/calendar')}
                 nodeId='calendar'
                 label='ปฏิทินกิจกรรม'
-                className='my-2 '
+                className='my-4'
               />
 
               <TreeItem
                 onClick={() => router.push('/gallery')}
                 nodeId='gallery'
                 label=' ภาพกิจกรรม'
-                className='mt-2 '
+                className='my-4'
               />
             </TreeItem>
           </TreeView>
@@ -185,14 +185,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/deschooling')}
                 nodeId='deschooling'
                 label='Deschooling'
-                className='my-2 '
+                className='my-4'
               />
 
               <TreeItem
                 onClick={() => router.push('/teacher-hero')}
                 nodeId='teacher-hero'
                 label=' Teacher Hero'
-                className='mt-2 '
+                className='my-4 '
               />
             </TreeItem>
           </TreeView>
@@ -257,7 +257,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
           {isIpadLayout && (
             <IconButton
-              className='cursor-pointer  justify-end md:hidden'
+              className='cursor-pointer justify-end md:hidden'
               size='large'
               edge='end'
               color='default'

@@ -30,10 +30,10 @@ const Home = () => {
         />
       </Head>
 
-      <div className=' w-full '>
+      <div className=' w-full  '>
         <Slide duration={30000} arrows={!screens.xs}>
           <div className='each-slide-effect flex  flex-row justify-center '>
-            <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-6xl lg:text-7xl xl:text-8xl'>
+            <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-7xl xl:text-8xl'>
               <div
                 className='flex w-full cursor-pointer justify-center'
                 onClick={() => router.push('/about-deschooling')}
@@ -48,10 +48,11 @@ const Home = () => {
               </div>
             </div>
           </div>
+
           <div
             className='each-slide-effect '
             style={{
-              background: `url('/images/bg-home-slide2.png')`,
+              background: `url('/images/bg-home-slide3.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -59,7 +60,7 @@ const Home = () => {
               height: '100%',
             }}
           >
-            <Row
+            {/* <Row
               gutter={[16, 16]}
               style={{
                 width: '100%',
@@ -141,7 +142,7 @@ const Home = () => {
                   />
                 </div>
               </Col>
-            </Row>
+            </Row> */}
           </div>
         </Slide>
       </div>

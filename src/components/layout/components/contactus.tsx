@@ -4,11 +4,10 @@ import { RiMailUnreadFill } from 'react-icons/ri';
 
 interface Props {
   menuName: string;
+  pathName: string;
 }
 
-export const ContactUs = ({ menuName }: Props) => {
-  const pathName = router.pathname;
-
+export const ContactUs = ({ menuName, pathName }: Props) => {
   const baseClasses =
     'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeClasses =

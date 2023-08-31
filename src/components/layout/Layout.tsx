@@ -1,4 +1,5 @@
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import TreeItem from '@mui/lab/TreeItem';
@@ -34,12 +35,11 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const router = useRouter();
   const [isOpenDrawer, setIsOpenDrawer] = React.useState(false);
+  const pathName = router.pathname;
 
   const theme = useTheme();
 
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
-
-  const pathName = router.pathname;
 
   const drowerComponent = () => (
     <Drawer
@@ -210,46 +210,54 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
     <div className={fontWeb.className}>
       <div className='relative h-screen w-full '>
         <div className='flex flex-row items-center justify-between border-y-8 border-r-2 border-white bg-white'>
-          <div className='flex justify-center md:w-1/4 '>
+          <div className='ml-2 flex justify-center md:ml-0 md:w-1/4'>
             <Link href='/home'>
               <LogoWebNew width='200px' />
             </Link>
           </div>
 
-          <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex'>
-            <Home menuName='หน้าแรก' />
+          <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex '>
+            <Home menuName='หน้าแรก' pathName={pathName} />
 
             <LearningSpace
               menuName='พื้นที่เรียนรู้'
               submenu1='ครูและผู้อำนวยการ'
               submenu2='พ่อแม่แลผู้ปกครอง'
+              pathName={pathName}
             />
 
-            <Vdo menuName='วิดีโอ' submenu1='VDO How to ดูง่าย พอดีคำ' />
+            <Vdo
+              menuName='วิดีโอ'
+              submenu1='VDO How to ดูง่าย พอดีคำ'
+              pathName={pathName}
+            />
 
             <Podcast
               menuName=' Podcast'
               submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
+              pathName={pathName}
             />
 
             <Event
               menuName=' กิจกรรม '
               submenu1='ปฏิทินกิจกรรม '
               submenu2=' ภาพกิจกรรม'
+              pathName={pathName}
             />
 
             <Tv
               menuName=' รายการทีวี '
               submenu1='Deschooling'
               submenu2='Teacher Hero'
+              pathName={pathName}
             />
 
-            <ContactUs menuName='  ติดต่อเรา' />
+            <ContactUs menuName='  ติดต่อเรา' pathName={pathName} />
           </div>
 
           {isIpadLayout && (
             <IconButton
-              className=' cursor-pointer justify-end md:hidden '
+              className='cursor-pointer  justify-end md:hidden'
               size='large'
               edge='end'
               color='default'

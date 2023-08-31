@@ -38,7 +38,9 @@ const Home = () => {
                 className='flex w-full cursor-pointer justify-center'
                 onClick={() => router.push('/about-deschooling')}
               >
-                <div className=' font-bold text-[#ffcc00]'>Deschooling</div>
+                <div className=' mr-4 font-bold text-[#ffcc00]'>
+                  Deschooling
+                </div>
                 <div className=' text-white'>คืออะไร_</div>
                 <div>
                   <TbZoomQuestion color='white' />
@@ -79,6 +81,7 @@ const Home = () => {
                   />
                 </div>
               </Col>
+
               <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex flex-col items-center'>
                   <div className='mb-2  mr-8 text-center  text-xl text-white'>
@@ -91,6 +94,7 @@ const Home = () => {
                   />
                 </div>
               </Col>
+
               <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex  flex-col items-center'>
                   <div className='mb-2 text-xl text-white'>
@@ -107,6 +111,7 @@ const Home = () => {
                   />
                 </div>
               </Col>
+
               <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className=' flex flex-col items-center'>
                   <div className='mb-2 text-xl text-white'>
@@ -121,6 +126,7 @@ const Home = () => {
                   />
                 </div>
               </Col>
+
               <Col xs={24} sm={12} md={8} lg={6} xl={4}>
                 <div className='  flex flex-col items-center '>
                   <div className='mb-2 text-xl text-white'>

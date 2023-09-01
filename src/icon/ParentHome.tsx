@@ -5,7 +5,7 @@ const ParentHome = (props: SVGProps<SVGSVGElement>) => (
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     width={290}
-    height={360}
+    height={300}
     viewBox='0 0 197 489'
     {...props}
   >

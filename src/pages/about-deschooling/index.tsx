@@ -17,7 +17,7 @@ const AboutDeschooling = () => {
         <div className='flex flex-row items-center justify-center pt-20'>
           <div className=' px-4 md:max-w-5xl md:px-2 md:text-2xl lg:px-0 lg:leading-10'>
             <div className='shrink-0 text-white'>
-              <div className=' text-center'>
+              <div className=' '>
                 <div className=' indent-10 '>
                   เราเชื่อว่า "ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้"
                   <span className='mx-2 text-[#f05223]'>Thai PBS</span>
@@ -33,7 +33,7 @@ const AboutDeschooling = () => {
                 </div>
               </div>
 
-              <div className=' mt-2 text-center'>
+              <div className=' '>
                 <div className='indent-10'>
                   ความร่วมมือจากบุคลากรหลากหลายภาคส่วนทั้งหน่วยงานภาครัฐ
                   ภาคเอกชน ผู้อำนวยการโรงเรียน

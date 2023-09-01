@@ -50,16 +50,82 @@ const Home = () => {
           </div>
 
           <div
-            className='each-slide-effect '
+            className='each-slide-effect  '
             style={{
-              background: `url('/images/bg-home-slide3.png')`,
+              background: `url('/images/bg-home-slide2.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
+              backgroundAttachment: 'fixed',
               width: '100%',
               height: '100%',
             }}
           >
+            <div className=' relative w-full '>
+              <div className=' h-[25%]  w-full  md:h-[45%] '>
+                <div className='absolute inset-x-0 bottom-2 flex w-full flex-row '>
+                  <div className=' h-[60%] w-1/5 lg:h-full'>
+                    <div className='text-center text-[8px] text-white md:text-xl'>
+                      นักเรียน
+                    </div>
+
+                    <BabyHome2
+                      className='h-full w-full cursor-pointer duration-700  hover:-translate-y-2 hover:ease-in-out sm:hover:-translate-y-4'
+                      onClick={() => router.push('/student')}
+                    />
+                  </div>
+
+                  <div className=' h-[60%] w-1/5  lg:h-full'>
+                    <div className='text-center text-[8px] text-white md:text-xl'>
+                      รัฐบาล
+                    </div>
+
+                    <GirlHome
+                      className='h-full w-full cursor-pointer duration-700  hover:-translate-y-2 hover:ease-in-out sm:hover:-translate-y-4'
+                      onClick={() => router.push('/government')}
+                    />
+                  </div>
+
+                  <div className=' h-[60%] w-1/5  lg:h-full'>
+                    <div className='text-center text-[8px] text-white md:text-xl'>
+                      ครูและผู้อำนวยการ
+                    </div>
+
+                    <Image
+                      src='/images/icon-teacher.png'
+                      width={550}
+                      height={450}
+                      alt='local-government'
+                      className='h-full w-full cursor-pointer duration-700  hover:-translate-y-2 hover:ease-in-out sm:hover:-translate-y-4'
+                      onClick={() => router.push('/teachers')}
+                    />
+                  </div>
+
+                  <div className=' h-[60%] w-1/5  lg:h-full'>
+                    <div className='text-center text-[8px] text-white md:text-xl'>
+                      พ่อแม่และผู้ปกครอง
+                    </div>
+
+                    <ParentHome
+                      className='h-full w-full cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out '
+                      onClick={() => router.push('/parents')}
+                    />
+                  </div>
+
+                  <div className=' h-[60%] w-1/5  lg:h-full'>
+                    <div className='text-center text-[8px] text-white md:text-xl'>
+                      หน่วยงานท้องถิ่น
+                    </div>
+
+                    <LocalGovermentHome
+                      className='h-full w-full cursor-pointer duration-700 hover:-translate-y-4 hover:ease-in-out '
+                      onClick={() => router.push('/local-government')}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* <Row
               gutter={[16, 16]}
               style={{
@@ -107,7 +173,7 @@ const Home = () => {
                     width={450}
                     height={450}
                     alt='local-government'
-                    className='cursor-pointer  duration-700 hover:-translate-y-4 hover:ease-in-out '
+                    className=' cursor-pointer duration-700 hover:-translate-y-4  hover:ease-in-out'
                     onClick={() => router.push('/teachers')}
                   />
                 </div>

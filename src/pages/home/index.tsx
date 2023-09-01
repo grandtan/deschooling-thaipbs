@@ -31,7 +31,7 @@ const Home = () => {
       </Head>
 
       <div className=' w-full  '>
-        <Slide duration={30000} arrows={!screens.xs}>
+        <Slide duration={2000} arrows={!screens.xs}>
           <div className='each-slide-effect flex  flex-row justify-center '>
             <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-7xl xl:text-8xl'>
               <div

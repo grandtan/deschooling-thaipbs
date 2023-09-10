@@ -12,7 +12,22 @@ function MyApp({ Component, pageProps }: AppProps) {
         src='https://www.googletagmanager.com/gtag/js?id=GTM-5GVNLZRH'
         strategy='afterInteractive'
       />
-      <Script id='google-analytics' strategy='afterInteractive'>
+      <Script
+        id='gtag-init'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GTM-5GVNLZRH', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+
+      {/* <Script id='google-analytics' strategy='afterInteractive'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
@@ -20,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
           gtag('config', 'G-GTM-5GVNLZRH');
         `}
-      </Script>
+      </Script> */}
       <Component {...pageProps} />
     </LoadingProvider>
   );

@@ -66,8 +66,6 @@ const Goverment = () => {
     });
   };
 
-  console.log(totalItems, maxResults);
-
   return (
     <Layout container={false}>
       <Head>

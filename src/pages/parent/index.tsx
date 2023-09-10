@@ -67,8 +67,6 @@ const Parent = () => {
     });
   };
 
-  console.log(totalItems, maxResults);
-
   return (
     <Layout container={false}>
       <Head>

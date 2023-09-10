@@ -66,8 +66,6 @@ const Deschooling = () => {
     });
   };
 
-  console.log(totalItems, maxResults);
-
   return (
     <Layout container={false}>
       <Head>

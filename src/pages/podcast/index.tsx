@@ -65,8 +65,6 @@ const Podcast = () => {
     });
   };
 
-  console.log(totalItems, maxResults);
-
   return (
     <Layout container={false}>
       <Head>

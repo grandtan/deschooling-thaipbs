@@ -1,5 +1,6 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Grid } from '@mui/material';
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
@@ -77,7 +78,7 @@ const Goverment = () => {
         />
       </Head>
 
-      <div className=' mx-4 py-10 md:mx-24'>
+      <div className=' mx-4 h-screen py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <RiGovernmentFill size={35} />
@@ -104,7 +105,7 @@ const Goverment = () => {
               .reverse()
               .slice(0, maxResults)
               .map((e, i) => (
-                <div className=' w-[50%]' key={i}>
+                <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
                   <Link
                     href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
                     passHref
@@ -124,7 +125,7 @@ const Goverment = () => {
                       <div className=' h-20  p-1 '>{e.snippet.title}</div>
                     </div>
                   </Link>
-                </div>
+                </Grid>
               ))}
         </div>
 

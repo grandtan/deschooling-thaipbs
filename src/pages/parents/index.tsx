@@ -1,12 +1,12 @@
-import React from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
-import { RiParentLine } from 'react-icons/ri';
-import { SiYoutubemusic } from 'react-icons/si';
 import Link from 'next/link';
+import React from 'react';
 import { FaPodcast } from 'react-icons/fa';
 import { MdComputer } from 'react-icons/md';
-import Head from 'next/head';
+import { RiParentLine } from 'react-icons/ri';
+
+import Layout from '@/components/layout/Layout';
 
 const Parents = () => {
   return (
@@ -26,7 +26,7 @@ const Parents = () => {
           <div className=' text-3xl '> พ่อแม่และผู้ปกครอง</div>
         </div>
 
-        <div className=' mt-36   flex flex-row items-center justify-center space-x-28'>
+        <div className='mt-8 flex flex-col items-center  justify-center  gap-8  md:mt-36 md:flex-row   md:space-x-10'>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               Home-Based Learning

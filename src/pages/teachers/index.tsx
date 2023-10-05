@@ -1,12 +1,13 @@
-import React from 'react';
-import { GiTeacher } from 'react-icons/gi';
-import Layout from '@/components/layout/Layout';
-import Link from 'next/link';
-import { FaPodcast } from 'react-icons/fa';
-import Image from 'next/image';
-import { SiYoutubemusic } from 'react-icons/si';
-import { MdComputer } from 'react-icons/md';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { FaPodcast } from 'react-icons/fa';
+import { GiTeacher } from 'react-icons/gi';
+import { MdComputer } from 'react-icons/md';
+import { SiYoutubemusic } from 'react-icons/si';
+
+import Layout from '@/components/layout/Layout';
 
 const TeacherAll = () => {
   return (
@@ -21,13 +22,13 @@ const TeacherAll = () => {
         />
       </Head>
 
-      <div className=' h-screen py-10'>
+      <div className=' py-10 md:h-screen'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <GiTeacher size={35} />
           <div className=' text-3xl'> ครูและผู้อำนวยการ</div>
         </div>
 
-        <div className=' mt-20  flex flex-row items-center justify-center space-x-28'>
+        <div className='mt-8 flex flex-col items-center  justify-center  gap-8  md:mt-36 md:flex-row   md:space-x-10'>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               VDO How to
@@ -39,7 +40,7 @@ const TeacherAll = () => {
             </div>
           </div>
 
-          <div className=' flex-col space-y-6'>
+          <div className=' flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               Podcast
             </div>
@@ -51,7 +52,7 @@ const TeacherAll = () => {
           </div>
         </div>
 
-        <div className='mt-20 flex  flex-row items-center justify-center space-x-28 '>
+        <div className='mt-4  flex flex-col items-center justify-center  gap-8  sm:mt-4  md:mt-36 md:flex-row   md:space-x-10'>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               Learning Space

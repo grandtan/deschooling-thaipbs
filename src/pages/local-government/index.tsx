@@ -45,7 +45,7 @@ const LocalGovernment = () => {
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className=' mx-24 h-full py-10'>
+      <div className='mx-4 h-full py-10 md:mx-24'>
         <div className=' flex space-x-4 font-semibold text-[#ffba00]'>
           <PiBowlFoodFill size={35} />
           <div className=' text-3xl '> หน่วยงานท้องถิ่น</div>

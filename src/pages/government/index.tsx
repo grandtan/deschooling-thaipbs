@@ -1,14 +1,15 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import { Grid } from '@mui/material';
+import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { MdComputer } from 'react-icons/md';
-import Layout from '@/components/layout/Layout';
-import { useLoading } from '@/context/loadingContext';
-import { YoutubeResponse } from '@/types/teacher';
-import Head from 'next/head';
 import { RiGovernmentFill } from 'react-icons/ri';
+
+import Layout from '@/components/layout/Layout';
+
+import { useLoading } from '@/context/loadingContext';
+
+import { YoutubeResponse } from '@/types/teacher';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -76,23 +77,25 @@ const Goverment = () => {
         />
       </Head>
 
-      <div className='mx-24 h-screen py-10'>
-        <div className='flex justify-between'>
-          <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
+      <div className=' mx-4 py-10 md:mx-24'>
+        <div className='flex  md:justify-between'>
+          <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <RiGovernmentFill size={35} />
-            <div className=' text-3xl '> รัฐบาล</div>
+            <div className=' text-3xl'>รัฐบาล</div>
           </div>
-          {!viewAllClicked &&
-            maxResults < totalItems &&
-            totalItems > RESULTS_PER_PAGE && (
-              <button
-                className=' flex items-center font-semibold text-[#ffba00]'
-                onClick={handleViewAll}
-              >
-                <div className='text-lg'>ดูทั้งหมด</div>
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            )}
+          <div className=' hidden md:flex'>
+            {!viewAllClicked &&
+              maxResults < totalItems &&
+              totalItems > RESULTS_PER_PAGE && (
+                <button
+                  className=' flex items-center font-semibold text-[#ffba00]'
+                  onClick={handleViewAll}
+                >
+                  <div className='text-lg'>ดูทั้งหมด</div>
+                  <ArrowForwardIosIcon className='pl-1' />
+                </button>
+              )}
+          </div>
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>

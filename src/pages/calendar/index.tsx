@@ -36,7 +36,7 @@ const Calendar = () => {
 
   return (
     <Layout backgroundImage='/images/bg-calendar.png'>
-      <div className='mx-24 h-screen py-10  lg:h-full'>
+      <div className='mx-4 h-screen py-10 md:mx-24  lg:h-full'>
         <Head>
           <title>ปฏิทินกิจกรรม : deschooling</title>
           <meta
@@ -60,7 +60,7 @@ const Calendar = () => {
               <img
                 src={item.imageUrl}
                 alt='deschooling'
-                className='h-3/4 w-3/4  rounded-b-xl  rounded-t-xl  border-2 border-dotted '
+                className=' h-full w-full  rounded-b-xl  rounded-t-xl  border-2  border-dotted  md:h-3/4 md:w-3/4 '
               />
             </div>
             // <div

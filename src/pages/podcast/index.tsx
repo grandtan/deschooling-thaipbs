@@ -1,13 +1,16 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Grid } from '@mui/material';
+import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import Layout from '@/components/layout/Layout';
-import { useLoading } from '@/context/loadingContext';
-import { YoutubeResponse } from '@/types/teacher';
-import Head from 'next/head';
 import { FaPodcast } from 'react-icons/fa';
+
+import Layout from '@/components/layout/Layout';
+
+import { useLoading } from '@/context/loadingContext';
+
+import { YoutubeResponse } from '@/types/teacher';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -77,25 +80,27 @@ const Podcast = () => {
         />
       </Head>
 
-      <div className='mx-24 h-full py-10'>
-        <div className='flex justify-between'>
-          <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
+      <div className=' mx-4 py-10 md:mx-24'>
+        <div className='flex  md:justify-between'>
+          <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <FaPodcast size={35} />
             <div className=' text-3xl'>
               Podcast กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง
             </div>
           </div>
-          {!viewAllClicked &&
-            maxResults < totalItems &&
-            totalItems > RESULTS_PER_PAGE && (
-              <button
-                className=' flex items-center font-semibold text-[#ffba00]'
-                onClick={handleViewAll}
-              >
-                <div className='text-lg'>ดูทั้งหมด</div>
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            )}
+          <div className=' hidden md:flex'>
+            {!viewAllClicked &&
+              maxResults < totalItems &&
+              totalItems > RESULTS_PER_PAGE && (
+                <button
+                  className=' flex items-center font-semibold text-[#ffba00]'
+                  onClick={handleViewAll}
+                >
+                  <div className='text-lg'>ดูทั้งหมด</div>
+                  <ArrowForwardIosIcon className='pl-1' />
+                </button>
+              )}
+          </div>
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>
@@ -105,7 +110,7 @@ const Podcast = () => {
                 .reverse()
                 .slice(0, maxResults)
                 .map((e, i) => (
-                  <Grid item xs={12} md={6} lg={3} key={i}>
+                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
                     <Link
                       href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
                       passHref

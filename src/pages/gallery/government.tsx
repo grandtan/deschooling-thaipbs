@@ -1,8 +1,9 @@
-import React from 'react';
-import Layout from '@/components/layout/Layout';
 import { Image } from 'antd';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+
+import Layout from '@/components/layout/Layout';
 
 const government = () => {
   const governmentEvent = [
@@ -40,14 +41,14 @@ const government = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-24 h-full py-10'>
+      <div className='mx-4 h-full py-10 md:mx-24'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className=' text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”
           </div>
         </div>
 
-        <div className='my-8 grid grid-cols-2 gap-2 md:grid-cols-5'>
+        <div className='my-8 grid grid-cols-1  gap-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <Image.PreviewGroup>
             {governmentEvent.map((image, index) => (
               <div key={index} className='m-4'>

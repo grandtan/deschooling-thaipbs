@@ -1,14 +1,11 @@
-import React from 'react';
-import { PiStudentFill, PiTelevisionFill } from 'react-icons/pi';
-import Layout from '@/components/layout/Layout';
-import Link from 'next/link';
-import { RiMailUnreadFill } from 'react-icons/ri';
-import { FaLine, FaPodcast } from 'react-icons/fa';
-
-import Image from 'next/image';
-import { Grid } from '@mui/material';
-import Item from 'antd/es/descriptions/Item';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import { FaPodcast } from 'react-icons/fa';
+import { PiStudentFill } from 'react-icons/pi';
+
+import Layout from '@/components/layout/Layout';
 
 const Student = () => {
   return (
@@ -27,13 +24,9 @@ const Student = () => {
           <div className=' text-3xl '>นักเรียน</div>
         </div>
 
-        {/* <div className=' my-24 flex flex-row justify-center text-xl text-white md:text-3xl'>
-          สวัสดีค่ะ น้อง ๆ สนใจเรื่องไหนคลิกเลยค่ะ !
-        </div> */}
-
-        <div className='mt-36 flex  flex-row items-center justify-center space-x-28'>
+        <div className='mt-36 flex flex-col  items-center  justify-center  gap-8 md:flex-row   md:space-x-10'>
           <div className='flex flex-col space-y-6'>
-            <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
+            <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
               Podcast
             </div>
             <div className=' flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-4 border-black bg-white p-8 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>
@@ -43,8 +36,8 @@ const Student = () => {
             </div>
           </div>
 
-          <div className=' flex-col space-y-6'>
-            <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
+          <div className='flex flex-col space-y-6'>
+            <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
               TV Program
             </div>
             <div className='flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-4 border-black bg-white p-8 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>

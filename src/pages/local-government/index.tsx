@@ -54,7 +54,7 @@ const LocalGovernment = () => {
         <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {videoData?.items?.map((e, i) => (
-              <Grid item xs={12} md={6} lg={3} key={i}>
+              <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
                 <Link
                   href={`https://www.youtube.com/watch?v=${e.id}`}
                   passHref

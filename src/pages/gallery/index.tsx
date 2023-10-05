@@ -1,9 +1,10 @@
-import React from 'react';
-import Layout from '@/components/layout/Layout';
-import { BsImages } from 'react-icons/bs';
 import { Image } from 'antd';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+import { BsImages } from 'react-icons/bs';
+
+import Layout from '@/components/layout/Layout';
 
 const Gallery = () => {
   const governmentEvent = [
@@ -31,13 +32,13 @@ const Gallery = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-24 py-10'>
+      <div className=' mx-4  py-10 md:mx-24 md:h-screen'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsImages size={35} />
           <div className=' text-3xl'>ภาพกิจกรรม</div>
         </div>
 
-        <div className='  grid h-screen grid-cols-1 place-content-center gap-4  md:grid-cols-2'>
+        <div className=' mt-12  grid  grid-cols-1 place-content-center gap-4  md:grid-cols-2'>
           <div className=' grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl  border-2  border-dashed p-0.5 md:grid-cols-4'>
             <div className='col-span-4 grid content-center  rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย

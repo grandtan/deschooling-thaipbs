@@ -1,16 +1,16 @@
-import { Grid, CircularProgress } from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Grid } from '@mui/material';
+import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { PiPencilLine } from 'react-icons/pi';
-import Layout from '@/components/layout/Layout';
-import { YoutubeResponse } from '@/types/teacher';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { MdComputer } from 'react-icons/md';
-import { SiYoutubemusic } from 'react-icons/si';
+
+import Layout from '@/components/layout/Layout';
 
 import { useLoading } from '@/context/loadingContext';
-import Head from 'next/head';
+
+import { YoutubeResponse } from '@/types/teacher';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -77,23 +77,26 @@ const VDO = () => {
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-24 py-10'>
-        <div className='flex justify-between'>
-          <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
-            <SiYoutubemusic size={35} />
-            <div className=' text-3xl '>VDO How to ดูง่าย พอดีคำ</div>
+
+      <div className=' mx-4 py-10 md:mx-24'>
+        <div className='flex  md:justify-between'>
+          <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
+            <MdComputer size={35} />
+            <div className=' text-3xl'>VDO How to ดูง่าย พอดีคำ</div>
           </div>
-          {!viewAllClicked &&
-            maxResults < totalItems &&
-            totalItems > RESULTS_PER_PAGE && (
-              <button
-                className=' flex items-center font-semibold text-[#ffba00]'
-                onClick={handleViewAll}
-              >
-                <div className='text-lg'>ดูทั้งหมด</div>
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            )}
+          <div className=' hidden md:flex'>
+            {!viewAllClicked &&
+              maxResults < totalItems &&
+              totalItems > RESULTS_PER_PAGE && (
+                <button
+                  className=' flex items-center font-semibold text-[#ffba00]'
+                  onClick={handleViewAll}
+                >
+                  <div className='text-lg'>ดูทั้งหมด</div>
+                  <ArrowForwardIosIcon className='pl-1' />
+                </button>
+              )}
+          </div>
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>
@@ -103,7 +106,7 @@ const VDO = () => {
                 .reverse()
                 .slice(0, maxResults)
                 .map((e, i) => (
-                  <Grid item xs={12} md={6} lg={3} key={i}>
+                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
                     <Link
                       href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
                       passHref

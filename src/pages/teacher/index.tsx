@@ -78,25 +78,27 @@ const Teacher = () => {
         />
       </Head>
 
-      <div className='mx-24 py-10'>
-        <div className='flex justify-between'>
-          <div className=' flex items-center space-x-4 font-semibold text-[#ffba00]'>
+      <div className=' mx-4 py-10 md:mx-24'>
+        <div className='flex  md:justify-between'>
+          <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <MdComputer size={35} />
             <div className=' text-3xl'>
               Learning Space แบ่งปันนวัตกรรมการสอน
             </div>
           </div>
-          {!viewAllClicked &&
-            maxResults < totalItems &&
-            totalItems > RESULTS_PER_PAGE && (
-              <button
-                className=' flex items-center font-semibold text-[#ffba00]'
-                onClick={handleViewAll}
-              >
-                <div className='text-lg'>ดูทั้งหมด</div>
-                <ArrowForwardIosIcon className='pl-1' />
-              </button>
-            )}
+          <div className=' hidden md:flex'>
+            {!viewAllClicked &&
+              maxResults < totalItems &&
+              totalItems > RESULTS_PER_PAGE && (
+                <button
+                  className=' flex items-center font-semibold text-[#ffba00]'
+                  onClick={handleViewAll}
+                >
+                  <div className='text-lg'>ดูทั้งหมด</div>
+                  <ArrowForwardIosIcon className='pl-1' />
+                </button>
+              )}
+          </div>
         </div>
 
         <div className='mt-10 flex flex-row justify-center '>
@@ -106,7 +108,7 @@ const Teacher = () => {
                 .reverse()
                 .slice(0, maxResults)
                 .map((e, i) => (
-                  <Grid item xs={12} md={6} lg={3} key={i}>
+                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
                     <Link
                       href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
                       passHref

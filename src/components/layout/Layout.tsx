@@ -280,7 +280,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             })`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            // backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
           }}
         >

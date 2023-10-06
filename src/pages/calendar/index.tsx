@@ -32,11 +32,9 @@ const Calendar = () => {
     fetchDeschoolingDetails();
   }, []);
 
-  console.log(data);
-
   return (
     <Layout backgroundImage='/images/bg-calendar.png'>
-      <div className='mx-4 h-screen py-10 md:mx-24  lg:h-full'>
+      <div className='mx-4   py-10 md:mx-24  lg:h-full'>
         <Head>
           <title>ปฏิทินกิจกรรม : deschooling</title>
           <meta

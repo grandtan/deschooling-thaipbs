@@ -13,7 +13,7 @@ import Head from 'next/head';
 
 const ContactUs = () => {
   return (
-    <Layout backgroundImage='/images/bg-contact-us.png'>
+    <Layout container={false}>
       <Head>
         <title>ติดต่อเรา : deschooling</title>
         <meta
@@ -25,15 +25,15 @@ const ContactUs = () => {
         <div className=' flex h-[70%] flex-col items-center justify-center  space-y-16'>
           <div className=' flex  space-x-4 font-semibold text-[#ffba00]'>
             <RiMailUnreadFill size={45} />
-            <div className=' text-4xl '>ติดต่อเรา</div>
+            <div className='text-2xl md:text-4xl'>ติดต่อเรา</div>
           </div>
 
-          <div className='flex flex-row  space-x-28 rounded-3xl border-2 border-dotted  p-10 font-mono'>
+          <div className='flex flex-row  space-x-28 rounded-3xl border-2 border-dotted  p-6 font-mono md:p-10'>
             <div className='flex flex-col space-y-6'>
               <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
                 EMAIL
               </div>
-              <div className=' rounded-full  border-2 border-black bg-white p-4 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white'>
+              <div className=' rounded-full  border-2 border-black bg-white p-3 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white md:p-4'>
                 <Link href='mailto:deschooling.thaipbs@gmail.com'>
                   <RiMailUnreadFill size={55} />
                 </Link>
@@ -44,7 +44,7 @@ const ContactUs = () => {
               <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
                 LINE
               </div>
-              <div className='rounded-full border-2 border-black bg-white p-4 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white'>
+              <div className='rounded-full border-2 border-black bg-white p-3 text-2xl hover:border-[#ffba00] hover:bg-[#ffba00] hover:text-white md:p-4'>
                 <Link
                   href='https://line.me/R/ti/p/@deschooling?from=page'
                   passHref

@@ -211,7 +211,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
   return (
     <div className={fontWeb.className}>
-      <div className='relative h-screen w-full '>
+      <div className='relative h-screen w-full  min-w-[320px]'>
         <div className='flex flex-row items-center justify-between border-y-8 border-r-2 border-white bg-white'>
           <div className='ml-2 flex justify-center md:ml-0 md:w-1/4'>
             <Link href='/home'>

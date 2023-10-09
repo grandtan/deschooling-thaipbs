@@ -63,7 +63,7 @@ const government = () => {
           </Image.PreviewGroup>
         </div>
 
-        <div className='text-justify indent-8 text-lg font-light text-white'>
+        <div className='text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8'>
           วันที่ 5 มีนาคม 2566 เวลา 10.00 - 13.00 น. ภาคีเพื่อการศึกษาไทย
           (Thailand Education Partnership: TEP) จัดเวทีเสวนา “TEP Policy Forum:
           ชวนพรรคร่วมคิด พลิกห้องเรียน เปลี่ยนไทยทันโลก”

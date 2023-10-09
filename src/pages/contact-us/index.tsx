@@ -21,14 +21,14 @@ const ContactUs = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='h-screen pt-10'>
-        <div className=' flex h-[70%] flex-col items-center justify-center  space-y-16'>
+      <div className='h-screen pt-4 md:pt-10'>
+        <div className=' flex h-[70%] flex-col items-center justify-center  space-y-8 md:space-y-16'>
           <div className=' flex  space-x-4 font-semibold text-[#ffba00]'>
             <RiMailUnreadFill size={45} />
             <div className='text-2xl md:text-4xl'>ติดต่อเรา</div>
           </div>
 
-          <div className='flex flex-row  space-x-28 rounded-3xl border-2 border-dotted  p-6 font-mono md:p-10'>
+          <div className='flex flex-row  space-x-14 rounded-3xl border-2 border-dotted p-8 font-mono md:space-x-28 md:p-10'>
             <div className='flex flex-col space-y-6'>
               <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
                 EMAIL

@@ -29,7 +29,7 @@ const Student = () => {
             <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
               Podcast
             </div>
-            <div className=' flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-4 border-black bg-white p-8 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>
+            <div className=' flex h-[100px] w-[200px] items-center justify-center  rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
               <Link href='/podcast'>
                 <FaPodcast size={100} />
               </Link>
@@ -40,7 +40,7 @@ const Student = () => {
             <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
               TV Program
             </div>
-            <div className='flex h-[100px] w-[200px] items-center justify-center  rounded-[50px] border-4 border-black bg-white p-8 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:p-0'>
+            <div className='flex h-[100px] w-[200px] items-center justify-center  rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
               <Link href='https://www.altv.tv/home' passHref target='_blank'>
                 <Image
                   src='/images/logoaltv.png'

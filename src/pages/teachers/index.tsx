@@ -22,7 +22,7 @@ const TeacherAll = () => {
         />
       </Head>
 
-      <div className=' h-screen py-10'>
+      <div className=' h-full py-6 md:h-screen md:py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <GiTeacher size={35} />
           <div className=' text-3xl'> ครูและผู้อำนวยการ</div>

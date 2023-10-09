@@ -45,12 +45,12 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
   const drowerComponent = () => (
     <Drawer
-      className={fontWeb.className}
+      className='font-san '
       anchor='right'
       open={isOpenDrawer}
       onClose={() => setIsOpenDrawer(false)}
     >
-      <div className='flex w-80 flex-col divide-y divide-yellow-300  rounded   border-y border-yellow-300 bg-white  lg:w-96'>
+      <div className='flex w-80 flex-col divide-y divide-yellow-300 rounded  border-y   border-yellow-300 bg-white lg:w-96'>
         <div className='ml-8 px-4 py-4'>
           <Link className=' text-lg text-black ' href='/home'>
             หน้าแรก
@@ -219,7 +219,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex '>
+          <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex  '>
             <Home menuName='หน้าแรก' pathName={pathName} />
 
             <LearningSpace

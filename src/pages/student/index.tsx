@@ -24,7 +24,7 @@ const Student = () => {
           <div className=' text-3xl '>นักเรียน</div>
         </div>
 
-        <div className='mt-36 flex flex-col  items-center  justify-center  gap-8 md:flex-row   md:space-x-10'>
+        <div className='mt-10 flex flex-col items-center justify-center  gap-8  md:mt-36 md:flex-row   md:space-x-10'>
           <div className='flex flex-col space-y-6'>
             <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
               Podcast

@@ -13,10 +13,10 @@ const AboutDeschooling = () => {
         />
       </Head>
 
-      <div className='h-screen w-full'>
-        <div className='flex flex-row items-center justify-center pt-20 '>
-          <div className=' w-[768px]  px-4 text-lg leading-10 text-white md:px-0 lg:w-[940px] lg:text-2xl lg:leading-10'>
-            <div className='text-center '>
+      <div className='h-screen w-full py-20 md:py-20'>
+        <div className='flex flex-row items-center justify-center '>
+          <div className=' w-[768px] px-4 text-lg leading-6 text-white md:px-0 md:leading-10 lg:w-[940px] lg:text-2xl lg:leading-10'>
+            <div className='text-center'>
               เราเชื่อว่า "ทุกคนเป็นส่วนหนึ่งในการเปลี่ยนแปลงการศึกษาไทยได้"
               <span className='mx-2 text-[#f05223]'>Thai PBS</span>
               จึงมีความตั้งใจ
@@ -29,7 +29,7 @@ const AboutDeschooling = () => {
               และแนวคิดใหม่ ๆ เพื่อเป็นพื้นที่แลกเปลี่ยนเรียนรู้ร่วมกัน
               พร้อมกับสร้าง
             </div>
-            <div className='indent-12'>
+            <div className='indent-0 md:indent-12'>
               ความร่วมมือจากบุคลากรหลากหลายภาคส่วนทั้งหน่วยงาน ภาครัฐ ภาคเอกชน
               ครู นักเรียน
             </div>

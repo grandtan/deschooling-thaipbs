@@ -41,6 +41,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   const theme = useTheme();
 
   const isIpadLayout = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobileLayout = useMediaQuery(theme.breakpoints.down('sm'));
 
   const drowerComponent = () => (
     <Drawer
@@ -207,6 +208,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
       </div>
     </Drawer>
   );
+
   return (
     <div className={fontWeb.className}>
       <div className='relative h-screen w-full '>
@@ -273,19 +275,23 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
         {drowerComponent()}
 
-        <div
-          style={{
-            backgroundImage: `url(${
-              backgroundImage || '/images/bg-master.png'
-            })`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            // backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
-          }}
-        >
-          {children}
-        </div>
+        {isMobileLayout ? (
+          <div className=' bg-black'> {children}</div>
+        ) : (
+          <div
+            style={{
+              backgroundImage: `url(${
+                backgroundImage || '/images/bg-master.png'
+              })`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              // backgroundPosition: 'center',
+              backgroundAttachment: 'fixed',
+            }}
+          >
+            {children}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -26,7 +26,6 @@ const Teacher = () => {
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
   const [viewAllClicked, setViewAllClicked] = useState(false);
-
   const { setLoading } = useLoading();
 
   useEffect(() => {

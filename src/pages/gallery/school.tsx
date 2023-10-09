@@ -39,14 +39,14 @@ const school = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-24 h-full py-10'>
+      <div className='mx-4 h-full py-10 md:mx-24'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
-          <div className=' text-3xl'>
+          <div className='text-xl md:text-3xl'>
             “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
           </div>
         </div>
 
-        <div className='my-8 grid grid-cols-2 gap-2 md:grid-cols-5'>
+        <div className='my-8 grid grid-cols-1 gap-2 md:grid-cols-5'>
           <Image.PreviewGroup>
             {schoolEvent.map((image, index) => (
               <div key={index} className='m-4'>
@@ -61,13 +61,11 @@ const school = () => {
           </Image.PreviewGroup>
         </div>
 
-        <div className='md:indent-8e text-center indent-0 text-lg font-light text-white md:text-justify'>
+        <div className='text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8'>
           วันที่ 5 มีนาคม 2566 เวลา 14.00 - 15.30 น. ดร.สมเกียรติ ตั้งกิจวานิชย์
-          ประธานสถาบันวิจัยเพื่อการพัฒนาประเทศไทย
-          นำเสนอภาพระบบการศึกษาไทยที่มีปัญหาตั้งแต่ก่อนเกิดสถานการณ์โควิด-19
-          ทั้งคุณภาพโดยรวมที่อยู่ในระดับต่ำ
-          ความเหลื่อมล้ำทางการศึกษาเพิ่มสูงขึ้น ยิ่งไปกว่านั้น
-          วิกฤตการแพร่ระบาดของโควิด-19 ตอกย้ำปัญหาเก่า
+          ประธานสถาบันวิจัยเพื่อการพัฒนาประเทศไทยนำเสนอภาพระบบการศึกษาไทยที่มีปัญหาตั้งแต่ก่อนเกิดสถานการณ์โควิด-19
+          ทั้งคุณภาพโดยรวมที่อยู่ในระดับต่ำความเหลื่อมล้ำทางการศึกษาเพิ่มสูงขึ้น
+          ยิ่งไปกว่านั้นวิกฤตการแพร่ระบาดของโควิด-19 ตอกย้ำปัญหาเก่า
           ทำให้เด็กไทยสูญเสียการเรียนรู้เป็นวงกว้างและมีความเสี่ยงหลุดจากระบบการศึกษามากขึ้น
         </div>
 

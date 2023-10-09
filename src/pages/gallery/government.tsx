@@ -43,7 +43,7 @@ const government = () => {
       </Head>
       <div className='mx-4 h-full py-10 md:mx-24'>
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
-          <div className=' text-3xl'>
+          <div className='text-xl md:text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”
           </div>
         </div>

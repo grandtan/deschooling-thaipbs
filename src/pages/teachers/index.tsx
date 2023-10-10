@@ -22,14 +22,14 @@ const TeacherAll = () => {
         />
       </Head>
 
-      <div className=' h-full py-6 md:h-screen md:py-10'>
+      <div className='h-full py-4 sm:h-screen md:py-10'>
         <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
           <GiTeacher size={35} />
           <div className=' text-3xl'> ครูและผู้อำนวยการ</div>
         </div>
 
-        <div className='flex flex-col items-center justify-center gap-6 pt-6 sm:flex-row  md:gap-10   md:pt-24'>
-          <div className='flex flex-col space-y-2 sm:space-y-6'>
+        <div className='flex flex-col items-center justify-center gap-6 pt-6 md:flex-row md:gap-10  md:pt-24'>
+          <div className='flex flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               VDO How to
             </div>
@@ -40,7 +40,7 @@ const TeacherAll = () => {
             </div>
           </div>
 
-          <div className=' flex flex-col space-y-2 sm:space-y-6'>
+          <div className=' flex flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               Podcast
             </div>
@@ -52,8 +52,8 @@ const TeacherAll = () => {
           </div>
         </div>
 
-        <div className='flex flex-col items-center justify-center  gap-6 pt-4 sm:flex-row  md:gap-10   md:pt-8'>
-          <div className='flex flex-col space-y-2 sm:space-y-6'>
+        <div className='flex flex-col items-center justify-center  gap-6 pt-4 md:flex-row  md:gap-10   md:pt-8'>
+          <div className='flex flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               Learning Space
             </div>
@@ -64,7 +64,7 @@ const TeacherAll = () => {
             </div>
           </div>
 
-          <div className=' flex-col space-y-2 sm:space-y-6'>
+          <div className=' flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               TV Program
             </div>

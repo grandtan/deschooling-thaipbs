@@ -5,10 +5,11 @@ import { FaPodcast } from 'react-icons/fa';
 interface Props {
   menuName: string;
   submenu1: string;
+  submenu2: string;
   pathName: string;
 }
 
-export const Podcast = ({ menuName, submenu1, pathName }: Props) => {
+export const Podcast = ({ menuName, submenu1, submenu2, pathName }: Props) => {
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
@@ -29,6 +30,12 @@ export const Podcast = ({ menuName, submenu1, pathName }: Props) => {
           href='/podcast'
         >
           {submenu1}
+        </Link>
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/outside-classroom-vdo-podcast'
+        >
+          {submenu2}
         </Link>
       </div>
     </div>

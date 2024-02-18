@@ -6,10 +6,23 @@ interface Props {
   menuName: string;
   submenu1: string;
   submenu2: string;
+  submenu3: string;
+  submenu4: string;
+  submenu5: string;
+  submenu6: string;
   pathName: string;
 }
 
-export const Tv = ({ menuName, submenu1, submenu2, pathName }: Props) => {
+export const Tv = ({
+  menuName,
+  submenu1,
+  submenu2,
+  submenu3,
+  submenu4,
+  submenu5,
+  submenu6,
+  pathName,
+}: Props) => {
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
@@ -39,6 +52,34 @@ export const Tv = ({ menuName, submenu1, submenu2, pathName }: Props) => {
           href='/teacher-hero'
         >
           {submenu2}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/first-class'
+        >
+          {submenu3}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/the-magnet'
+        >
+          {submenu4}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/thamaitai'
+        >
+          {submenu5}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/coolcru'
+        >
+          {submenu6}
         </Link>
       </div>
     </div>

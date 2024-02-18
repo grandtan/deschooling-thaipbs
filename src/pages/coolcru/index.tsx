@@ -1,27 +1,28 @@
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Grid } from '@mui/material';
 import Head from 'next/head';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { RiGovernmentFill } from 'react-icons/ri';
+import { MdComputer } from 'react-icons/md';
 
 import Layout from '@/components/layout/Layout';
 
 import { useLoading } from '@/context/loadingContext';
 
 import { YoutubeResponse } from '@/types/teacher';
+import { SiYoutubemusic } from 'react-icons/si';
+import { PiTelevisionFill } from 'react-icons/pi';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
 
-const PLAYLIST_ID = 'PLeZwwnM5meV9BDlxnsCvOf7v12EQ_YRtq';
+const PLAYLIST_ID = 'PLeZwwnM5meV8rTvcEU9sk04HU5I0oje9s';
 
 const RESULTS_PER_PAGE = 8;
 
-const Goverment = () => {
+const CoolCru = () => {
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
@@ -71,22 +72,20 @@ const Goverment = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>
-          เสียงสะท้อนสู่นโยบายภาครัฐ : คุณคือใครในวงการการศึกษา : deschooling
-        </title>
+        <title>ครูคูล : deschooling</title>
         <meta
           name='keywords'
-          content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
+          content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
 
       <div className=' mx-4 h-screen py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
-            <RiGovernmentFill size={35} />
-            <div className=' text-3xl'>เสียงสะท้อนสู่นโยบายภาครัฐ</div>
+            <PiTelevisionFill size={35} />
+            <div className='text-3xl'>ครูคูล</div>
           </div>
-          <div className=' hidden md:flex'>
+          {/* <div className=' hidden md:flex'>
             {!viewAllClicked &&
               maxResults < totalItems &&
               totalItems > RESULTS_PER_PAGE && (
@@ -98,59 +97,63 @@ const Goverment = () => {
                   <ArrowForwardIosIcon className='pl-1' />
                 </button>
               )}
-          </div>
+          </div> */}
         </div>
 
-        <div className='mt-10 flex flex-row justify-center '>
-          {itemYoutube?.etag &&
-            [...itemYoutube.items]
-              .reverse()
-              .slice(0, maxResults)
-              .map((e, i) => (
-                <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
-                  <Link
-                    href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
-                    passHref
-                    target='_blank'
-                  >
-                    <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-                      <div>
-                        <img
-                          className='rounded-t-xl rounded-bl-xl'
-                          src={e.snippet.thumbnails.high.url}
-                          width='100%'
-                          height='100%'
-                          alt={e.snippet.title}
-                        />
+        {/* <div className='mt-10 flex flex-row justify-center '>
+          <Grid container spacing={4}>
+            {itemYoutube?.etag &&
+              [...itemYoutube.items]
+                .reverse()
+                .slice(0, maxResults)
+                .map((e, i) => (
+                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
+                    <Link
+                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
+                      passHref
+                      target='_blank'
+                    >
+                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                        <div>
+                          <img
+                            className='rounded-t-xl rounded-bl-xl'
+                            src={e.snippet.thumbnails.high.url}
+                            width='100%'
+                            height='100%'
+                            alt={e.snippet.title}
+                          />
+                        </div>
+
+                        <div className='h-24 p-2 text-left '>
+                          {e.snippet.title}
+                        </div>
                       </div>
+                    </Link>
+                  </Grid>
+                ))}
+          </Grid>
+        </div> */}
 
-                      <div className=' h-20  p-1 '>{e.snippet.title}</div>
-                    </div>
-                  </Link>
-                </Grid>
-              ))}
-        </div>
-
-        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+        {/* <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
           {maxResults < totalItems && (
             <button onClick={handleViewMore}>
               VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
             </button>
           )}
-        </div>
+        </div> */}
 
-        <div className='flex justify-end'>
+        {/* <div className=' flex justify-end '>
           <button
             className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
             onClick={scrollToTop}
           >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
 };
 
-export default Goverment;
+export default CoolCru;

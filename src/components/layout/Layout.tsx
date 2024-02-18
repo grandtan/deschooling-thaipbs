@@ -73,19 +73,19 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             >
               <TreeItem
                 onClick={() => router.push('/teacher')}
-                nodeId='ครูและผู้อำนวยการ'
+                nodeId='teacher'
                 label='ครูและผู้อำนวยการ'
                 className='my-4 '
               />
               <TreeItem
                 onClick={() => router.push('/parent')}
-                nodeId='พ่อแม่และผู้ปกครอง'
+                nodeId='parent'
                 label='พ่อแม่และผู้ปกครอง'
                 className='my-4 '
               />
               <TreeItem
                 onClick={() => router.push('/small-school')}
-                nodeId='โรงเรียนขนาดเล็กต้นแบบ'
+                nodeId='small-school'
                 label='โรงเรียนขนาดเล็กต้นแบบ'
                 className='my-4 '
               />
@@ -113,6 +113,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 label='VDO How to'
                 className='my-4'
               />
+
+              <TreeItem
+                onClick={() => router.push('/outside-classroom-vdo')}
+                nodeId='outside-classroom-vdo'
+                label='วิชานอกห้อง'
+                className='my-4'
+              />
             </TreeItem>
           </TreeView>
         </div>
@@ -136,6 +143,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/podcast')}
                 nodeId='VDO How to'
                 label='ฟัง พูด อ่าน กิน'
+                className='my-4'
+              />
+
+              <TreeItem
+                onClick={() => router.push('/outside-classroom-vdo-podcast')}
+                nodeId='outside-classroom-vdo-podcast'
+                label='วิชานอกห้อง'
                 className='my-4'
               />
             </TreeItem>
@@ -187,7 +201,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           >
             <TreeItem
               nodeId='1'
-              label={<div className=' text-lg '>รายการทีวี</div>}
+              label={<div className='text-lg'>รายการทีวี</div>}
             >
               <TreeItem
                 onClick={() => router.push('/deschooling')}
@@ -200,6 +214,34 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/teacher-hero')}
                 nodeId='teacher-hero'
                 label=' Teacher Hero'
+                className='my-4 '
+              />
+
+              <TreeItem
+                onClick={() => router.push('/first-class')}
+                nodeId='first-class'
+                label='สารคดี First class'
+                className='my-4 '
+              />
+
+              <TreeItem
+                onClick={() => router.push('/the-magnet')}
+                nodeId='the-magnet'
+                label='The Magnet'
+                className='my-4 '
+              />
+
+              <TreeItem
+                onClick={() => router.push('/thamaitai')}
+                nodeId='thamaitai'
+                label='ท่าไม้ตาย'
+                className='my-4 '
+              />
+
+              <TreeItem
+                onClick={() => router.push('/coolcru')}
+                nodeId='coolcru'
+                label='ครูคูล'
                 className='my-4 '
               />
             </TreeItem>
@@ -225,7 +267,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00] md:flex'>
+          <div className='z-10 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00] md:flex'>
             <Home menuName='หน้าแรก' pathName={pathName} />
 
             <LearningSpace
@@ -240,12 +282,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             <Vdo
               menuName='วิดีโอ'
               submenu1='VDO How to ดูง่าย พอดีคำ'
+              submenu2='วิชานอกห้อง'
               pathName={pathName}
             />
 
             <Podcast
               menuName=' Podcast'
               submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
+              submenu2='วิชานอกห้อง'
               pathName={pathName}
             />
 
@@ -260,6 +304,10 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               menuName=' รายการทีวี '
               submenu1='Deschooling'
               submenu2='Teacher Hero'
+              submenu3='สารคดี First class'
+              submenu4='The Magnet'
+              submenu5='ท่าไม้ตาย'
+              submenu6='ครูคูล'
               pathName={pathName}
             />
 

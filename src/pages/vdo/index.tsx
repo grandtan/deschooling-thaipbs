@@ -11,6 +11,7 @@ import Layout from '@/components/layout/Layout';
 import { useLoading } from '@/context/loadingContext';
 
 import { YoutubeResponse } from '@/types/teacher';
+import { SiYoutubemusic } from 'react-icons/si';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -81,7 +82,7 @@ const VDO = () => {
       <div className=' mx-4 py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
-            <MdComputer size={35} />
+            <SiYoutubemusic size={35} />
             <div className=' text-3xl'>VDO How to ดูง่าย พอดีคำ</div>
           </div>
           <div className=' hidden md:flex'>

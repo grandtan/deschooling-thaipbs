@@ -69,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           >
             <TreeItem
               nodeId='1'
-              label={<div className=' text-lg  '>พื้นที่เรียนรู้</div>}
+              label={<div className=' text-lg'>พื้นที่เรียนรู้</div>}
             >
               <TreeItem
                 onClick={() => router.push('/teacher')}
@@ -81,6 +81,12 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/parent')}
                 nodeId='พ่อแม่และผู้ปกครอง'
                 label='พ่อแม่และผู้ปกครอง'
+                className='my-4 '
+              />
+              <TreeItem
+                onClick={() => router.push('/small-school')}
+                nodeId='โรงเรียนขนาดเล็กต้นแบบ'
+                label='โรงเรียนขนาดเล็กต้นแบบ'
                 className='my-4 '
               />
             </TreeItem>
@@ -219,13 +225,15 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-20 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00]  md:flex  '>
+          <div className='hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00] md:flex'>
             <Home menuName='หน้าแรก' pathName={pathName} />
 
             <LearningSpace
               menuName='พื้นที่เรียนรู้'
               submenu1='ครูและผู้อำนวยการ'
               submenu2='พ่อแม่แลผู้ปกครอง'
+              submenu3='โรงเรียนขนาดเล็กต้นแบบ'
+              submenu4='ห้องเรียนบูรณาการ'
               pathName={pathName}
             />
 

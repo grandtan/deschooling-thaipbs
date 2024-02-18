@@ -6,6 +6,8 @@ interface Props {
   menuName: string;
   submenu1: string;
   submenu2: string;
+  submenu3: string;
+  submenu4: string;
   pathName: string;
 }
 
@@ -13,6 +15,8 @@ export const LearningSpace = ({
   menuName,
   submenu1,
   submenu2,
+  submenu3,
+  submenu4,
   pathName,
 }: Props) => {
   const baseButtonClasses =
@@ -30,7 +34,7 @@ export const LearningSpace = ({
         </div>
         {menuName}
       </button>
-      <div className='fixed hidden w-[210px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-auto flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
         <Link
           className='px-5 py-3 text-black hover:text-[#ffba00]'
           href='/teacher'
@@ -42,6 +46,18 @@ export const LearningSpace = ({
           href='/parent'
         >
           {submenu2}
+        </Link>
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/small-school'
+        >
+          {submenu3}
+        </Link>
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/classroom'
+        >
+          {submenu4}
         </Link>
       </div>
     </div>

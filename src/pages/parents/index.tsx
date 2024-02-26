@@ -7,6 +7,7 @@ import { MdComputer } from 'react-icons/md';
 import { RiParentLine } from 'react-icons/ri';
 
 import Layout from '@/components/layout/Layout';
+import { PiTelevisionFill } from 'react-icons/pi';
 
 const Parents = () => {
   return (
@@ -48,7 +49,9 @@ const Parents = () => {
               </Link>
             </div>
           </div>
+        </div>
 
+        <div className='flex flex-col items-center justify-center gap-6 pt-4 md:flex-row  md:gap-10  md:pt-8'>
           <div className=' flex-col space-y-4 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
               TV Program
@@ -61,6 +64,17 @@ const Parents = () => {
                   width={200}
                   height={200}
                 />
+              </Link>
+            </div>
+          </div>
+
+          <div className='flex flex-col space-y-2 md:space-y-6'>
+            <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
+              First Class ห้องเรียนแรก
+            </div>
+            <div className=' flex h-[100px] w-[200px] items-center justify-center rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
+              <Link href='/first-class'>
+                <PiTelevisionFill size={100} />
               </Link>
             </div>
           </div>

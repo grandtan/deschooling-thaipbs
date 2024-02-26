@@ -220,7 +220,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               <TreeItem
                 onClick={() => router.push('/first-class')}
                 nodeId='first-class'
-                label='สารคดี First class'
+                label='First Class ห้องเรียนแรก'
                 className='my-4 '
               />
 
@@ -304,7 +304,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               menuName=' รายการทีวี '
               submenu1='Deschooling'
               submenu2='Teacher Hero'
-              submenu3='สารคดี First class'
+              submenu3='First Class ห้องเรียนแรก'
               submenu4='The Magnet แรงดึงกลับ'
               submenu5='ท่าไม้ตาย'
               submenu6='COOL CRU จารย์เจ๋ง'

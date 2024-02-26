@@ -73,7 +73,7 @@ const FirstClass = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>สารคดี First class : deschooling</title>
+        <title>First Class ห้องเรียนแรก : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
@@ -84,7 +84,7 @@ const FirstClass = () => {
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <PiTelevisionFill size={35} />
-            <div className='text-3xl'>สารคดี First class</div>
+            <div className='text-3xl'>First Class ห้องเรียนแรก</div>
           </div>
           {/* <div className=' hidden md:flex'>
             {!viewAllClicked &&

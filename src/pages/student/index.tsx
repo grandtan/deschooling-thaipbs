@@ -6,6 +6,7 @@ import { FaPodcast } from 'react-icons/fa';
 import { PiStudentFill } from 'react-icons/pi';
 
 import Layout from '@/components/layout/Layout';
+import { SiYoutubemusic } from 'react-icons/si';
 
 const Student = () => {
   return (
@@ -48,6 +49,17 @@ const Student = () => {
                   width={200}
                   height={200}
                 />
+              </Link>
+            </div>
+          </div>
+
+          <div className='flex flex-col space-y-6'>
+            <div className=' text-center  text-xl text-[#ffba00] md:text-2xl'>
+              วิชานอกห้อง
+            </div>
+            <div className='flex h-[100px] w-[200px] items-center justify-center  rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
+              <Link href='/outside-classroom-vdo'>
+                <SiYoutubemusic size={100} />
               </Link>
             </div>
           </div>

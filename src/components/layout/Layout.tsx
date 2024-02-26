@@ -227,7 +227,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               <TreeItem
                 onClick={() => router.push('/the-magnet')}
                 nodeId='the-magnet'
-                label='The Magnet'
+                label='The Magnet แรงดึงกลับ'
                 className='my-4 '
               />
 
@@ -241,7 +241,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               <TreeItem
                 onClick={() => router.push('/coolcru')}
                 nodeId='coolcru'
-                label='ครูคูล'
+                label='COOL CRU จารย์เจ๋ง'
                 className='my-4 '
               />
             </TreeItem>
@@ -305,9 +305,9 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               submenu1='Deschooling'
               submenu2='Teacher Hero'
               submenu3='สารคดี First class'
-              submenu4='The Magnet'
+              submenu4='The Magnet แรงดึงกลับ'
               submenu5='ท่าไม้ตาย'
-              submenu6='ครูคูล'
+              submenu6='COOL CRU จารย์เจ๋ง'
               pathName={pathName}
             />
 

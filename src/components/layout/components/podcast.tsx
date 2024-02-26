@@ -24,7 +24,7 @@ export const Podcast = ({ menuName, submenu1, submenu2, pathName }: Props) => {
         {menuName}
       </button>
 
-      <div className='fixed hidden w-[310px] flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
+      <div className='fixed hidden w-fit flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
         <Link
           className='px-5 py-3 text-black hover:text-[#ffba00]'
           href='/podcast'

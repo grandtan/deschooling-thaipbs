@@ -72,7 +72,7 @@ const CoolCru = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>ครูคูล : deschooling</title>
+        <title>COOL CRU จารย์เจ๋ง : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
@@ -83,7 +83,7 @@ const CoolCru = () => {
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <PiTelevisionFill size={35} />
-            <div className='text-3xl'>ครูคูล</div>
+            <div className='text-3xl'>COOL CRU จารย์เจ๋ง</div>
           </div>
           {/* <div className=' hidden md:flex'>
             {!viewAllClicked &&

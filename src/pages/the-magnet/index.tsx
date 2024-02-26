@@ -72,7 +72,7 @@ const TheMagnet = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>The Magnet : deschooling</title>
+        <title>The Magnet แรงดึงกลับ : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
@@ -83,7 +83,7 @@ const TheMagnet = () => {
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <PiTelevisionFill size={35} />
-            <div className='text-3xl'>The Magnet</div>
+            <div className='text-3xl'>The Magnet แรงดึงกลับ</div>
           </div>
           {/* <div className=' hidden md:flex'>
             {!viewAllClicked &&

@@ -1,25 +1,19 @@
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import { Grid } from '@mui/material';
 import Head from 'next/head';
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { MdComputer } from 'react-icons/md';
-
 import Layout from '@/components/layout/Layout';
-
 import { useLoading } from '@/context/loadingContext';
-
 import { YoutubeResponse } from '@/types/teacher';
-import { SiYoutubemusic } from 'react-icons/si';
 import { PiTelevisionFill } from 'react-icons/pi';
+import { Grid } from '@mui/material';
+import Link from 'next/link';
 
 const YOUTUBE_PLAYLIST_ITEMs_API =
   'https://www.googleapis.com/youtube/v3/playlistItems';
 
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
-
-const PLAYLIST_ID = 'PLeZwwnM5meV8rTvcEU9sk04HU5I0oje9s';
-
+const PLAYLIST_ID = 'PLeZwwnM5meV_8bJV_CSZAmAeESjQYcBf0';
 const RESULTS_PER_PAGE = 8;
 
 const CoolCru = () => {
@@ -79,13 +73,13 @@ const CoolCru = () => {
         />
       </Head>
 
-      <div className=' mx-4 h-screen py-10 md:mx-24'>
+      <div className=' mx-4 py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <PiTelevisionFill size={35} />
             <div className='text-3xl'>COOL CRU จารย์เจ๋ง</div>
           </div>
-          {/* <div className=' hidden md:flex'>
+          <div className=' hidden md:flex'>
             {!viewAllClicked &&
               maxResults < totalItems &&
               totalItems > RESULTS_PER_PAGE && (
@@ -97,24 +91,22 @@ const CoolCru = () => {
                   <ArrowForwardIosIcon className='pl-1' />
                 </button>
               )}
-          </div> */}
+          </div>
         </div>
 
-        {/* <div className='mt-10 flex flex-row justify-center '>
+        <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
-              [...itemYoutube.items]
-                .reverse()
-                .slice(0, maxResults)
-                .map((e, i) => (
-                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
-                    <Link
-                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
-                      passHref
-                      target='_blank'
-                    >
-                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-                        <div>
+              itemYoutube.items?.slice(0, maxResults).map((e, i) => (
+                <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
+                  <Link
+                    href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
+                    passHref
+                    target='_blank'
+                  >
+                    <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                      <div>
+                        {e.snippet.thumbnails?.high?.url && (
                           <img
                             className='rounded-t-xl rounded-bl-xl'
                             src={e.snippet.thumbnails.high.url}
@@ -122,35 +114,36 @@ const CoolCru = () => {
                             height='100%'
                             alt={e.snippet.title}
                           />
-                        </div>
-
-                        <div className='h-24 p-2 text-left '>
-                          {e.snippet.title}
-                        </div>
+                        )}
                       </div>
-                    </Link>
-                  </Grid>
-                ))}
-          </Grid>
-        </div> */}
 
-        {/* <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+                      <div className='h-24 p-2 text-left '>
+                        {e.snippet.title}
+                      </div>
+                    </div>
+                  </Link>
+                </Grid>
+              ))}
+          </Grid>
+        </div>
+
+        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
           {maxResults < totalItems && (
             <button onClick={handleViewMore}>
               VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
             </button>
           )}
-        </div> */}
+        </div>
 
-        {/* <div className=' flex justify-end '>
+        <div className=' flex justify-end '>
           <button
             className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
             onClick={scrollToTop}
           >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
-        </div> */}
+        </div>
       </div>
     </Layout>
   );

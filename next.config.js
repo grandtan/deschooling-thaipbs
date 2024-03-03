@@ -35,3 +35,10 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+module.exports = {
+  images: {
+    domains: ['images-cdn.enveu.com','cf-images.ap-southeast-1.prod.boltdns.net'],
+ 
+  },
+};

@@ -53,51 +53,16 @@ const Calendar = () => {
         </div>
 
         <div className='flex flex-col space-y-10 p-4 '>
-          {data?.map((item, index) => (
-            <div key={index} className=' flex justify-center  '>
-              <img
-                src={item.imageUrl}
-                alt='deschooling'
-                className=' h-full w-full  rounded-b-xl  rounded-t-xl  border-2  border-dotted  md:h-3/4 md:w-3/4 '
-              />
-            </div>
-            // <div
-            //   key={index}
-            //   className='flex w-full cursor-pointer flex-row  rounded-t-[50px]   rounded-bl-[50px] bg-white md:w-auto'
-            // >
-            //   <div className='flex w-1/6 flex-row items-center  justify-center  rounded-t-[50px] rounded-bl-[50px] bg-[#ffd666]  text-center'>
-            //     <div className='text-2xl font-bold'>{item.textDate}</div>
-            //   </div>
-            //   <div className='flex w-3/6  flex-col  items-center  justify-center  space-y-2 rounded-t-[50px]  rounded-bl-[50px] text-center text-xl hover:text-yellow-900'>
-            //     <div className='flex flex-row items-center gap-x-2'>
-            //       <LuMapPin /> {item.eventName}
-            //     </div>
-            //     <div className='flex flex-row items-center gap-x-2'>
-            //       <BiTimeFive /> {item.period}
-            //     </div>
-            //     <div className='flex flex-row items-center gap-x-2'>
-            //       <TiWarningOutline /> {item.remark}
-            //     </div>
-            //   </div>
-
-            //   <div className='flex w-2/6 flex-row items-center justify-center space-x-10 rounded-t-[50px]  rounded-bl-[50px]  bg-slate-100 p-1'>
-            //     <QRCode
-            //       size={150}
-            //       iconSize={200 / 4}
-            //       errorLevel='H'
-            //       value={item.qrcode}
-            //       icon='https://img.icons8.com/color/48/google-docs--v1.png'
-            //     />
-            //     <QRCode
-            //       size={150}
-            //       iconSize={200 / 4}
-            //       errorLevel='H'
-            //       value={item.line}
-            //       icon='https://img.icons8.com/color/48/line-me.png'
-            //     />
-            //   </div>
-            // </div>
-          ))}
+          {data?.length &&
+            data?.map((item, index) => (
+              <div key={index} className=' flex justify-center  '>
+                <img
+                  src={item.imageUrl}
+                  alt='deschooling'
+                  className=' h-full w-full  rounded-b-xl  rounded-t-xl  border-2  border-dotted  md:h-3/4 md:w-3/4 '
+                />
+              </div>
+            ))}
         </div>
       </div>
     </Layout>

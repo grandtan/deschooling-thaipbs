@@ -31,17 +31,22 @@ const FirstClass = () => {
         </div>
 
         <div className='mt-10 flex flex-row justify-center'>
-          <div className='aspect-video rounded-xl  border-2  bg-white p-0.5 duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in'>
-            <Link href={vdoFirstClass} passHref target='_blank'>
-              <Image
-                className='rounded-xl'
-                src={ImageFirstClass}
-                width={500}
-                height={500}
-                alt='Picture of the First Class'
-              />
-            </Link>
-          </div>
+          <Link href={vdoFirstClass} passHref target='_blank'>
+            <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2 bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+              <div>
+                <Image
+                  className='rounded-t-xl rounded-bl-xl'
+                  src={ImageFirstClass}
+                  width={500}
+                  height={500}
+                  alt='Picture of the First Class'
+                />
+              </div>
+              <div className='h-34 p-2 text-left'>
+                First Class ห้องเรียนแรก เบื้องหลังความสำเร็จคือครอบครัว
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </Layout>

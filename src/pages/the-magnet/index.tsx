@@ -14,7 +14,7 @@ const imageUrls = [
   'https://cf-images.ap-southeast-1.prod.boltdns.net/v1/static/6075037809001/ac0c4060-0232-4ccb-9850-c8e1b8facca8/3a558ee1-59c4-4303-9960-328b844a1474/1920x1080/match/image.jpg',
 ];
 
-const vdoFirstClass = [
+const vdoTheMagnet = [
   'https://vipa.me/th/play/%25E0%25B9%2580%25E0%25B8%2594%25E0%25B9%2587%25E0%25B8%2581%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%25A4%25E0%25B8%2595-%25E0%25B9%2580%25E0%25B8%2589%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%259A%25E0%25B8%259E%25E0%25B8%25A5%25E0%25B8%25B1%25E0%25B8%2599/1216022?seriesId=1216484',
   'https://vipa.me/th/play/%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%2580%25E0%25B8%2587%25E0%25B8%25B4%25E0%25B8%2599-%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%2582%25E0%25B8%25AD%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25AA/1216020?seriesId=1216484',
   'https://vipa.me/th/play/%25E0%25B9%2580%25E0%25B8%2594%25E0%25B9%2587%25E0%25B8%2581%25E0%25B8%25AB%25E0%25B8%25A5%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%25AB%25E0%25B9%2589%25E0%25B8%25AD%25E0%25B8%2587-learning-loss/1216018?seriesId=1216484',
@@ -53,8 +53,8 @@ const TheMagnet = () => {
           <Grid container spacing={4}>
             {imageUrls.map((imageUrl, index) => (
               <Grid item xs={12} sm={6} md={6} lg={3} key={index}>
-                <Link href={vdoFirstClass[index]} passHref target='_blank'>
-                  <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                <Link href={vdoTheMagnet[index]} passHref target='_blank'>
+                  <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2 bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
                     <div>
                       <Image
                         className='rounded-t-xl rounded-bl-xl'

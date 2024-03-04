@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Image } from 'antd';
+import { Image, Modal } from 'antd';
 import { BsImages } from 'react-icons/bs';
 import Layout from '@/components/layout/Layout';
 
 const Gallery = () => {
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [previewImage, setPreviewImage] = useState('');
+
   const governmentEvent = [
     '/images/government-event/government_1.jpg',
     '/images/government-event/government_2.jpg',
@@ -23,6 +26,15 @@ const Gallery = () => {
     '/images/school-event/school_4.jpg',
     '/images/school-event/school_5.jpg',
   ];
+
+  const handlePreview = (image: string) => {
+    setPreviewImage(image);
+    setPreviewVisible(true);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewVisible(false);
+  };
 
   return (
     <Layout container={false}>
@@ -47,7 +59,11 @@ const Gallery = () => {
             </div>
 
             {governmentEvent.map((image, index) => (
-              <div key={index + 1} className={index === 0 ? 'col-span-4' : ''}>
+              <div
+                onClick={() => handlePreview(image)}
+                key={index + 1}
+                className={index === 0 ? 'col-span-4' : ''}
+              >
                 <LazyLoadImage
                   src={image}
                   alt={'Government Event ' + index}
@@ -71,6 +87,7 @@ const Gallery = () => {
             <Image.PreviewGroup>
               {schoolEvent.map((image, index) => (
                 <div
+                  onClick={() => handlePreview(image)}
                   key={index + 1}
                   className={index === 0 ? 'col-span-4' : ''}
                 >
@@ -90,6 +107,16 @@ const Gallery = () => {
               รายละเอียดเพิ่มเติม
             </Link>
           </div>
+
+          <Modal
+            visible={previewVisible}
+            onCancel={handleClosePreview}
+            footer={null}
+            closable={false}
+            width='80%'
+          >
+            <LazyLoadImage src={previewImage} effect='blur' />
+          </Modal>
         </div>
       </div>
     </Layout>

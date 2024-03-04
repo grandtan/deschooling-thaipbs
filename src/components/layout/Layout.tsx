@@ -147,8 +147,8 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               />
 
               <TreeItem
-                onClick={() => router.push('/outside-classroom-vdo-podcast')}
-                nodeId='outside-classroom-vdo-podcast'
+                onClick={() => router.push('/outside-classroom-podcast')}
+                nodeId='outside-classroom-podcast'
                 label='วิชานอกห้อง'
                 className='my-4'
               />

@@ -33,7 +33,7 @@ export const Podcast = ({ menuName, submenu1, submenu2, pathName }: Props) => {
         </Link>
         <Link
           className='px-5 py-3 text-black hover:text-[#ffba00]'
-          href='/outside-classroom-vdo-podcast'
+          href='/outside-classroom-podcast'
         >
           {submenu2}
         </Link>

@@ -85,7 +85,7 @@ const OutsideClassRoomVdo = () => {
             <SiYoutubemusic size={35} />
             <div className='text-3xl'>วิชานอกห้อง</div>
           </div>
-          {/* <div className=' hidden md:flex'>
+          <div className=' hidden md:flex'>
             {!viewAllClicked &&
               maxResults < totalItems &&
               totalItems > RESULTS_PER_PAGE && (
@@ -97,10 +97,10 @@ const OutsideClassRoomVdo = () => {
                   <ArrowForwardIosIcon className='pl-1' />
                 </button>
               )}
-          </div> */}
+          </div>
         </div>
 
-        {/* <div className='mt-10 flex flex-row justify-center '>
+        <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
               [...itemYoutube.items]
@@ -132,25 +132,25 @@ const OutsideClassRoomVdo = () => {
                   </Grid>
                 ))}
           </Grid>
-        </div> */}
+        </div>
 
-        {/* <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
           {maxResults < totalItems && (
             <button onClick={handleViewMore}>
               VDO เพิ่มเติม
               <ArrowForwardIosIcon className='pl-1' />
             </button>
           )}
-        </div> */}
+        </div>
 
-        {/* <div className=' flex justify-end '>
+        <div className=' flex justify-end '>
           <button
             className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
             onClick={scrollToTop}
           >
             <ArrowUpwardIcon htmlColor='white' />
           </button>
-        </div> */}
+        </div>
       </div>
     </Layout>
   );

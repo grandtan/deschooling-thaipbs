@@ -56,7 +56,7 @@ const Home = () => {
           <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
             <CustomReactPlayer
               playing={playing}
-              url='https://www.youtube.com/watch?v=paiO6M2wBqE'
+              url='https://dai.ly/k3mtSXvNkuRQZvA7MdC'
               onCustomPlay={handleVideoPlay}
               onCustomPause={handleVideoPause}
             />

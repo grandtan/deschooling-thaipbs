@@ -1,9 +1,10 @@
-import { Image } from 'antd';
+import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import { Image } from 'antd';
 import { BsImages } from 'react-icons/bs';
-
 import Layout from '@/components/layout/Layout';
 
 const Gallery = () => {
@@ -32,47 +33,59 @@ const Gallery = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className=' mx-4  py-10 md:mx-24 md:h-screen'>
-        <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
+      <div className='mx-4 py-10 md:mx-24 md:h-screen'>
+        <div className='flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsImages size={35} />
-          <div className=' text-3xl'>ภาพกิจกรรม</div>
+          <div className='text-3xl'>ภาพกิจกรรม</div>
         </div>
 
-        <div className=' mt-12  grid  grid-cols-1 place-content-center gap-4  md:grid-cols-2'>
-          <div className=' grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl  border-2  border-dashed p-0.5 md:grid-cols-4'>
-            <div className='col-span-4 grid content-center  rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
+        <div className='mt-12 grid grid-cols-1 place-content-center gap-4 md:grid-cols-2'>
+          <div className='grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl border-2 border-dashed p-0.5 md:grid-cols-4'>
+            <div className='col-span-4 grid content-center rounded-t-3xl bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
               ก้าวทันโลก”
             </div>
-            <Image.PreviewGroup>
-              {governmentEvent.map((image, index) => (
-                <div key={index} className={index === 0 ? 'col-span-4 ' : ''}>
-                  <Image src={image} sizes='50%' alt='Government Event' />
-                </div>
-              ))}
-            </Image.PreviewGroup>
+
+            {governmentEvent.map((image, index) => (
+              <div key={index + 1} className={index === 0 ? 'col-span-4' : ''}>
+                <LazyLoadImage
+                  src={image}
+                  alt={'Government Event ' + index}
+                  effect='blur'
+                />
+              </div>
+            ))}
+
             <Link
-              className='col-span-4  grid content-center rounded-b-3xl bg-[#ffd666]  p-2 text-center '
               href='/gallery/government'
+              className='col-span-4 grid content-center rounded-b-3xl bg-[#ffd666] p-2 text-center'
             >
               รายละเอียดเพิ่มเติม
             </Link>
           </div>
 
-          <div className='grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl  border-2  border-dashed p-0.5 md:grid-cols-4'>
-            <div className='col-span-4 grid   content-center rounded-t-3xl  bg-[#ffcc00] p-4 text-center text-xl'>
+          <div className='grid grid-cols-4 gap-1 rounded-b-3xl rounded-t-3xl border-2 border-dashed p-0.5 md:grid-cols-4'>
+            <div className='col-span-4 grid content-center rounded-t-3xl bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
             <Image.PreviewGroup>
               {schoolEvent.map((image, index) => (
-                <div key={index} className={index === 0 ? 'col-span-4  ' : ''}>
-                  <Image src={image} sizes='100%' alt='School Event' />
+                <div
+                  key={index + 1}
+                  className={index === 0 ? 'col-span-4' : ''}
+                >
+                  <LazyLoadImage
+                    src={image}
+                    alt={'School Event ' + index}
+                    effect='blur'
+                  />
                 </div>
               ))}
             </Image.PreviewGroup>
+
             <Link
-              className='col-span-4  grid content-center rounded-b-3xl bg-[#ffd666]  p-2 text-center '
               href='/gallery/school'
+              className='col-span-4 grid content-center rounded-b-3xl bg-[#ffd666] p-2 text-center'
             >
               รายละเอียดเพิ่มเติม
             </Link>

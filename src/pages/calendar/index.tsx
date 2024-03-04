@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { th } from 'date-fns/locale';
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { BsFillCalendarHeartFill } from 'react-icons/bs';
 
 import Layout from '@/components/layout/Layout';
@@ -9,6 +9,8 @@ import Layout from '@/components/layout/Layout';
 import { useLoading } from '@/context/loadingContext';
 
 import { CaledarResponse } from '@/types/calendat';
+
+const LazyImage = React.lazy(() => import('@/components/LazyImage'));
 
 const Calendar = () => {
   const [data, setData] = useState<CaledarResponse[] | null>(null);
@@ -55,16 +57,18 @@ const Calendar = () => {
         </div>
 
         <div className='flex flex-col space-y-10 p-4 '>
-          {data?.length &&
-            data?.map((item, index) => (
-              <div key={index} className=' flex justify-center  '>
-                <img
-                  src={item.imageUrl}
-                  alt='deschooling'
-                  className=' h-full w-full  rounded-b-xl  rounded-t-xl  border-2  border-dotted  md:h-3/4 md:w-3/4 '
-                />
-              </div>
-            ))}
+          <Suspense fallback={<div>Loading...</div>}>
+            {data?.length &&
+              data?.map((item, index) => (
+                <div key={index} className=' flex justify-center  '>
+                  <LazyImage
+                    src={item.imageUrl}
+                    alt='deschooling'
+                    className=' h-full w-full  rounded-b-xl  rounded-t-xl  border-2  border-dotted  md:h-3/4 md:w-3/4 '
+                  />
+                </div>
+              ))}
+          </Suspense>
         </div>
       </div>
     </Layout>

@@ -41,7 +41,7 @@ const SmallSchool = () => {
     );
     const data: YoutubeResponse = await res.json();
 
-    setItemYoutube(data);
+    // setItemYoutube(data);
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
       setLoading(false);
@@ -71,85 +71,102 @@ const SmallSchool = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>โรงเรียนขนาดเล็กต้นแบบ : deschooling</title>
+        <title>โรงเรียนเล็กจิ๋วแต่แจ๋ว : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
 
-      <div className=' mx-4  py-10 md:mx-24'>
+      <div className=' mx-4  h-screen py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <MdComputer size={35} />
-            <div className=' text-3xl'>โรงเรียนขนาดเล็กต้นแบบ</div>
+            <div className=' text-3xl'>โรงเรียนเล็ก จิ๋วแต่แจ๋ว</div>
           </div>
-          <div className=' hidden md:flex'>
-            {!viewAllClicked &&
-              maxResults < totalItems &&
-              totalItems > RESULTS_PER_PAGE && (
-                <button
-                  className=' flex items-center font-semibold text-[#ffba00]'
-                  onClick={handleViewAll}
-                >
-                  <div className='text-lg'>ดูทั้งหมด</div>
-                  <ArrowForwardIosIcon className='pl-1' />
-                </button>
-              )}
-          </div>
-        </div>
-
-        <div className='mt-10 flex flex-row justify-center '>
-          <Grid container spacing={4}>
-            {itemYoutube?.etag &&
-              [...itemYoutube.items]
-                .reverse()
-                .slice(0, maxResults)
-                .map((e, i) => (
-                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
-                    <Link
-                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
-                      passHref
-                      target='_blank'
-                    >
-                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-                        <div>
-                          <img
-                            className='rounded-t-xl rounded-bl-xl'
-                            src={e.snippet.thumbnails.high.url}
-                            width='100%'
-                            height='100%'
-                            alt={e.snippet.title}
-                          />
-                        </div>
-
-                        <div className='h-24 p-2 text-left '>
-                          {e.snippet.title}
-                        </div>
-                      </div>
-                    </Link>
-                  </Grid>
-                ))}
-          </Grid>
-        </div>
-
-        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
-          {maxResults < totalItems && (
-            <button onClick={handleViewMore}>
-              VDO เพิ่มเติม
-              <ArrowForwardIosIcon className='pl-1' />
-            </button>
+          {itemYoutube?.items?.length && (
+            <div className=' hidden md:flex'>
+              {!viewAllClicked &&
+                maxResults < totalItems &&
+                totalItems > RESULTS_PER_PAGE && (
+                  <button
+                    className=' flex items-center font-semibold text-[#ffba00]'
+                    onClick={handleViewAll}
+                  >
+                    <div className='text-lg'>ดูทั้งหมด</div>
+                    <ArrowForwardIosIcon className='pl-1' />
+                  </button>
+                )}
+            </div>
           )}
         </div>
 
-        <div className=' flex justify-end '>
-          <button
-            className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
-            onClick={scrollToTop}
-          >
-            <ArrowUpwardIcon htmlColor='white' />
-          </button>
-        </div>
+        {itemYoutube?.items?.length ? (
+          <div className='mt-10 flex flex-row justify-center '>
+            <Grid container spacing={4}>
+              {itemYoutube?.etag &&
+                [...itemYoutube.items]
+                  .reverse()
+                  .slice(0, maxResults)
+                  .map((e, i) => (
+                    <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
+                      <Link
+                        href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${PLAYLIST_ID}`}
+                        passHref
+                        target='_blank'
+                      >
+                        <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                          <div>
+                            <img
+                              className='rounded-t-xl rounded-bl-xl'
+                              src={e.snippet.thumbnails.high.url}
+                              width='100%'
+                              height='100%'
+                              alt={e.snippet.title}
+                            />
+                          </div>
+
+                          <div className='h-24 p-2 text-left '>
+                            {e.snippet.title}
+                          </div>
+                        </div>
+                      </Link>
+                    </Grid>
+                  ))}
+            </Grid>
+          </div>
+        ) : (
+          <div>
+            <div className=' flex w-full justify-center pt-64  text-6xl text-[#ffba00]'>
+              ติดตามชม
+            </div>
+            <div className=' flex w-full justify-center pt-4  text-6xl text-[#ffba00]'>
+              ต้นเดือนเมษายน 2567
+            </div>
+          </div>
+        )}
+
+        {itemYoutube?.items?.length && (
+          <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+            {maxResults < totalItems && (
+              <button onClick={handleViewMore}>
+                VDO เพิ่มเติม
+                <ArrowForwardIosIcon className='pl-1' />
+              </button>
+            )}
+          </div>
+        )}
+
+        {itemYoutube?.items?.length && (
+          <div className=' flex justify-end '>
+            <button
+              className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
+              onClick={scrollToTop}
+            >
+              <ArrowUpwardIcon htmlColor='white' />
+            </button>
+          </div>
+        )}
       </div>
     </Layout>
   );

@@ -41,7 +41,7 @@ const ClassRoom = () => {
     );
     const data: YoutubeResponse = await res.json();
 
-    setItemYoutube(data);
+    // setItemYoutube(data);
     setTotalItems(data.pageInfo.totalResults);
     setTimeout(() => {
       setLoading(false);
@@ -71,7 +71,7 @@ const ClassRoom = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>ห้องเรียนบูรณาการ : deschooling</title>
+        <title>ห้องเรียนเล็ก เอาเด็กอยู่ : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
@@ -82,7 +82,7 @@ const ClassRoom = () => {
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <MdComputer size={35} />
-            <div className='text-3xl'>ห้องเรียนบูรณาการ</div>
+            <div className='text-3xl'>ห้องเรียนเล็ก เอาเด็กอยู่</div>
           </div>
           <div className=' hidden md:flex'>
             {!viewAllClicked &&

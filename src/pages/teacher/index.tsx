@@ -104,7 +104,7 @@ const Teacher = () => {
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
               [...itemYoutube.items]
-                .reverse()
+                // .reverse()
                 .slice(0, maxResults)
                 .map((e, i) => (
                   <Grid item xs={12} sm={6} md={6} lg={3} key={i}>

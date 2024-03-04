@@ -82,7 +82,7 @@ const TeacherAll = () => {
 
           <div className='flex flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
-              โรงเรียนขนาดเล็กต้นแบบ
+              โรงเรียนเล็ก จิ๋วแต่แจ๋ว
             </div>
             <div className=' flex h-[100px] w-[200px] items-center justify-center rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
               <Link href='/small-school'>
@@ -93,7 +93,7 @@ const TeacherAll = () => {
 
           <div className='flex flex-col space-y-2 md:space-y-6'>
             <div className=' text-center text-xl text-[#ffba00] md:text-2xl'>
-              ห้องเรียนบูรณาการ
+              ห้องเรียนเล็ก เอาเด็กอยู่
             </div>
             <div className=' flex h-[100px] w-[200px] items-center justify-center rounded-full border-4 border-black bg-white p-14 hover:border-white hover:bg-[#ffba00] hover:text-white md:h-[150px] md:w-[260px] md:rounded-[50px] md:p-0'>
               <Link href='/classroom'>

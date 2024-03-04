@@ -2,7 +2,7 @@ import { Grid } from 'antd';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
 
@@ -14,11 +14,32 @@ import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
 import LocalGovermentHome from '@/icon/LocalGovermentHome';
 import ParentHome from '@/icon/ParentHome';
+import dynamic from 'next/dynamic';
+
+const CustomReactPlayer = dynamic(
+  () => import('@/components/layout/components/reactPlayer'),
+  {
+    ssr: false,
+  }
+);
 
 const { useBreakpoint } = Grid;
 const Home = () => {
   const screens = useBreakpoint();
   const router = useRouter();
+
+  const [autoplay, setAutoplay] = useState(true);
+  const [playing, setPlaying] = useState(false);
+
+  const handleVideoPlay = () => {
+    setAutoplay(false);
+    setPlaying(true);
+  };
+
+  const handleVideoPause = () => {
+    setAutoplay(true);
+    setPlaying(false);
+  };
 
   return (
     <Layout container={false}>
@@ -31,7 +52,16 @@ const Home = () => {
       </Head>
 
       <div className=' w-full  '>
-        <Slide duration={4000} arrows={!screens.xs}>
+        <Slide duration={4000} arrows={!screens.xs} autoplay={autoplay}>
+          <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
+            <CustomReactPlayer
+              playing={playing}
+              url='https://www.youtube.com/watch?v=paiO6M2wBqE'
+              onCustomPlay={handleVideoPlay}
+              onCustomPause={handleVideoPause}
+            />
+          </div>
+
           <div className='each-slide-effect flex  flex-row justify-center '>
             <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-7xl xl:text-8xl'>
               <div

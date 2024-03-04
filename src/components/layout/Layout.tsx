@@ -337,7 +337,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           <div
             style={{
               backgroundImage: `url(${
-                backgroundImage || '/images/bg-master.png'
+                backgroundImage || 'https://i.ibb.co/YPfh2HJ/bg-master.png'
               })`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',

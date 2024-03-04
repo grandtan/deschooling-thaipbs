@@ -1,11 +1,16 @@
-import { Image } from 'antd';
+import React, { useState } from 'react';
+import { Modal, Image } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
-
+import { BsImages } from 'react-icons/bs';
 import Layout from '@/components/layout/Layout';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const government = () => {
+const Government = () => {
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [previewImage, setPreviewImage] = useState('');
+
   const governmentEvent = [
     '/images/government-event/government_1.jpg',
     '/images/government-event/government_2.jpg',
@@ -29,6 +34,15 @@ const government = () => {
     '/images/government-event/government_20.jpg',
   ];
 
+  const handlePreview = (image: string) => {
+    setPreviewImage(image);
+    setPreviewVisible(true);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewVisible(false);
+  };
+
   return (
     <Layout backgroundImage='/images/bg-master.png'>
       <Head>
@@ -42,25 +56,24 @@ const government = () => {
         />
       </Head>
       <div className='mx-4 h-full py-10 md:mx-24'>
-        <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
+        <div className='flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className='text-xl md:text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”
           </div>
         </div>
 
         <div className='my-8 grid grid-cols-1  gap-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-          <Image.PreviewGroup>
-            {governmentEvent.map((image, index) => (
-              <div key={index} className='m-4'>
-                <Image
-                  className=' rounded-xl'
-                  sizes='50%'
-                  src={image}
-                  alt={`Government Event ${index + 1}`}
-                />
-              </div>
-            ))}
-          </Image.PreviewGroup>
+          {governmentEvent.map((image, index) => (
+            <div key={index} className='m-4'>
+              <LazyLoadImage
+                src={image}
+                className='cursor-pointer rounded-xl'
+                onClick={() => handlePreview(image)}
+                alt={`Government Event ${index + 1}`}
+                effect='blur'
+              />
+            </div>
+          ))}
         </div>
 
         <div className='text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8'>
@@ -86,9 +99,19 @@ const government = () => {
             อ่านเพิ่มเติม
           </Link>
         </div>
+
+        <Modal
+          visible={previewVisible}
+          onCancel={handleClosePreview}
+          footer={null}
+          closable={false}
+          width='80%' // Adjust the width as needed
+        >
+          <Image src={previewImage} />
+        </Modal>
       </div>
     </Layout>
   );
 };
 
-export default government;
+export default Government;

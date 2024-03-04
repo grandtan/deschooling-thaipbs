@@ -1,10 +1,15 @@
-import React from 'react';
-import Layout from '@/components/layout/Layout';
-import { Image } from 'antd';
-import Link from 'next/link';
+import React, { useState } from 'react';
+import { Modal, Image } from 'antd';
 import Head from 'next/head';
+import Link from 'next/link';
+import Layout from '@/components/layout/Layout';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const school = () => {
+const School = () => {
+  const [previewVisible, setPreviewVisible] = useState(false);
+  const [previewImage, setPreviewImage] = useState('');
+
   const schoolEvent = [
     '/images/school-event/school_1.jpg',
     '/images/school-event/school_2.jpg',
@@ -28,6 +33,15 @@ const school = () => {
     '/images/school-event/school_20.jpg',
   ];
 
+  const handlePreview = (image: string) => {
+    setPreviewImage(image);
+    setPreviewVisible(true);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewVisible(false);
+  };
+
   return (
     <Layout backgroundImage='/images/bg-master.png'>
       <Head>
@@ -47,18 +61,17 @@ const school = () => {
         </div>
 
         <div className='my-8 grid grid-cols-1 gap-2 md:grid-cols-5'>
-          <Image.PreviewGroup>
-            {schoolEvent.map((image, index) => (
-              <div key={index} className='m-4'>
-                <Image
-                  className=' rounded-xl'
-                  sizes='50%'
-                  src={image}
-                  alt={`School Event ${index + 1}`}
-                />
-              </div>
-            ))}
-          </Image.PreviewGroup>
+          {schoolEvent.map((image, index) => (
+            <div key={index} className='m-4'>
+              <LazyLoadImage
+                src={image}
+                className='cursor-pointer rounded-xl'
+                onClick={() => handlePreview(image)}
+                alt={`School Event ${index + 1}`}
+                effect='blur'
+              />
+            </div>
+          ))}
         </div>
 
         <div className='text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8'>
@@ -78,9 +91,19 @@ const school = () => {
             อ่านเพิ่มเติม
           </Link>
         </div>
+
+        <Modal
+          visible={previewVisible}
+          onCancel={handleClosePreview}
+          footer={null}
+          closable={false}
+          width='80%'
+        >
+          <Image src={previewImage} />
+        </Modal>
       </div>
     </Layout>
   );
 };
 
-export default school;
+export default School;

@@ -11,13 +11,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 
-import { ContactUs } from '@/components/layout/components/contactus';
-import { Event } from '@/components/layout/components/event';
-import { Home } from '@/components/layout/components/home';
-import { LearningSpace } from '@/components/layout/components/learningspace';
-import { Podcast } from '@/components/layout/components/podcast';
-import { Tv } from '@/components/layout/components/tv';
-import { Vdo } from '@/components/layout/components/vdo';
+import ContactUs from '@/components/layout/components/contactus';
+import Event from '@/components/layout/components/event';
+import Home from '@/components/layout/components/home';
+import LearningSpace from '@/components/layout/components/learningspace';
+import Podcast from '@/components/layout/components/podcast';
+import Tv from '@/components/layout/components/tv';
+import Vdo from '@/components/layout/components/vdo';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
 
@@ -337,7 +337,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
           <div
             style={{
               backgroundImage: `url(${
-                backgroundImage || 'https://i.ibb.co/YPfh2HJ/bg-master.png'
+                backgroundImage || '/images/bg-master.png'
               })`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',

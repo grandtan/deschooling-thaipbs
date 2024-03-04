@@ -9,7 +9,7 @@ interface Props {
   pathName: string;
 }
 
-export const Vdo = ({ menuName, submenu1, submenu2, pathName }: Props) => {
+const Vdo = ({ menuName, submenu1, submenu2, pathName }: Props) => {
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
@@ -38,3 +38,5 @@ export const Vdo = ({ menuName, submenu1, submenu2, pathName }: Props) => {
     </div>
   );
 };
+
+export default Vdo;

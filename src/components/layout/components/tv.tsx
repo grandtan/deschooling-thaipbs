@@ -13,7 +13,7 @@ interface Props {
   pathName: string;
 }
 
-export const Tv = ({
+const Tv = ({
   menuName,
   submenu1,
   submenu2,
@@ -85,3 +85,5 @@ export const Tv = ({
     </div>
   );
 };
+
+export default Tv;

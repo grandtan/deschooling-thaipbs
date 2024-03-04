@@ -7,7 +7,7 @@ interface Props {
   pathName: string;
 }
 
-export const ContactUs = ({ menuName, pathName }: Props) => {
+const ContactUs = ({ menuName, pathName }: Props) => {
   const baseClasses =
     'flex flex-col items-center p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeClasses =
@@ -26,3 +26,5 @@ export const ContactUs = ({ menuName, pathName }: Props) => {
     </div>
   );
 };
+
+export default ContactUs;

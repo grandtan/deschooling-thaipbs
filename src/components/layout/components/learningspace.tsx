@@ -11,7 +11,7 @@ interface Props {
   pathName: string;
 }
 
-export const LearningSpace = ({
+const LearningSpace = ({
   menuName,
   submenu1,
   submenu2,
@@ -63,3 +63,5 @@ export const LearningSpace = ({
     </div>
   );
 };
+
+export default LearningSpace;

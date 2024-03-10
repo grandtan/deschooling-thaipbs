@@ -1,0 +1,183 @@
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { Grid } from '@mui/material';
+import { useLoading } from '@/context/loadingContext';
+import { YoutubeResponse } from '@/types/teacher';
+import React, { useEffect, useState } from 'react';
+import { MdComputer } from 'react-icons/md';
+import Link from 'next/link';
+import axios from 'axios';
+
+const RESULTS_PER_PAGE = 8;
+const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
+const YOUTUBE_PLAYLIST_ITEMs_API =
+  'https://www.googleapis.com/youtube/v3/playlistItems';
+
+interface Props {
+  playListId: string;
+}
+
+const PreviewClip = ({ playListId }: Props) => {
+  const { setLoading, loading } = useLoading();
+
+  const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
+  const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
+  const [totalItems, setTotalItems] = useState(0);
+  const [viewAllClicked, setViewAllClicked] = useState(false);
+
+  useEffect(() => {
+    const fetchYoutube = async () => {
+      setLoading(true);
+
+      try {
+        const response = await axios.get(YOUTUBE_PLAYLIST_ITEMs_API, {
+          params: {
+            part: 'snippet',
+            playlistId: playListId,
+            maxResults: maxResults,
+            key: YOUTUBE_API_KEY,
+          },
+        });
+
+        const data = response.data;
+
+        if (data?.items?.length) {
+          setItemYoutube(data);
+          setTotalItems(data.pageInfo.totalResults);
+        } else {
+          console.log('No items found in the YouTube response');
+        }
+      } catch (error) {
+        console.error('Error fetching data from YouTube:', error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      }
+    };
+
+    fetchYoutube();
+  }, [maxResults]);
+
+  const handleViewAll = () => {
+    setMaxResults(totalItems);
+    setViewAllClicked(true);
+  };
+
+  const handleViewMore = () => {
+    setLoading(true);
+    setMaxResults((prevMaxResults) => prevMaxResults + RESULTS_PER_PAGE);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  const baseClass = 'mx-4 py-10 md:mx-24';
+  let conditionalClass = itemYoutube?.items?.length ? '' : 'h-screen';
+
+  return (
+    <div className={`${baseClass} ${conditionalClass}`}>
+      <div className='flex  md:justify-between'>
+        <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
+          <MdComputer size={35} />
+          <div className=' text-3xl'>โรงเรียนเล็ก จิ๋วแต่แจ๋ว</div>
+        </div>
+        {itemYoutube?.items?.length && (
+          <div className=' hidden md:flex'>
+            {!viewAllClicked &&
+              maxResults < totalItems &&
+              totalItems > RESULTS_PER_PAGE && (
+                <button
+                  className=' flex items-center font-semibold text-[#ffba00]'
+                  onClick={handleViewAll}
+                >
+                  <div className='text-lg'>ดูทั้งหมด</div>
+                  <ArrowForwardIosIcon className='pl-1' />
+                </button>
+              )}
+          </div>
+        )}
+      </div>
+
+      {itemYoutube?.items?.length ? (
+        <div className='mt-10 flex flex-row justify-center '>
+          <Grid container spacing={4}>
+            {itemYoutube?.etag &&
+              [...itemYoutube.items]
+                .reverse()
+                .slice(0, maxResults)
+                .map((e, i) => (
+                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
+                    <Link
+                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${playListId}`}
+                      passHref
+                      target='_blank'
+                    >
+                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                        <div>
+                          <img
+                            className='rounded-t-xl rounded-bl-xl'
+                            src={e.snippet.thumbnails.high.url}
+                            width='100%'
+                            height='100%'
+                            alt={e.snippet.title}
+                          />
+                        </div>
+
+                        <div className='h-24 p-2 text-left '>
+                          {e.snippet.title}
+                        </div>
+                      </div>
+                    </Link>
+                  </Grid>
+                ))}
+          </Grid>
+        </div>
+      ) : (
+        <div>
+          {!loading && (
+            <div>
+              <div className=' flex w-full justify-center pt-64  text-6xl text-[#ffba00]'>
+                ติดตามชม
+              </div>
+              <div className=' flex w-full justify-center pt-4  text-6xl text-[#ffba00]'>
+                ต้นเดือนเมษายน 2567
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {itemYoutube?.items?.length && (
+        <div className='mt-10 flex justify-center text-lg text-[#ffba00] '>
+          {maxResults < totalItems && (
+            <button onClick={handleViewMore}>
+              VDO เพิ่มเติม
+              <ArrowForwardIosIcon className='pl-1' />
+            </button>
+          )}
+        </div>
+      )}
+
+      {itemYoutube?.items?.length && (
+        <div className=' flex justify-end '>
+          <button
+            className='h-12 w-12 animate-bounce rounded-full bg-[#ffba00]'
+            onClick={scrollToTop}
+          >
+            <ArrowUpwardIcon htmlColor='white' />
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PreviewClip;

@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
     dirs: ['src'],
@@ -7,14 +6,15 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
-  // Uncoment to add domain whitelist
-  // images: {
-  //   domains: [
-  //     'res.cloudinary.com',
-  //   ],
-  // },
+  images: {
+    domains: [
+      'res.cloudinary.com',
+      'images-cdn.enveu.com',
+      'cf-images.ap-southeast-1.prod.boltdns.net',
+      's3.ap-southeast-1.amazonaws.com', 
+    ],
+  },
 
-  // SVGR
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -35,10 +35,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
-module.exports = {
-  images: {
-    domains: ['images-cdn.enveu.com','cf-images.ap-southeast-1.prod.boltdns.net'],
- 
-  },
-};

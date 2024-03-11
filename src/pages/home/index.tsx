@@ -82,7 +82,7 @@ const Home = () => {
           <div
             className='each-slide-effect   '
             style={{
-              background: `url('/images/bg-home-slide2.png')`,
+              background: `url('https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-home-slide2.png')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',

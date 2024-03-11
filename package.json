@@ -41,6 +41,7 @@
     "react-lazy-load-image-component": "^1.6.0",
     "react-player": "^2.15.1",
     "react-qr-code": "^2.0.11",
+    "react-query": "^3.39.3",
     "react-slideshow-image": "^4.2.1",
     "styled-components": "^5.3.11",
     "tailwind-merge": "^1.12.0"

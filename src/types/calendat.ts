@@ -1,4 +1,4 @@
-export interface CaledarResponse {
+export interface CalendarResponse {
   eventName: string;
   eventDes: string;
   textDate: string;

@@ -8,12 +8,12 @@ import Layout from '@/components/layout/Layout';
 
 import { useLoading } from '@/context/loadingContext';
 
-import { CaledarResponse } from '@/types/calendat';
+import { CalendarResponse } from '@/types/calendat';
 
 const LazyImage = React.lazy(() => import('@/components/LazyImage'));
 
 const Calendar = () => {
-  const [data, setData] = useState<CaledarResponse[] | null>(null);
+  const [data, setData] = useState<CalendarResponse[] | null>(null);
   const { setLoading } = useLoading();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Calendar = () => {
         `https://sheet.best/api/sheets/84dbfbff-a983-41ad-82e4-627c6217f442?key=${apiKey}`
       )
         .then((response) => response.json())
-        .then((data: CaledarResponse[]) => {
+        .then((data: CalendarResponse[]) => {
           setData(data);
           setLoading(false);
         })

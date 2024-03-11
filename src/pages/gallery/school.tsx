@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Modal, Image } from 'antd';
+import { Modal } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Image from 'next/image';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const School = () => {
@@ -63,12 +63,14 @@ const School = () => {
         <div className='my-8 grid grid-cols-1 gap-2 md:grid-cols-5'>
           {schoolEvent.map((image, index) => (
             <div key={index} className='m-4'>
-              <LazyLoadImage
+              <Image
                 src={image}
                 className='cursor-pointer rounded-xl'
                 onClick={() => handlePreview(image)}
-                alt={`School Event ${index + 1}`}
-                effect='blur'
+                alt={`Government Event ${index + 1}`}
+                width={400}
+                height={300}
+                placeholder='empty'
               />
             </div>
           ))}
@@ -99,7 +101,13 @@ const School = () => {
           closable={false}
           width='80%'
         >
-          <Image src={previewImage} />
+          <Image
+            alt='Mountains'
+            src={previewImage}
+            width={1500}
+            height={1000}
+            placeholder='empty'
+          />
         </Modal>
       </div>
     </Layout>

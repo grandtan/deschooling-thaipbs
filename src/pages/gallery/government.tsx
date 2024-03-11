@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Modal, Image } from 'antd';
+import { Modal } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
 import { BsImages } from 'react-icons/bs';
 import Layout from '@/components/layout/Layout';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import Image from 'next/image';
 
 const Government = () => {
   const [previewVisible, setPreviewVisible] = useState(false);
@@ -65,12 +66,14 @@ const Government = () => {
         <div className='my-8 grid grid-cols-1  gap-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {governmentEvent.map((image, index) => (
             <div key={index} className='m-4'>
-              <LazyLoadImage
+              <Image
                 src={image}
                 className='cursor-pointer rounded-xl'
                 onClick={() => handlePreview(image)}
                 alt={`Government Event ${index + 1}`}
-                effect='blur'
+                width={400}
+                height={300}
+                placeholder='empty'
               />
             </div>
           ))}
@@ -105,9 +108,15 @@ const Government = () => {
           onCancel={handleClosePreview}
           footer={null}
           closable={false}
-          width='80%' // Adjust the width as needed
+          width='80%'
         >
-          <Image src={previewImage} />
+          <Image
+            alt='Mountains'
+            src={previewImage}
+            width={1500}
+            height={1000}
+            placeholder='empty'
+          />
         </Modal>
       </div>
     </Layout>

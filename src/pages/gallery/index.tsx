@@ -3,7 +3,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Image, Modal } from 'antd';
+import { Modal } from 'antd';
 import { BsImages } from 'react-icons/bs';
 import Layout from '@/components/layout/Layout';
 
@@ -84,21 +84,20 @@ const Gallery = () => {
             <div className='col-span-4 grid content-center rounded-t-3xl bg-[#ffcc00] p-4 text-center text-xl'>
               เวทีเสวนา “โรงเรียนเล็ก โรงเรียนใหญ่แก้ปัญหาอย่างไรให้ตรงจุด”
             </div>
-            <Image.PreviewGroup>
-              {schoolEvent.map((image, index) => (
-                <div
-                  onClick={() => handlePreview(image)}
-                  key={index + 1}
-                  className={index === 0 ? 'col-span-4' : ''}
-                >
-                  <LazyLoadImage
-                    src={image}
-                    alt={'School Event ' + index}
-                    effect='blur'
-                  />
-                </div>
-              ))}
-            </Image.PreviewGroup>
+
+            {schoolEvent.map((image, index) => (
+              <div
+                onClick={() => handlePreview(image)}
+                key={index + 1}
+                className={index === 0 ? 'col-span-4' : ''}
+              >
+                <LazyLoadImage
+                  src={image}
+                  alt={'School Event ' + index}
+                  effect='blur'
+                />
+              </div>
+            ))}
 
             <Link
               href='/gallery/school'

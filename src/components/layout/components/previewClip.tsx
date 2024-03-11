@@ -15,9 +15,10 @@ const YOUTUBE_PLAYLIST_ITEMs_API =
 
 interface Props {
   playListId: string;
+  title: string;
 }
 
-const PreviewClip = ({ playListId }: Props) => {
+const PreviewClip = ({ playListId, title }: Props) => {
   const { setLoading, loading } = useLoading();
 
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
@@ -87,7 +88,7 @@ const PreviewClip = ({ playListId }: Props) => {
       <div className='flex  md:justify-between'>
         <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
           <MdComputer size={35} />
-          <div className=' text-3xl'>โรงเรียนเล็ก จิ๋วแต่แจ๋ว</div>
+          <div className=' text-3xl'>{title}</div>
         </div>
         {itemYoutube?.items?.length && (
           <div className=' hidden md:flex'>

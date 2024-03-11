@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 import PreviewClip from '@/components/layout/components/previewClip';
 
 const OutsideClassRoomVdo = () => {
-  const PLAYLIST_ID = 'PLeZwwnM5meV8rTvcEU9sk04HU5I0oje9s';
+  const PLAYLIST_ID = 'PLeZwwnM5meV8ML4oP8CiKq5xffN1pCxNy';
 
   return (
     <Layout container={false}>
@@ -15,7 +15,7 @@ const OutsideClassRoomVdo = () => {
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <PreviewClip playListId={PLAYLIST_ID} />
+      <PreviewClip playListId={PLAYLIST_ID} title='วิชานอกห้อง' />
     </Layout>
   );
 };

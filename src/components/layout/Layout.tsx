@@ -149,7 +149,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               <TreeItem
                 onClick={() => router.push('/outside-classroom-podcast')}
                 nodeId='outside-classroom-podcast'
-                label='วิชานอกห้อง'
+                label='รู้รอบนอกห้องเรียน'
                 className='my-4'
               />
             </TreeItem>
@@ -289,7 +289,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             <Podcast
               menuName=' Podcast'
               submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
-              submenu2='วิชานอกห้อง'
+              submenu2='รู้รอบนอกห้องเรียน'
               pathName={pathName}
             />
 

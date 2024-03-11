@@ -56,7 +56,7 @@ const Home = () => {
           <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
             <CustomReactPlayer
               playing={playing}
-              url='https://dai.ly/k3mtSXvNkuRQZvA7MdC'
+              url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
               onCustomPlay={handleVideoPlay}
               onCustomPause={handleVideoPause}
             />
@@ -80,7 +80,7 @@ const Home = () => {
           </div>
 
           <div
-            className='each-slide-effect  '
+            className='each-slide-effect   '
             style={{
               background: `url('/images/bg-home-slide2.png')`,
               backgroundSize: 'cover',

@@ -343,6 +343,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             overflowY: 'auto',
             backgroundAttachment: 'fixed',
           }}
+          className=' mb-10'
         >
           {children}
         </div>

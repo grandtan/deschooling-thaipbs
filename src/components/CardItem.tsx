@@ -10,7 +10,7 @@ interface CardItemProps {
 
 const CardItem: React.FC<CardItemProps> = ({ title, titleIcon, items }) => (
   <div className='py-10'>
-    <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00]'>
+    <div className=' flex items-center justify-center space-x-4 font-semibold text-[#ffba00] '>
       {titleIcon}
       <div className=' text-3xl  underline  sm:no-underline'>{title}</div>
     </div>

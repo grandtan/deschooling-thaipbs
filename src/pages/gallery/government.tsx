@@ -45,7 +45,7 @@ const Government = () => {
   };
 
   return (
-    <Layout backgroundImage='/images/bg-master.png'>
+    <Layout>
       <Head>
         <title>
           เวทีเสวนา “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทย
@@ -56,7 +56,7 @@ const Government = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-4 h-full py-10 md:mx-24'>
+      <div className='mx-4  my-10 md:mx-24'>
         <div className='flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <div className='text-xl md:text-3xl'>
             “ชวนพรรคร่วมคิด ฟื้นชีวิตเรียนรู้ใหม่ หนุนเด็กไทยก้าวทันโลก”
@@ -79,7 +79,7 @@ const Government = () => {
           ))}
         </div>
 
-        <div className='text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8'>
+        <div className='mb-20 text-center indent-0 text-lg font-light text-white md:text-justify md:indent-8 '>
           วันที่ 5 มีนาคม 2566 เวลา 10.00 - 13.00 น. ภาคีเพื่อการศึกษาไทย
           (Thailand Education Partnership: TEP) จัดเวทีเสวนา “TEP Policy Forum:
           ชวนพรรคร่วมคิด พลิกห้องเรียน เปลี่ยนไทยทันโลก”

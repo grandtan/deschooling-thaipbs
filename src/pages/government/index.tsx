@@ -80,7 +80,7 @@ const Goverment = () => {
         />
       </Head>
 
-      <div className=' mx-4 h-screen py-10 md:mx-24'>
+      <div className=' mx-4 py-10 md:mx-24'>
         <div className='flex  md:justify-between'>
           <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
             <RiGovernmentFill size={35} />

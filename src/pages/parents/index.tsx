@@ -20,7 +20,7 @@ const Parents = () => {
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='h-screen py-10'>
+      <div className=' my-10'>
         <CardItem
           title='พ่อแม่และผู้ปกครอง'
           titleIcon={<RiParentLine size={35} />}

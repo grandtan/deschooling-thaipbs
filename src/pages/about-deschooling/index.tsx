@@ -13,7 +13,7 @@ const AboutDeschooling = () => {
         />
       </Head>
 
-      <div className='h-screen py-8 md:py-20'>
+      <div className=' py-8 md:py-20'>
         <div className='flex flex-row items-center justify-center '>
           <div className=' w-[768px] px-4 text-lg leading-6 text-white md:px-0 md:leading-10 lg:w-[940px] lg:text-2xl lg:leading-10'>
             <div className='text-center'>

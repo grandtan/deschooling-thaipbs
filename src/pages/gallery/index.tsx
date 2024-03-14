@@ -45,7 +45,7 @@ const Gallery = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-4 py-10 md:mx-24 md:h-screen'>
+      <div className='mx-4 mb-40  mt-10 md:mx-24 '>
         <div className='flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsImages size={35} />
           <div className='text-3xl'>ภาพกิจกรรม</div>

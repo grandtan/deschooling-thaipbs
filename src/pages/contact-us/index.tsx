@@ -21,7 +21,7 @@ const ContactUs = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='h-screen pt-4 md:pt-10'>
+      <div className=' pt-4 md:pt-10'>
         <div className=' flex h-[70%] flex-col items-center justify-center  space-y-8 md:space-y-16'>
           <div className=' flex  space-x-4 font-semibold text-[#ffba00]'>
             <RiMailUnreadFill size={45} />

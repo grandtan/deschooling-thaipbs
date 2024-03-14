@@ -26,8 +26,9 @@ const PreviewClip = ({ playListId, title }: Props) => {
   const [maxResults, setMaxResults] = useState(RESULTS_PER_PAGE);
   const [totalItems, setTotalItems] = useState(0);
   const [viewAllClicked, setViewAllClicked] = useState(false);
+  const [fristCall, setFristCall] = useState(false);
 
-  const fetchYoutube = async () => {
+  const fetchCheckTotal = async () => {
     setLoading(true);
 
     try {
@@ -35,7 +36,30 @@ const PreviewClip = ({ playListId, title }: Props) => {
         params: {
           part: 'snippet',
           playlistId: playListId,
-          maxResults: maxResults,
+          maxResults: totalItems,
+          key: YOUTUBE_API_KEY,
+        },
+      });
+
+      const data: YoutubeResponse = response.data;
+
+      setTotalItems(data.pageInfo.totalResults);
+
+      fetchPlaylist(data.pageInfo.totalResults);
+    } catch (error) {
+      console.error('Error fetching data from YouTube:', error);
+      setLoading(false);
+    }
+  };
+  const fetchPlaylist = async (total: number) => {
+    setLoading(true);
+
+    try {
+      const response = await axios.get(YOUTUBE_PLAYLIST_ITEMs_API, {
+        params: {
+          part: 'snippet',
+          playlistId: playListId,
+          maxResults: total,
           key: YOUTUBE_API_KEY,
         },
       });
@@ -44,7 +68,6 @@ const PreviewClip = ({ playListId, title }: Props) => {
 
       if (data?.items?.length) {
         setItemYoutube(data);
-        setTotalItems(data.pageInfo.totalResults);
       } else {
         console.log('No items found in the YouTube response');
       }
@@ -53,13 +76,14 @@ const PreviewClip = ({ playListId, title }: Props) => {
     } finally {
       setTimeout(() => {
         setLoading(false);
+        setFristCall(true);
       }, 1000);
     }
   };
 
   useEffect(() => {
-    fetchYoutube();
-  }, [maxResults]);
+    fetchCheckTotal();
+  }, []);
 
   const handleViewAll = () => {
     setMaxResults(totalItems);
@@ -141,7 +165,7 @@ const PreviewClip = ({ playListId, title }: Props) => {
         </div>
       ) : (
         <div>
-          {!loading && (
+          {fristCall && (
             <div>
               <div className=' flex w-full justify-center pt-64  text-6xl text-[#ffba00]'>
                 ติดตามชม

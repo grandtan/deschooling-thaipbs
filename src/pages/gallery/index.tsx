@@ -12,19 +12,19 @@ const Gallery = () => {
   const [previewImage, setPreviewImage] = useState('');
 
   const governmentEvent = [
-    '/images/government-event/government_1.jpg',
-    '/images/government-event/government_2.jpg',
-    '/images/government-event/government_3.jpg',
-    '/images/government-event/government_4.jpg',
-    '/images/government-event/government_5.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/government-event/government_1.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/government-event/government_2.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/government-event/government_3.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/government-event/government_4.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/government-event/government_5.jpg',
   ];
 
   const schoolEvent = [
-    '/images/school-event/school_1.jpg',
-    '/images/school-event/school_2.jpg',
-    '/images/school-event/school_3.jpg',
-    '/images/school-event/school_4.jpg',
-    '/images/school-event/school_5.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/school-event/school_1.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/school-event/school_2.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/school-event/school_3.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/school-event/school_4.jpg',
+    'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/school-event/school_5.jpg',
   ];
 
   const handlePreview = (image: string) => {

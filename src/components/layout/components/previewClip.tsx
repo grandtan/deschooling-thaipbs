@@ -40,10 +40,11 @@ const PreviewClip = ({ playListId, title }: Props) => {
           },
         });
 
-        const data = response.data;
+        const data: YoutubeResponse = response.data;
 
         if (data?.items?.length) {
           setItemYoutube(data);
+
           setTotalItems(data.pageInfo.totalResults);
         } else {
           console.log('No items found in the YouTube response');
@@ -80,11 +81,8 @@ const PreviewClip = ({ playListId, title }: Props) => {
     });
   };
 
-  const baseClass = 'mx-4 py-10 md:mx-24';
-  let conditionalClass = itemYoutube?.items?.length ? '' : 'h-screen';
-
   return (
-    <div className={`${baseClass} ${conditionalClass}`}>
+    <div className='mx-4 py-10 md:mx-24'>
       <div className='flex  md:justify-between'>
         <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
           <MdComputer size={35} />
@@ -125,7 +123,7 @@ const PreviewClip = ({ playListId, title }: Props) => {
                         <div>
                           <img
                             className='rounded-t-xl rounded-bl-xl'
-                            src={e.snippet.thumbnails.high.url}
+                            src={e?.snippet?.thumbnails?.high?.url}
                             width='100%'
                             height='100%'
                             alt={e.snippet.title}

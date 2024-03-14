@@ -259,7 +259,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
   return (
     <div className={fontWeb.className}>
-      <div className='relative h-screen w-full  min-w-[320px]'>
+      <div className='relative h-screen w-full  min-w-[320px] overflow-hidden'>
         <div className='flex flex-row items-center justify-between border-y-8 border-r-2 border-white bg-white'>
           <div className='ml-2 flex justify-center md:ml-0 md:w-1/4'>
             <Link href='/home'>
@@ -331,24 +331,21 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
         {drowerComponent()}
 
-        {isMobileLayout ? (
-          <div className=' bg-black'> {children}</div>
-        ) : (
-          <div
-            style={{
-              backgroundImage: `url(${
-                backgroundImage ||
-                'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-master.png'
-              })`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover',
-              // backgroundPosition: 'center',
-              backgroundAttachment: 'fixed',
-            }}
-          >
-            {children}
-          </div>
-        )}
+        <div
+          style={{
+            backgroundImage: `url(${
+              backgroundImage ||
+              'https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-master.png'
+            })`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            height: '100%',
+            overflowY: 'auto',
+            backgroundAttachment: 'fixed',
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

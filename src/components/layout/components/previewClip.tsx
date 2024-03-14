@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import { MdComputer } from 'react-icons/md';
 import Link from 'next/link';
 import axios from 'axios';
+import { SiYoutubemusic } from 'react-icons/si';
 
 const RESULTS_PER_PAGE = 8;
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
@@ -82,10 +83,10 @@ const PreviewClip = ({ playListId, title }: Props) => {
   };
 
   return (
-    <div className='mx-4 py-10 md:mx-24'>
+    <div className='mx-4 mb-32 mt-10 md:mx-24'>
       <div className='flex  md:justify-between'>
         <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
-          <MdComputer size={35} />
+          <SiYoutubemusic size={35} />
           <div className=' text-3xl'>{title}</div>
         </div>
         {itemYoutube?.items?.length && (

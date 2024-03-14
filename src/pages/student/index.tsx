@@ -10,7 +10,7 @@ import { SiYoutubemusic } from 'react-icons/si';
 import CardItem from '@/components/CardItem';
 
 const Student: React.FC = () => (
-  <Layout backgroundImage='/images/bg-student.png'>
+  <Layout backgroundImage='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-student.png'>
     <Head>
       <title>นักเรียน : คุณคือใครในวงการการศึกษา : deschooling</title>
       <meta

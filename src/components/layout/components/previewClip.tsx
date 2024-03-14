@@ -27,38 +27,37 @@ const PreviewClip = ({ playListId, title }: Props) => {
   const [totalItems, setTotalItems] = useState(0);
   const [viewAllClicked, setViewAllClicked] = useState(false);
 
-  useEffect(() => {
-    const fetchYoutube = async () => {
-      setLoading(true);
+  const fetchYoutube = async () => {
+    setLoading(true);
 
-      try {
-        const response = await axios.get(YOUTUBE_PLAYLIST_ITEMs_API, {
-          params: {
-            part: 'snippet',
-            playlistId: playListId,
-            maxResults: maxResults,
-            key: YOUTUBE_API_KEY,
-          },
-        });
+    try {
+      const response = await axios.get(YOUTUBE_PLAYLIST_ITEMs_API, {
+        params: {
+          part: 'snippet',
+          playlistId: playListId,
+          maxResults: maxResults,
+          key: YOUTUBE_API_KEY,
+        },
+      });
 
-        const data: YoutubeResponse = response.data;
+      const data: YoutubeResponse = response.data;
 
-        if (data?.items?.length) {
-          setItemYoutube(data);
-
-          setTotalItems(data.pageInfo.totalResults);
-        } else {
-          console.log('No items found in the YouTube response');
-        }
-      } catch (error) {
-        console.error('Error fetching data from YouTube:', error);
-      } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
+      if (data?.items?.length) {
+        setItemYoutube(data);
+        setTotalItems(data.pageInfo.totalResults);
+      } else {
+        console.log('No items found in the YouTube response');
       }
-    };
+    } catch (error) {
+      console.error('Error fetching data from YouTube:', error);
+    } finally {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
+  };
 
+  useEffect(() => {
     fetchYoutube();
   }, [maxResults]);
 

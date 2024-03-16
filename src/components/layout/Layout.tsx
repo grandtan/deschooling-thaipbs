@@ -142,7 +142,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               <TreeItem
                 onClick={() => router.push('/podcast')}
                 nodeId='VDO How to'
-                label='ฟัง พูด อ่าน กิน'
+                label='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
                 className='my-4'
               />
 

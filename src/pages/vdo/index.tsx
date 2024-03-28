@@ -19,7 +19,11 @@ const VDO = () => {
         />
       </Head>
 
-      <PreviewClip playListId={PLAYLIST_ID} title='VDO How to ดูง่าย พอดีคำ' />
+      <PreviewClip
+        playListId={PLAYLIST_ID}
+        title='VDO How to ดูง่าย พอดีคำ'
+        isNotReverse
+      />
     </Layout>
   );
 };

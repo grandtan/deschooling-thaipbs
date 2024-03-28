@@ -20,6 +20,7 @@ const Teacher = () => {
       <PreviewClip
         playListId={PLAYLIST_ID}
         title='Learning Space แบ่งปันนวัตกรรมการสอน'
+        isNotReverse
       />
     </Layout>
   );

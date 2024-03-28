@@ -45,12 +45,12 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
 
   const drowerComponent = () => (
     <Drawer
-      className='font-san '
+      className='font-san drop-shadow-xl  '
       anchor='right'
       open={isOpenDrawer}
       onClose={() => setIsOpenDrawer(false)}
     >
-      <div className='flex w-80 flex-col divide-y divide-yellow-300 rounded  border-y   border-yellow-300 bg-white lg:w-96'>
+      <div className='flex w-80 flex-col divide-y divide-yellow-300 rounded  border-y   border-yellow-300  bg-white lg:w-96'>
         <div className='ml-8 px-4 py-4'>
           <Link className=' text-lg text-black ' href='/home'>
             หน้าแรก
@@ -115,9 +115,9 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               />
 
               <TreeItem
-                onClick={() => router.push('/outside-classroom-vdo')}
-                nodeId='outside-classroom-vdo'
-                label='วิชานอกห้อง'
+                onClick={() => router.push('/outside-classroom-podcast')}
+                nodeId='outside-classroom-podcast'
+                label='รู้รอบนอกห้องเรียน'
                 className='my-4'
               />
             </TreeItem>
@@ -145,11 +145,10 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 label='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
                 className='my-4'
               />
-
               <TreeItem
-                onClick={() => router.push('/outside-classroom-podcast')}
-                nodeId='outside-classroom-podcast'
-                label='รู้รอบนอกห้องเรียน'
+                onClick={() => router.push('/outside-classroom-vdo')}
+                nodeId='outside-classroom-vdo'
+                label='วิชานอกห้อง'
                 className='my-4'
               />
             </TreeItem>
@@ -282,14 +281,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             <Vdo
               menuName='วิดีโอ'
               submenu1='VDO How to ดูง่าย พอดีคำ'
-              submenu2='วิชานอกห้อง'
+              submenu2='รู้รอบนอกห้องเรียน'
               pathName={pathName}
             />
 
             <Podcast
               menuName=' Podcast'
               submenu1='กินอย่างไรให้ชีวิตดี๊ดี 5 นาที รู้เรื่อง'
-              submenu2='รู้รอบนอกห้องเรียน'
+              submenu2='วิชานอกห้อง'
               pathName={pathName}
             />
 

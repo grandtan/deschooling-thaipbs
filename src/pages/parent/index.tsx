@@ -25,6 +25,7 @@ const Parent = () => {
       <PreviewClip
         playListId={PLAYLIST_ID}
         title='Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน'
+        isNotReverse
       />
     </Layout>
   );

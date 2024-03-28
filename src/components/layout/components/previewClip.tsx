@@ -17,9 +17,10 @@ const YOUTUBE_PLAYLIST_ITEMs_API =
 interface Props {
   playListId: string;
   title: string;
+  isNotReverse?: boolean;
 }
 
-const PreviewClip = ({ playListId, title }: Props) => {
+const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
   const { setLoading, loading } = useLoading();
 
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
@@ -133,44 +134,44 @@ const PreviewClip = ({ playListId, title }: Props) => {
         <div className='mt-10 flex flex-row justify-center '>
           <Grid container spacing={4}>
             {itemYoutube?.etag &&
-              [...itemYoutube.items]
-                .reverse()
-                .slice(0, maxResults)
-                .map((e, i) => (
-                  <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
-                    <Link
-                      href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${playListId}`}
-                      passHref
-                      target='_blank'
-                    >
-                      <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
-                        <div>
-                          <img
-                            className='rounded-t-xl rounded-bl-xl'
-                            src={e?.snippet?.thumbnails?.high?.url}
-                            width='100%'
-                            height='100%'
-                            alt={e.snippet.title}
-                          />
-                        </div>
-
-                        <div className='h-24 p-2 text-left '>
-                          {e.snippet.title}
-                        </div>
+              (isNotReverse
+                ? itemYoutube.items.slice(0, maxResults)
+                : [...itemYoutube.items].reverse().slice(0, maxResults)
+              ).map((e, i) => (
+                <Grid item xs={12} sm={6} md={6} lg={3} key={i}>
+                  <Link
+                    href={`https://www.youtube.com/watch?v=${e.snippet.resourceId.videoId}&list=${playListId}`}
+                    passHref
+                    target='_blank'
+                  >
+                    <div className='aspect-video w-full rounded-t-xl rounded-bl-xl border-2  bg-white p-0.5  duration-500 hover:-translate-y-6 hover:border-[#ffba00]  hover:text-yellow-900 hover:ease-in '>
+                      <div>
+                        <img
+                          className='rounded-t-xl rounded-bl-xl'
+                          src={e?.snippet?.thumbnails?.high?.url}
+                          width='100%'
+                          height='100%'
+                          alt={e.snippet.title}
+                        />
                       </div>
-                    </Link>
-                  </Grid>
-                ))}
+
+                      <div className='h-24 p-2 text-left '>
+                        {e.snippet.title}
+                      </div>
+                    </div>
+                  </Link>
+                </Grid>
+              ))}
           </Grid>
         </div>
       ) : (
         <div>
           {fristCall && (
             <div>
-              <div className=' flex w-full justify-center pt-64  text-6xl text-[#ffba00]'>
+              <div className=' flex w-full justify-center pt-64 text-3xl  text-[#ffba00] sm:text-6xl'>
                 ติดตามชม
               </div>
-              <div className=' flex w-full justify-center pt-4  text-6xl text-[#ffba00]'>
+              <div className=' flex w-full justify-center pt-4 text-3xl text-[#ffba00] sm:text-6xl'>
                 ต้นเดือนเมษายน 2567
               </div>
             </div>

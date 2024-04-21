@@ -53,14 +53,16 @@ const Home = () => {
 
       <div className=' w-full  '>
         <Slide duration={4000} arrows={!screens.xs} autoplay={autoplay}>
-          {/* <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
-                <CustomReactPlayer
-                  playing={playing}
-                  url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
-                  onCustomPlay={handleVideoPlay}
-                  onCustomPause={handleVideoPause}
-                />
-              </div> */}
+          {!screens.xs && (
+            <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
+              <CustomReactPlayer
+                playing={playing}
+                url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
+                onCustomPlay={handleVideoPlay}
+                onCustomPause={handleVideoPause}
+              />
+            </div>
+          )}
 
           <div className='each-slide-effect flex  flex-row justify-center '>
             <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-7xl xl:text-8xl'>

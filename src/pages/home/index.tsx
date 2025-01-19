@@ -1,8 +1,9 @@
 import { Grid } from 'antd';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
 
@@ -14,7 +15,6 @@ import BabyHome2 from '@/icon/BabyHome2';
 import GirlHome from '@/icon/GirlHome';
 import LocalGovermentHome from '@/icon/LocalGovermentHome';
 import ParentHome from '@/icon/ParentHome';
-import dynamic from 'next/dynamic';
 
 const CustomReactPlayer = dynamic(
   () => import('@/components/layout/components/reactPlayer'),
@@ -81,8 +81,34 @@ const Home = () => {
             </div>
           </div>
 
+          <div className='each-slide-effect flex  flex-row justify-center '>
+            <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-6xl xl:text-7xl'>
+              <div
+                className='flex w-full cursor-pointer justify-center'
+                onClick={() => router.push('/teacher-classroom')}
+              >
+                <div className=' font-bold text-[#ffcc00]'>โครงการ</div>
+                <div className=' text-white'> "เติมพลังครู สู่ห้องเรียน"</div>
+              </div>
+            </div>
+          </div>
+
+          <div className='each-slide-effect flex  flex-row justify-center '>
+            <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-6xl xl:text-7xl'>
+              <div
+                className='flex w-full cursor-pointer justify-center'
+                onClick={() => router.push('/learning-chart')}
+              >
+                <div className=' font-bold text-[#ffcc00]'>
+                  ความต้องการของบุคลากรทาง
+                </div>
+                <div className=' text-white'>การศึกษา</div>
+              </div>
+            </div>
+          </div>
+
           <div
-            className='each-slide-effect   '
+            className='each-slide-effect'
             style={{
               background: `url('https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-home-slide2.png')`,
               backgroundSize: 'cover',

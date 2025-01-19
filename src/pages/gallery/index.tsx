@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Modal } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Modal } from 'antd';
+import React, { useState } from 'react';
 import { BsImages } from 'react-icons/bs';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import Layout from '@/components/layout/Layout';
 
 const Gallery = () => {

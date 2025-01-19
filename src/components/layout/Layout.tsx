@@ -166,10 +166,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               overflowY: 'auto',
             }}
           >
-            <TreeItem
-              nodeId='1'
-              label={<div className=' text-lg '>กิจกรรม</div>}
-            >
+            <TreeItem nodeId='1' label={<div className='text-lg'>กิจกรรม</div>}>
               <TreeItem
                 onClick={() => router.push('/calendar')}
                 nodeId='calendar'
@@ -181,6 +178,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 onClick={() => router.push('/gallery')}
                 nodeId='gallery'
                 label=' ภาพกิจกรรม'
+                className='my-4'
+              />
+
+              <TreeItem
+                onClick={() => router.push('/teacher-classroom')}
+                nodeId='teacher-classroom'
+                label='เติมพลังครู สู่ห้องเรียน'
                 className='my-4'
               />
             </TreeItem>
@@ -293,9 +297,10 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             />
 
             <Event
-              menuName=' กิจกรรม '
+              menuName='กิจกรรม'
               submenu1='ปฏิทินกิจกรรม '
               submenu2=' ภาพกิจกรรม'
+              submenu3='เติมพลังครู สู่ห้องเรียน'
               pathName={pathName}
             />
 

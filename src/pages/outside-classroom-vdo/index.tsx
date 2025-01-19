@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
-import Layout from '@/components/layout/Layout';
+
 import PreviewClip from '@/components/layout/components/previewClip';
+import Layout from '@/components/layout/Layout';
 
 const OutsideClassRoomVdo = () => {
   const PLAYLIST_ID = 'PLeZwwnM5meV8ML4oP8CiKq5xffN1pCxNy';

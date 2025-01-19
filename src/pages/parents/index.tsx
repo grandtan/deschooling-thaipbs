@@ -1,16 +1,17 @@
-import React from 'react';
 import Head from 'next/head';
-import Layout from '@/components/layout/Layout';
-import CardItem from '@/components/CardItem';
-import { RiParentLine } from 'react-icons/ri';
+import Image from 'next/image';
+import React from 'react';
 import { FaPodcast } from 'react-icons/fa';
 import { MdComputer } from 'react-icons/md';
 import { PiTelevisionFill } from 'react-icons/pi';
-import Image from 'next/image';
+import { RiParentLine } from 'react-icons/ri';
+
+import CardItem from '@/components/CardItem';
+import Layout from '@/components/layout/Layout';
 
 const Parents = () => {
   return (
-    <Layout backgroundImage='/images/bg-parent-all.png'>
+    <Layout backgroundImage='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-master.png'>
       <Head>
         <title>
           พ่อแม่และผู้ปกครอง : คุณคือใครในวงการการศึกษา : deschooling

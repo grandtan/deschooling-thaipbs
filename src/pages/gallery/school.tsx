@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
 import { Modal } from 'antd';
 import Head from 'next/head';
-import Link from 'next/link';
-import Layout from '@/components/layout/Layout';
 import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+
 import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import Layout from '@/components/layout/Layout';
 
 const School = () => {
   const [previewVisible, setPreviewVisible] = useState(false);

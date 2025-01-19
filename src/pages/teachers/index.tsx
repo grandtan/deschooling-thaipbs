@@ -1,14 +1,15 @@
-import React from 'react';
 import Head from 'next/head';
-import Layout from '@/components/layout/Layout';
-import CardItem from '@/components/CardItem';
+import Image from 'next/image';
+import React from 'react';
+import { FaPodcast } from 'react-icons/fa';
 import { GiTeacher } from 'react-icons/gi';
 import { SiYoutubemusic } from 'react-icons/si';
-import { FaPodcast } from 'react-icons/fa';
-import Image from 'next/image';
+
+import CardItem from '@/components/CardItem';
+import Layout from '@/components/layout/Layout';
 
 const Teachers: React.FC = () => (
-  <Layout backgroundImage='/images/bg-Teachers.png'>
+  <Layout backgroundImage='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/images/bg-master.png'>
     <Head>
       <title>นักเรียน : คุณคือใครในวงการการศึกษา : deschooling</title>
       <meta

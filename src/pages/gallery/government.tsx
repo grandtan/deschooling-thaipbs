@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
 import { Modal } from 'antd';
 import Head from 'next/head';
-import Link from 'next/link';
-import { BsImages } from 'react-icons/bs';
-import Layout from '@/components/layout/Layout';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState } from 'react';
+
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+import Layout from '@/components/layout/Layout';
 
 const Government = () => {
   const [previewVisible, setPreviewVisible] = useState(false);

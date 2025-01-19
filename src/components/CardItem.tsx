@@ -1,6 +1,6 @@
-import React from 'react';
 import { Col, Row } from 'antd';
 import Link from 'next/link';
+import React from 'react';
 
 interface CardItemProps {
   title: string;
@@ -14,14 +14,15 @@ const CardItem: React.FC<CardItemProps> = ({ title, titleIcon, items }) => (
       {titleIcon}
       <div className=' text-3xl  underline  sm:no-underline'>{title}</div>
     </div>
+
     <Row
       gutter={[16, 16]}
       justify='start'
-      className=' my-16 overflow-y-auto md:my-40  '
+      className='my-14 overflow-y-auto md:my-20 '
     >
       {items.map((item, index) => (
-        <Col key={index} xs={24} sm={24} md={12} lg={12} xl={6}>
-          <div className='flex  flex-col items-center space-y-6'>
+        <Col key={index} xs={24} sm={24} md={12} lg={12} xl={12}>
+          <div className='mb-10  flex flex-col items-center  space-y-6'>
             <div className='text-center text-xl text-[#ffba00] md:text-2xl'>
               {item.nameTitle}
             </div>

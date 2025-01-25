@@ -347,7 +347,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             overflowY: 'auto',
             backgroundAttachment: 'fixed',
           }}
-          className='flex flex-grow items-center justify-center'
+          className='flex flex-grow justify-center'
         >
           {children}
         </div>

@@ -67,6 +67,14 @@ export const chartOptions = {
           size: 12,
         },
       },
+      title: {
+        display: true,
+        color: 'black',
+        text: 'ท่านอยากให้การศึกษาไทยปรับเปลี่ยนเรื่องอะไรมากที่สุด',
+        font: {
+          size: 12,
+        },
+      },
     },
   },
   scales: {

@@ -4,11 +4,13 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
+import { Bar } from 'react-chartjs-2';
 import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 
+import { chartData, chartOptions } from '@/components/layout/components/chart';
 import Layout from '@/components/layout/Layout';
 
 import BabyHome2 from '@/icon/BabyHome2';
@@ -24,6 +26,7 @@ const CustomReactPlayer = dynamic(
 );
 
 const { useBreakpoint } = Grid;
+
 const Home = () => {
   const screens = useBreakpoint();
   const router = useRouter();
@@ -94,15 +97,22 @@ const Home = () => {
           </div>
 
           <div className='each-slide-effect flex  flex-row justify-center '>
-            <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-6xl xl:text-7xl'>
+            <div className='mx-4 flex h-screen w-full  flex-col items-center justify-center md:mx-0'>
               <div
-                className='flex w-full cursor-pointer justify-center'
+                className='mb-10 flex cursor-pointer flex-row text-3xl sm:text-5xl md:text-3xl lg:text-3xl xl:text-4xl'
                 onClick={() => router.push('/learning-chart')}
               >
-                <div className=' font-bold text-[#ffcc00]'>
+                <div className='font-bold text-[#ffcc00]'>
                   ความต้องการของบุคลากรทาง
                 </div>
                 <div className=' text-white'>การศึกษา</div>
+              </div>
+
+              <div
+                className='flex h-3/4 w-full cursor-pointer justify-center rounded-2xl border-4 border-yellow-500 bg-white p-4 md:w-3/4'
+                onClick={() => router.push('/learning-chart')}
+              >
+                <Bar data={chartData} options={chartOptions} />
               </div>
             </div>
           </div>

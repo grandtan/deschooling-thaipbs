@@ -1,9 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
 import { PiTelevisionFill } from 'react-icons/pi';
+
+import Layout from '@/components/layout/Layout';
 
 const ImageFirstClass =
   'https://images-cdn.enveu.com/960x540/filters:format(webp):quality(50)/https://cf-images.ap-southeast-1.prod.boltdns.net/v1/static/6075037809001/c65f1315-f409-4a3f-964c-9bb6411db9e9/0e7b57fc-886e-42f4-b4c3-20dbfdb3da86/1920x1080/match/image.jpg';

@@ -1,13 +1,14 @@
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { Grid } from '@mui/material';
-import { useLoading } from '@/context/loadingContext';
-import { YoutubeResponse } from '@/types/teacher';
-import React, { useEffect, useState } from 'react';
-import { MdComputer } from 'react-icons/md';
-import Link from 'next/link';
 import axios from 'axios';
+import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import { SiYoutubemusic } from 'react-icons/si';
+
+import { useLoading } from '@/context/loadingContext';
+
+import { YoutubeResponse } from '@/types/teacher';
 
 const RESULTS_PER_PAGE = 8;
 const YOUTUBE_API_KEY = 'AIzaSyAUCEi5_NKskjwa5Q2Mrjb-0qGSG1NptfM';
@@ -111,7 +112,7 @@ const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
       <div className='flex  md:justify-between'>
         <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
           <SiYoutubemusic size={35} />
-          <div className=' text-3xl'>{title}</div>
+          <div className=' bg-black text-3xl'>{title}</div>
         </div>
         {itemYoutube?.items?.length && (
           <div className=' hidden md:flex'>
@@ -167,12 +168,12 @@ const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
       ) : (
         <div>
           {fristCall && (
-            <div>
-              <div className=' flex w-full justify-center pt-64 text-3xl  text-[#ffba00] sm:text-6xl'>
-                ติดตามชม
+            <div className='mt-6 flex flex-col items-center justify-center'>
+              <div className='text-3xl text-[#ffba00] sm:text-6xl'>
+                ติดตามชม...
               </div>
-              <div className=' flex w-full justify-center pt-4 text-3xl text-[#ffba00] sm:text-6xl'>
-                ต้นเดือนเมษายน 2567
+              <div className='pt-4 text-3xl text-white sm:text-6xl'>
+                เดือนเมษายน 2568
               </div>
             </div>
           )}

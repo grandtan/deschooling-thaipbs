@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import router from 'next/router';
 import { FaPodcast } from 'react-icons/fa';
 
 interface Props {

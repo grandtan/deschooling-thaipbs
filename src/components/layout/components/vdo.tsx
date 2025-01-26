@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import router from 'next/router';
 import { SiYoutubemusic } from 'react-icons/si';
 
 interface Props {

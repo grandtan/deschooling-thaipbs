@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { PiTelevisionFill } from 'react-icons/pi';
-import router from 'next/router';
 
 interface Props {
   menuName: string;

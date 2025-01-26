@@ -18,7 +18,7 @@ const TeacherClassroom = () => {
         />
       </Head>
 
-      <div className='flex flex-col'>
+      <div className='flex h-full w-full flex-col'>
         <Document
           title='บทความ : โครงการ “เติมพลังครู สู่ห้องเรียน”'
           file='/pdf/government-event.pdf'

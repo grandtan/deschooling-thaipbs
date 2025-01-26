@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player';
 interface CustomReactPlayerProps {
   url: string;
   playing: boolean;
+  className?: string;
 
   onCustomPlay?: () => void; // Optional prop
   onCustomPause?: () => void; // Optional prop
@@ -14,9 +15,11 @@ const CustomReactPlayer: React.FC<CustomReactPlayerProps> = ({
   playing,
   onCustomPlay,
   onCustomPause,
+  className,
 }) => {
   return (
     <ReactPlayer
+      className={className}
       url={url}
       controls={true}
       playing={playing}

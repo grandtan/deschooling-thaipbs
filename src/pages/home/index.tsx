@@ -57,13 +57,23 @@ const Home = () => {
       <div className=' w-full  '>
         <Slide duration={4000} arrows={!screens.xs} autoplay={autoplay}>
           {!screens.xs && (
-            <div className='each-slide-effect  flex h-full w-full items-center justify-center '>
-              <CustomReactPlayer
-                playing={playing}
-                url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
-                onCustomPlay={handleVideoPlay}
-                onCustomPause={handleVideoPause}
-              />
+            <div className='each-slide-effect flex h-full w-full items-center justify-center'>
+              <div className=' flex w-full flex-col justify-center space-x-2 text-xl  md:space-x-8 md:text-4xl '>
+                <div className='mb-4 flex w-full cursor-pointer justify-center'>
+                  <div className='mr-4 font-bold text-[#ffcc00]'>VDO แนะนำ</div>
+                  <div className=' bg-white font-bold text-black'>
+                    Deschooling
+                  </div>
+                </div>
+
+                <CustomReactPlayer
+                  className='rounded-2xl border-4 border-yellow-500 p-1'
+                  playing={playing}
+                  url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
+                  onCustomPlay={handleVideoPlay}
+                  onCustomPause={handleVideoPause}
+                />
+              </div>
             </div>
           )}
 

@@ -112,7 +112,7 @@ const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
       <div className='flex  md:justify-between'>
         <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
           <SiYoutubemusic size={35} />
-          <div className=' bg-black text-3xl'>{title}</div>
+          <div className=' bg-black p-0.5 text-3xl'>{title}</div>
         </div>
         {itemYoutube?.items?.length && (
           <div className=' hidden md:flex'>
@@ -172,7 +172,7 @@ const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
               <div className='text-3xl text-[#ffba00] sm:text-6xl'>
                 ติดตามชม...
               </div>
-              <div className='pt-4 text-3xl text-white sm:text-6xl'>
+              <div className='mt-4 bg-black text-3xl text-white sm:text-6xl '>
                 เดือนเมษายน 2568
               </div>
             </div>

@@ -15,11 +15,11 @@ const LearningChart: React.FC = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='mx-4 flex h-screen w-full flex-col items-center justify-center  md:mx-0'>
-        <h1 className='mb-10 text-center text-lg text-white md:text-3xl'>
+      <div className='flex h-screen w-full flex-col items-center justify-center px-20'>
+        <div className='mb-10 bg-black p-1 text-center text-lg text-white md:text-3xl'>
           ความต้องการของบุคลากรทางการศึกษา
-        </h1>
-        <div className='flex h-3/4 w-full justify-center rounded-2xl border-4 border-yellow-500 bg-white p-2 md:w-3/4'>
+        </div>
+        <div className=' flex h-3/4 w-full items-center justify-center'>
           <Bar data={chartData} options={chartOptions} />
         </div>
       </div>

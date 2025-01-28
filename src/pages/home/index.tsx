@@ -119,7 +119,7 @@ const Home = () => {
               </div>
 
               <div
-                className='flex h-3/4 w-full cursor-pointer justify-center rounded-2xl border-4 border-yellow-500 bg-white p-4 md:w-3/4'
+                className='flex h-3/4 w-full cursor-pointer justify-center md:w-5/6'
                 onClick={() => router.push('/learning-chart')}
               >
                 <Bar data={chartData} options={chartOptions} />

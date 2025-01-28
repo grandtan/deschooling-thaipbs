@@ -1,3 +1,5 @@
+import { lighten } from 'polished';
+
 import {
   BarElement,
   CategoryScale,
@@ -17,6 +19,21 @@ ChartJS.register(
   Legend
 );
 
+const backgroundColor = [
+  '#0c3beb',
+  '#eb0c2e',
+  '#ffbb2a',
+  '#4bcd06',
+  '#c5188e',
+  '#f05b0b',
+  '#6495ED',
+  '#09f5e3',
+];
+
+const hoverBackgroundColor = backgroundColor.map((color) =>
+  lighten(0.1, color)
+);
+
 export const chartData = {
   labels: [
     'หลักสูตรที่ทันสมัยเรียนไปใช้ได้จริงเน้นการสร้างสมรรถนะ',
@@ -30,20 +47,27 @@ export const chartData = {
   ],
   datasets: [
     {
-      data: [43.5, 38.7, 5.8, 4.5, 3.5, 2.1, 1.1, 1.0],
+      data: [50, 60, 70, 80, 50, 30, 40, 60],
       backgroundColor: [
-        'rgba(54, 162, 235, 1.0)', // สีฟ้าเข้ม
-        'rgba(255, 99, 132, 1.0)', // สีแดงเข้ม
-        'rgba(255, 206, 86, 1.0)', // สีเหลืองเข้ม
-        'rgba(75, 192, 192, 1.0)', // สีเขียวอมฟ้าเข้ม
-        'rgba(153, 102, 255, 1.0)', // สีม่วงเข้ม
-        'rgba(255, 159, 64, 1.0)', // สีส้มเข้ม
-        'rgba(201, 203, 207, 1.0)', // สีเทาเข้ม
-        'rgba(100, 181, 246, 1.0)', // สีฟ้าสด
+        '#0c3beb',
+        '#eb0c2e ',
+        '#ffbb2a ',
+        '#229954',
+        '#c5188e ',
+        '#f05b0b ',
+        '#6495ED ',
+        '#09f5e3 ',
       ],
 
-      borderColor: 'rgba(0, 0, 0 )',
-      borderWidth: 2.5,
+      borderColor: 'black',
+      borderWidth: 4,
+      hoverBorderWidth: 6,
+      borderRadius: 30,
+      hoverBorderRadius: 30,
+      hoverBorderColor: 'white',
+      hoverBackgroundColor: hoverBackgroundColor,
+      barThickness: 80,
+      hoverbarThickness: 90,
     },
   ],
 };
@@ -57,14 +81,10 @@ export const chartOptions = {
     },
     title: {
       display: true,
-      color: 'black',
+      color: 'white',
       text: 'ท่านอยากให้การศึกษาไทยปรับเปลี่ยนเรื่องอะไรมากที่สุด',
       font: {
-        size: 14,
-      },
-      padding: {
-        top: 4,
-        bottom: 4,
+        size: 18,
       },
     },
   },
@@ -72,14 +92,18 @@ export const chartOptions = {
     y: {
       ticks: {
         callback: (value: string | number) => `${value}%`,
-        color: 'rgba(75, 75, 75, 1)',
+        color: 'white',
         font: {
-          size: 10,
+          size: 18,
+          weight: 'bold',
         },
       },
       beginAtZero: true,
       max: 100,
       min: 0,
+      grid: {
+        color: '#626567 ',
+      },
     },
     x: {
       ticks: {
@@ -89,10 +113,14 @@ export const chartOptions = {
             ? `${labels[index].slice(0, 20)}...`
             : labels[index];
         },
-        color: 'rgba(75, 75, 75, 1)',
+        color: 'white',
         font: {
-          size: 8,
+          size: 12,
+          weight: 'bold',
         },
+      },
+      grid: {
+        color: '#626567 ',
       },
     },
   },

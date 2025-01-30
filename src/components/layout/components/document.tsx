@@ -8,7 +8,7 @@ interface Props {
 
 const Document: React.FC<Props> = ({ title, file, titleFile }) => {
   return (
-    <div className='mx-4 mb-10 mt-10 md:mx-24 '>
+    <div className='mx-4 mt-10 md:mx-24 '>
       <div className='flex flex-col space-y-6 font-semibold'>
         <div className='flex space-x-4'>
           <IoDocumentText size={35} className='text-[#ffba00]' />

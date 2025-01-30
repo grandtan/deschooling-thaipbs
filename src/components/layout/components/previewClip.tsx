@@ -19,9 +19,15 @@ interface Props {
   playListId: string;
   title: string;
   isNotReverse?: boolean;
+  content?: boolean;
 }
 
-const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
+const PreviewClip = ({
+  playListId,
+  title,
+  isNotReverse,
+  content = true,
+}: Props) => {
   const { setLoading, loading } = useLoading();
 
   const [itemYoutube, setItemYoutube] = useState<YoutubeResponse>();
@@ -167,13 +173,24 @@ const PreviewClip = ({ playListId, title, isNotReverse }: Props) => {
         </div>
       ) : (
         <div>
-          {fristCall && (
-            <div className='mt-6 flex flex-col items-center justify-center'>
+          {content !== false && fristCall && (
+            <div className='mt-20 flex flex-col items-center justify-center'>
               <div className='text-3xl text-[#ffba00] sm:text-6xl'>
                 ติดตามชม...
               </div>
               <div className='mt-4 bg-black text-3xl text-white sm:text-6xl '>
                 เดือนเมษายน 2568
+              </div>
+            </div>
+          )}
+
+          {content === false && fristCall && (
+            <div className='mt-20 flex flex-col items-center justify-center'>
+              <div className='text-3xl text-[#ffba00] sm:text-6xl'>
+                ติดตามชม...
+              </div>
+              <div className='mt-4 bg-black text-3xl text-white sm:text-6xl '>
+                เร็ว ๆ นี้
               </div>
             </div>
           )}

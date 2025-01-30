@@ -7,7 +7,7 @@ import Layout from '@/components/layout/Layout';
 
 const PLAYLIST_ID = 'PLeZwwnM5meV-muR4SgMOhWgXV18n_Yy1l';
 
-const TeacherClassroom = () => {
+const VdoTeacherClassroom = () => {
   return (
     <Layout container={false}>
       <Head>
@@ -18,12 +18,7 @@ const TeacherClassroom = () => {
         />
       </Head>
 
-      <div className='flex h-full w-full flex-col border-t-4 border-yellow-500 bg-white'>
-        <Document
-          title='บทความ : โครงการ “เติมพลังครู สู่ห้องเรียน”'
-          titleFile='โครงการ “เติมพลังครู สู่ห้องเรียน”'
-        />
-
+      <div className='flex h-full w-full flex-col border-t-4 border-yellow-500'>
         <PreviewClip
           playListId={PLAYLIST_ID}
           title=' VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
@@ -35,4 +30,4 @@ const TeacherClassroom = () => {
   );
 };
 
-export default TeacherClassroom;
+export default VdoTeacherClassroom;

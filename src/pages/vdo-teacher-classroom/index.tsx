@@ -18,14 +18,12 @@ const VdoTeacherClassroom = () => {
         />
       </Head>
 
-      <div className='flex h-full w-full flex-col border-t-4 border-yellow-500'>
-        <PreviewClip
-          playListId={PLAYLIST_ID}
-          title=' VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
-          content={false}
-          isNotReverse
-        />
-      </div>
+      <PreviewClip
+        playListId={PLAYLIST_ID}
+        title=' VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
+        content={false}
+        isNotReverse
+      />
     </Layout>
   );
 };

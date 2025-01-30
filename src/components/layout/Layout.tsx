@@ -103,6 +103,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 label='เติมพลังครู สู่ห้องเรียน'
                 className='my-4 '
               />
+
+              <TreeItem
+                onClick={() => router.push('/idea')}
+                nodeId='idea'
+                label='เติมไอเดียให้ครูเจ๋ง'
+                className='my-4 '
+              />
             </TreeItem>
           </TreeView>
         </div>
@@ -301,6 +308,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               submenu3='โรงเรียนเล็ก จิ๋วแต่แจ๋ว'
               submenu4='ห้องเรียนเล็ก เอาเด็กอยู่'
               submenu5='เติมพลังครู สู่ห้องเรียน'
+              submenu6='เติมไอเดียให้ครูเจ๋ง'
               pathName={pathName}
             />
 

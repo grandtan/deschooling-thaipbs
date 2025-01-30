@@ -187,6 +187,13 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
                 label='เติมพลังครู สู่ห้องเรียน'
                 className='my-4'
               />
+
+              <TreeItem
+                onClick={() => router.push('/feedback')}
+                nodeId='feedback'
+                label='รับฟังเสียงสะท้อน'
+                className='my-4'
+              />
             </TreeItem>
           </TreeView>
         </div>
@@ -301,6 +308,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               submenu1='ปฏิทินกิจกรรม '
               submenu2=' ภาพกิจกรรม'
               submenu3='เติมพลังครู สู่ห้องเรียน'
+              submenu4='รับฟังเสียงสะท้อน'
               pathName={pathName}
             />
 

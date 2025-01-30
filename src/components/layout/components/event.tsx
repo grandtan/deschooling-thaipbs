@@ -6,10 +6,18 @@ interface Props {
   submenu1: string;
   submenu2: string;
   submenu3: string;
+  submenu4: string;
   pathName: string;
 }
 
-const Event = ({ menuName, submenu1, submenu2, submenu3, pathName }: Props) => {
+const Event = ({
+  menuName,
+  submenu1,
+  submenu2,
+  submenu3,
+  submenu4,
+  pathName,
+}: Props) => {
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
@@ -46,6 +54,13 @@ const Event = ({ menuName, submenu1, submenu2, submenu3, pathName }: Props) => {
           href='/teacher-classroom'
         >
           {submenu3}
+        </Link>
+
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/feedback'
+        >
+          {submenu4}
         </Link>
       </div>
     </div>

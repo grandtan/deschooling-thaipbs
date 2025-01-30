@@ -178,7 +178,7 @@ const PreviewClip = ({
               <div className='text-3xl text-[#ffba00] sm:text-6xl'>
                 ติดตามชม...
               </div>
-              <div className='mt-4 bg-black text-3xl text-white sm:text-6xl '>
+              <div className='mt-4 bg-black p-3 text-3xl text-white sm:text-6xl'>
                 เดือนเมษายน 2568
               </div>
             </div>
@@ -189,7 +189,7 @@ const PreviewClip = ({
               <div className='text-3xl text-[#ffba00] sm:text-6xl'>
                 ติดตามชม...
               </div>
-              <div className='mt-4 bg-black text-3xl text-white sm:text-6xl '>
+              <div className='mt-4 bg-black p-3 text-3xl text-white sm:text-6xl'>
                 เร็ว ๆ นี้
               </div>
             </div>

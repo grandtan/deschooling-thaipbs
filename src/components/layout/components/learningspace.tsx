@@ -10,6 +10,8 @@ interface Props {
   submenu4: string;
   submenu5: string;
   submenu6: string;
+  submenu7: string;
+  submenu8: string;
   pathName: string;
 }
 
@@ -21,6 +23,8 @@ const LearningSpace = ({
   submenu4,
   submenu5,
   submenu6,
+  submenu7,
+  submenu8,
   pathName,
 }: Props) => {
   const baseButtonClasses =
@@ -75,6 +79,18 @@ const LearningSpace = ({
           href='/idea'
         >
           {submenu6}
+        </Link>
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/certificate'
+        >
+          {submenu7}
+        </Link>
+        <Link
+          className='px-5 py-3 text-black hover:text-[#ffba00]'
+          href='/classroom-management'
+        >
+          {submenu8}
         </Link>
       </div>
     </div>

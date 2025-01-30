@@ -6,13 +6,13 @@ import Layout from '@/components/layout/Layout';
 
 import PreviewClip from '@/components/layout/components/previewClip';
 
-const PLAYLIST_ID = 'PLeZwwnM5meV8rTvcEU9sk04HU5I0oje9s';
+const PLAYLIST_ID = 'PLeZwwnM5meV8wZkVA_scPjm-OxtOOgucx';
 
-const Parent = () => {
+const ClassroomManagement = () => {
   return (
     <Layout container={false}>
       <Head>
-        <title>พ่อแม่และผู้ปกครอง : deschooling</title>
+        <title>การจัดการห้องเรียน : deschooling</title>
         <meta
           name='keywords'
           content='Descholling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
@@ -21,11 +21,12 @@ const Parent = () => {
 
       <PreviewClip
         playListId={PLAYLIST_ID}
-        title='Home-Based Learning เมื่อพ่อแม่เป็นครูอีกคน'
+        title='การจัดการห้องเรียน'
+        content={false}
         isNotReverse
       />
     </Layout>
   );
 };
 
-export default Parent;
+export default ClassroomManagement;

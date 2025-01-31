@@ -20,6 +20,8 @@ import Tv from '@/components/layout/components/tv';
 import Vdo from '@/components/layout/components/vdo';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
+import Cooperation from '@/components/layout/components/cooperation';
+import EducationPolicy from '@/components/layout/components/educational-policy';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -294,6 +296,44 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         </div>
 
         <div className='px-12 py-4 '>
+          <Link className=' text-lg ' href='/cooperation'>
+            ความร่วมมือ
+          </Link>
+        </div>
+
+        <div className='px-4 py-4'>
+          <TreeView
+            aria-label='file system navigator'
+            defaultCollapseIcon={<ExpandMoreIcon />}
+            defaultExpandIcon={<ChevronRightIcon />}
+            sx={{
+              height: auto,
+              flexGrow: 1,
+              overflowY: 'auto',
+            }}
+          >
+            <TreeItem
+              nodeId='1'
+              label={<div className='text-lg'>นโยบายการศึกษา</div>}
+            >
+              <TreeItem
+                onClick={() => router.push('/government')}
+                nodeId='government'
+                label='เสียงสะท้อนสู่นโยบายภาครัฐ'
+                className='my-4'
+              />
+
+              <TreeItem
+                onClick={() => router.push('/gallery')}
+                nodeId='gallery'
+                label='ขับเคลื่อนการศึกษา'
+                className='my-4'
+              />
+            </TreeItem>
+          </TreeView>
+        </div>
+
+        <div className='px-12 py-4 '>
           <Link className=' text-lg ' href='/contact-us'>
             ติดต่อเรา
           </Link>
@@ -312,7 +352,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             </Link>
           </div>
 
-          <div className='z-10 hidden w-3/4 items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00] md:flex'>
+          <div className='z-10 hidden w-full items-center justify-center rounded-bl-[50px] rounded-tr-[50px] bg-[#ffcc00] md:flex'>
             <Home menuName='หน้าแรก' pathName={pathName} />
 
             <LearningSpace
@@ -362,7 +402,16 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               pathName={pathName}
             />
 
-            <ContactUs menuName='  ติดต่อเรา' pathName={pathName} />
+            <Cooperation menuName='ความร่วมมือ' pathName={pathName} />
+
+            <EducationPolicy
+              menuName='นโยบายการศึกษา'
+              submenu1='เสียงสะท้อนสู่นโยบายภาครัฐ'
+              submenu2='ขับเคลื่อนการศึกษา'
+              pathName={pathName}
+            />
+
+            <ContactUs menuName='ติดต่อเรา' pathName={pathName} />
           </div>
 
           {isIpadLayout && (

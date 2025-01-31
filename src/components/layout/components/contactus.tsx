@@ -18,10 +18,10 @@ const ContactUs = ({ menuName, pathName }: Props) => {
   return (
     <div className='hidden w-full sm:block md:w-auto'>
       <Link className={`${baseClasses} ${activeClasses}`} href='/contact-us'>
-        <div className='mb-1 flex flex-col  items-center'>
+        <div className='mb-1 flex flex-col items-center'>
           <RiMailUnreadFill size={35} />
         </div>
-        {menuName}
+        <div className='text-center'> {menuName}</div>
       </Link>
     </div>
   );

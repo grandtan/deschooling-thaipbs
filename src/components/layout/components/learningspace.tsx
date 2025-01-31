@@ -40,7 +40,7 @@ const LearningSpace = ({
         <div className='mb-1 flex flex-col  items-center'>
           <MdComputer size={35} />
         </div>
-        {menuName}
+        <div className='text-center'> {menuName}</div>
       </button>
       <div className='fixed hidden w-fit flex-col divide-y rounded bg-white text-start text-xl drop-shadow-lg hover:flex peer-hover:flex'>
         <Link

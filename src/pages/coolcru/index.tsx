@@ -17,7 +17,11 @@ const CoolCru = () => {
         />
       </Head>
 
-      <PreviewClip playListId={PLAYLIST_ID} title='COOL CRU จารย์เจ๋ง' />
+      <PreviewClip
+        playListId={PLAYLIST_ID}
+        title='COOL CRU จารย์เจ๋ง'
+        isNotReverse
+      />
     </Layout>
   );
 };

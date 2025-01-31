@@ -28,7 +28,11 @@ const ThaMaiTai = () => {
         />
       </Head>
 
-      <PreviewClip playListId={PLAYLIST_ID} title='ท่าไม้ตาย' />
+      <PreviewClip
+        playListId={PLAYLIST_ID}
+        title='ท่าไม้ตาย'
+        isNotReverse={false}
+      />
     </Layout>
   );
 };

@@ -116,7 +116,7 @@ const PreviewClip = ({
   return (
     <div className='mx-4 mb-32 mt-10 md:mx-24'>
       <div className='flex  md:justify-between'>
-        <div className=' flex space-x-4  font-semibold text-[#ffba00] md:items-center'>
+        <div className=' flex space-x-4 font-semibold text-[#ffba00] md:items-center'>
           <SiYoutubemusic size={35} />
           <div className=' bg-black p-0.5 text-3xl'>{title}</div>
         </div>

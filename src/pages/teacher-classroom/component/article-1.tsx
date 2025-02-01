@@ -2,7 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import { IoDocumentText } from 'react-icons/io5';
 
+import PreviewClip from '@/components/layout/components/previewClip';
+
 import RelateArticle from '@/pages/teacher-classroom/component/related-article';
+
+const PLAYLIST_ID = 'PLeZwwnM5meV-muR4SgMOhWgXV18n_Yy1l';
 
 const ArticleOne = () => {
   return (
@@ -298,6 +302,14 @@ const ArticleOne = () => {
       </div>
 
       <RelateArticle />
+
+      <div className='mt-4'>
+        <PreviewClip
+          playListId={PLAYLIST_ID}
+          title='VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
+          isNotReverse
+        />
+      </div>
     </div>
   );
 };

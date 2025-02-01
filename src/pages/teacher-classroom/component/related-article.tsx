@@ -35,11 +35,9 @@ const RelateArticle = () => {
   return (
     <section className='mx-4 pt-16 md:mx-24'>
       {/* Title Section */}
-      <div className='flex items-center space-x-4'>
-        <TbCirclesRelation size={40} className='text-[#ffba00]' />
-        <h2 className='text-2xl font-extrabold underline underline-offset-4'>
-          บทความที่เกี่ยวข้อง
-        </h2>
+      <div className='flex space-x-4 font-semibold text-[#ffba00] md:items-center'>
+        <TbCirclesRelation size={40} />
+        <h2 className='bg-black p-0.5 text-3xl'>บทความที่เกี่ยวข้อง</h2>
       </div>
 
       {/* Slide Section */}

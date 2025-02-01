@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
 
-import Document from '@/components/layout/components/document';
 import PreviewClip from '@/components/layout/components/previewClip';
 import Layout from '@/components/layout/Layout';
 
@@ -18,12 +17,13 @@ const VdoTeacherClassroom = () => {
         />
       </Head>
 
-      <PreviewClip
-        playListId={PLAYLIST_ID}
-        title=' VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
-        content={false}
-        isNotReverse
-      />
+      <div className='w-full'>
+        <PreviewClip
+          playListId={PLAYLIST_ID}
+          title=' VDO : โครงการ “เติมพลังครู สู่ห้องเรียน”'
+          isNotReverse
+        />
+      </div>
     </Layout>
   );
 };

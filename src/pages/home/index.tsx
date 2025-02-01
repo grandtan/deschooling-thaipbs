@@ -54,12 +54,12 @@ const Home = () => {
         />
       </Head>
 
-      <div className=' w-full  '>
+      <div className='w-full'>
         <Slide duration={4000} arrows={!screens.xs} autoplay={autoplay}>
           {!screens.xs && (
-            <div className='each-slide-effect flex h-full w-full items-center justify-center'>
-              <div className=' flex w-full flex-col justify-center space-x-2 text-xl  md:space-x-8 md:text-4xl '>
-                <div className='mb-4 flex w-full cursor-pointer justify-center'>
+            <div className='each-slide-effect flex flex-row justify-center'>
+              <div className=' flex w-full flex-col justify-center'>
+                <div className='mb-6 flex w-full cursor-pointer justify-center text-3xl md:text-4xl'>
                   <div className='mr-4 font-bold text-[#ffcc00]'>VDO แนะนำ</div>
                   <div className=' bg-white font-bold text-black'>
                     Deschooling
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
 
                 <CustomReactPlayer
-                  className='rounded-2xl border-4 border-yellow-500 p-1'
+                  className='rounded-3xl border-2 border-dotted bg-black p-2'
                   playing={playing}
                   url='https://s3.ap-southeast-1.amazonaws.com/altv-deschooling-assets/EP36_VDO%20Presentation%20Deschooling%20Project%20-%20REExport.mp4'
                   onCustomPlay={handleVideoPlay}
@@ -77,7 +77,7 @@ const Home = () => {
             </div>
           )}
 
-          <div className='each-slide-effect flex  flex-row justify-center '>
+          <div className='each-slide-effect flex  flex-row justify-center'>
             <div className=' flex w-full  space-x-2 text-3xl sm:text-5xl md:space-x-8 md:text-5xl lg:text-7xl xl:text-8xl'>
               <div
                 className='flex w-full cursor-pointer justify-center'

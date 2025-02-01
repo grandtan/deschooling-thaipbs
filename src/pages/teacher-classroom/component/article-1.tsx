@@ -2,6 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 import { IoDocumentText } from 'react-icons/io5';
 
+import RelateArticle from '@/pages/teacher-classroom/component/related-article';
+
 const ArticleOne = () => {
   return (
     <div className='flex h-full w-full flex-col border-t-4 border-yellow-400 bg-white pb-10'>
@@ -294,6 +296,8 @@ const ArticleOne = () => {
           </div>
         </div>
       </div>
+
+      <RelateArticle />
     </div>
   );
 };

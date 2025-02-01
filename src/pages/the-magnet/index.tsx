@@ -1,10 +1,11 @@
+import Grid from '@mui/material/Grid';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
 import { PiTelevisionFill } from 'react-icons/pi';
-import Grid from '@mui/material/Grid';
+
+import Layout from '@/components/layout/Layout';
 
 const imageUrls = [
   'https://cf-images.ap-southeast-1.prod.boltdns.net/v1/static/6075037809001/4f06c161-e6a9-46f1-8b0f-f2b54847afc5/6987b051-79f9-4c2d-9eee-6505ba01939d/1920x1080/match/image.jpg',

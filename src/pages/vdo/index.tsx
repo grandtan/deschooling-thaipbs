@@ -1,10 +1,8 @@
 import Head from 'next/head';
-
-import React, { useEffect, useState } from 'react';
-
-import Layout from '@/components/layout/Layout';
+import React from 'react';
 
 import PreviewClip from '@/components/layout/components/previewClip';
+import Layout from '@/components/layout/Layout';
 
 const PLAYLIST_ID = 'PLeZwwnM5meV8NRnJ3RkyUawJwzKiSMtt6';
 

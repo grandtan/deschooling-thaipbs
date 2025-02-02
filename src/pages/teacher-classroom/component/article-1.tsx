@@ -297,6 +297,8 @@ const ArticleOne = () => {
               ซึ่งนั่นก็คือการพัฒนาผู้เรียนในวันนี้ให้เขาได้เติบโตเป็น
               “คนคุณภาพ” ต่อไป
             </div>
+
+            <div className='border border-dashed border-yellow-500' />
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ const Calendar = () => {
 
         <div className=' flex flex-row items-center space-x-4 font-semibold text-[#ffba00]'>
           <BsFillCalendarHeartFill size={35} />
-          <div className='text-3xl  '>ปฏิทินกิจกรรม</div>
+          <div className='text-3xl'>ปฏิทินกิจกรรม</div>
         </div>
 
         <div className='my-10 text-center text-2xl text-[#ffba00]'>

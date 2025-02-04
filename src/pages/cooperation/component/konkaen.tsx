@@ -781,6 +781,32 @@ const Konkaen = () => {
               รวมทั้งการทำงานที่เน้นบูรณาการงานจากหลายฝ่ายเพื่อสร้างอนาคตของเด็กและสังคมไทยให้เติบโตอย่างยั่งยืน
               โดยมุ่งเป้าหมายเพื่อพัฒนาการศึกษาและ ทุนมนุษย์ให้มีคุณภาพในอนาคต
             </div>
+
+            <div className='border border-dashed border-yellow-500' />
+
+            <div className='flex flex-col space-x-0 space-y-4  md:flex-row md:space-x-4 md:space-y-0'>
+              <div className='flex w-full flex-col items-center justify-center  md:w-1/2 '>
+                <Image
+                  alt='image'
+                  src='/images/cooperation/Konkaen1.png'
+                  width={600}
+                  height={500}
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
+
+              <div className='flex w-full flex-col items-center justify-center  md:w-1/2'>
+                <Image
+                  alt='image'
+                  src='/images/cooperation/Konkaen2.png'
+                  width={600}
+                  height={500}
+                  style={{ borderRadius: '20px' }}
+                />
+              </div>
+            </div>
+
+            <div className='border border-dashed border-yellow-500' />
           </div>
         </div>
       </div>

@@ -6,17 +6,6 @@ const PLAYLIST_ID = 'PLeZwwnM5meV861QP7QjpwzBzupMVrodNS';
 const Konkaen = () => {
   return (
     <div className='flex h-full w-full flex-col border-t-4 border-yellow-400 bg-white pb-10'>
-      {/* <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center  '>
-          <div className='space-y-5 text-xl text-[#2b2a2a] '>
-            <div className='text-3xl  font-bold '>
-              1. บทความสรุปกิจกรรม ระยอง
-            </div>
-            <div className='font-bold'>รอไฟล์ word</div>
-          </div>
-        </div>
-      </div> */}
-
       <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center space-y-8'>
           <div className='space-y-4 text-3xl text-[#2b2a2a] '>

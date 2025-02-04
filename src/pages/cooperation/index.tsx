@@ -5,6 +5,7 @@ import React from 'react';
 import Layout from '@/components/layout/Layout';
 import Konkaen from '@/pages/cooperation/component/konkaen';
 import { IoDocumentText } from 'react-icons/io5';
+import Rayong from '@/pages/cooperation/component/rayong';
 
 const Cooperation = () => {
   return (
@@ -32,6 +33,7 @@ const Cooperation = () => {
         </div>
 
         <Konkaen />
+        <Rayong />
       </div>
     </Layout>
   );

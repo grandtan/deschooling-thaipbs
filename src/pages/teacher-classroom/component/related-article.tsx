@@ -33,7 +33,7 @@ const slideConfig = {
 
 const RelateArticle = () => {
   return (
-    <section className='mx-4 pt-16 md:mx-24'>
+    <div className='mx-4  pt-16 md:mx-24'>
       {/* Title Section */}
       <div className='flex space-x-4 font-semibold text-[#ffba00] md:items-center'>
         <TbCirclesRelation size={40} />
@@ -41,7 +41,7 @@ const RelateArticle = () => {
       </div>
 
       {/* Slide Section */}
-      <div className='relative mt-6'>
+      <div className='relative mb-8 mt-8'>
         <Slide {...slideConfig}>
           {articles.map((article, index) => (
             <div key={index} className='flex justify-center px-2'>
@@ -65,7 +65,9 @@ const RelateArticle = () => {
           <button className='nav next right-[-50px] hidden md:flex'>❯</button>
         </div>
       </div>
-    </section>
+
+      <div className='border border-dashed border-yellow-500' />
+    </div>
   );
 };
 

@@ -41,7 +41,7 @@ const RelateArticle = () => {
       </div>
 
       {/* Slide Section */}
-      <div className='relative mt-6'>
+      <div className='relative mb-8 mt-8'>
         <Slide {...slideConfig}>
           {articles.map((article, index) => (
             <div key={index} className='flex justify-center px-2'>

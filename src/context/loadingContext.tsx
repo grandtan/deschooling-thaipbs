@@ -1,6 +1,8 @@
+// @/context/loadingContext.tsx
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
-import React, { createContext, useContext, useState } from 'react';
+import { useRouter } from 'next/router';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type LoadingContextType = {
   loading: boolean;
@@ -22,9 +24,35 @@ export const LoadingProvider: React.FC<LoadingProviderProps> = ({
   children,
 }) => {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
   const antIcon = (
     <LoadingOutlined style={{ fontSize: 60, color: '#ffba00' }} spin />
   );
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      setLoading(true);
+    };
+
+    const handleRouteChangeEnd = () => {
+      // แสดง loading เป็นเวลา 2 วินาที ก่อนที่จะซ่อน
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChangeStart);
+    router.events.on('routeChangeComplete', handleRouteChangeEnd);
+    router.events.on('routeChangeError', handleRouteChangeEnd);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart);
+      router.events.off('routeChangeComplete', handleRouteChangeEnd);
+      router.events.off('routeChangeError', handleRouteChangeEnd);
+    };
+  }, [router]);
+
   return (
     <LoadingContext.Provider value={{ loading, setLoading }}>
       <div style={{ position: 'relative', minHeight: '100vh' }}>

@@ -1,3 +1,4 @@
+import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import Script from 'next/script';
@@ -39,7 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <LoadingProvider>
-        <Component {...pageProps} />
+        <AnimatePresence mode='wait'>
+          <Component {...pageProps} />
+        </AnimatePresence>
       </LoadingProvider>
     </>
   );

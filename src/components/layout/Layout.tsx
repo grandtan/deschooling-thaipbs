@@ -12,6 +12,8 @@ import { useRouter } from 'next/router';
 import * as React from 'react';
 
 import ContactUs from '@/components/layout/components/contactus';
+import Cooperation from '@/components/layout/components/cooperation';
+import EducationPolicy from '@/components/layout/components/educational-policy';
 import Event from '@/components/layout/components/event';
 import Home from '@/components/layout/components/home';
 import LearningSpace from '@/components/layout/components/learningspace';
@@ -20,8 +22,6 @@ import Tv from '@/components/layout/components/tv';
 import Vdo from '@/components/layout/components/vdo';
 
 import { LogoWebNew } from '@/icon/LogoWebNew';
-import Cooperation from '@/components/layout/components/cooperation';
-import EducationPolicy from '@/components/layout/components/educational-policy';
 
 const fontWeb = Kanit({
   weight: '400',
@@ -447,6 +447,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
         >
           {children}
         </div>
+        {/* <PDPA /> */}
       </div>
     </div>
   );

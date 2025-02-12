@@ -60,3 +60,14 @@
 .react-slideshow-container .default-nav:last-of-type {
   right: 90px !important
 }
+
+/* กำหนดให้ container ที่มี class pdpa-modal ไม่รับ pointer events */
+.pdpa-modal {
+  pointer-events: none;
+}
+
+/* ให้ element Modal (เนื้อหาที่แสดง) รับ pointer events ตามปกติ */
+.pdpa-modal .ant-modal {
+  pointer-events: auto;
+}
+

@@ -4,13 +4,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
-import { Bar } from 'react-chartjs-2';
 import { TbZoomQuestion } from 'react-icons/tb';
 import { Slide } from 'react-slideshow-image';
 
 import 'react-slideshow-image/dist/styles.css';
 
-import { chartData, chartOptions } from '@/components/layout/components/chart';
+import BarChart from '@/components/layout/components/chart';
 import Layout from '@/components/layout/Layout';
 
 import BabyHome2 from '@/icon/BabyHome2';
@@ -122,7 +121,7 @@ const Home = () => {
                 className='flex h-3/4 w-full cursor-pointer justify-center md:w-5/6'
                 onClick={() => router.push('/learning-chart')}
               >
-                <Bar data={chartData} options={chartOptions} />
+                <BarChart />
               </div>
             </div>
           </div>

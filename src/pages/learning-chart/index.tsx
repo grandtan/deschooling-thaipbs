@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
 
-import { chartData, chartOptions } from '@/components/layout/components/chart';
+import BarChart from '@/components/layout/components/chart';
 import Layout from '@/components/layout/Layout';
 
 const LearningChart: React.FC = () => {
@@ -20,7 +19,7 @@ const LearningChart: React.FC = () => {
           ความต้องการของบุคลากรทางการศึกษา
         </div>
         <div className=' flex h-3/4 w-full items-center justify-center'>
-          <Bar data={chartData} options={chartOptions} />
+          <BarChart />
         </div>
       </div>
     </Layout>

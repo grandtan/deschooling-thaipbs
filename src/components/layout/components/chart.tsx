@@ -1,14 +1,24 @@
-import { lighten } from 'polished';
-
+// BarChart.tsx
 import {
   BarElement,
   CategoryScale,
   Chart as ChartJS,
+  ChartData,
+  ChartOptions,
   Legend,
   LinearScale,
+  Scale,
   Title,
   Tooltip,
 } from 'chart.js';
+import { lighten } from 'polished';
+import React, { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
+
+export type CalendarResponse = {
+  title: string;
+  value: string;
+};
 
 ChartJS.register(
   CategoryScale,
@@ -19,109 +29,128 @@ ChartJS.register(
   Legend
 );
 
-const backgroundColor = [
-  '#0c3beb',
-  '#eb0c2e',
-  '#ffbb2a',
-  '#4bcd06',
-  '#c5188e',
-  '#f05b0b',
-  '#6495ED',
-  '#09f5e3',
-];
+const BarChart: React.FC = () => {
+  // state สำหรับเก็บข้อมูลจาก API
+  const [sheetData, setSheetData] = useState<CalendarResponse[]>([]);
 
-const hoverBackgroundColor = backgroundColor.map((color) =>
-  lighten(0.1, color)
-);
+  // ดึงข้อมูลจาก Sheet.best เมื่อ component mount
+  useEffect(() => {
+    const fetchDeschoolingDetails = async () => {
+      const apiKey =
+        '4UNw#HpV7wJmbx7-uKaFuid#jLv!t5oB@ESY5iWEnGICMJszJJv%nKB_Il_vGdf!';
+      try {
+        const response = await fetch(
+          `https://api.sheetbest.com/sheets/3f057aee-5b3a-414a-8da5-9e70e6d074b6?key=${apiKey}`
+        );
+        const data: CalendarResponse[] = await response.json();
+        console.log(JSON.stringify(data));
+        setSheetData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchDeschoolingDetails();
+  }, []);
 
-export const chartData = {
-  labels: [
-    'หลักสูตรที่ทันสมัยเรียนไปใช้ได้จริงเน้นการสร้างสมรรถนะ',
-    'ลดภาระงานครู',
-    'งบประมาณจากส่วนกลางที่เหมาะกับสภาพพื้นที่',
-    'การกระจายอำนาจไปสู่สถานศึกษา',
-    'การจัดสรรงบประมาณอาหารกลางวัน',
-    'ระบบผลิตและพัฒนาครู',
-    'ความเสมอภาคทางการศึกษาโอกาสในการเรียนต่อ',
-    'สนับสนุนให้มีโรงเรียนพ่อแม่',
-  ],
-  datasets: [
-    {
-      data: [50, 60, 70, 80, 50, 30, 40, 60],
-      backgroundColor: [
-        '#0c3beb',
-        '#eb0c2e ',
-        '#ffbb2a ',
-        '#229954',
-        '#c5188e ',
-        '#f05b0b ',
-        '#6495ED ',
-        '#09f5e3 ',
-      ],
+  // กำหนดสีพื้นฐานสำหรับแผนภูมิ
+  const backgroundColor: string[] = [
+    '#0c3beb',
+    '#eb0c2e',
+    '#ffbb2a',
+    '#4bcd06',
+    '#c5188e',
+    '#f05b0b',
+    '#6495ED',
+    '#09f5e3',
+  ];
 
-      borderColor: 'black',
-      borderWidth: 4,
-      hoverBorderWidth: 6,
-      borderRadius: 50,
-      hoverBorderRadius: 50,
-      hoverBorderColor: 'white',
-      hoverBackgroundColor: hoverBackgroundColor,
-      barThickness: 80,
-      hoverbarThickness: 90,
-    },
-  ],
-};
+  // คำนวณสี hover ด้วยการทำให้สว่างขึ้นเล็กน้อย
+  const hoverBackgroundColor: string[] = backgroundColor.map((color) =>
+    lighten(0.1, color)
+  );
 
-export const chartOptions = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      display: false,
-    },
-    title: {
-      display: true,
-      color: 'white',
-      text: 'ท่านอยากให้การศึกษาไทยปรับเปลี่ยนเรื่องอะไรมากที่สุด',
-      font: {
-        size: 18,
+  // สร้าง chartData โดยใช้ข้อมูลจาก state ที่ดึงมาจาก API
+  // หากยังไม่มีข้อมูล ให้ใช้ array ว่าง (หรือแสดง Loading state ได้)
+  const chartData: ChartData<'bar'> = {
+    labels: sheetData.map((item) => item.title),
+    datasets: [
+      {
+        data: sheetData.map((item) => Number(item.value)),
+        backgroundColor: backgroundColor,
+        borderColor: 'black',
+        borderWidth: 4,
+        hoverBorderWidth: 6,
+        borderRadius: 50,
+        // ไม่ใช้ hoverBorderRadius เพราะ Chart.js ไม่มี property นี้
+        hoverBorderColor: 'white',
+        hoverBackgroundColor: hoverBackgroundColor,
+        barThickness: 80,
+        // หากต้องการให้ bar มีความหนาเพิ่มขึ้นเมื่อ hover สามารถใช้ hoverBarThickness ได้
+        // hoverBarThickness: 90,
       },
-    },
-  },
-  scales: {
-    y: {
-      ticks: {
-        callback: (value: string | number) => `${value}%`,
+    ],
+  };
+
+  // กำหนด options สำหรับแผนภูมิ (ChartOptions)
+  const chartOptions: ChartOptions<'bar'> = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      title: {
+        display: true,
         color: 'white',
+        text: 'ท่านอยากให้การศึกษาไทยปรับเปลี่ยนเรื่องอะไรมากที่สุด',
         font: {
           size: 18,
-          weight: 'bold',
         },
-      },
-      beginAtZero: true,
-      max: 100,
-      min: 0,
-      grid: {
-        color: '#626567 ',
       },
     },
-    x: {
-      ticks: {
-        callback: function (_value: string | number, index: number) {
-          const labels = this.chart?.data?.labels as string[];
-          return labels && labels[index]?.length > 20
-            ? `${labels[index].slice(0, 20)}...`
-            : labels[index];
+    scales: {
+      y: {
+        ticks: {
+          callback: (value: string | number) => `${value}%`,
+          color: 'white',
+          font: {
+            size: 18,
+            weight: 'bold',
+          },
         },
-        color: 'white',
-        font: {
-          size: 12,
-          weight: 'bold',
+        beginAtZero: true,
+        max: 100,
+        min: 0,
+        grid: {
+          color: '#626567',
         },
       },
-      grid: {
-        color: '#626567 ',
+      x: {
+        ticks: {
+          // ใช้ฟังก์ชันธรรมดาเพื่อให้ "this" เป็น instance ของ Scale
+          callback: function (_value: string | number, index: number): string {
+            // cast this เป็น Scale<any>
+            const scale = this as Scale<any>;
+            // cast this.chart.data.labels เป็น string[]
+            const labels = (scale.chart.data.labels as string[]) || [];
+            return labels[index] && labels[index].length > 20
+              ? `${labels[index].slice(0, 20)}...`
+              : labels[index];
+          },
+          color: 'white',
+          font: {
+            size: 12,
+            weight: 'bold',
+          },
+        },
+        grid: {
+          color: '#626567',
+        },
       },
     },
-  },
+  };
+
+  return <Bar data={chartData} options={chartOptions} />;
 };
+
+export default BarChart;

@@ -30,8 +30,10 @@ ChartJS.register(
 );
 
 const BarChart: React.FC = () => {
-  // state สำหรับเก็บข้อมูลจาก API
+  // State สำหรับเก็บข้อมูลที่ได้จาก API
   const [sheetData, setSheetData] = useState<CalendarResponse[]>([]);
+  // State สำหรับ Loading (ถ้าต้องการแสดง indicator)
+  const [loading, setLoading] = useState<boolean>(true);
 
   // ดึงข้อมูลจาก Sheet.best เมื่อ component mount
   useEffect(() => {
@@ -46,9 +48,12 @@ const BarChart: React.FC = () => {
         console.log(JSON.stringify(data));
         setSheetData(data);
       } catch (error) {
-        console.error(error);
+        console.error('Error fetching sheet data:', error);
+      } finally {
+        setLoading(false);
       }
     };
+
     fetchDeschoolingDetails();
   }, []);
 
@@ -69,8 +74,7 @@ const BarChart: React.FC = () => {
     lighten(0.1, color)
   );
 
-  // สร้าง chartData โดยใช้ข้อมูลจาก state ที่ดึงมาจาก API
-  // หากยังไม่มีข้อมูล ให้ใช้ array ว่าง (หรือแสดง Loading state ได้)
+  // สร้าง chartData โดยใช้ข้อมูลจาก state
   const chartData: ChartData<'bar'> = {
     labels: sheetData.map((item) => item.title),
     datasets: [
@@ -85,13 +89,13 @@ const BarChart: React.FC = () => {
         hoverBorderColor: 'white',
         hoverBackgroundColor: hoverBackgroundColor,
         barThickness: 80,
-        // หากต้องการให้ bar มีความหนาเพิ่มขึ้นเมื่อ hover สามารถใช้ hoverBarThickness ได้
+        // หากต้องการให้ bar หนาขึ้นเมื่อ hover สามารถเปิดใช้งาน hoverBarThickness ได้
         // hoverBarThickness: 90,
       },
     ],
   };
 
-  // กำหนด options สำหรับแผนภูมิ (ChartOptions)
+  // กำหนด options สำหรับแผนภูมิ
   const chartOptions: ChartOptions<'bar'> = {
     responsive: true,
     maintainAspectRatio: false,
@@ -129,9 +133,7 @@ const BarChart: React.FC = () => {
         ticks: {
           // ใช้ฟังก์ชันธรรมดาเพื่อให้ "this" เป็น instance ของ Scale
           callback: function (_value: string | number, index: number): string {
-            // cast this เป็น Scale<any>
             const scale = this as Scale<any>;
-            // cast this.chart.data.labels เป็น string[]
             const labels = (scale.chart.data.labels as string[]) || [];
             return labels[index] && labels[index].length > 20
               ? `${labels[index].slice(0, 20)}...`
@@ -150,7 +152,23 @@ const BarChart: React.FC = () => {
     },
   };
 
-  return <Bar data={chartData} options={chartOptions} />;
+  // ถ้าอยู่ในสถานะ loading ให้แสดงข้อความ Loading
+  if (loading) {
+    return (
+      <div className='flex h-full items-center justify-center'>
+        <p className='text-lg text-gray-500'>Loading chart...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className='h-full w-full'>
+      {/* Container นี้ใช้สำหรับกำหนดความสูงให้ตอบสนองต่อขนาดหน้าจอ */}
+      <div className='h-[300px] w-full sm:h-[400px] md:h-[500px] lg:h-[600px]'>
+        <Bar data={chartData} options={chartOptions} />
+      </div>
+    </div>
+  );
 };
 
 export default BarChart;

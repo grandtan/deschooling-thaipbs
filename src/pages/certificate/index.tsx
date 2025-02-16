@@ -68,13 +68,55 @@ const images = [
     src: '/images/poster/Poster250567.jpg',
     link: 'https://drive.google.com/drive/folders/10ykmuJmUKnohrh95H57k3vYWE2VOUhpG',
   },
+
   {
     src: '/images/poster/Poster180567.jpg',
     link: 'https://drive.google.com/drive/folders/1zGQbU-rtd1TeMnQU0IDA1BbN3Q9ml90w',
   },
+
   {
     src: '/images/poster/Poster200467.jpg',
     link: 'https://drive.google.com/drive/folders/1zGQbU-rtd1TeMnQU0IDA1BbN3Q9ml90w',
+  },
+
+  {
+    src: '/images/poster/Poster060467.jpg',
+    link: 'https://drive.google.com/drive/folders/126a1_-Q7m6XY8Iu3KGbf14QVX48Anlyd',
+  },
+
+  {
+    src: '/images/poster/Poster300367.jpg',
+    link: 'https://drive.google.com/drive/folders/1KwzHjFz72pItQg1j3kCSfPrvyJPomI87',
+  },
+
+  {
+    src: '/images/poster/Poster230367.jpg',
+    link: 'https://drive.google.com/drive/folders/19pzKNNsEjf6gjgS4totA9bEru2BCmYlr',
+  },
+
+  {
+    src: '/images/poster/Poster160367.jpg',
+    link: 'https://drive.google.com/drive/folders/1LKGKLgC4yItjwe3DsZESYxSomb10OHuA',
+  },
+  {
+    src: '/images/poster/Poster020367.jpg',
+    link: 'https://drive.google.com/drive/folders/1x9PdkbXL1GV4aSffdX_VdyEsFpl15Ruk',
+  },
+  {
+    src: '/images/poster/Poster240267.jpg',
+    link: 'https://drive.google.com/drive/folders/1T9FkfdWOTnPHHgXWeqhPzHGnv79q_kdn',
+  },
+  {
+    src: '/images/poster/Poster170267.jpg',
+    link: 'https://drive.google.com/drive/folders/1_IeN5xChnTISoOWb9EaUu7QprirjUH7g',
+  },
+  {
+    src: '/images/poster/Poster100267.jpg',
+    link: 'https://drive.google.com/drive/folders/16gjY2zoPB828UFRDqFiexZRHux0OEyRd',
+  },
+  {
+    src: '/images/poster/Poster030267.jpg',
+    link: 'https://drive.google.com/drive/folders/1rmI1apIO3JCi0VLpyRVaivZ73dyudEa8',
   },
   {
     src: '/images/poster/Poster270167.jpg',
@@ -139,7 +181,7 @@ const Certificate = () => {
             </div>
 
             {/* Grid แสดงรูปของปีนั้น */}
-            <div className='grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12'>
+            <div className='grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3 md:gap-12'>
               {yearImages.map((item, index) => (
                 <div key={index} className='group'>
                   {item.link ? (

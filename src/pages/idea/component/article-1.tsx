@@ -19,7 +19,7 @@ const ArticleOne = () => {
               <div className='text-3xl font-bold text-white'>
                 <div>
                   บทความ : โครงการ “เติมไอเดีย เติมไฟให้ ‘ครูเจ๋ง’
-                  ได้ในห้องเรียน” (รอรูป)
+                  ได้ในห้องเรียน”
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/P1166934.JPG'
+              src='/images/idea/P1177223.JPG'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -73,23 +73,11 @@ const ArticleOne = () => {
       </div>
 
       <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center  md:w-1/2 '>
+        <div className='flex w-full flex-col items-center justify-center '>
           <div>
             <Image
               alt='image'
-              src='/images/1/P1155764.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
-          </div>
-        </div>
-
-        <div className='flex w-full flex-col justify-center  md:w-1/2'>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1166948.JPG'
+              src='/images/idea/Screen Shot1.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -138,10 +126,10 @@ const ArticleOne = () => {
         </div>
       </div>
 
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center bg-[#2b2a2a]'>
           <div className='p-3 text-center text-2xl font-extrabold text-white'>
-            รอรูป
+            ภาพกิจกรรม
           </div>
         </div>
       </div>
@@ -151,7 +139,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03152.JPG'
+              src='/images/idea/P1177076.JPG'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -163,7 +151,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03224.JPG'
+              src='/images/idea/P1177112.JPG'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -177,7 +165,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03248.JPG'
+              src='/images/idea/P1177199.JPG'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -189,7 +177,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/P1155201.JPG'
+              src='/images/idea/P1177169.JPG'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -198,7 +186,7 @@ const ArticleOne = () => {
         </div>
       </div>
 
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-8 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center'>
           <div className='space-y-4 text-xl text-[#2b2a2a]'>
             <div className='indent-10'>
@@ -288,66 +276,6 @@ const ArticleOne = () => {
               การเข้าสังคม หรือการดูแลตนเอง
               มีปัญหาในการรับรู้และทำความเข้าใจข้อมูลที่ซับซ้อน
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center bg-[#2b2a2a]'>
-          <div className='p-3 text-center text-2xl font-extrabold text-white'>
-            รอรูป
-          </div>
-        </div>
-      </div>
-
-      <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center  md:w-1/2 '>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1155908.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
-          </div>
-        </div>
-
-        <div className='flex w-full flex-col justify-center  md:w-1/2'>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1166255.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center  md:w-1/2 '>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1166651.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
-          </div>
-        </div>
-
-        <div className='flex w-full flex-col justify-center  md:w-1/2'>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1166852.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
           </div>
         </div>
       </div>
@@ -670,23 +598,11 @@ const ArticleOne = () => {
       </div>
 
       <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-10 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center  md:w-1/2 '>
+        <div className='flex w-full flex-col items-center justify-center '>
           <div>
             <Image
               alt='image'
-              src='/images/1/P1155764.JPG'
-              width={650}
-              height={500}
-              style={{ borderRadius: '20px' }}
-            />
-          </div>
-        </div>
-
-        <div className='flex w-full flex-col justify-center  md:w-1/2'>
-          <div>
-            <Image
-              alt='image'
-              src='/images/2/P1166948.JPG'
+              src='/images/idea/Screen Shot2.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -825,7 +741,7 @@ const ArticleOne = () => {
       <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-8 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center bg-[#2b2a2a]'>
           <div className='p-3 text-center text-2xl font-extrabold text-white'>
-            รอรูป
+            ภาพกิจกรรม
           </div>
         </div>
       </div>
@@ -835,7 +751,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03152.JPG'
+              src='/images/idea/Screen Shot9.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -847,7 +763,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03224.JPG'
+              src='/images/idea/Screen Shot10.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -861,7 +777,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/DSC03248.JPG'
+              src='/images/idea/Screen Shot11.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}
@@ -873,7 +789,7 @@ const ArticleOne = () => {
           <div>
             <Image
               alt='image'
-              src='/images/1/P1155201.JPG'
+              src='/images/idea/Screen Shot8.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}

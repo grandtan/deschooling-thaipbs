@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import React from 'react';
-import Layout from '@/components/layout/Layout';
 import Image from 'next/image';
+import React from 'react';
 import { FaCloudDownloadAlt } from 'react-icons/fa';
 import { PiCertificateBold } from 'react-icons/pi';
+
+import Layout from '@/components/layout/Layout';
 
 // ✅ ข้อมูลรูปภาพ (เพิ่มปีอื่นเข้ามา)
 const images = [
@@ -74,6 +75,18 @@ const images = [
   {
     src: '/images/poster/Poster200467.jpg',
     link: 'https://drive.google.com/drive/folders/1zGQbU-rtd1TeMnQU0IDA1BbN3Q9ml90w',
+  },
+  {
+    src: '/images/poster/Poster270167.jpg',
+    link: 'https://drive.google.com/drive/folders/1rjR1AhLKWS8xpB9CmvuzR2sHO2-2cfRf',
+  },
+  {
+    src: '/images/poster/Poster200167.jpg',
+    link: 'https://drive.google.com/file/d/1jytP3WDKj6TlW67jmIObl8XbdmjjzmId/view',
+  },
+  {
+    src: '/images/poster/Poster060167.jpg',
+    link: 'https://drive.google.com/drive/folders/1-q4Otd4E_WZ5OS77t1_pDElzhvg9SCq3',
   },
 ];
 

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-
 import React from 'react';
+import { IoDocumentText } from 'react-icons/io5';
 
 import Layout from '@/components/layout/Layout';
+
 import Konkaen from '@/pages/cooperation/component/konkaen';
-import { IoDocumentText } from 'react-icons/io5';
 import Rayong from '@/pages/cooperation/component/rayong';
 
 const Cooperation = () => {
@@ -32,8 +32,8 @@ const Cooperation = () => {
           </div>
         </div>
 
-        <Konkaen />
         <Rayong />
+        <Konkaen />
       </div>
     </Layout>
   );

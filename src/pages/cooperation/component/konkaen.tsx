@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-
-const PLAYLIST_ID = 'PLeZwwnM5meV861QP7QjpwzBzupMVrodNS';
+import { FaPencil } from 'react-icons/fa6';
 
 const Konkaen = () => {
   return (
@@ -784,7 +783,12 @@ const Konkaen = () => {
 
             <div className='border border-dashed border-yellow-500' />
 
-            <div className='flex flex-col space-x-0 space-y-4  md:flex-row md:space-x-4 md:space-y-0'>
+            <div className='flex space-x-4 py-4 font-semibold text-[#ffba00] md:items-center'>
+              <FaPencil size={40} />
+              <div className='bg-black p-1 text-3xl'>Visual Note : ขอนแก่น</div>
+            </div>
+
+            <div className='flex flex-col space-x-0 space-y-4  pb-4 md:flex-row md:space-x-4 md:space-y-0'>
               <div className='flex w-full flex-col items-center justify-center  md:w-1/2 '>
                 <Image
                   alt='image'

@@ -82,9 +82,9 @@ const BarChart: React.FC = () => {
         data: sheetData.map((item) => Number(item.value)),
         backgroundColor: backgroundColor,
         borderColor: 'black',
-        borderWidth: 4,
-        hoverBorderWidth: 6,
-        borderRadius: 50,
+        borderWidth: 2,
+        hoverBorderWidth: 4,
+        borderRadius: 16,
         // ไม่ใช้ hoverBorderRadius เพราะ Chart.js ไม่มี property นี้
         hoverBorderColor: 'white',
         hoverBackgroundColor: hoverBackgroundColor,

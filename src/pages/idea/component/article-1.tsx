@@ -126,14 +126,6 @@ const ArticleOne = () => {
         </div>
       </div>
 
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center bg-[#2b2a2a]'>
-          <div className='p-3 text-center text-2xl font-extrabold text-white'>
-            ภาพกิจกรรม
-          </div>
-        </div>
-      </div>
-
       <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center  md:w-1/2 '>
           <div>
@@ -173,7 +165,7 @@ const ArticleOne = () => {
           </div>
         </div>
 
-        <div className='flex w-full flex-col justify-center  md:w-1/2'>
+        <div className='flex w-full flex-col justify-center  md:w-1/2 '>
           <div>
             <Image
               alt='image'
@@ -185,6 +177,8 @@ const ArticleOne = () => {
           </div>
         </div>
       </div>
+
+      <div className='border border-dashed border-yellow-500' />
 
       <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-8 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center'>
@@ -734,14 +728,6 @@ const ArticleOne = () => {
               ทีมโค้ชจึงแนะนำว่าการเร่งการอ่านหรือเขียนอาจไม่ใช่สิ่งแรกที่ควรทำ
               แต่ควรเริ่มต้นจากการพัฒนาฐานกายของเด็กให้พร้อมก่อน
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-8 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
-        <div className='flex w-full flex-col justify-center bg-[#2b2a2a]'>
-          <div className='p-3 text-center text-2xl font-extrabold text-white'>
-            ภาพกิจกรรม
           </div>
         </div>
       </div>

@@ -25,11 +25,10 @@ const images = [
     link: 'https://drive.google.com/drive/folders/1V70EdxVsbiPYNGSCxn554B32Ucbuici2',
   },
 
-  //รอ poster
-  // {
-  //   src: '/images/poster/Poster141267.jpg',
-  //   link: 'https://drive.google.com/drive/folders/1LoVPkxOGValTRuAuLL8kz-_gIgqXuTqa',
-  // },
+  {
+    src: '/images/poster/Poster141267.jpg',
+    link: 'https://drive.google.com/drive/folders/1LoVPkxOGValTRuAuLL8kz-_gIgqXuTqa',
+  },
 
   {
     src: '/images/poster/Poster301167.jpg',

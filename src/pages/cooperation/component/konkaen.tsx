@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaPencil } from 'react-icons/fa6';
 
 const Konkaen = () => {
   return (
@@ -20,6 +19,28 @@ const Konkaen = () => {
           </div>
 
           <div className='border border-dashed border-yellow-500' />
+
+          <div className='flex flex-col space-x-0 space-y-4   md:flex-row md:space-x-4 md:space-y-0'>
+            <div className='flex w-full flex-col items-center justify-center  md:w-1/2 '>
+              <Image
+                alt='image'
+                src='/images/cooperation/Konkaen1.png'
+                width={600}
+                height={500}
+                style={{ borderRadius: '20px' }}
+              />
+            </div>
+
+            <div className='flex w-full flex-col items-center justify-center  md:w-1/2'>
+              <Image
+                alt='image'
+                src='/images/cooperation/Konkaen2.png'
+                width={600}
+                height={500}
+                style={{ borderRadius: '20px' }}
+              />
+            </div>
+          </div>
 
           <div className='space-y-4 text-xl/8  text-[#2b2a2a]'>
             <div className='indent-10'>
@@ -780,37 +801,6 @@ const Konkaen = () => {
               รวมทั้งการทำงานที่เน้นบูรณาการงานจากหลายฝ่ายเพื่อสร้างอนาคตของเด็กและสังคมไทยให้เติบโตอย่างยั่งยืน
               โดยมุ่งเป้าหมายเพื่อพัฒนาการศึกษาและ ทุนมนุษย์ให้มีคุณภาพในอนาคต
             </div>
-
-            <div className='border border-dashed border-yellow-500' />
-
-            <div className='flex space-x-4 py-4 font-semibold text-[#ffba00] md:items-center'>
-              <FaPencil size={40} />
-              <div className='bg-black p-1 text-3xl'>Visual Note : ขอนแก่น</div>
-            </div>
-
-            <div className='flex flex-col space-x-0 space-y-4  pb-4 md:flex-row md:space-x-4 md:space-y-0'>
-              <div className='flex w-full flex-col items-center justify-center  md:w-1/2 '>
-                <Image
-                  alt='image'
-                  src='/images/cooperation/Konkaen1.png'
-                  width={600}
-                  height={500}
-                  style={{ borderRadius: '20px' }}
-                />
-              </div>
-
-              <div className='flex w-full flex-col items-center justify-center  md:w-1/2'>
-                <Image
-                  alt='image'
-                  src='/images/cooperation/Konkaen2.png'
-                  width={600}
-                  height={500}
-                  style={{ borderRadius: '20px' }}
-                />
-              </div>
-            </div>
-
-            <div className='border border-dashed border-yellow-500' />
           </div>
         </div>
       </div>

@@ -59,10 +59,11 @@ const BarChart: React.FC = () => {
 
   // กำหนดสีพื้นฐานสำหรับแผนภูมิ
   const backgroundColor: string[] = [
-    '#0c3beb',
-    '#eb0c2e',
-    '#ffbb2a',
     '#4bcd06',
+    '#ffbb2a',
+    '#9b59b6',
+    '#eb0c2e',
+    '#0c3beb',
     '#c5188e',
     '#f05b0b',
     '#6495ED',

@@ -4,8 +4,6 @@ import { IoDocumentText } from 'react-icons/io5';
 
 import PreviewClip from '@/components/layout/components/previewClip';
 
-import RelateArticle from '@/pages/teacher-classroom/component/related-article';
-
 const PLAYLIST_ID = 'PLeZwwnM5meV-muR4SgMOhWgXV18n_Yy1l';
 
 const ArticleOne = () => {
@@ -17,7 +15,7 @@ const ArticleOne = () => {
             <div className='flex justify-center space-x-4'>
               <IoDocumentText size={35} className='text-[#ffba00]' />
               <div className='text-3xl font-bold text-white'>
-                <div>บทความ : โครงการ “เติมพลังครู สู่ห้องเรียน”</div>
+                <div>โครงการ “เติมพลังครู สู่ห้องเรียน”</div>
               </div>
             </div>
           </div>
@@ -302,8 +300,6 @@ const ArticleOne = () => {
           </div>
         </div>
       </div>
-
-      <RelateArticle />
 
       <div className='mt-4'>
         <PreviewClip

@@ -22,7 +22,7 @@ const Feedback = () => {
               <div className='flex justify-center space-x-4'>
                 <IoDocumentText size={35} className='text-[#ffba00]' />
                 <div className='text-3xl font-bold text-white'>
-                  <div>บทความ : รับฟังเสียงสะท้อน</div>
+                  <div> รับฟังเสียงสะท้อน</div>
                 </div>
               </div>
             </div>

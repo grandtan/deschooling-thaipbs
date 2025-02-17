@@ -25,7 +25,7 @@ const Cooperation = () => {
               <div className='flex justify-center space-x-4'>
                 <IoDocumentText size={35} className='text-[#ffba00]' />
                 <div className='text-3xl font-bold text-white'>
-                  <div>บทความสรุปกิจกรรม</div>
+                  <div>เครือข่ายด้านการศึกษา</div>
                 </div>
               </div>
             </div>

@@ -317,14 +317,14 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
               label={<div className='text-lg'>นโยบายการศึกษา</div>}
             >
               <TreeItem
-                onClick={() => router.push('/government')}
+                onClick={() => router.push('/government-policy')}
                 nodeId='government'
                 label='เสียงสะท้อนสู่นโยบายภาครัฐ'
                 className='my-4'
               />
 
               <TreeItem
-                onClick={() => router.push('/gallery')}
+                onClick={() => router.push('/gallery-policy')}
                 nodeId='gallery'
                 label='ขับเคลื่อนการศึกษา'
                 className='my-4'
@@ -392,7 +392,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             />
 
             <Tv
-              menuName=' รายการทีวี '
+              menuName='รายการทีวี'
               submenu1='Deschooling'
               submenu2='Teacher Hero'
               submenu3='First Class ห้องเรียนแรก'

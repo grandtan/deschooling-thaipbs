@@ -9,13 +9,28 @@ import Layout from '@/components/layout/Layout';
 // ✅ ข้อมูลรูปภาพ (เพิ่มปีอื่นเข้ามา)
 const images = [
   {
+    src: '/images/poster/Poster150268.jpg',
+    link: 'https://drive.google.com/drive/folders/1UZACmejP3k8k1P4jixuV3Mae3tqWoYWl',
+  },
+  {
+    src: '/images/poster/Poster250168.jpg',
+    link: 'https://drive.google.com/drive/folders/1GWatIemjK0ezJXSTHdUdfH1ohoGC4AnG',
+  },
+  {
+    src: '/images/poster/Poster120168.jpg',
+    link: 'https://drive.google.com/drive/folders/1mDmVCAMHQfzyRY_Yr-9HEn-WJWLHD73s',
+  },
+  {
     src: '/images/poster/Poster211267.jpg',
     link: 'https://drive.google.com/drive/folders/1V70EdxVsbiPYNGSCxn554B32Ucbuici2',
   },
-  {
-    src: '/images/poster/Poster141267.jpg',
-    link: 'https://drive.google.com/drive/folders/1LoVPkxOGValTRuAuLL8kz-_gIgqXuTqa',
-  },
+
+  //รอ poster
+  // {
+  //   src: '/images/poster/Poster141267.jpg',
+  //   link: 'https://drive.google.com/drive/folders/1LoVPkxOGValTRuAuLL8kz-_gIgqXuTqa',
+  // },
+
   {
     src: '/images/poster/Poster301167.jpg',
     link: 'https://drive.google.com/drive/folders/1O3ji2UEttqhRE_AD7rqmjukQePZknJ9e',
@@ -124,7 +139,7 @@ const images = [
   },
   {
     src: '/images/poster/Poster200167.jpg',
-    link: 'https://drive.google.com/file/d/1jytP3WDKj6TlW67jmIObl8XbdmjjzmId/view',
+    link: 'https://drive.google.com/drive/folders/1ggG7ADdJ0b9lsA1FllQSUbqWgxfD7mtc',
   },
   {
     src: '/images/poster/Poster060167.jpg',
@@ -169,27 +184,39 @@ const Certificate = () => {
           <div className='bg-black p-0.5 text-3xl'>ดาวน์โหลดเกียรติบัตร</div>
         </div>
 
-        {/* วนลูปแสดงแต่ละปี */}
-        {Object.entries(groupedImages).map(([year, yearImages]) => (
-          <div key={year} className='space-y-10'>
-            {/* Section Title */}
-            <div className='flex justify-center space-x-2 bg-black p-2 font-semibold text-white md:items-center'>
-              <PiCertificateBold size={35} />
-              <div className='text-center text-2xl'>
-                เกียรติบัตรกิจกรรมปี {year}
+        {/* วนลูปแสดงแต่ละปี โดยเรียงจากปีมากไปน้อย */}
+        {Object.entries(groupedImages)
+          .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA)) // เรียงจากปีใหม่ไปปีเก่า
+          .map(([year, yearImages]) => (
+            <div key={year} className='space-y-10'>
+              {/* Section Title */}
+              <div className='flex justify-center space-x-2 bg-black p-2 font-semibold text-white md:items-center'>
+                <PiCertificateBold size={35} />
+                <div className='text-center text-2xl'>
+                  เกียรติบัตรกิจกรรมปี {year}
+                </div>
               </div>
-            </div>
 
-            {/* Grid แสดงรูปของปีนั้น */}
-            <div className='grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3 md:gap-12'>
-              {yearImages.map((item, index) => (
-                <div key={index} className='group'>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+              {/* Grid แสดงรูปของปีนั้น */}
+              <div className='grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3 md:gap-12'>
+                {yearImages.map((item, index) => (
+                  <div key={index} className='group'>
+                    {item.link ? (
+                      <a
+                        href={item.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <Image
+                          src={item.src}
+                          alt={`poster ${year}`}
+                          width={350}
+                          height={400}
+                          className='rounded-xl border-2 border-dashed border-white transition-transform duration-500 ease-in group-hover:-translate-y-6'
+                          priority
+                        />
+                      </a>
+                    ) : (
                       <Image
                         src={item.src}
                         alt={`poster ${year}`}
@@ -198,22 +225,12 @@ const Certificate = () => {
                         className='rounded-xl border-2 border-dashed border-white transition-transform duration-500 ease-in group-hover:-translate-y-6'
                         priority
                       />
-                    </a>
-                  ) : (
-                    <Image
-                      src={item.src}
-                      alt={`poster ${year}`}
-                      width={350}
-                      height={400}
-                      className='rounded-xl border-2 border-dashed border-white transition-transform duration-500 ease-in group-hover:-translate-y-6'
-                      priority
-                    />
-                  )}
-                </div>
-              ))}
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
     </Layout>
   );

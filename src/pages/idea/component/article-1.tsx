@@ -269,7 +269,7 @@ const ArticleOne = () => {
         </div>
       </div>
 
-      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-14 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+      <div className='mx-4 flex flex-col space-x-0 space-y-6 pt-4 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
         <div className='flex w-full flex-col justify-center'>
           <div className='space-y-5 text-xl text-[#2b2a2a]'>
             <div className='indent-10'>
@@ -450,6 +450,20 @@ const ArticleOne = () => {
               โดยทางโรงเรียนให้ความสำคัญทั้งในด้านการเรียนรวมและการจัดการสิ่งแวดล้อมที่เหมาะสม
             </div>
 
+            <div className='mx-4 flex flex-col space-x-0 space-y-4 py-2 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+              <div className='flex w-full flex-col items-center justify-center '>
+                <div>
+                  <Image
+                    alt='image'
+                    src='/images/idea/Screen Shot4.png'
+                    width={650}
+                    height={500}
+                    style={{ borderRadius: '20px' }}
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className='border border-dashed border-yellow-500' />
 
             <div className='indent-10'>
@@ -496,6 +510,20 @@ const ArticleOne = () => {
               ส่งเสริมความเข้มแข็งทางใจ ฝึกฝนทักษะการสื่อสาร ทักษะการแก้ไขปัญหา
               จำลองชีวิตที่จะพบเจอเมื่อเข้าเรียนรวมและใช้ชีวิตในสังคมที่มีขนาดใหญ่และหลากหลายขึ้น
               ทั้งหมดนี้โรงเรียนมีหน้าที่เตรียมความพร้อมทักษะและประสบการณ์ชีวิตเพื่อให้พวกเขาอยู่ในสังคมอนาคตต่อไปได้
+            </div>
+
+            <div className='mx-4 flex flex-col space-x-0 space-y-4 py-2 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+              <div className='flex w-full flex-col items-center justify-center '>
+                <div>
+                  <Image
+                    alt='image'
+                    src='/images/idea/Screen Shot5.png'
+                    width={650}
+                    height={500}
+                    style={{ borderRadius: '20px' }}
+                  />
+                </div>
+              </div>
             </div>
 
             <div className='border border-dashed border-yellow-500' />
@@ -553,6 +581,20 @@ const ArticleOne = () => {
               และการสนับสนุนด้านสังคมและอารมณ์ของเด็ก
               เป็นปัจจัยสำคัญที่ช่วยให้เด็กกลุ่มนี้สามารถพัฒนาศักยภาพของตนเอง
               และเติบโตขึ้นเป็นสมาชิกที่มีคุณค่าในสังคม
+            </div>
+
+            <div className='mx-4 flex flex-col space-x-0 space-y-4 py-2 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+              <div className='flex w-full flex-col items-center justify-center '>
+                <div>
+                  <Image
+                    alt='image'
+                    src='/images/idea/Screen Shot6.png'
+                    width={650}
+                    height={500}
+                    style={{ borderRadius: '20px' }}
+                  />
+                </div>
+              </div>
             </div>
 
             <div className='border border-dashed border-yellow-500' />
@@ -771,6 +813,20 @@ const ArticleOne = () => {
             <Image
               alt='image'
               src='/images/idea/Screen Shot8.png'
+              width={650}
+              height={500}
+              style={{ borderRadius: '20px' }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className='mx-4 flex flex-col space-x-0 space-y-4 pt-6 md:mx-24 md:flex-row md:space-x-4 md:space-y-0'>
+        <div className='flex w-full flex-col items-center  justify-center'>
+          <div>
+            <Image
+              alt='image'
+              src='/images/idea/Screen Shot6.png'
               width={650}
               height={500}
               style={{ borderRadius: '20px' }}

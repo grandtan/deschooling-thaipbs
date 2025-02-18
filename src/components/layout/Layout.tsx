@@ -345,7 +345,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
   return (
     <div className={fontWeb.className}>
       <div className='relative flex min-h-screen w-full min-w-[320px] flex-col overflow-hidden'>
-        <div className='flex flex-row items-center justify-between border-y-8 border-r-2 border-white bg-white'>
+        <div className=' header flex flex-row items-center justify-between border-y-8 border-r-2 border-white bg-white shadow-xl drop-shadow-xl'>
           <div className='ml-2 flex justify-center md:ml-0 md:w-1/4'>
             <Link href='/home'>
               <LogoWebNew width='200px' />
@@ -443,7 +443,7 @@ const Layout: React.FC<LayoutProps> = ({ children, backgroundImage }) => {
             overflowY: 'auto',
             backgroundAttachment: 'fixed',
           }}
-          className='flex flex-grow justify-center'
+          className='flex flex-grow justify-center pt-[80px]' // เพิ่ม padding-top เพื่อให้เนื้อหาด้านล่างไม่ถูกบัง
         >
           {children}
         </div>

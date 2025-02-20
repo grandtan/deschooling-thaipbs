@@ -9,6 +9,10 @@ import Layout from '@/components/layout/Layout';
 // ✅ ข้อมูลรูปภาพ (เพิ่มปีอื่นเข้ามา)
 const images = [
   {
+    src: '/images/poster/Poster220268.jpg',
+    link: 'https://drive.google.com/drive/folders/10o-5fMVievlJ-NmBnBNHRiyuOX6y7o_f',
+  },
+  {
     src: '/images/poster/Poster150268.jpg',
     link: 'https://drive.google.com/drive/folders/1UZACmejP3k8k1P4jixuV3Mae3tqWoYWl',
   },

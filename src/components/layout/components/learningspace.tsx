@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import router from 'next/router';
 import { MdComputer } from 'react-icons/md';
 
 interface Props {
@@ -30,7 +29,14 @@ const LearningSpace = ({
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
-    pathName === '/teacher' || pathName === '/parent'
+    pathName === '/teacher' ||
+    pathName === '/parent' ||
+    pathName === '/classroom' ||
+    pathName === '/small-school' ||
+    pathName === '/vdo-teacher-classroom' ||
+    pathName === '/idea' ||
+    pathName === '/certificate' ||
+    pathName === '/classroom-management'
       ? 'rounded-b-[50px] bg-white text-[#ffba00]'
       : '';
 

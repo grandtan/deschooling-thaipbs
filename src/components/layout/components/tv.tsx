@@ -25,7 +25,12 @@ const Tv = ({
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
-    pathName === '/deschooling' || pathName === '/teacher-hero'
+    pathName === '/deschooling' ||
+    pathName === '/teacher-hero' ||
+    pathName === '/first-class' ||
+    pathName === '/the-magnet' ||
+    pathName === '/thamaitai' ||
+    pathName === '/coolcru'
       ? 'rounded-b-[50px] bg-white text-[#ffba00]'
       : '';
 

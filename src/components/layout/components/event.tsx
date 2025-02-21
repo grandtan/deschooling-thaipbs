@@ -21,7 +21,10 @@ const Event = ({
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
-    pathName === '/calendar' || pathName === '/gallery'
+    pathName === '/calendar' ||
+    pathName === '/gallery' ||
+    pathName === '/teacher-classroom' ||
+    pathName === '/feedback'
       ? 'rounded-b-[50px] bg-white text-[#ffba00]'
       : '';
 

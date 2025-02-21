@@ -12,7 +12,9 @@ const Podcast = ({ menuName, submenu1, submenu2, pathName }: Props) => {
   const baseButtonClasses =
     'peer p-3 text-base text-black hover:rounded-b-[50px] hover:bg-white hover:text-[#ffba00] lg:text-2xl';
   const activeButtonClasses =
-    pathName === '/podcast' ? 'rounded-b-[50px] bg-white text-[#ffba00]' : '';
+    pathName === '/podcast' || pathName === '/outside-classroom-vdo'
+      ? 'rounded-b-[50px] bg-white text-[#ffba00]'
+      : '';
 
   return (
     <div className='hidden w-full sm:block md:w-auto'>

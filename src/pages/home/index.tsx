@@ -106,15 +106,17 @@ const Home = () => {
           </div>
 
           <div className='each-slide-effect flex  flex-row justify-center '>
-            <div className='mx-4 flex h-screen w-full  flex-col items-center justify-center md:mx-0'>
+            <div className='mx-4 flex h-screen w-full flex-col items-center justify-center md:mx-0'>
               <div
-                className='mb-10 flex cursor-pointer flex-row text-3xl sm:text-5xl md:text-3xl lg:text-3xl xl:text-4xl'
+                className='mb-10 flex w-full cursor-pointer justify-center'
                 onClick={() => router.push('/learning-chart')}
               >
-                <div className='font-bold text-[#ffcc00]'>
-                  ความต้องการของบุคลากรทาง
+                <div className='text-center text-3xl sm:text-5xl md:text-3xl lg:text-3xl xl:text-4xl'>
+                  <div className='font-bold text-[#ffcc00]'>
+                    ความต้องการของบุคลากรทาง
+                  </div>
+                  <div className=' text-white'>การศึกษา</div>
                 </div>
-                <div className=' text-white'>การศึกษา</div>
               </div>
 
               <div

@@ -14,7 +14,7 @@ const LearningChart: React.FC = () => {
           content='Deschooling, พื้นที่การเรียนรู้, ห้องเรียนข้ามเส้น'
         />
       </Head>
-      <div className='flex h-screen w-full flex-col items-center justify-center px-20'>
+      <div className='flex h-screen w-full flex-col items-center justify-center px-4 md:px-20'>
         <div className='mb-10 bg-black p-1 text-center text-lg text-white md:text-3xl'>
           ความต้องการของบุคลากรทางการศึกษา
         </div>
